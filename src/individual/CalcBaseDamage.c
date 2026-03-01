@@ -302,6 +302,7 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
         movepower = 60 + 20 * DefendingMon.positiveStatBoosts;
         movepower = movepower > 200 ? 200 : movepower;
         break;
+    case MOVE_POWER_TRIP:
     case MOVE_STORED_POWER:
         movepower = 20 + 20 * AttackingMon.positiveStatBoosts;
         break;
@@ -336,7 +337,7 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
         break;
     case MOVE_PAYBACK:
         // TODO: Check correctness
-        if (sp->playerActions[defender][0] == CONTROLLER_COMMAND_40) {
+        if (IsMovingAfterClient(sp, defender) == TRUE) { //as of Gen5 no longer doubles on switching
             movepower *= 2;
         }
         break;
@@ -433,6 +434,13 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
     case MOVE_TRUMP_CARD:
         movepower = damage_power;
         break;
+    case MOVE_TERRAIN_PULSE:
+        if (sp->terrainOverlay.numberOfTurnsLeft > 0 
+            && sp->terrainOverlay.type 
+            && IsClientGrounded(sp, attacker))
+        {
+            movepower *= 2;
+        }
     default:
         break;
     }
@@ -529,7 +537,7 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             break;
         case MOVE_EXPANDING_FORCE:
             // https://www.smogon.com/forums/threads/sword-shield-battle-mechanics-research.3655528/post-8520635
-            if ((terrainOverlayNumberOfTurnsLeft > 0) && (terrainOverlayType == MISTY_TERRAIN)) {
+            if ((terrainOverlayNumberOfTurnsLeft > 0) && (terrainOverlayType == PSYCHIC_TERRAIN)) {
                 basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_5);
             }
             break;
@@ -541,8 +549,7 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             break;
         case MOVE_LASH_OUT:
             // https://www.smogon.com/forums/threads/sword-shield-battle-mechanics-research.3655528/post-8870357
-            // TODO
-            if (FALSE) {
+            if (sp->moveConditionsFlags[attacker].anyStatLoweredThisTurn) {
                 basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__2_0);
             }
             break;
@@ -731,13 +738,13 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             }
 
             if ((AttackingMon.ability == ABILITY_RECKLESS)
-            && (moveEffect == MOVE_EFFECT_CRASH_ON_MISS)
-            && (moveEffect == MOVE_EFFECT_RECOIL_QUARTER)
-            && (moveEffect == MOVE_EFFECT_RECOIL_THIRD)
-            && (moveEffect == MOVE_EFFECT_RECOIL_BURN_HIT)
-            && (moveEffect == MOVE_EFFECT_RECOIL_PARALYZE_HIT)
-            && (moveEffect == MOVE_EFFECT_RECOIL_HALF)
-            && (moveEffect == MOVE_EFFECT_CONFUSE_AND_CRASH_IF_MISS)) {
+            && ((moveEffect == MOVE_EFFECT_CRASH_ON_MISS)
+                || (moveEffect == MOVE_EFFECT_RECOIL_QUARTER)
+                || (moveEffect == MOVE_EFFECT_RECOIL_THIRD)
+                || (moveEffect == MOVE_EFFECT_RECOIL_BURN_HIT)
+                || (moveEffect == MOVE_EFFECT_RECOIL_PARALYZE_HIT)
+                || (moveEffect == MOVE_EFFECT_RECOIL_HALF)
+                || (moveEffect == MOVE_EFFECT_CONFUSE_HIT_CRASH_ON_MISS))) {
                 basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_2);
                 continue;
             }
@@ -837,6 +844,12 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             // TODO: confirm location
             if (movetype == TYPE_STEEL && AttackingMon.ability == ABILITY_STEELY_SPIRIT) {
                 basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_5);
+            }
+
+            // handle Stakeout
+            // TODO: confirm location
+            if (AttackingMon.ability == ABILITY_STAKEOUT && sp->playerActions[sp->defence_client][3] == CONTROLLER_COMMAND_40) {
+                basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__2_0);
             }
         }
 
@@ -1047,12 +1060,12 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
 #endif
 
     // Step 3.4. Attack boosts/drops
-    attack = AttackingMon.attack * StatBoostModifiersTemp[AttackingMon.atkstate + 6][0];
-    attack /= StatBoostModifiersTemp[AttackingMon.atkstate + 6][1];
+    attack = AttackingMon.attack * StatBoostModifiers[AttackingMon.atkstate + 6][0];
+    attack /= StatBoostModifiers[AttackingMon.atkstate + 6][1];
     attack = attack % 65536;
 
-    sp_attack = AttackingMon.sp_attack * StatBoostModifiersTemp[AttackingMon.spatkstate + 6][0];
-    sp_attack /= StatBoostModifiersTemp[AttackingMon.spatkstate + 6][1];
+    sp_attack = AttackingMon.sp_attack * StatBoostModifiers[AttackingMon.spatkstate + 6][0];
+    sp_attack /= StatBoostModifiers[AttackingMon.spatkstate + 6][1];
     sp_attack = sp_attack % 65536;
 
 #ifdef DEBUG_DAMAGE_CALC
@@ -1388,12 +1401,12 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
 #endif
 
     // Step 4.6. Defense boosts/drops
-    defense = DefendingMon.defense * StatBoostModifiersTemp[DefendingMon.defstate + 6][0];
-    defense /= StatBoostModifiersTemp[DefendingMon.defstate + 6][1];
+    defense = DefendingMon.defense * StatBoostModifiers[DefendingMon.defstate + 6][0];
+    defense /= StatBoostModifiers[DefendingMon.defstate + 6][1];
     defense = defense % 65536;
 
-    sp_defense = DefendingMon.sp_defense * StatBoostModifiersTemp[DefendingMon.spdefstate + 6][0];
-    sp_defense /= StatBoostModifiersTemp[DefendingMon.spdefstate+ 6][1];
+    sp_defense = DefendingMon.sp_defense * StatBoostModifiers[DefendingMon.spdefstate + 6][0];
+    sp_defense /= StatBoostModifiers[DefendingMon.spdefstate+ 6][1];
     sp_defense = sp_defense % 65536;
 
 #ifdef DEBUG_DAMAGE_CALC
