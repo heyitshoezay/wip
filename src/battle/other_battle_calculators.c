@@ -42,7 +42,7 @@ const AccuracyStatChangeRatio sAccStatChanges[] =
     { 18,  6 },
 };
 
-const u8 HeldItemPowerUpTable[][2] = {
+u8 HeldItemPowerUpTable[36][2] = {
     { HOLD_EFFECT_STRENGTHEN_BUG, TYPE_BUG },
     { HOLD_EFFECT_STRENGTHEN_STEEL, TYPE_STEEL },
     { HOLD_EFFECT_STRENGTHEN_GROUND, TYPE_GROUND },
@@ -81,56 +81,6 @@ const u8 HeldItemPowerUpTable[][2] = {
     { HOLD_EFFECT_STRENGTHEN_FAIRY, TYPE_FAIRY },
     { HOLD_EFFECT_ARCEUS_FAIRY, TYPE_FAIRY },
 #endif
-};
-
-const u16 StrongJawMovesTable[] = {
-    MOVE_BITE,
-    MOVE_CRUNCH,
-    MOVE_FIRE_FANG,
-    MOVE_FISHIOUS_REND,
-    MOVE_HYPER_FANG,
-    MOVE_ICE_FANG,
-    MOVE_JAW_LOCK,
-    MOVE_POISON_FANG,
-    MOVE_PSYCHIC_FANGS,
-    MOVE_THUNDER_FANG,
-};
-
-const u16 MegaLauncherMovesTable[] = {
-    MOVE_AURA_SPHERE,
-    MOVE_DARK_PULSE,
-    MOVE_DRAGON_PULSE,
-    MOVE_HEAL_PULSE,
-    MOVE_ORIGIN_PULSE,
-    MOVE_TERRAIN_PULSE,
-    MOVE_WATER_PULSE,
-};
-
-const u16 SharpnessMovesTable[] = {
-    MOVE_AERIAL_ACE,
-    MOVE_AIR_CUTTER,
-    MOVE_AIR_SLASH,
-    MOVE_AQUA_CUTTER,
-    MOVE_BEHEMOTH_BLADE,
-    MOVE_BITTER_BLADE,
-    MOVE_CEASELESS_EDGE,
-    MOVE_CROSS_POISON,
-    MOVE_CUT,
-    MOVE_FURY_CUTTER,
-    MOVE_KOWTOW_CLEAVE,
-    MOVE_LEAF_BLADE,
-    MOVE_NIGHT_SLASH,
-    MOVE_POPULATION_BOMB,
-    MOVE_PSYBLADE,
-    MOVE_PSYCHO_CUT,
-    MOVE_RAZOR_SHELL,
-    MOVE_RAZOR_LEAF,
-    MOVE_SACRED_SWORD,
-    MOVE_SECRET_SWORD,
-    MOVE_SLASH,
-    MOVE_SOLAR_BLADE,
-    MOVE_STONE_AXE,
-    MOVE_X_SCISSOR,
 };
 
 const u16 PowderMovesList[] = {
@@ -1530,7 +1480,7 @@ void LONG_CALL CalcPriorityAndQuickClawCustapBerry(void *bsys, struct BattleStru
 
 const u8 CriticalRateTable[] =
 {
-     24,
+     16,
      8,
      2,
      1,
@@ -1561,7 +1511,14 @@ int CalcCritical(void *bw, struct BattleStruct *sp, int attacker, int defender, 
 
     temp = (((condition2 & STATUS2_FOCUS_ENERGY) != 0) * 2) + (hold_effect == HOLD_EFFECT_CRITRATE_UP) + critical_count + (ability == ABILITY_SUPER_LUCK)
          + (2 * ((hold_effect == HOLD_EFFECT_CHANSEY_CRITRATE_UP) && (species == SPECIES_CHANSEY)))
-         + (2 * ((hold_effect == HOLD_EFFECT_FARFETCHD_CRITRATE_UP) && (species == SPECIES_FARFETCHD)));
+         + (2 * ((hold_effect == HOLD_EFFECT_FARFETCHD_CRITRATE_UP) && (species == SPECIES_FARFETCHD || species == SPECIES_SIRFETCHD)));
+
+#ifdef HLG_CUSTOM_WEATHER
+    u32 weather = GetScriptVar(PERMANENT_OW_WEATHER_VARIABLE);
+    if (CheckScriptFlag(PERMANENT_OW_WEATHER_FLAG) && (weather == 7 || weather == 8) && (attacker == 1 || attacker == 3)) {
+        temp++;
+    }
+#endif
 
 
     if (temp > 4 || sp->moveConditionsFlags[attacker].laserFocusTimer)
@@ -1917,7 +1874,8 @@ int LONG_CALL ServerDoTypeCalcMod(void *bw UNUSED, struct BattleStruct *sp, int 
  *  @param msg msg param to fill with values for printing a message that results from running
  *  @return TRUE if the battler can not escape; FALSE if the battler can escape
  */
-BOOL CantEscape(void *bw, struct BattleStruct *sp, int battlerId, MESSAGE_PARAM *msg) {
+BOOL LONG_CALL CantEscape(void *bw, struct BattleStruct *sp, int battlerId, MESSAGE_PARAM *msg)
+{
     int battlerIdAbility;
     int maxBattlers UNUSED;
     u8 side UNUSED;
@@ -2516,15 +2474,13 @@ BOOL LONG_CALL BattleSystem_CheckMoveEffect(void *bw, struct BattleStruct *sp, i
         return TRUE;
     }
 
-    // thunder wave when used by an electric type mon
+    // thunder wave when used by a electric type
     if (move == MOVE_THUNDER_WAVE
         && HasType(sp, battlerIdAttacker, TYPE_ELECTRIC)) {
         sp->waza_status_flag &= ~MOVE_STATUS_FLAG_MISS;
         return TRUE;
-
-    
     }
-    
+
     if (!(sp->server_status_flag & BATTLE_STATUS_FLAT_HIT_RATE) //TODO: Is this flag a debug flag to ignore hit rates..?
         && ((sp->battlemon[battlerIdTarget].effect_of_moves & MOVE_EFFECT_FLAG_LOCK_ON
             && sp->battlemon[battlerIdTarget].moveeffect.battlerIdLockOn == battlerIdAttacker)
@@ -3416,8 +3372,8 @@ BOOL LONG_CALL ov12_02251A28(struct BattleSystem *bsys, struct BattleStruct *ctx
         msg->msg_id = BATTLE_MSG_THROAT_CHOP_PREVENTS_CERTAIN_MOVES;
         msg->msg_para[0] = CreateNicknameTag(ctx, battlerId);
         ret = FALSE;
-    } 
-
+    }
+    /*
     else if (ctx->moveTbl[ctx->battlemon[battlerId].move[movePos]].flag & FLAG_UNUSED_MOVE) {
 #ifdef DEBUG_ENABLE_UNIMPLEMENTED_MOVES
         debug_printf("Move %d at position %d for battler %d is not implemented/dexited\n", ctx->moveTbl[ctx->battlemon[battlerId].move[movePos]], movePos, battlerId);
@@ -3427,7 +3383,7 @@ BOOL LONG_CALL ov12_02251A28(struct BattleSystem *bsys, struct BattleStruct *ctx
         msg->msg_id = BATTLE_MSG_MOVE_IS_UNIMPLEMENTED;
         ret = FALSE;
     }
-
+    */
     return ret;
 }
 

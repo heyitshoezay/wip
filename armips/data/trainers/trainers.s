@@ -33,7 +33,7 @@ trainerdata 0, "-"
 trainerdata 1, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 3
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -46,15 +46,15 @@ trainerdata 1, "Silver"
         // mon 0
         ivs 255
         abilityslot 0
-        level 14
+        level 21
         pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_WISE_GLASSES
+        move MOVE_OMINOUS_WIND
+        move MOVE_CURSE
+        move MOVE_SLUDGE
+        move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -62,31 +62,63 @@ trainerdata 1, "Silver"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 21
         pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_SCOPE_LENS
+        move MOVE_BITE
+        move MOVE_WING_ATTACK
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_VENOSHOCK
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 2
+		 // mon 2
         ivs 255
         abilityslot 0
-        level 18
+        level 21
+        pokemon SPECIES_MAGNEMITE
+        item ITEM_MAGNET
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+		 // mon 3
+        ivs 255
+        abilityslot 0
+        level 22
+        pokemon SPECIES_KADABRA
+        item ITEM_TWISTED_SPOON
+        move MOVE_PSYBEAM
+        move MOVE_REFLECT
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_CHARGE_BEAM
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+				
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 23
         pokemon SPECIES_BAYLEEF
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_SITRUS_BERRY
+        move MOVE_MEGA_DRAIN
+        move MOVE_FLASH
+        move MOVE_ANCIENT_POWER
+        move MOVE_BODY_SLAM
         ability ABILITY_OVERGROW
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -117,7 +149,7 @@ trainerdata 2, "Silver"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -148,7 +180,7 @@ trainerdata 3, "Silver"
         move MOVE_WATER_GUN
         move MOVE_NONE
         ability ABILITY_SHEER_FORCE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -191,7 +223,7 @@ trainerdata 4, "Wade"
 trainerdata 5, "Victoria"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BEAUTY
-    nummons 3
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -204,49 +236,17 @@ trainerdata 5, "Victoria"
         // mon 0
         ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_SENTRET
+        level 25
+        pokemon SPECIES_GRANBULL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_RUN_AWAY
-        setivs 1, 1, 1, 1, 1, 1
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
-        ballseal 0
-
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 13
-        pokemon SPECIES_SENTRET
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_RUN_AWAY
-        setivs 1, 1, 1, 1, 1, 1
+        move MOVE_FIRE_FANG
+        move MOVE_ICE_FANG
+        move MOVE_THUNDER_FANG
+        move MOVE_PLAY_ROUGH
+        ability ABILITY_STRONG_JAW
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 16
-        pokemon SPECIES_SENTRET
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_RUN_AWAY
-        setivs 1, 1, 1, 1, 1, 1
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CALM
         ballseal 0
 
     endparty
@@ -267,15 +267,15 @@ trainerdata 6, "Keith"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_GROWLITHE
+        level 24
+        pokemon SPECIES_ARCANINE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_EXTREME_SPEED
+        move MOVE_CRUNCH
+        move MOVE_FIRE_FANG
+        move MOVE_THUNDER_FANG
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -306,7 +306,7 @@ trainerdata 7, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -322,7 +322,7 @@ trainerdata 7, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -338,7 +338,7 @@ trainerdata 7, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -354,7 +354,7 @@ trainerdata 7, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -431,7 +431,7 @@ trainerdata 9, "Elaine"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -462,7 +462,7 @@ trainerdata 10, "Amy & Mimi"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INSOMNIA
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -478,7 +478,7 @@ trainerdata 10, "Amy & Mimi"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -743,7 +743,7 @@ trainerdata 14, "Duncan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -759,7 +759,7 @@ trainerdata 14, "Duncan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -775,7 +775,7 @@ trainerdata 14, "Duncan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -806,7 +806,7 @@ trainerdata 15, "Otis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -822,7 +822,7 @@ trainerdata 15, "Otis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -838,7 +838,7 @@ trainerdata 15, "Otis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGMA_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -869,7 +869,7 @@ trainerdata 16, "Simon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -885,7 +885,7 @@ trainerdata 16, "Simon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -977,7 +977,7 @@ trainerdata 19, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -993,7 +993,7 @@ trainerdata 19, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -1009,7 +1009,7 @@ trainerdata 19, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -1049,12 +1049,12 @@ trainerdata 20, "Falkner"
         ivs 255
         abilityslot 0
         level 16
-        pokemon SPECIES_NOCTOWL
+        pokemon SPECIES_PIDGEOTTO
         item ITEM_BERRY_JUICE
-        move MOVE_CONFUSION
-        move MOVE_WORK_UP
-        move MOVE_HYPNOSIS
-        move MOVE_AIR_CUTTER
+        move MOVE_QUICK_ATTACK
+        move MOVE_PLUCK
+        move MOVE_ROOST
+        move MOVE_STEEL_WING
         ability ABILITY_TINTED_LENS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -1143,7 +1143,7 @@ trainerdata 21, "Bugsy"
         // mon 0
         ivs 255
         abilityslot 0
-        level 19
+        level 20
         pokemon SPECIES_ARIADOS
         item ITEM_FOCUS_SASH
         move MOVE_STICKY_WEB
@@ -1178,7 +1178,7 @@ trainerdata 21, "Bugsy"
         level 20
         pokemon SPECIES_PINSIR
         item ITEM_BERRY_JUICE
-        move MOVE_VICE_GRIP
+        move MOVE_ROCK_TOMB
         move MOVE_VITAL_THROW
         move MOVE_BULLDOZE
         move MOVE_X_SCISSOR
@@ -1201,7 +1201,7 @@ trainerdata 21, "Bugsy"
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 4
@@ -1217,7 +1217,7 @@ trainerdata 21, "Bugsy"
         ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 5
@@ -1253,15 +1253,15 @@ trainerdata 22, "Carrie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_SNUBBULL
+        level 26
+        pokemon SPECIES_CARBINK
         item ITEM_NONE
-        move MOVE_SCARY_FACE
-        move MOVE_CHARM
-        move MOVE_BITE
-        move MOVE_LICK
-        ability ABILITY_INTIMIDATE
-        setivs 1, 1, 1, 1, 1, 1
+        move MOVE_ROCK_THROW
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_EARTH_POWER
+        move MOVE_FLASH
+        ability ABILITY_CLEAR_BODY
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -1336,7 +1336,7 @@ trainerdata 24, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -1606,7 +1606,7 @@ trainerdata 29, "Rod"
 trainerdata 30, "Whitney"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_WHITNEY
-    nummons 2
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -1619,15 +1619,15 @@ trainerdata 30, "Whitney"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_CLEFAIRY
-        item ITEM_NONE
-        move MOVE_DOUBLE_SLAP
-        move MOVE_MIMIC
-        move MOVE_ENCORE
-        move MOVE_METRONOME
-        ability ABILITY_CUTE_CHARM
-        setivs 12, 12, 12, 12, 12, 12
+        level 25
+        pokemon SPECIES_AROMATISSE
+        item ITEM_EXPERT_BELT
+        move MOVE_PSYCHIC
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_FLASH_CANNON
+        ability ABILITY_FAIRY_AURA
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -1635,19 +1635,82 @@ trainerdata 30, "Whitney"
         // mon 1
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_MILTANK
-        item ITEM_LUM_BERRY
-        move MOVE_ROLLOUT
-        move MOVE_ATTRACT
-        move MOVE_STOMP
-        move MOVE_MILK_DRINK
-        ability ABILITY_SCRAPPY
-        setivs 12, 12, 12, 12, 12, 12
+        level 25
+        pokemon SPECIES_AZUMARILL
+        item ITEM_MUSCLE_BAND
+        move MOVE_PLAY_ROUGH
+        move MOVE_AQUA_JET
+        move MOVE_ICE_PUNCH
+        move MOVE_AQUA_TAIL
+        ability ABILITY_HUGE_POWER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		 // mon 2
+        ivs 255
+        abilityslot 0
+        level 25
+        pokemon SPECIES_MIMIKYU
+        item ITEM_LIFE_ORB
+        move MOVE_PLAY_ROUGH
+        move MOVE_SHADOW_CLAW
+        move MOVE_LEECH_LIFE
+        move MOVE_CUT
+        ability ABILITY_DISGUISE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
+		 // mon 3
+        ivs 255
+        abilityslot 0
+        level 26
+        pokemon SPECIES_CLEFABLE
+        item ITEM_LEFTOVERS
+        move MOVE_AURA_SPHERE
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ICE_BEAM
+        move MOVE_FLAMETHROWER
+        ability ABILITY_UNAWARE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 26
+        pokemon SPECIES_WIGGLYTUFF
+        item ITEM_WISE_GLASSES
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_TRI_ATTACK
+        move MOVE_HYPER_VOICE
+        move MOVE_KNOCK_OFF
+        ability ABILITY_COMPETITIVE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_SERIOUS
+        ballseal 0
+		
+		 // mon 5
+        ivs 255
+        abilityslot 1
+        level 27
+        pokemon SPECIES_SYLVEON
+        item ITEM_SITRUS_BERRY
+        move MOVE_HYPER_VOICE
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_PSYSHOCK
+        move MOVE_TRAILBLAZE
+        ability ABILITY_PIXILATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 252, 0, 0
+        nature NATURE_TIMID
+        ballseal 0
     endparty
 
 trainerdata 31, "Morty"
@@ -2052,7 +2115,7 @@ trainerdata 37, "Preston"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -2068,7 +2131,7 @@ trainerdata 37, "Preston"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -2099,7 +2162,7 @@ trainerdata 38, "Colette"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGIC_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -2130,7 +2193,7 @@ trainerdata 39, "Eugene"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -2146,7 +2209,7 @@ trainerdata 39, "Eugene"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -2162,7 +2225,7 @@ trainerdata 39, "Eugene"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -2193,7 +2256,7 @@ trainerdata 40, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STENCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -2224,7 +2287,7 @@ trainerdata 41, "Clyde"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -2255,7 +2318,7 @@ trainerdata 42, "Nathan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAP_SIPPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -2368,7 +2431,7 @@ trainerdata 45, "Ruth"
         move MOVE_TAIL_WHIP
         move MOVE_THUNDER_SHOCK
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -2399,7 +2462,7 @@ trainerdata 46, "Martha"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -2415,7 +2478,7 @@ trainerdata 46, "Martha"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -2431,7 +2494,7 @@ trainerdata 46, "Martha"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -2506,7 +2569,7 @@ trainerdata 48, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -2522,7 +2585,7 @@ trainerdata 48, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -2881,7 +2944,7 @@ trainerdata 58, "Arnold"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -2912,7 +2975,7 @@ trainerdata 59, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -2928,7 +2991,7 @@ trainerdata 59, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -2944,7 +3007,7 @@ trainerdata 59, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -3044,7 +3107,7 @@ trainerdata 61, "Anthony"
 trainerdata 62, "Samuel"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_YOUNGSTER
-    nummons 4
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -3057,15 +3120,15 @@ trainerdata 62, "Samuel"
         // mon 0
         ivs 255
         abilityslot 0
-        level 7
-        pokemon SPECIES_RATTATA
+        level 20
+        pokemon SPECIES_RATICATE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_SUCKER_PUNCH
+        move MOVE_HYPER_FANG
+        move MOVE_QUICK_ATTACK
+        move MOVE_ZEN_HEADBUTT
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -3073,15 +3136,15 @@ trainerdata 62, "Samuel"
         // mon 1
         ivs 255
         abilityslot 0
-        level 10
+        level 20
         pokemon SPECIES_SANDSHREW
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_ROCK_TOMB
+        move MOVE_BULLDOZE
+        move MOVE_RAPID_SPIN
+        move MOVE_FURY_CUTTER
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -3089,31 +3152,15 @@ trainerdata 62, "Samuel"
         // mon 2
         ivs 255
         abilityslot 0
-        level 8
-        pokemon SPECIES_SPEAROW
+        level 20
+        pokemon SPECIES_FEAROW
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_PLUCK
+        move MOVE_DOUBLE_HIT
+        move MOVE_DRILL_RUN
+        move MOVE_PURSUIT
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
-        ballseal 0
-
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 8
-        pokemon SPECIES_SPEAROW
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -3167,15 +3214,15 @@ trainerdata 64, "Ian"
         // mon 0
         ivs 255
         abilityslot 0
-        level 10
+        level 23
         pokemon SPECIES_MANKEY
         item ITEM_NONE
-        move MOVE_FOCUS_ENERGY
-        move MOVE_SCRATCH
-        move MOVE_LOW_KICK
+        move MOVE_COVET
+        move MOVE_ROCK_TOMB
+        move MOVE_BRICK_BREAK
         move MOVE_LEER
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -3183,15 +3230,15 @@ trainerdata 64, "Ian"
         // mon 1
         ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_DIGLETT
+        level 23
+        pokemon SPECIES_DUGTRIO
         item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_GROWL
-        move MOVE_SCRATCH
+        move MOVE_MAGNITUDE
+        move MOVE_SUCKER_PUNCH
+        move MOVE_NIGHT_SLASH
         move MOVE_SAND_ATTACK
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -3201,7 +3248,7 @@ trainerdata 64, "Ian"
 trainerdata 65, "Gina"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PICNICKER
-    nummons 3
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -3214,31 +3261,15 @@ trainerdata 65, "Gina"
         // mon 0
         ivs 255
         abilityslot 0
-        level 9
-        pokemon SPECIES_HOPPIP
+        level 23
+        pokemon SPECIES_SKIPLOOM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_FAIRY_WIND
+        move MOVE_MEGA_DRAIN
+        move MOVE_U_TURN
+        move MOVE_STUN_SPORE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
-        ballseal 0
-
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 9
-        pokemon SPECIES_HOPPIP
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -3246,15 +3277,15 @@ trainerdata 65, "Gina"
         // mon 2
         ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_BULBASAUR
+        level 23
+        pokemon SPECIES_IVYSAUR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_LEECH_SEED
+        move MOVE_MAGICAL_LEAF
+        move MOVE_SLUDGE
+        move MOVE_BODY_SLAM
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -3277,15 +3308,15 @@ trainerdata 66, "Todd"
         // mon 0
         ivs 255
         abilityslot 0
-        level 14
+        level 24
         pokemon SPECIES_PSYDUCK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_SCALD
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_FLASH
+        move MOVE_ICY_WIND
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -3449,33 +3480,33 @@ trainerdata 70, "Samantha"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_MEOWTH
+        level 25
+        pokemon SPECIES_MR_MIME
         item ITEM_NONE
-        move MOVE_SCRATCH
-        move MOVE_GROWL
-        move MOVE_BITE
-        move MOVE_PAY_DAY
-        ability ABILITY_TECHNICIAN
-        setivs 1, 1, 1, 1, 1, 1
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_REFLECT
+        move MOVE_MAGICAL_LEAF
+        ability ABILITY_SOUNDPROOF
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_MEOWTH
+        level 25
+        pokemon SPECIES_JIGGLYPUFF
         item ITEM_NONE
-        move MOVE_SCRATCH
-        move MOVE_GROWL
-        move MOVE_BITE
-        move MOVE_SLASH
-        ability ABILITY_TECHNICIAN
-        setivs 1, 1, 1, 1, 1, 1
+        move MOVE_SING
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_SHADOW_BALL
+        move MOVE_PLAY_ROUGH
+        ability ABILITY_CUTE_CHARM
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        nature NATURE_SERIOUS
         ballseal 0
 
     endparty
@@ -3483,7 +3514,7 @@ trainerdata 70, "Samantha"
 trainerdata 71, "Cathy"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LASS
-    nummons 3
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -3496,49 +3527,33 @@ trainerdata 71, "Cathy"
         // mon 0
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_JIGGLYPUFF
+        level 25
+        pokemon SPECIES_RIBOMBEE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CUTE_CHARM
-        setivs 1, 1, 1, 1, 1, 1
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_STUN_SPORE
+        move MOVE_MEGA_DRAIN
+        move MOVE_SILVER_WIND
+        ability ABILITY_SHIELD_DUST
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_JIGGLYPUFF
+        level 25
+        pokemon SPECIES_TINKATUFF
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_FAKE_OUT
+        move MOVE_COVET
+        move MOVE_METAL_CLAW
+        move MOVE_KNOCK_OFF
         ability ABILITY_CUTE_CHARM
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 15
-        pokemon SPECIES_JIGGLYPUFF
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CUTE_CHARM
-        setivs 1, 1, 1, 1, 1, 1
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -3709,7 +3724,7 @@ trainerdata 74, "Ivan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -3725,7 +3740,7 @@ trainerdata 74, "Ivan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -3741,7 +3756,7 @@ trainerdata 74, "Ivan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -3772,7 +3787,7 @@ trainerdata 75, "Elliot"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -3788,7 +3803,7 @@ trainerdata 75, "Elliot"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -3819,7 +3834,7 @@ trainerdata 76, "Brooke"
         move MOVE_QUICK_ATTACK
         move MOVE_DOUBLE_TEAM
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -3850,7 +3865,7 @@ trainerdata 77, "Kim"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -3881,7 +3896,7 @@ trainerdata 78, "Arnie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -3912,7 +3927,7 @@ trainerdata 79, "Ken"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -3928,7 +3943,7 @@ trainerdata 79, "Ken"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MOLD_BREAKER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -3959,7 +3974,7 @@ trainerdata 80, "Dirk"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -3975,7 +3990,7 @@ trainerdata 80, "Dirk"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -4006,7 +4021,7 @@ trainerdata 81, "Tori & Til"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -4022,7 +4037,7 @@ trainerdata 81, "Tori & Til"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -4087,7 +4102,7 @@ trainerdata 83, "Cindy"
         move MOVE_BODY_SLAM
         move MOVE_DOUBLE_KICK
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -4118,7 +4133,7 @@ trainerdata 84, "Barry"
         move MOVE_EARTH_POWER
         move MOVE_FOCUS_BLAST
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -4149,7 +4164,7 @@ trainerdata 85, "Paula"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -4165,7 +4180,7 @@ trainerdata 85, "Paula"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -4196,7 +4211,7 @@ trainerdata 86, "Randall"
         move MOVE_WITHDRAW
         move MOVE_TACKLE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -4212,7 +4227,7 @@ trainerdata 86, "Randall"
         move MOVE_WATER_GUN
         move MOVE_TAIL_WHIP
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -4228,7 +4243,7 @@ trainerdata 86, "Randall"
         move MOVE_WITHDRAW
         move MOVE_TACKLE
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -4259,7 +4274,7 @@ trainerdata 87, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -4290,7 +4305,7 @@ trainerdata 88, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4306,7 +4321,7 @@ trainerdata 88, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4322,7 +4337,7 @@ trainerdata 88, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4338,7 +4353,7 @@ trainerdata 88, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4354,7 +4369,7 @@ trainerdata 88, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4385,7 +4400,7 @@ trainerdata 89, "Grace"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -4401,7 +4416,7 @@ trainerdata 89, "Grace"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -4432,7 +4447,7 @@ trainerdata 90, "Kaylee"
         move MOVE_SUPERSONIC
         move MOVE_PECK
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -4448,7 +4463,7 @@ trainerdata 90, "Kaylee"
         move MOVE_SUPERSONIC
         move MOVE_PECK
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -4464,7 +4479,7 @@ trainerdata 90, "Kaylee"
         move MOVE_SUPERSONIC
         move MOVE_PECK
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -4495,7 +4510,7 @@ trainerdata 91, "Susie"
         move MOVE_DISABLE
         move MOVE_CONFUSION
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -4511,7 +4526,7 @@ trainerdata 91, "Susie"
         move MOVE_SUPERSONIC
         move MOVE_HORN_ATTACK
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -4542,7 +4557,7 @@ trainerdata 92, "Denise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -4573,7 +4588,7 @@ trainerdata 93, "Kara"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -4589,7 +4604,7 @@ trainerdata 93, "Kara"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -4620,7 +4635,7 @@ trainerdata 94, "Wendy"
         move MOVE_LEER
         move MOVE_BUBBLE_BEAM
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -4636,7 +4651,7 @@ trainerdata 94, "Wendy"
         move MOVE_LEER
         move MOVE_BUBBLE_BEAM
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -4667,7 +4682,7 @@ trainerdata 95, "Charlie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -4683,7 +4698,7 @@ trainerdata 95, "Charlie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -4699,7 +4714,7 @@ trainerdata 95, "Charlie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -4730,7 +4745,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -4746,7 +4761,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -4762,7 +4777,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -4778,7 +4793,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -4794,7 +4809,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -4810,7 +4825,7 @@ trainerdata 96, "George"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -4841,7 +4856,7 @@ trainerdata 97, "Berke"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -4872,7 +4887,7 @@ trainerdata 98, "Ronald"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -4888,7 +4903,7 @@ trainerdata 98, "Ronald"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -4919,7 +4934,7 @@ trainerdata 99, "Matthew"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HYPER_CUTTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -4950,7 +4965,7 @@ trainerdata 100, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -4966,7 +4981,7 @@ trainerdata 100, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -5201,7 +5216,7 @@ trainerdata 105, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -5217,7 +5232,7 @@ trainerdata 105, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -5233,7 +5248,7 @@ trainerdata 105, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -5264,7 +5279,7 @@ trainerdata 106, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -5280,7 +5295,7 @@ trainerdata 106, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -5296,7 +5311,7 @@ trainerdata 106, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -5327,7 +5342,7 @@ trainerdata 107, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -5343,7 +5358,7 @@ trainerdata 107, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -5359,7 +5374,7 @@ trainerdata 107, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -6096,7 +6111,7 @@ trainerdata 122, "Marvin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -6112,7 +6127,7 @@ trainerdata 122, "Marvin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -6128,7 +6143,7 @@ trainerdata 122, "Marvin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -6159,7 +6174,7 @@ trainerdata 123, "Tully"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -6190,7 +6205,7 @@ trainerdata 124, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -6206,7 +6221,7 @@ trainerdata 124, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -6222,7 +6237,7 @@ trainerdata 124, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -6253,7 +6268,7 @@ trainerdata 125, "Edgar"
         move MOVE_AURORA_BEAM
         move MOVE_BUBBLE_BEAM
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -6269,7 +6284,7 @@ trainerdata 125, "Edgar"
         move MOVE_AURORA_BEAM
         move MOVE_BUBBLE_BEAM
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -6300,7 +6315,7 @@ trainerdata 126, "Andre"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -6331,7 +6346,7 @@ trainerdata 127, "Raymond"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -6347,7 +6362,7 @@ trainerdata 127, "Raymond"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -6363,7 +6378,7 @@ trainerdata 127, "Raymond"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -6379,7 +6394,7 @@ trainerdata 127, "Raymond"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -6410,7 +6425,7 @@ trainerdata 128, "Jonah"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -6426,7 +6441,7 @@ trainerdata 128, "Jonah"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6442,7 +6457,7 @@ trainerdata 128, "Jonah"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -6458,7 +6473,7 @@ trainerdata 128, "Jonah"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -6489,7 +6504,7 @@ trainerdata 129, "Shane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -6505,7 +6520,7 @@ trainerdata 129, "Shane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -6536,7 +6551,7 @@ trainerdata 130, "Beckett"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -6567,7 +6582,7 @@ trainerdata 131, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -6583,7 +6598,7 @@ trainerdata 131, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6614,7 +6629,7 @@ trainerdata 132, "Ron"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -6645,7 +6660,7 @@ trainerdata 133, "Morgan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -6661,7 +6676,7 @@ trainerdata 133, "Morgan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -6692,7 +6707,7 @@ trainerdata 134, "Benjamin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -6708,7 +6723,7 @@ trainerdata 134, "Benjamin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -6724,7 +6739,7 @@ trainerdata 134, "Benjamin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -6755,7 +6770,7 @@ trainerdata 135, "Johnny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -6771,7 +6786,7 @@ trainerdata 135, "Johnny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -6787,7 +6802,7 @@ trainerdata 135, "Johnny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -6818,7 +6833,7 @@ trainerdata 136, "Linda"
         move MOVE_LEECH_SEED
         move MOVE_DOUBLE_EDGE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -6834,7 +6849,7 @@ trainerdata 136, "Linda"
         move MOVE_LEECH_SEED
         move MOVE_DOUBLE_EDGE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6850,7 +6865,7 @@ trainerdata 136, "Linda"
         move MOVE_LEECH_SEED
         move MOVE_DOUBLE_EDGE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -6928,7 +6943,7 @@ trainerdata 138, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6959,7 +6974,7 @@ trainerdata 139, "Debra"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -6990,7 +7005,7 @@ trainerdata 140, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -7006,7 +7021,7 @@ trainerdata 140, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -7037,7 +7052,7 @@ trainerdata 141, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -7068,7 +7083,7 @@ trainerdata 142, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -7084,7 +7099,7 @@ trainerdata 142, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -7100,7 +7115,7 @@ trainerdata 142, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -7131,7 +7146,7 @@ trainerdata 143, "Erik"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -7147,7 +7162,7 @@ trainerdata 143, "Erik"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -7163,7 +7178,7 @@ trainerdata 143, "Erik"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -7194,7 +7209,7 @@ trainerdata 144, "Michael"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -7210,7 +7225,7 @@ trainerdata 144, "Michael"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -7226,7 +7241,7 @@ trainerdata 144, "Michael"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -7257,7 +7272,7 @@ trainerdata 145, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7288,7 +7303,7 @@ trainerdata 146, "Timothy"
         move MOVE_SAND_ATTACK
         move MOVE_SUCKER_PUNCH
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7304,7 +7319,7 @@ trainerdata 146, "Timothy"
         move MOVE_SAND_ATTACK
         move MOVE_SUCKER_PUNCH
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -7335,7 +7350,7 @@ trainerdata 147, "Ted"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ANGER_POINT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7366,7 +7381,7 @@ trainerdata 148, "Lloyd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -7397,7 +7412,7 @@ trainerdata 149, "Dean"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLOUD_NINE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -7413,7 +7428,7 @@ trainerdata 149, "Dean"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7444,7 +7459,7 @@ trainerdata 150, "Sid"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -7460,7 +7475,7 @@ trainerdata 150, "Sid"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ANGER_POINT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -7476,7 +7491,7 @@ trainerdata 150, "Sid"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -7507,7 +7522,7 @@ trainerdata 151, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -7523,7 +7538,7 @@ trainerdata 151, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -7554,7 +7569,7 @@ trainerdata 152, "Hope"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -7585,7 +7600,7 @@ trainerdata 153, "Sharon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ADAPTABILITY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -7601,7 +7616,7 @@ trainerdata 153, "Sharon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7632,7 +7647,7 @@ trainerdata 154, "Bailey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7648,7 +7663,7 @@ trainerdata 154, "Bailey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7664,7 +7679,7 @@ trainerdata 154, "Bailey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7680,7 +7695,7 @@ trainerdata 154, "Bailey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7696,7 +7711,7 @@ trainerdata 154, "Bailey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7727,7 +7742,7 @@ trainerdata 155, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -7743,7 +7758,7 @@ trainerdata 155, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -7759,7 +7774,7 @@ trainerdata 155, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -8117,7 +8132,7 @@ trainerdata 165, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -8148,7 +8163,7 @@ trainerdata 166, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -8179,7 +8194,7 @@ trainerdata 167, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -8210,7 +8225,7 @@ trainerdata 168, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -8226,7 +8241,7 @@ trainerdata 168, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -8242,7 +8257,7 @@ trainerdata 168, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -8273,7 +8288,7 @@ trainerdata 169, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -8289,7 +8304,7 @@ trainerdata 169, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -8320,7 +8335,7 @@ trainerdata 170, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -8336,7 +8351,7 @@ trainerdata 170, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -8352,7 +8367,7 @@ trainerdata 170, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -8383,7 +8398,7 @@ trainerdata 171, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -8399,7 +8414,7 @@ trainerdata 171, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -8415,7 +8430,7 @@ trainerdata 171, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -8446,7 +8461,7 @@ trainerdata 172, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -8462,7 +8477,7 @@ trainerdata 172, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -8478,7 +8493,7 @@ trainerdata 172, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -8509,7 +8524,7 @@ trainerdata 173, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -8525,7 +8540,7 @@ trainerdata 173, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -8541,7 +8556,7 @@ trainerdata 173, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -8557,7 +8572,7 @@ trainerdata 173, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -8588,7 +8603,7 @@ trainerdata 174, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -8604,7 +8619,7 @@ trainerdata 174, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -8620,7 +8635,7 @@ trainerdata 174, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -8651,7 +8666,7 @@ trainerdata 175, "Bethany"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -8682,7 +8697,7 @@ trainerdata 176, "Margaret"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -8713,7 +8728,7 @@ trainerdata 177, "Ethel"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -8744,7 +8759,7 @@ trainerdata 178, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -8760,7 +8775,7 @@ trainerdata 178, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -8791,7 +8806,7 @@ trainerdata 179, "Kipp"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -8807,7 +8822,7 @@ trainerdata 179, "Kipp"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -8823,7 +8838,7 @@ trainerdata 179, "Kipp"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -8839,7 +8854,7 @@ trainerdata 179, "Kipp"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -8870,7 +8885,7 @@ trainerdata 180, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -8901,7 +8916,7 @@ trainerdata 181, "William"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -8932,7 +8947,7 @@ trainerdata 182, "Beverly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -8963,7 +8978,7 @@ trainerdata 183, "Alice"
         move MOVE_SWEET_SCENT
         move MOVE_DRAIN_PUNCH
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -8979,7 +8994,7 @@ trainerdata 183, "Alice"
         move MOVE_CRUNCH
         move MOVE_MUD_BOMB
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -8995,7 +9010,7 @@ trainerdata 183, "Alice"
         move MOVE_ATTRACT
         move MOVE_DRAIN_PUNCH
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -9026,7 +9041,7 @@ trainerdata 184, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -9042,7 +9057,7 @@ trainerdata 184, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -9608,7 +9623,7 @@ trainerdata 194, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -9921,7 +9936,7 @@ trainerdata 201, "Andrew"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -9937,7 +9952,7 @@ trainerdata 201, "Andrew"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -9968,7 +9983,7 @@ trainerdata 202, "Calvin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SCRAPPY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -9999,7 +10014,7 @@ trainerdata 203, "Phillip"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10015,7 +10030,7 @@ trainerdata 203, "Phillip"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -10046,7 +10061,7 @@ trainerdata 204, "Leonard"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -10062,7 +10077,7 @@ trainerdata 204, "Leonard"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10235,7 +10250,7 @@ trainerdata 207, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10266,7 +10281,7 @@ trainerdata 208, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -10297,7 +10312,7 @@ trainerdata 209, "Cassie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -10313,7 +10328,7 @@ trainerdata 209, "Cassie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -10344,7 +10359,7 @@ trainerdata 210, "Caroline"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -10360,7 +10375,7 @@ trainerdata 210, "Caroline"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -10376,7 +10391,7 @@ trainerdata 210, "Caroline"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -10407,7 +10422,7 @@ trainerdata 211, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -10423,7 +10438,7 @@ trainerdata 211, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -10454,7 +10469,7 @@ trainerdata 212, "Terrell"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10485,7 +10500,7 @@ trainerdata 213, "Kent"
         move MOVE_VICE_GRIP
         move MOVE_HARDEN
         ability ABILITY_HYPER_CUTTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -10501,7 +10516,7 @@ trainerdata 213, "Kent"
         move MOVE_VICE_GRIP
         move MOVE_HARDEN
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -10532,7 +10547,7 @@ trainerdata 214, "Roberto"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -10548,7 +10563,7 @@ trainerdata 214, "Roberto"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -10564,7 +10579,7 @@ trainerdata 214, "Roberto"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10595,7 +10610,7 @@ trainerdata 215, "Connie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -11081,7 +11096,7 @@ trainerdata 225, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -11112,7 +11127,7 @@ trainerdata 226, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -11237,7 +11252,7 @@ trainerdata 229, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11253,7 +11268,7 @@ trainerdata 229, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11284,7 +11299,7 @@ trainerdata 230, "Franklin"
         move MOVE_PSYCHIC
         move MOVE_DISABLE
         ability ABILITY_INNER_FOCUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -11300,7 +11315,7 @@ trainerdata 230, "Franklin"
         move MOVE_DOUBLE_HIT
         move MOVE_PSYCHIC
         ability ABILITY_EARLY_BIRD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -11331,7 +11346,7 @@ trainerdata 231, "Edward"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11362,7 +11377,7 @@ trainerdata 232, "Vincent"
         move MOVE_PIN_MISSILE
         move MOVE_HELPING_HAND
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11378,7 +11393,7 @@ trainerdata 232, "Vincent"
         move MOVE_GYRO_BALL
         move MOVE_SCREECH
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -11394,7 +11409,7 @@ trainerdata 232, "Vincent"
         move MOVE_THUNDER_WAVE
         move MOVE_MAGNET_BOMB
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -11417,33 +11432,33 @@ trainerdata 233, "Eric"
         // mon 0
         ivs 255
         abilityslot 0
-        level 11
+        level 24
         pokemon SPECIES_GRIMER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 0, 0, 0, 0, 0, 0
+        move MOVE_ROCK_TOMB
+        move MOVE_POISON_FANG
+        move MOVE_DIG
+        move MOVE_THUNDER_PUNCH
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 11
-        pokemon SPECIES_GRIMER
+        level 24
+        monwithform SPECIES_GRIMER, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 0, 0, 0, 0, 0, 0
+        move MOVE_BITE
+        move MOVE_POISON_FANG
+        move MOVE_DIG
+        move MOVE_THUNDER_PUNCH
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -11472,7 +11487,7 @@ trainerdata 234, "Eoin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -11488,7 +11503,7 @@ trainerdata 234, "Eoin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -11504,7 +11519,7 @@ trainerdata 234, "Eoin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -11535,7 +11550,7 @@ trainerdata 235, "Noland"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -11551,7 +11566,7 @@ trainerdata 235, "Noland"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -11708,7 +11723,7 @@ trainerdata 238, "Stanly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11724,7 +11739,7 @@ trainerdata 238, "Stanly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11740,7 +11755,7 @@ trainerdata 238, "Stanly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLOUD_NINE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -11771,7 +11786,7 @@ trainerdata 239, "Jeff"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11787,7 +11802,7 @@ trainerdata 239, "Jeff"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11818,7 +11833,7 @@ trainerdata 240, "Garrett"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HYPER_CUTTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -11849,7 +11864,7 @@ trainerdata 241, "Kenneth"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11865,7 +11880,7 @@ trainerdata 241, "Kenneth"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11881,7 +11896,7 @@ trainerdata 241, "Kenneth"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -11897,7 +11912,7 @@ trainerdata 241, "Kenneth"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -11928,7 +11943,7 @@ trainerdata 242, "Fritz"
         move MOVE_ENCORE
         move MOVE_DOUBLE_SLAP
         ability ABILITY_FILTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -11944,7 +11959,7 @@ trainerdata 242, "Fritz"
         move MOVE_CONFUSE_RAY
         move MOVE_FEINT_ATTACK
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -11960,7 +11975,7 @@ trainerdata 242, "Fritz"
         move MOVE_SEISMIC_TOSS
         move MOVE_REVENGE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -11991,7 +12006,7 @@ trainerdata 243, "Katie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -12424,7 +12439,7 @@ trainerdata 248, "Ed"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -12440,7 +12455,7 @@ trainerdata 248, "Ed"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -12456,7 +12471,7 @@ trainerdata 248, "Ed"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -12676,7 +12691,7 @@ trainerdata 252, "Harold"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -12692,7 +12707,7 @@ trainerdata 252, "Harold"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -13767,7 +13782,7 @@ trainerdata 265, "Silver"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -13777,7 +13792,7 @@ trainerdata 265, "Silver"
 trainerdata 266, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 3
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -13790,51 +13805,82 @@ trainerdata 266, "Silver"
         // mon 0
         ivs 255
         abilityslot 0
-        level 14
+        level 21
         pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_WISE_GLASSES
+        move MOVE_OMINOUS_WIND
+        move MOVE_CURSE
+        move MOVE_SLUDGE
+        move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 21
         pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_SCOPE_LENS
+        move MOVE_BITE
+        move MOVE_WING_ATTACK
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_VENOSHOCK
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 2
+		 // mon 2
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_QUILAVA
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_BLAZE
-        setivs 3, 3, 3, 3, 3, 3
+        level 21
+        pokemon SPECIES_MAGNEMITE
+        item ITEM_MAGNET
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIRKY
+        nature NATURE_MODEST
         ballseal 0
-
+		
+		 // mon 3
+        ivs 255
+        abilityslot 0
+        level 22
+        pokemon SPECIES_KADABRA
+        item ITEM_TWISTED_SPOON
+        move MOVE_PSYBEAM
+        move MOVE_REFLECT
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_CHARGE_BEAM
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+				
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 23
+        pokemon SPECIES_QUILAVA
+        item ITEM_SITRUS_BERRY
+        move MOVE_FLAME_CHARGE
+        move MOVE_EXTRASENSORY
+        move MOVE_SCORCHING_SANDS
+        move MOVE_QUICK_ATTACK
+        ability ABILITY_BLAZE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_SERIOUS
+        ballseal 0
     endparty
 
 trainerdata 267, "Silver"
@@ -14030,7 +14076,7 @@ trainerdata 268, "Silver"
 trainerdata 269, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 3
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -14043,49 +14089,81 @@ trainerdata 269, "Silver"
         // mon 0
         ivs 255
         abilityslot 0
-        level 14
+        level 21
         pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_WISE_GLASSES
+        move MOVE_OMINOUS_WIND
+        move MOVE_CURSE
+        move MOVE_SLUDGE
+        move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 21
         pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        item ITEM_SCOPE_LENS
+        move MOVE_BITE
+        move MOVE_WING_ATTACK
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_VENOSHOCK
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 2
+		 // mon 2
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_CROCONAW
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SHEER_FORCE
-        setivs 3, 3, 3, 3, 3, 3
+        level 21
+        pokemon SPECIES_MAGNEMITE
+        item ITEM_MAGNET
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        nature NATURE_MODEST
+        ballseal 0
+		
+		 // mon 3
+        ivs 255
+        abilityslot 0
+        level 22
+        pokemon SPECIES_KADABRA
+        item ITEM_TWISTED_SPOON
+        move MOVE_PSYBEAM
+        move MOVE_REFLECT
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_CHARGE_BEAM
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+				
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 23
+        pokemon SPECIES_CROCONAW
+        item ITEM_SITRUS_BERRY
+        move MOVE_ICE_FANG
+        move MOVE_AQUA_JET
+        move MOVE_BITE
+        move MOVE_METAL_CLAW
+        ability ABILITY_BLAZE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -14093,7 +14171,7 @@ trainerdata 269, "Silver"
 trainerdata 270, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 4
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -14102,69 +14180,85 @@ trainerdata 270, "Silver"
     battletype SINGLE_BATTLE
     endentry
 
-    party 270
+   party 270
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
+        level 21
         pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_LICK
-        move MOVE_CONFUSE_RAY
-        move MOVE_MEAN_LOOK
+        item ITEM_WISE_GLASSES
+        move MOVE_OMINOUS_WIND
         move MOVE_CURSE
+        move MOVE_SLUDGE
+        move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_JOLLY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_THUNDER_WAVE
-        move MOVE_THUNDER_SHOCK
-        move MOVE_SUPERSONIC
-        move MOVE_SONIC_BOOM
-        ability ABILITY_MAGNET_PULL
-        setivs 9, 9, 9, 9, 9, 9
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 20
+        level 21
         pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_SUPERSONIC
+        item ITEM_SCOPE_LENS
         move MOVE_BITE
         move MOVE_WING_ATTACK
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_VENOSHOCK
         ability ABILITY_SNIPER
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 3
+		 // mon 2
+        ivs 255
+        abilityslot 0
+        level 21
+        pokemon SPECIES_MAGNEMITE
+        item ITEM_MAGNET
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+		 // mon 3
         ivs 255
         abilityslot 0
         level 22
-        pokemon SPECIES_CROCONAW
-        item ITEM_NONE
-        move MOVE_SCARY_FACE
-        move MOVE_ICE_FANG
-        move MOVE_WATER_GUN
-        move MOVE_BITE
-        ability ABILITY_SHEER_FORCE
-        setivs 9, 9, 9, 9, 9, 9
+        pokemon SPECIES_KADABRA
+        item ITEM_TWISTED_SPOON
+        move MOVE_PSYBEAM
+        move MOVE_REFLECT
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_CHARGE_BEAM
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_IMPISH
+        nature NATURE_ADAMANT
+        ballseal 0
+				
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 23
+        pokemon SPECIES_CROCONAW
+        item ITEM_SITRUS_BERRY
+        move MOVE_ICE_FANG
+        move MOVE_AQUA_JET
+        move MOVE_BITE
+        move MOVE_METAL_CLAW
+        ability ABILITY_BLAZE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -14399,7 +14493,7 @@ trainerdata 273, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -14415,7 +14509,7 @@ trainerdata 273, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -14431,7 +14525,7 @@ trainerdata 273, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -14462,7 +14556,7 @@ trainerdata 274, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -14478,7 +14572,7 @@ trainerdata 274, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -14494,7 +14588,7 @@ trainerdata 274, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -14525,7 +14619,7 @@ trainerdata 275, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -14541,7 +14635,7 @@ trainerdata 275, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -14557,7 +14651,7 @@ trainerdata 275, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -14573,7 +14667,7 @@ trainerdata 275, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGMA_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -14604,7 +14698,7 @@ trainerdata 276, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -14620,7 +14714,7 @@ trainerdata 276, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -14651,7 +14745,7 @@ trainerdata 277, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -14667,7 +14761,7 @@ trainerdata 277, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -14683,7 +14777,7 @@ trainerdata 277, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -14793,7 +14887,7 @@ trainerdata 279, "Joey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -14824,7 +14918,7 @@ trainerdata 280, "Joey"
         move MOVE_HYPER_FANG
         move MOVE_SCARY_FACE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -14855,7 +14949,7 @@ trainerdata 281, "Richard"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -14886,7 +14980,7 @@ trainerdata 282, "Ned"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -14902,7 +14996,7 @@ trainerdata 282, "Ned"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -14918,7 +15012,7 @@ trainerdata 282, "Ned"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -14949,7 +15043,7 @@ trainerdata 283, "Orson"
         move MOVE_LEER
         move MOVE_BITE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -14965,7 +15059,7 @@ trainerdata 283, "Orson"
         move MOVE_SLUDGE
         move MOVE_SMOKESCREEN
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -14996,7 +15090,7 @@ trainerdata 284, "Corey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15012,7 +15106,7 @@ trainerdata 284, "Corey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -15028,7 +15122,7 @@ trainerdata 284, "Corey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15044,7 +15138,7 @@ trainerdata 284, "Corey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -15649,7 +15743,7 @@ trainerdata 291, "Debbie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -15680,7 +15774,7 @@ trainerdata 292, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -15711,7 +15805,7 @@ trainerdata 293, "Nicole"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -15727,7 +15821,7 @@ trainerdata 293, "Nicole"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -15743,7 +15837,7 @@ trainerdata 293, "Nicole"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HYDRATION
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -15774,7 +15868,7 @@ trainerdata 294, "Lori"
         move MOVE_ICE_BEAM
         move MOVE_RECOVER
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15790,7 +15884,7 @@ trainerdata 294, "Lori"
         move MOVE_ICE_BEAM
         move MOVE_RECOVER
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15806,7 +15900,7 @@ trainerdata 294, "Lori"
         move MOVE_THUNDER
         move MOVE_BLIZZARD
         ability ABILITY_NATURAL_CURE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15837,7 +15931,7 @@ trainerdata 295, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -15868,7 +15962,7 @@ trainerdata 296, "Nikki"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -15884,7 +15978,7 @@ trainerdata 296, "Nikki"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -15915,7 +16009,7 @@ trainerdata 297, "Diana"
         move MOVE_PSYCH_UP
         move MOVE_DISABLE
         ability ABILITY_CLOUD_NINE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -15946,7 +16040,7 @@ trainerdata 298, "Briana"
         move MOVE_SUPERSONIC
         move MOVE_POISON_JAB
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -15962,7 +16056,7 @@ trainerdata 298, "Briana"
         move MOVE_SUPERSONIC
         move MOVE_POISON_JAB
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -16212,7 +16306,7 @@ trainerdata 304, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -16228,7 +16322,7 @@ trainerdata 304, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -16244,7 +16338,7 @@ trainerdata 304, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -16260,7 +16354,7 @@ trainerdata 304, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -16291,7 +16385,7 @@ trainerdata 305, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -16307,7 +16401,7 @@ trainerdata 305, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -16323,7 +16417,7 @@ trainerdata 305, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -16339,7 +16433,7 @@ trainerdata 305, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -16370,7 +16464,7 @@ trainerdata 306, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -16386,7 +16480,7 @@ trainerdata 306, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -16402,7 +16496,7 @@ trainerdata 306, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -16418,7 +16512,7 @@ trainerdata 306, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -16449,7 +16543,7 @@ trainerdata 307, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -16465,7 +16559,7 @@ trainerdata 307, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -16481,7 +16575,7 @@ trainerdata 307, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -16497,7 +16591,7 @@ trainerdata 307, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -16559,7 +16653,7 @@ trainerdata 309, "Dwayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -16575,7 +16669,7 @@ trainerdata 309, "Dwayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -16591,7 +16685,7 @@ trainerdata 309, "Dwayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -16607,7 +16701,7 @@ trainerdata 309, "Dwayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -16638,7 +16732,7 @@ trainerdata 310, "Harris"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -16669,7 +16763,7 @@ trainerdata 311, "Zeke"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -16685,7 +16779,7 @@ trainerdata 311, "Zeke"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -16716,7 +16810,7 @@ trainerdata 312, "Charles"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -16732,7 +16826,7 @@ trainerdata 312, "Charles"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -16748,7 +16842,7 @@ trainerdata 312, "Charles"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -16779,7 +16873,7 @@ trainerdata 313, "Reese"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -16810,7 +16904,7 @@ trainerdata 314, "Joel"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -16826,7 +16920,7 @@ trainerdata 314, "Joel"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -16857,7 +16951,7 @@ trainerdata 315, "Glenn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -16873,7 +16967,7 @@ trainerdata 315, "Glenn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -16889,7 +16983,7 @@ trainerdata 315, "Glenn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -16920,7 +17014,7 @@ trainerdata 316, "Herman"
         move MOVE_BARRAGE
         move MOVE_DREAM_EATER
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -16936,7 +17030,7 @@ trainerdata 316, "Herman"
         move MOVE_BARRAGE
         move MOVE_DREAM_EATER
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -16952,7 +17046,7 @@ trainerdata 316, "Herman"
         move MOVE_WOOD_HAMMER
         move MOVE_DREAM_EATER
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -16983,7 +17077,7 @@ trainerdata 317, "Fidel"
         move MOVE_CONFUSE_RAY
         move MOVE_ME_FIRST
         ability ABILITY_EARLY_BIRD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -17014,7 +17108,7 @@ trainerdata 318, "Burt"
         move MOVE_DOUBLE_HIT
         move MOVE_SLUDGE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -17030,7 +17124,7 @@ trainerdata 318, "Burt"
         move MOVE_ANCIENT_POWER
         move MOVE_RECOVER
         ability ABILITY_SIMPLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -17091,7 +17185,7 @@ trainerdata 320, "Martin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -17107,7 +17201,7 @@ trainerdata 320, "Martin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MEGA_LAUNCHER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -17138,7 +17232,7 @@ trainerdata 321, "Stephen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -17154,7 +17248,7 @@ trainerdata 321, "Stephen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -17170,7 +17264,7 @@ trainerdata 321, "Stephen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -17201,7 +17295,7 @@ trainerdata 322, "Barney"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -17217,7 +17311,7 @@ trainerdata 322, "Barney"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -17233,7 +17327,7 @@ trainerdata 322, "Barney"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -17264,7 +17358,7 @@ trainerdata 323, "Tully"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -17295,7 +17389,7 @@ trainerdata 324, "Tully"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -17311,7 +17405,7 @@ trainerdata 324, "Tully"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -17327,7 +17421,7 @@ trainerdata 324, "Tully"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -17358,7 +17452,7 @@ trainerdata 325, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -17374,7 +17468,7 @@ trainerdata 325, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -17390,7 +17484,7 @@ trainerdata 325, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -17421,7 +17515,7 @@ trainerdata 326, "Jo & Zoe"
         move MOVE_SLUDGE_BOMB
         move MOVE_PROTECT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -17437,7 +17531,7 @@ trainerdata 326, "Jo & Zoe"
         move MOVE_DRAIN_PUNCH
         move MOVE_ATTRACT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -17468,7 +17562,7 @@ trainerdata 327, "Danny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -17484,7 +17578,7 @@ trainerdata 327, "Danny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -17500,7 +17594,7 @@ trainerdata 327, "Danny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -17531,7 +17625,7 @@ trainerdata 328, "Tommy"
         move MOVE_FLY
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -17547,7 +17641,7 @@ trainerdata 328, "Tommy"
         move MOVE_REFLECT
         move MOVE_FOCUS_BLAST
         ability ABILITY_INNER_FOCUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -17578,7 +17672,7 @@ trainerdata 329, "Dudley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -17609,7 +17703,7 @@ trainerdata 330, "Joe"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -17625,7 +17719,7 @@ trainerdata 330, "Joe"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -17656,7 +17750,7 @@ trainerdata 331, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -17672,7 +17766,7 @@ trainerdata 331, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -17688,7 +17782,7 @@ trainerdata 331, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -17719,7 +17813,7 @@ trainerdata 332, "Heidi"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEAF_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -17735,7 +17829,7 @@ trainerdata 332, "Heidi"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -17766,7 +17860,7 @@ trainerdata 333, "Edna"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -17782,7 +17876,7 @@ trainerdata 333, "Edna"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -17813,7 +17907,7 @@ trainerdata 334, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -17829,7 +17923,7 @@ trainerdata 334, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -17845,7 +17939,7 @@ trainerdata 334, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -17876,7 +17970,7 @@ trainerdata 335, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -17892,7 +17986,7 @@ trainerdata 335, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -17923,7 +18017,7 @@ trainerdata 336, "Tanya"
         move MOVE_EGG_BOMB
         move MOVE_HYPNOSIS
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -17954,7 +18048,7 @@ trainerdata 337, "Gregory"
         move MOVE_THUNDER_WAVE
         move MOVE_DOUBLE_TEAM
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -17970,7 +18064,7 @@ trainerdata 337, "Gregory"
         move MOVE_CHARGE_BEAM
         move MOVE_DOUBLE_TEAM
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -17986,7 +18080,7 @@ trainerdata 337, "Gregory"
         move MOVE_THUNDER_WAVE
         move MOVE_THUNDER_FANG
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -18017,7 +18111,7 @@ trainerdata 338, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -18111,7 +18205,7 @@ trainerdata 340, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -18142,7 +18236,7 @@ trainerdata 341, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -18173,7 +18267,7 @@ trainerdata 342, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -18204,7 +18298,7 @@ trainerdata 343, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18235,7 +18329,7 @@ trainerdata 344, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -18266,7 +18360,7 @@ trainerdata 345, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -18297,7 +18391,7 @@ trainerdata 346, "Julia"
         move MOVE_SLASH
         move MOVE_ATTRACT
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18313,7 +18407,7 @@ trainerdata 346, "Julia"
         move MOVE_INGRAIN
         move MOVE_ATTRACT
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -18329,7 +18423,7 @@ trainerdata 346, "Julia"
         move MOVE_ATTRACT
         move MOVE_X_SCISSOR
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -18360,7 +18454,7 @@ trainerdata 347, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -18391,7 +18485,7 @@ trainerdata 348, "Robert"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -18422,7 +18516,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18438,7 +18532,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18454,7 +18548,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18470,7 +18564,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18486,7 +18580,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18502,7 +18596,7 @@ trainerdata 349, "Joshua"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -18533,7 +18627,7 @@ trainerdata 350, "Carter"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -18549,7 +18643,7 @@ trainerdata 350, "Carter"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -18565,7 +18659,7 @@ trainerdata 350, "Carter"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -18596,7 +18690,7 @@ trainerdata 351, "Trevor"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLOUD_NINE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -18627,7 +18721,7 @@ trainerdata 352, "Georgia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -18643,7 +18737,7 @@ trainerdata 352, "Georgia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -18659,7 +18753,7 @@ trainerdata 352, "Georgia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -18675,7 +18769,7 @@ trainerdata 352, "Georgia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ADAPTABILITY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -18691,7 +18785,7 @@ trainerdata 352, "Georgia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -18753,7 +18847,7 @@ trainerdata 354, "Laura"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -18769,7 +18863,7 @@ trainerdata 354, "Laura"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -18785,7 +18879,7 @@ trainerdata 354, "Laura"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -18816,7 +18910,7 @@ trainerdata 355, "Shannon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -18832,7 +18926,7 @@ trainerdata 355, "Shannon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -18848,7 +18942,7 @@ trainerdata 355, "Shannon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -18879,7 +18973,7 @@ trainerdata 356, "Michelle"
         move MOVE_LEECH_SEED
         move MOVE_SUNNY_DAY
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -18895,7 +18989,7 @@ trainerdata 356, "Michelle"
         move MOVE_STUN_SPORE
         move MOVE_BOUNCE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -18911,7 +19005,7 @@ trainerdata 356, "Michelle"
         move MOVE_SLEEP_POWDER
         move MOVE_SUNNY_DAY
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -18942,7 +19036,7 @@ trainerdata 357, "Clarke"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -18958,7 +19052,7 @@ trainerdata 357, "Clarke"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -18989,7 +19083,7 @@ trainerdata 358, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -19005,7 +19099,7 @@ trainerdata 358, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -19021,7 +19115,7 @@ trainerdata 358, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -19052,7 +19146,7 @@ trainerdata 359, "Jim"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19083,7 +19177,7 @@ trainerdata 360, "Arnie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -19255,7 +19349,7 @@ trainerdata 364, "Sam"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STENCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -19271,7 +19365,7 @@ trainerdata 364, "Sam"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_REGENERATOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -19302,7 +19396,7 @@ trainerdata 365, "Tyrone"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -19318,7 +19412,7 @@ trainerdata 365, "Tyrone"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -19334,7 +19428,7 @@ trainerdata 365, "Tyrone"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -19396,7 +19490,7 @@ trainerdata 367, "Shawn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -19412,7 +19506,7 @@ trainerdata 367, "Shawn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_REGENERATOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -19428,7 +19522,7 @@ trainerdata 367, "Shawn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -19459,7 +19553,7 @@ trainerdata 368, "Rebecca"
         move MOVE_SAFEGUARD
         move MOVE_GYRO_BALL
         ability ABILITY_HEATPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -19475,7 +19569,7 @@ trainerdata 368, "Rebecca"
         move MOVE_PSYBEAM
         move MOVE_HYPNOSIS
         ability ABILITY_BAD_DREAMS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -19506,7 +19600,7 @@ trainerdata 369, "Darcy"
         move MOVE_DISABLE
         move MOVE_PSYCHIC
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -19522,7 +19616,7 @@ trainerdata 369, "Darcy"
         move MOVE_PSYCHIC
         move MOVE_YAWN
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19553,7 +19647,7 @@ trainerdata 370, "Jerome"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -19569,7 +19663,7 @@ trainerdata 370, "Jerome"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -19585,7 +19679,7 @@ trainerdata 370, "Jerome"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -19601,7 +19695,7 @@ trainerdata 370, "Jerome"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -19632,7 +19726,7 @@ trainerdata 371, "Tucker"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -19648,7 +19742,7 @@ trainerdata 371, "Tucker"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -19679,7 +19773,7 @@ trainerdata 372, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19695,7 +19789,7 @@ trainerdata 372, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -19711,7 +19805,7 @@ trainerdata 372, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -19742,7 +19836,7 @@ trainerdata 373, "Frankie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -19773,7 +19867,7 @@ trainerdata 374, "Tyson"
         move MOVE_SURF
         move MOVE_AMNESIA
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -19789,7 +19883,7 @@ trainerdata 374, "Tyson"
         move MOVE_OCTAZOOKA
         move MOVE_AURORA_BEAM
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -19820,7 +19914,7 @@ trainerdata 375, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -19836,7 +19930,7 @@ trainerdata 375, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -19852,7 +19946,7 @@ trainerdata 375, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -19883,7 +19977,7 @@ trainerdata 376, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -19899,7 +19993,7 @@ trainerdata 376, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -19915,7 +20009,7 @@ trainerdata 376, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -19946,7 +20040,7 @@ trainerdata 377, "Parker"
         move MOVE_TWISTER
         move MOVE_AGILITY
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -19962,7 +20056,7 @@ trainerdata 377, "Parker"
         move MOVE_TWISTER
         move MOVE_AGILITY
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19993,7 +20087,7 @@ trainerdata 378, "Warren"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -20009,7 +20103,7 @@ trainerdata 378, "Warren"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -20040,7 +20134,7 @@ trainerdata 379, "Jimmy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -20056,7 +20150,7 @@ trainerdata 379, "Jimmy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -20072,7 +20166,7 @@ trainerdata 379, "Jimmy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -20103,7 +20197,7 @@ trainerdata 380, "Owen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -20134,7 +20228,7 @@ trainerdata 381, "Jason"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -20150,7 +20244,7 @@ trainerdata 381, "Jason"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INFILTRATOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -20181,7 +20275,7 @@ trainerdata 382, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOLAR_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -20197,7 +20291,7 @@ trainerdata 382, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -20306,7 +20400,7 @@ trainerdata 385, "Dara & Dia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -20322,7 +20416,7 @@ trainerdata 385, "Dara & Dia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -20353,7 +20447,7 @@ trainerdata 386, "Greg"
         move MOVE_DREAM_EATER
         move MOVE_NONE
         ability ABILITY_INSOMNIA
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -20431,7 +20525,7 @@ trainerdata 388, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -20447,7 +20541,7 @@ trainerdata 388, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -20478,7 +20572,7 @@ trainerdata 389, "Nelson"
         move MOVE_WATER_GUN
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -20494,7 +20588,7 @@ trainerdata 389, "Nelson"
         move MOVE_WATER_GUN
         move MOVE_CONFUSION
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -20525,7 +20619,7 @@ trainerdata 390, "Ray"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -20548,15 +20642,15 @@ trainerdata 391, "Issac"
         // mon 0
         ivs 255
         abilityslot 0
-        level 12
+        level 25
         pokemon SPECIES_LICKITUNG
         item ITEM_NONE
         move MOVE_LICK
         move MOVE_SUPERSONIC
-        move MOVE_CUT
-        move MOVE_NONE
+        move MOVE_KNOCK_OFF
+        move MOVE_STOMP
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -20579,15 +20673,15 @@ trainerdata 392, "Donald"
         // mon 0
         ivs 255
         abilityslot 0
-        level 11
+        level 24
         pokemon SPECIES_SLOWPOKE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_CURSE
+        move MOVE_WATER_PULSE
+        move MOVE_PSYBEAM
+        move MOVE_HEADBUTT
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -20595,15 +20689,15 @@ trainerdata 392, "Donald"
         // mon 1
         ivs 255
         abilityslot 0
-        level 11
+        level 24
         pokemon SPECIES_SLOWPOKE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_CURSE
+        move MOVE_WATER_PULSE
+        move MOVE_PSYBEAM
+        move MOVE_HEADBUTT
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -20613,7 +20707,7 @@ trainerdata 392, "Donald"
 trainerdata 393, "Teru"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SUPER_NERD
-    nummons 4
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -20626,15 +20720,15 @@ trainerdata 393, "Teru"
         // mon 0
         ivs 255
         abilityslot 0
-        level 7
+        level 23
         pokemon SPECIES_MAGNEMITE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -20642,15 +20736,15 @@ trainerdata 393, "Teru"
         // mon 1
         ivs 255
         abilityslot 0
-        level 11
-        pokemon SPECIES_VOLTORB
+        level 23
+        monwithform SPECIES_VOLTORB, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        move MOVE_MAGICAL_LEAF
+        move MOVE_CHARGE_BEAM
+        move MOVE_SWIFT
+        move MOVE_ELECTRO_BALL
+        ability ABILITY_STATIC
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -20658,34 +20752,19 @@ trainerdata 393, "Teru"
         // mon 2
         ivs 255
         abilityslot 0
-        level 7
+        level 23
         pokemon SPECIES_MAGNEMITE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
 
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 9
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
-        ballseal 0
 
     endparty
 
@@ -20713,7 +20792,7 @@ trainerdata 394, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -20729,7 +20808,7 @@ trainerdata 394, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -20745,7 +20824,7 @@ trainerdata 394, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -20776,7 +20855,7 @@ trainerdata 395, "Mark"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -20792,7 +20871,7 @@ trainerdata 395, "Mark"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -20808,7 +20887,7 @@ trainerdata 395, "Mark"
         move MOVE_CONFUSION
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -20839,7 +20918,7 @@ trainerdata 396, "Horton"
         move MOVE_SCREECH
         move MOVE_EXPLOSION
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -20855,7 +20934,7 @@ trainerdata 396, "Horton"
         move MOVE_DOUBLE_TEAM
         move MOVE_LIGHT_SCREEN
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -20871,7 +20950,7 @@ trainerdata 396, "Horton"
         move MOVE_SCREECH
         move MOVE_ROLLOUT
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -20902,7 +20981,7 @@ trainerdata 397, "Chad"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -20933,7 +21012,7 @@ trainerdata 398, "Valerie"
         move MOVE_TACKLE
         move MOVE_POISON_POWDER
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -20949,7 +21028,7 @@ trainerdata 398, "Valerie"
         move MOVE_TACKLE
         move MOVE_STUN_SPORE
         ability ABILITY_LEAF_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -20980,7 +21059,7 @@ trainerdata 399, "Lyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -20996,7 +21075,7 @@ trainerdata 399, "Lyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -21012,7 +21091,7 @@ trainerdata 399, "Lyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -21043,7 +21122,7 @@ trainerdata 400, "Dana"
         move MOVE_THUNDER_SHOCK
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -21059,7 +21138,7 @@ trainerdata 400, "Dana"
         move MOVE_DISABLE
         move MOVE_CONFUSION
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -21090,7 +21169,7 @@ trainerdata 401, "Alfred"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -21121,7 +21200,7 @@ trainerdata 402, "Tiffany"
         move MOVE_DOUBLE_SLAP
         move MOVE_MINIMIZE
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -21152,7 +21231,7 @@ trainerdata 403, "Spencer"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -21168,7 +21247,7 @@ trainerdata 403, "Spencer"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -21184,7 +21263,7 @@ trainerdata 403, "Spencer"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -21262,7 +21341,7 @@ trainerdata 405, "Phil"
         move MOVE_ME_FIRST
         move MOVE_CONFUSE_RAY
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -21278,7 +21357,7 @@ trainerdata 405, "Phil"
         move MOVE_REFLECT
         move MOVE_CHARGE_BEAM
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -21309,7 +21388,7 @@ trainerdata 406, "Zach"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -21426,31 +21505,31 @@ trainerdata 409, "Brandon"
         // mon 0
         ivs 255
         abilityslot 0
-        level 13
-        pokemon SPECIES_SNUBBULL
+        level 23
+        pokemon SPECIES_GRANBULL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_BRICK_BREAK
+        move MOVE_PLAY_ROUGH
+        move MOVE_BULLDOZE
+        move MOVE_FIRE_FANG
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 13
-        pokemon SPECIES_MAREEP
+        level 23
+        pokemon SPECIES_FLAAFFY
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_POWER_GEM
+        move MOVE_FLASH
+        move MOVE_COTTON_GUARD
+        move MOVE_GROWL
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -21481,7 +21560,7 @@ trainerdata 410, "Harry"
         move MOVE_SLAM
         move MOVE_MUD_SHOT
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -21512,7 +21591,7 @@ trainerdata 411, "Vernon"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -21543,7 +21622,7 @@ trainerdata 412, "Eli"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -21559,7 +21638,7 @@ trainerdata 412, "Eli"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -21575,7 +21654,7 @@ trainerdata 412, "Eli"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAP_SIPPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -21606,7 +21685,7 @@ trainerdata 413, "Scott"
         move MOVE_ROLLOUT
         move MOVE_POISON_STING
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -21622,7 +21701,7 @@ trainerdata 413, "Scott"
         move MOVE_STOCKPILE
         move MOVE_SPIT_UP
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -21638,7 +21717,7 @@ trainerdata 413, "Scott"
         move MOVE_FLAIL
         move MOVE_WATER_PULSE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -21700,7 +21779,7 @@ trainerdata 415, "Jared"
         move MOVE_REFLECT
         move MOVE_LIGHT_SCREEN
         ability ABILITY_FILTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -21716,7 +21795,7 @@ trainerdata 415, "Jared"
         move MOVE_SLEEP_POWDER
         move MOVE_LEECH_SEED
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -21732,7 +21811,7 @@ trainerdata 415, "Jared"
         move MOVE_HYPNOSIS
         move MOVE_GRASS_KNOT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -21763,7 +21842,7 @@ trainerdata 416, "Jo & Zoe"
         move MOVE_DRAIN_PUNCH
         move MOVE_ATTRACT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -21779,7 +21858,7 @@ trainerdata 416, "Jo & Zoe"
         move MOVE_SLUDGE_BOMB
         move MOVE_PROTECT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -21952,7 +22031,7 @@ trainerdata 419, "Ellen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHEER_FORCE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -21968,7 +22047,7 @@ trainerdata 419, "Ellen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -22077,7 +22156,7 @@ trainerdata 422, "Rodney"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -22093,7 +22172,7 @@ trainerdata 422, "Rodney"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BAD_DREAMS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -22124,7 +22203,7 @@ trainerdata 423, "Jeremy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -22140,7 +22219,7 @@ trainerdata 423, "Jeremy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -22156,7 +22235,7 @@ trainerdata 423, "Jeremy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -22187,7 +22266,7 @@ trainerdata 424, "Colin"
         move MOVE_AVALANCHE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -22218,7 +22297,7 @@ trainerdata 425, "Meg & Peg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_QUICK_FEET
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -22234,7 +22313,7 @@ trainerdata 425, "Meg & Peg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -22265,7 +22344,7 @@ trainerdata 426, "Meg & Peg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -22281,7 +22360,7 @@ trainerdata 426, "Meg & Peg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_QUICK_FEET
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -22312,7 +22391,7 @@ trainerdata 427, "Shirley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_PUNK_ROCK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -22328,7 +22407,7 @@ trainerdata 427, "Shirley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -22359,7 +22438,7 @@ trainerdata 428, "Nate"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -22375,7 +22454,7 @@ trainerdata 428, "Nate"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -22406,7 +22485,7 @@ trainerdata 429, "Ricky"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -22422,7 +22501,7 @@ trainerdata 429, "Ricky"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -22453,7 +22532,7 @@ trainerdata 430, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -22469,7 +22548,7 @@ trainerdata 430, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -22500,7 +22579,7 @@ trainerdata 431, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -22516,7 +22595,7 @@ trainerdata 431, "Jack"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -22547,7 +22626,7 @@ trainerdata 432, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -22563,7 +22642,7 @@ trainerdata 432, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SPEED_BOOST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -22594,7 +22673,7 @@ trainerdata 433, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -22610,7 +22689,7 @@ trainerdata 433, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -22626,7 +22705,7 @@ trainerdata 433, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -22642,7 +22721,7 @@ trainerdata 433, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SPEED_BOOST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -22673,7 +22752,7 @@ trainerdata 434, "Chad"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -22689,7 +22768,7 @@ trainerdata 434, "Chad"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -22720,7 +22799,7 @@ trainerdata 435, "Chad"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -22736,7 +22815,7 @@ trainerdata 435, "Chad"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -22767,7 +22846,7 @@ trainerdata 436, "Beverly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -22798,7 +22877,7 @@ trainerdata 437, "Beverly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -22829,7 +22908,7 @@ trainerdata 438, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -22845,7 +22924,7 @@ trainerdata 438, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -22876,7 +22955,7 @@ trainerdata 439, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -22892,7 +22971,7 @@ trainerdata 439, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -22908,7 +22987,7 @@ trainerdata 439, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -22924,7 +23003,7 @@ trainerdata 439, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -22955,7 +23034,7 @@ trainerdata 440, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -22971,7 +23050,7 @@ trainerdata 440, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -23002,7 +23081,7 @@ trainerdata 441, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -23018,7 +23097,7 @@ trainerdata 441, "Huey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -23049,7 +23128,7 @@ trainerdata 442, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -23080,7 +23159,7 @@ trainerdata 443, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -23394,7 +23473,7 @@ trainerdata 449, "Arnie"
         move MOVE_CONFUSION
         move MOVE_LEECH_LIFE
         ability ABILITY_SHIELD_DUST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -23425,7 +23504,7 @@ trainerdata 450, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -23441,7 +23520,7 @@ trainerdata 450, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -23457,7 +23536,7 @@ trainerdata 450, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -23488,7 +23567,7 @@ trainerdata 451, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -23504,7 +23583,7 @@ trainerdata 451, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -23535,7 +23614,7 @@ trainerdata 452, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -23551,7 +23630,7 @@ trainerdata 452, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -23582,7 +23661,7 @@ trainerdata 453, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -23598,7 +23677,7 @@ trainerdata 453, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -23614,7 +23693,7 @@ trainerdata 453, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -23645,7 +23724,7 @@ trainerdata 454, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -23661,7 +23740,7 @@ trainerdata 454, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -23677,7 +23756,7 @@ trainerdata 454, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -23693,7 +23772,7 @@ trainerdata 454, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -23724,7 +23803,7 @@ trainerdata 455, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -23740,7 +23819,7 @@ trainerdata 455, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -23756,7 +23835,7 @@ trainerdata 455, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -23772,7 +23851,7 @@ trainerdata 455, "Irwin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -24023,7 +24102,7 @@ trainerdata 460, "Wade"
         move MOVE_CONFUSION
         move MOVE_GUST
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -24039,7 +24118,7 @@ trainerdata 460, "Wade"
         move MOVE_CAPTIVATE
         move MOVE_SAFEGUARD
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24055,7 +24134,7 @@ trainerdata 460, "Wade"
         move MOVE_POISON_JAB
         move MOVE_FOCUS_ENERGY
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24071,7 +24150,7 @@ trainerdata 460, "Wade"
         move MOVE_SLEEP_POWDER
         move MOVE_STUN_SPORE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -24102,7 +24181,7 @@ trainerdata 461, "Wade"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -24118,7 +24197,7 @@ trainerdata 461, "Wade"
         move MOVE_SUPERSONIC
         move MOVE_WHIRLWIND
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24134,7 +24213,7 @@ trainerdata 461, "Wade"
         move MOVE_STRING_SHOT
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -24150,7 +24229,7 @@ trainerdata 461, "Wade"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -24181,7 +24260,7 @@ trainerdata 462, "Ralph"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -24212,7 +24291,7 @@ trainerdata 463, "Ralph"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -24228,7 +24307,7 @@ trainerdata 463, "Ralph"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24259,7 +24338,7 @@ trainerdata 464, "Dana"
         move MOVE_DISCHARGE
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -24275,7 +24354,7 @@ trainerdata 464, "Dana"
         move MOVE_DISABLE
         move MOVE_CONFUSION
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -24306,7 +24385,7 @@ trainerdata 465, "Dana"
         move MOVE_CONFUSION
         move MOVE_SCREECH
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -24322,7 +24401,7 @@ trainerdata 465, "Dana"
         move MOVE_THUNDER_WAVE
         move MOVE_COTTON_SPORE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -24353,7 +24432,7 @@ trainerdata 466, "Tiffany"
         move MOVE_WAKE_UP_SLAP
         move MOVE_METRONOME
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -24384,7 +24463,7 @@ trainerdata 467, "Tiffany"
         move MOVE_WAKE_UP_SLAP
         move MOVE_MOONLIGHT
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -24415,7 +24494,7 @@ trainerdata 468, "Ross"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -24431,7 +24510,7 @@ trainerdata 468, "Ross"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -24462,7 +24541,7 @@ trainerdata 469, "Mitch"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -24493,7 +24572,7 @@ trainerdata 470, "Gregg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24509,7 +24588,7 @@ trainerdata 470, "Gregg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24525,7 +24604,7 @@ trainerdata 470, "Gregg"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24556,7 +24635,7 @@ trainerdata 471, "Garett"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24572,7 +24651,7 @@ trainerdata 471, "Garett"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24588,7 +24667,7 @@ trainerdata 471, "Garett"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -24619,7 +24698,7 @@ trainerdata 472, "Trenton"
         move MOVE_RECOVER
         move MOVE_CHARGE_BEAM
         ability ABILITY_DOWNLOAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24650,7 +24729,7 @@ trainerdata 473, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -24666,7 +24745,7 @@ trainerdata 473, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -24697,7 +24776,7 @@ trainerdata 474, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -24728,7 +24807,7 @@ trainerdata 475, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -24744,7 +24823,7 @@ trainerdata 475, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -24760,7 +24839,7 @@ trainerdata 475, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -24791,7 +24870,7 @@ trainerdata 476, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -24807,7 +24886,7 @@ trainerdata 476, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -24823,7 +24902,7 @@ trainerdata 476, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -24854,7 +24933,7 @@ trainerdata 477, "Mickey"
         move MOVE_RECOVER
         move MOVE_TRI_ATTACK
         ability ABILITY_DOWNLOAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -25011,7 +25090,7 @@ trainerdata 480, "Diana"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -25042,7 +25121,7 @@ trainerdata 481, "Jill"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -25073,7 +25152,7 @@ trainerdata 482, "Deandre"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -25089,7 +25168,7 @@ trainerdata 482, "Deandre"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -25105,7 +25184,7 @@ trainerdata 482, "Deandre"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -25136,7 +25215,7 @@ trainerdata 483, "Patton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -25152,7 +25231,7 @@ trainerdata 483, "Patton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -25183,7 +25262,7 @@ trainerdata 484, "Gerardo"
         move MOVE_ICICLE_SPEAR
         move MOVE_LEER
         ability ABILITY_SHELL_ARMOR
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -25199,7 +25278,7 @@ trainerdata 484, "Gerardo"
         move MOVE_SUPERSONIC
         move MOVE_TOXIC_SPIKES
         ability ABILITY_SHELL_ARMOR
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -25215,7 +25294,7 @@ trainerdata 484, "Gerardo"
         move MOVE_ENCORE
         move MOVE_ICY_WIND
         ability ABILITY_THICK_FAT
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -25873,7 +25952,7 @@ trainerdata 492, "Alex"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -25889,7 +25968,7 @@ trainerdata 492, "Alex"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -25905,7 +25984,7 @@ trainerdata 492, "Alex"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -25936,7 +26015,7 @@ trainerdata 493, "Edith"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -25967,7 +26046,7 @@ trainerdata 494, "Georgina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -25983,7 +26062,7 @@ trainerdata 494, "Georgina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -25999,7 +26078,7 @@ trainerdata 494, "Georgina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -26015,7 +26094,7 @@ trainerdata 494, "Georgina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -26031,7 +26110,7 @@ trainerdata 494, "Georgina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 1, 1, 1, 1, 1, 1
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -26359,7 +26438,7 @@ trainerdata 502, "Clea & Gil"
         move MOVE_THUNDERBOLT
         move MOVE_HEADBUTT
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -26375,7 +26454,7 @@ trainerdata 502, "Clea & Gil"
         move MOVE_SURF
         move MOVE_HEADBUTT
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -26406,7 +26485,7 @@ trainerdata 503, "Jack"
         move MOVE_SWIFT
         move MOVE_ROLLOUT
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -26422,7 +26501,7 @@ trainerdata 503, "Jack"
         move MOVE_MOONLIGHT
         move MOVE_SUNNY_DAY
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -26438,7 +26517,7 @@ trainerdata 503, "Jack"
         move MOVE_CRUNCH
         move MOVE_REVERSAL
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -26469,7 +26548,7 @@ trainerdata 504, "Mickey"
         move MOVE_ROLLOUT
         move MOVE_LIGHT_SCREEN
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -26485,7 +26564,7 @@ trainerdata 504, "Mickey"
         move MOVE_TAKE_DOWN
         move MOVE_FLAME_WHEEL
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -26501,7 +26580,7 @@ trainerdata 504, "Mickey"
         move MOVE_ACID
         move MOVE_MOONLIGHT
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -26532,7 +26611,7 @@ trainerdata 505, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -26548,7 +26627,7 @@ trainerdata 505, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -26564,7 +26643,7 @@ trainerdata 505, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -26580,7 +26659,7 @@ trainerdata 505, "Alan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SPEED_BOOST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -26611,7 +26690,7 @@ trainerdata 506, "Mickey"
         move MOVE_SWIFT
         move MOVE_FUTURE_SIGHT
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -26627,7 +26706,7 @@ trainerdata 506, "Mickey"
         move MOVE_BIND
         move MOVE_MEGA_DRAIN
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -26643,7 +26722,7 @@ trainerdata 506, "Mickey"
         move MOVE_SONIC_BOOM
         move MOVE_SUPERSONIC
         ability ABILITY_SPEED_BOOST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -26659,7 +26738,7 @@ trainerdata 506, "Mickey"
         move MOVE_AMNESIA
         move MOVE_EARTHQUAKE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -26690,7 +26769,7 @@ trainerdata 507, "Chad"
         move MOVE_LIGHT_SCREEN
         move MOVE_PSYCHIC
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -26706,7 +26785,7 @@ trainerdata 507, "Chad"
         move MOVE_THUNDER_WAVE
         move MOVE_MAGNET_BOMB
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -26737,7 +26816,7 @@ trainerdata 508, "Mickey"
         move MOVE_REFLECT
         move MOVE_ENCORE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -26753,7 +26832,7 @@ trainerdata 508, "Mickey"
         move MOVE_LOCK_ON
         move MOVE_SWIFT
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -26784,7 +26863,7 @@ trainerdata 509, "Huey"
         move MOVE_BODY_SLAM
         move MOVE_PERISH_SONG
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -26800,7 +26879,7 @@ trainerdata 509, "Huey"
         move MOVE_ICE_PUNCH
         move MOVE_SUBMISSION
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -26831,7 +26910,7 @@ trainerdata 510, "Joey"
         move MOVE_SUBSTITUTE
         move MOVE_ENDEAVOR
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -26862,7 +26941,7 @@ trainerdata 511, "Mickey"
         move MOVE_HYPER_FANG
         move MOVE_PURSUIT
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -26893,7 +26972,7 @@ trainerdata 512, "Wade"
         move MOVE_SUPERSONIC
         move MOVE_WHIRLWIND
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -26909,7 +26988,7 @@ trainerdata 512, "Wade"
         move MOVE_CAPTIVATE
         move MOVE_TAILWIND
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -26925,7 +27004,7 @@ trainerdata 512, "Wade"
         move MOVE_PIN_MISSILE
         move MOVE_BUG_BITE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -26941,7 +27020,7 @@ trainerdata 512, "Wade"
         move MOVE_CAPTIVATE
         move MOVE_TAILWIND
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -26972,7 +27051,7 @@ trainerdata 513, "Arnie"
         move MOVE_MUD_SLAP
         move MOVE_LEECH_LIFE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -26988,7 +27067,7 @@ trainerdata 513, "Arnie"
         move MOVE_POISON_FANG
         move MOVE_SIGNAL_BEAM
         ability ABILITY_SHIELD_DUST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -27019,7 +27098,7 @@ trainerdata 514, "Mickey"
         move MOVE_PSYCHIC
         move MOVE_TOXIC
         ability ABILITY_SHIELD_DUST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -27050,7 +27129,7 @@ trainerdata 515, "Ralph"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -27066,7 +27145,7 @@ trainerdata 515, "Ralph"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -27097,7 +27176,7 @@ trainerdata 516, "Mickey"
         move MOVE_SURF
         move MOVE_PIN_MISSILE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -27113,7 +27192,7 @@ trainerdata 516, "Mickey"
         move MOVE_FURY_ATTACK
         move MOVE_WATERFALL
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -27144,7 +27223,7 @@ trainerdata 517, "Tully"
         move MOVE_WATERFALL
         move MOVE_AQUA_RING
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -27160,7 +27239,7 @@ trainerdata 517, "Tully"
         move MOVE_WATERFALL
         move MOVE_MEGAHORN
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -27176,7 +27255,7 @@ trainerdata 517, "Tully"
         move MOVE_AQUA_TAIL
         move MOVE_MINIMIZE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -27207,7 +27286,7 @@ trainerdata 518, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -27223,7 +27302,7 @@ trainerdata 518, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -27239,7 +27318,7 @@ trainerdata 518, "Liz"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -27270,7 +27349,7 @@ trainerdata 519, "Mickey"
         move MOVE_STUN_SPORE
         move MOVE_SLUDGE_BOMB
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -27286,7 +27365,7 @@ trainerdata 519, "Mickey"
         move MOVE_POISON_STING
         move MOVE_IRON_TAIL
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -27302,7 +27381,7 @@ trainerdata 519, "Mickey"
         move MOVE_TAIL_WHIP
         move MOVE_BODY_SLAM
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -27333,7 +27412,7 @@ trainerdata 520, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -27349,7 +27428,7 @@ trainerdata 520, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -27365,7 +27444,7 @@ trainerdata 520, "Gina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -27396,7 +27475,7 @@ trainerdata 521, "Mickey"
         move MOVE_LEECH_SEED
         move MOVE_COTTON_SPORE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27412,7 +27491,7 @@ trainerdata 521, "Mickey"
         move MOVE_LEECH_SEED
         move MOVE_COTTON_SPORE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27428,7 +27507,7 @@ trainerdata 521, "Mickey"
         move MOVE_HEADBUTT
         move MOVE_MUD_SLAP
         ability ABILITY_OVERGROW
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -27459,7 +27538,7 @@ trainerdata 522, "Tiffany"
         move MOVE_BLIZZARD
         move MOVE_THUNDER
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -27490,7 +27569,7 @@ trainerdata 523, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27506,7 +27585,7 @@ trainerdata 523, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27522,7 +27601,7 @@ trainerdata 523, "Anthony"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -27553,7 +27632,7 @@ trainerdata 524, "Mickey"
         move MOVE_DEFENSE_CURL
         move MOVE_ROLLOUT
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -27569,7 +27648,7 @@ trainerdata 524, "Mickey"
         move MOVE_DEFENSE_CURL
         move MOVE_ROLLOUT
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -27585,7 +27664,7 @@ trainerdata 524, "Mickey"
         move MOVE_HEADBUTT
         move MOVE_DIG
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -27616,7 +27695,7 @@ trainerdata 525, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -27632,7 +27711,7 @@ trainerdata 525, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -27648,7 +27727,7 @@ trainerdata 525, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SIMPLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -27664,7 +27743,7 @@ trainerdata 525, "Todd"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -27695,7 +27774,7 @@ trainerdata 526, "Mickey"
         move MOVE_HARDEN
         move MOVE_MAGNITUDE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -27711,7 +27790,7 @@ trainerdata 526, "Mickey"
         move MOVE_HARDEN
         move MOVE_MAGNITUDE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -27727,7 +27806,7 @@ trainerdata 526, "Mickey"
         move MOVE_AMNESIA
         move MOVE_FLAMETHROWER
         ability ABILITY_SIMPLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -27743,7 +27822,7 @@ trainerdata 526, "Mickey"
         move MOVE_SURF
         move MOVE_PSYCH_UP
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -27774,7 +27853,7 @@ trainerdata 527, "Irwin"
         move MOVE_SONIC_BOOM
         move MOVE_CHARGE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27790,7 +27869,7 @@ trainerdata 527, "Irwin"
         move MOVE_LIGHT_SCREEN
         move MOVE_SWIFT
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -27806,7 +27885,7 @@ trainerdata 527, "Irwin"
         move MOVE_CHARGE_BEAM
         move MOVE_RAIN_DANCE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -27822,7 +27901,7 @@ trainerdata 527, "Irwin"
         move MOVE_MAGNET_RISE
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -27853,7 +27932,7 @@ trainerdata 528, "Dana"
         move MOVE_CONFUSION
         move MOVE_SCREECH
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -27869,7 +27948,7 @@ trainerdata 528, "Dana"
         move MOVE_THUNDER_WAVE
         move MOVE_SIGNAL_BEAM
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -27900,7 +27979,7 @@ trainerdata 529, "Mickey"
         move MOVE_THUNDER_WAVE
         move MOVE_COTTON_SPORE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -27916,7 +27995,7 @@ trainerdata 529, "Mickey"
         move MOVE_PSYCHIC
         move MOVE_SCREECH
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -27947,7 +28026,7 @@ trainerdata 530, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -27963,7 +28042,7 @@ trainerdata 530, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -27979,7 +28058,7 @@ trainerdata 530, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -27995,7 +28074,7 @@ trainerdata 530, "Brent"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -28026,7 +28105,7 @@ trainerdata 531, "Mickey"
         move MOVE_ICE_BEAM
         move MOVE_HEADBUTT
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -28042,7 +28121,7 @@ trainerdata 531, "Mickey"
         move MOVE_FLAMETHROWER
         move MOVE_HEADBUTT
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -28073,7 +28152,7 @@ trainerdata 532, "Mickey"
         move MOVE_SUPERSONIC
         move MOVE_GUST
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -28089,7 +28168,7 @@ trainerdata 532, "Mickey"
         move MOVE_SUPERSONIC
         move MOVE_GUST
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -28105,7 +28184,7 @@ trainerdata 532, "Mickey"
         move MOVE_TWINEEDLE
         move MOVE_DOUBLE_TEAM
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28121,7 +28200,7 @@ trainerdata 532, "Mickey"
         move MOVE_GUST
         move MOVE_WHIRLWIND
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28152,7 +28231,7 @@ trainerdata 533, "Wayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -28168,7 +28247,7 @@ trainerdata 533, "Wayne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -28199,7 +28278,7 @@ trainerdata 534, "Kimberly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -28230,7 +28309,7 @@ trainerdata 535, "Marigold"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -28261,7 +28340,7 @@ trainerdata 536, "Bertrand"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28277,7 +28356,7 @@ trainerdata 536, "Bertrand"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -28293,7 +28372,7 @@ trainerdata 536, "Bertrand"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -28324,7 +28403,7 @@ trainerdata 537, "Harrison"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RIVALRY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -28340,7 +28419,7 @@ trainerdata 537, "Harrison"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -28371,7 +28450,7 @@ trainerdata 538, "Hugh"
         move MOVE_SURF
         move MOVE_WATERFALL
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -28402,7 +28481,7 @@ trainerdata 539, "Markus"
         move MOVE_GROWL
         move MOVE_STRENGTH
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28433,7 +28512,7 @@ trainerdata 540, "Rex"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -28464,7 +28543,7 @@ trainerdata 541, "Andy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_QUICK_FEET
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -28495,7 +28574,7 @@ trainerdata 542, "Mickey"
         move MOVE_TAKE_DOWN
         move MOVE_PSYCHIC
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -28511,7 +28590,7 @@ trainerdata 542, "Mickey"
         move MOVE_QUICK_ATTACK
         move MOVE_BITE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28542,7 +28621,7 @@ trainerdata 543, "Mickey"
         move MOVE_TAKE_DOWN
         move MOVE_PSYCHIC
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28558,7 +28637,7 @@ trainerdata 543, "Mickey"
         move MOVE_QUICK_ATTACK
         move MOVE_DOUBLE_KICK
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28589,7 +28668,7 @@ trainerdata 544, "Mickey"
         move MOVE_TAKE_DOWN
         move MOVE_PSYCHIC
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -28605,7 +28684,7 @@ trainerdata 544, "Mickey"
         move MOVE_QUICK_ATTACK
         move MOVE_BITE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -28683,7 +28762,7 @@ trainerdata 546, "Sherman"
         move MOVE_AMNESIA
         move MOVE_SLAM
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -28699,7 +28778,7 @@ trainerdata 546, "Sherman"
         move MOVE_STEEL_WING
         move MOVE_RETURN
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -28730,7 +28809,7 @@ trainerdata 547, "Bruce"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -28746,7 +28825,7 @@ trainerdata 547, "Bruce"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -28762,7 +28841,7 @@ trainerdata 547, "Bruce"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -28934,7 +29013,7 @@ trainerdata 551, "Dwight"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MAGNET_PULL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -28950,7 +29029,7 @@ trainerdata 551, "Dwight"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -28981,7 +29060,7 @@ trainerdata 552, "Regis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -28997,7 +29076,7 @@ trainerdata 552, "Regis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -29028,7 +29107,7 @@ trainerdata 553, "Moe & Lulu"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RAIN_DISH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -29044,7 +29123,7 @@ trainerdata 553, "Moe & Lulu"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -29075,7 +29154,7 @@ trainerdata 554, "Milton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -29200,7 +29279,7 @@ trainerdata 557, "Vic & Tara"
         move MOVE_CONFUSE_RAY
         move MOVE_FIRE_SPIN
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -29216,7 +29295,7 @@ trainerdata 557, "Vic & Tara"
         move MOVE_INGRAIN
         move MOVE_MEGA_DRAIN
         ability ABILITY_SOLAR_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -29247,7 +29326,7 @@ trainerdata 558, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -29263,7 +29342,7 @@ trainerdata 558, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -29279,7 +29358,7 @@ trainerdata 558, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -29310,7 +29389,7 @@ trainerdata 559, "Tim & Sue"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -29326,7 +29405,7 @@ trainerdata 559, "Tim & Sue"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -29357,7 +29436,7 @@ trainerdata 560, "Clark"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -29388,7 +29467,7 @@ trainerdata 561, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -29419,7 +29498,7 @@ trainerdata 562, "Piper"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -29450,7 +29529,7 @@ trainerdata 563, "Ginger"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -29481,7 +29560,7 @@ trainerdata 564, "Clarice"
         move MOVE_RETURN
         move MOVE_IRON_TAIL
         ability ABILITY_GLUTTONY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -29497,7 +29576,7 @@ trainerdata 564, "Clarice"
         move MOVE_TOXIC
         move MOVE_PETAL_DANCE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -29559,7 +29638,7 @@ trainerdata 566, "Connor"
         move MOVE_FLAIL
         move MOVE_SECRET_POWER
         ability ABILITY_GLUTTONY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -29590,7 +29669,7 @@ trainerdata 567, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -29606,7 +29685,7 @@ trainerdata 567, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -29637,7 +29716,7 @@ trainerdata 568, "Travis"
         move MOVE_SLUDGE_BOMB
         move MOVE_NATURE_POWER
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -29668,7 +29747,7 @@ trainerdata 569, "Kay & Tia"
         move MOVE_YAWN
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -29684,7 +29763,7 @@ trainerdata 569, "Kay & Tia"
         move MOVE_YAWN
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -29715,7 +29794,7 @@ trainerdata 570, "Boone"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -29731,7 +29810,7 @@ trainerdata 570, "Boone"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_PRANKSTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -29762,7 +29841,7 @@ trainerdata 571, "Eleanor"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OWN_TEMPO
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -29778,7 +29857,7 @@ trainerdata 571, "Eleanor"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -29809,7 +29888,7 @@ trainerdata 572, "Dale"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STICKY_HOLD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -29840,7 +29919,7 @@ trainerdata 573, "Jacob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -29856,7 +29935,7 @@ trainerdata 573, "Jacob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -29887,7 +29966,7 @@ trainerdata 574, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -29918,7 +29997,7 @@ trainerdata 575, "Dan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIQUID_OOZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -29934,7 +30013,7 @@ trainerdata 575, "Dan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -29950,7 +30029,7 @@ trainerdata 575, "Dan"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -29981,7 +30060,7 @@ trainerdata 576, "Theron"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_DRY_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -30012,7 +30091,7 @@ trainerdata 577, "Markey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -30043,7 +30122,7 @@ trainerdata 578, "Teddy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MERCILESS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -30074,7 +30153,7 @@ trainerdata 579, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_QUICK_FEET
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -30090,7 +30169,7 @@ trainerdata 579, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -30121,7 +30200,7 @@ trainerdata 580, "Pedro"
         move MOVE_DIG
         move MOVE_SURF
         ability ABILITY_GLUTTONY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -30152,7 +30231,7 @@ trainerdata 581, "Adrian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -30183,7 +30262,7 @@ trainerdata 582, "Cheyenne"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -30292,7 +30371,7 @@ trainerdata 585, "Elmo"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -30308,7 +30387,7 @@ trainerdata 585, "Elmo"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -30339,7 +30418,7 @@ trainerdata 586, "Luis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -30355,7 +30434,7 @@ trainerdata 586, "Luis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -30386,7 +30465,7 @@ trainerdata 587, "Leona"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SIMPLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -30417,7 +30496,7 @@ trainerdata 588, "Mina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -30433,7 +30512,7 @@ trainerdata 588, "Mina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -30449,7 +30528,7 @@ trainerdata 588, "Mina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -30480,7 +30559,7 @@ trainerdata 589, "Murphy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -30496,7 +30575,7 @@ trainerdata 589, "Murphy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -30512,7 +30591,7 @@ trainerdata 589, "Murphy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -30528,7 +30607,7 @@ trainerdata 589, "Murphy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUSTLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -30559,7 +30638,7 @@ trainerdata 590, "Liam"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -30590,7 +30669,7 @@ trainerdata 591, "Gideon"
         move MOVE_BUBBLE_BEAM
         move MOVE_CONFUSE_RAY
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -30606,7 +30685,7 @@ trainerdata 591, "Gideon"
         move MOVE_PSYBEAM
         move MOVE_CONFUSE_RAY
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -30637,7 +30716,7 @@ trainerdata 592, "Chelan"
         move MOVE_DEFENSE_CURL
         move MOVE_DIG
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -30668,7 +30747,7 @@ trainerdata 593, "Kendra"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OBLIVIOUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -30699,7 +30778,7 @@ trainerdata 594, "Esteban"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -30715,7 +30794,7 @@ trainerdata 594, "Esteban"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -30746,7 +30825,7 @@ trainerdata 595, "Duane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -30762,7 +30841,7 @@ trainerdata 595, "Duane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHARPNESS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -30935,7 +31014,7 @@ trainerdata 598, "Day & Dani"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_PLUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -30951,7 +31030,7 @@ trainerdata 598, "Day & Dani"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_MINUS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -30982,7 +31061,7 @@ trainerdata 599, "Virgil"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TRUANT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -31013,7 +31092,7 @@ trainerdata 600, "Selina"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -31138,7 +31217,7 @@ trainerdata 603, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLOWER_GIFT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -31154,7 +31233,7 @@ trainerdata 603, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SOLAR_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -31170,7 +31249,7 @@ trainerdata 603, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -31186,7 +31265,7 @@ trainerdata 603, "Erin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -31359,7 +31438,7 @@ trainerdata 606, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -31375,7 +31454,7 @@ trainerdata 606, "Parry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -31469,7 +31548,7 @@ trainerdata 608, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -31485,7 +31564,7 @@ trainerdata 608, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -31501,7 +31580,7 @@ trainerdata 608, "Wilton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -31579,7 +31658,7 @@ trainerdata 610, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -31595,7 +31674,7 @@ trainerdata 610, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -31611,7 +31690,7 @@ trainerdata 610, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -31627,7 +31706,7 @@ trainerdata 610, "Derek"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -31658,7 +31737,7 @@ trainerdata 611, "Beverly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -31752,7 +31831,7 @@ trainerdata 613, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -31768,7 +31847,7 @@ trainerdata 613, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -31799,7 +31878,7 @@ trainerdata 614, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -31815,7 +31894,7 @@ trainerdata 614, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -31846,7 +31925,7 @@ trainerdata 615, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -31862,7 +31941,7 @@ trainerdata 615, "Krise"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -31893,7 +31972,7 @@ trainerdata 616, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -31909,7 +31988,7 @@ trainerdata 616, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -31940,7 +32019,7 @@ trainerdata 617, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -31956,7 +32035,7 @@ trainerdata 617, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -31987,7 +32066,7 @@ trainerdata 618, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -32003,7 +32082,7 @@ trainerdata 618, "Ian"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -32034,7 +32113,7 @@ trainerdata 619, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -32050,7 +32129,7 @@ trainerdata 619, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -32081,7 +32160,7 @@ trainerdata 620, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -32097,7 +32176,7 @@ trainerdata 620, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -32128,7 +32207,7 @@ trainerdata 621, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -32144,7 +32223,7 @@ trainerdata 621, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -32160,7 +32239,7 @@ trainerdata 621, "Walt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -32191,7 +32270,7 @@ trainerdata 622, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -32207,7 +32286,7 @@ trainerdata 622, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -32238,7 +32317,7 @@ trainerdata 623, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -32254,7 +32333,7 @@ trainerdata 623, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -32285,7 +32364,7 @@ trainerdata 624, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -32301,7 +32380,7 @@ trainerdata 624, "Doug"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -32332,7 +32411,7 @@ trainerdata 625, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -32348,7 +32427,7 @@ trainerdata 625, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -32379,7 +32458,7 @@ trainerdata 626, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -32395,7 +32474,7 @@ trainerdata 626, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -32426,7 +32505,7 @@ trainerdata 627, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -32442,7 +32521,7 @@ trainerdata 627, "Rob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -32473,7 +32552,7 @@ trainerdata 628, "Reese"
         move MOVE_MUD_BOMB
         move MOVE_CRUNCH
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -32489,7 +32568,7 @@ trainerdata 628, "Reese"
         move MOVE_SMOKESCREEN
         move MOVE_ASSURANCE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -32520,7 +32599,7 @@ trainerdata 629, "Reese"
         move MOVE_STOCKPILE
         move MOVE_SPIT_UP
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -32536,7 +32615,7 @@ trainerdata 629, "Reese"
         move MOVE_SMOKESCREEN
         move MOVE_ASSURANCE
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -32567,7 +32646,7 @@ trainerdata 630, "Reese"
         move MOVE_GASTRO_ACID
         move MOVE_CRUNCH
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -32583,7 +32662,7 @@ trainerdata 630, "Reese"
         move MOVE_SMOKESCREEN
         move MOVE_THUNDER
         ability ABILITY_LEVITATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -32614,7 +32693,7 @@ trainerdata 631, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INSOMNIA
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -32630,7 +32709,7 @@ trainerdata 631, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -32661,7 +32740,7 @@ trainerdata 632, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INSOMNIA
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -32677,7 +32756,7 @@ trainerdata 632, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -32708,7 +32787,7 @@ trainerdata 633, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -32724,7 +32803,7 @@ trainerdata 633, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INSOMNIA
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -32740,7 +32819,7 @@ trainerdata 633, "Aiden"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CLEAR_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -32771,7 +32850,7 @@ trainerdata 634, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -32787,7 +32866,7 @@ trainerdata 634, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -32818,7 +32897,7 @@ trainerdata 635, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -32834,7 +32913,7 @@ trainerdata 635, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -32865,7 +32944,7 @@ trainerdata 636, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -32881,7 +32960,7 @@ trainerdata 636, "Ernest"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -32912,7 +32991,7 @@ trainerdata 637, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -32928,7 +33007,7 @@ trainerdata 637, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -32959,7 +33038,7 @@ trainerdata 638, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -32975,7 +33054,7 @@ trainerdata 638, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -33006,7 +33085,7 @@ trainerdata 639, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TECHNICIAN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -33022,7 +33101,7 @@ trainerdata 639, "Hillary"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -33053,7 +33132,7 @@ trainerdata 640, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -33069,7 +33148,7 @@ trainerdata 640, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -33085,7 +33164,7 @@ trainerdata 640, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -33116,7 +33195,7 @@ trainerdata 641, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -33132,7 +33211,7 @@ trainerdata 641, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -33148,7 +33227,7 @@ trainerdata 641, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -33179,7 +33258,7 @@ trainerdata 642, "Billy"
         move MOVE_SUBSTITUTE
         move MOVE_NONE
         ability ABILITY_SOUNDPROOF
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -33195,7 +33274,7 @@ trainerdata 642, "Billy"
         move MOVE_X_SCISSOR
         move MOVE_SLASH
         ability ABILITY_EFFECT_SPORE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -33211,7 +33290,7 @@ trainerdata 642, "Billy"
         move MOVE_DYNAMIC_PUNCH
         move MOVE_HYPNOSIS
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -33227,7 +33306,7 @@ trainerdata 642, "Billy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIMBER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -33258,7 +33337,7 @@ trainerdata 643, "Kay & Tia"
         move MOVE_EARTHQUAKE
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -33274,7 +33353,7 @@ trainerdata 643, "Kay & Tia"
         move MOVE_YAWN
         move MOVE_NONE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -33305,7 +33384,7 @@ trainerdata 644, "Kay & Tia"
         move MOVE_MUDDY_WATER
         move MOVE_EARTHQUAKE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -33321,7 +33400,7 @@ trainerdata 644, "Kay & Tia"
         move MOVE_MUDDY_WATER
         move MOVE_PROTECT
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -33352,7 +33431,7 @@ trainerdata 645, "Kay & Tia"
         move MOVE_YAWN
         move MOVE_PROTECT
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -33368,7 +33447,7 @@ trainerdata 645, "Kay & Tia"
         move MOVE_MUDDY_WATER
         move MOVE_EARTHQUAKE
         ability ABILITY_DAMP
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -33540,7 +33619,7 @@ trainerdata 649, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -33556,7 +33635,7 @@ trainerdata 649, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -33572,7 +33651,7 @@ trainerdata 649, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -33603,7 +33682,7 @@ trainerdata 650, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -33619,7 +33698,7 @@ trainerdata 650, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -33635,7 +33714,7 @@ trainerdata 650, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -33666,7 +33745,7 @@ trainerdata 651, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -33682,7 +33761,7 @@ trainerdata 651, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -33698,7 +33777,7 @@ trainerdata 651, "Torin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -33729,7 +33808,7 @@ trainerdata 652, "Tim & Sue"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -33745,7 +33824,7 @@ trainerdata 652, "Tim & Sue"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -33776,7 +33855,7 @@ trainerdata 653, "Tim & Sue"
         move MOVE_ROLE_PLAY
         move MOVE_REFLECT
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -33792,7 +33871,7 @@ trainerdata 653, "Tim & Sue"
         move MOVE_ZEN_HEADBUTT
         move MOVE_BLIZZARD
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -33823,7 +33902,7 @@ trainerdata 654, "Tim & Sue"
         move MOVE_REFLECT
         move MOVE_RECOVER
         ability ABILITY_SYNCHRONIZE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -33839,7 +33918,7 @@ trainerdata 654, "Tim & Sue"
         move MOVE_AQUA_JET
         move MOVE_BLIZZARD
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -33870,7 +33949,7 @@ trainerdata 655, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -33886,7 +33965,7 @@ trainerdata 655, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -33902,7 +33981,7 @@ trainerdata 655, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -33918,7 +33997,7 @@ trainerdata 655, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -33949,7 +34028,7 @@ trainerdata 656, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -33965,7 +34044,7 @@ trainerdata 656, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -33981,7 +34060,7 @@ trainerdata 656, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -33997,7 +34076,7 @@ trainerdata 656, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -34028,7 +34107,7 @@ trainerdata 657, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SAND_VEIL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -34044,7 +34123,7 @@ trainerdata 657, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -34060,7 +34139,7 @@ trainerdata 657, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34076,7 +34155,7 @@ trainerdata 657, "Kenny"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -34107,7 +34186,7 @@ trainerdata 658, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -34123,7 +34202,7 @@ trainerdata 658, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -34154,7 +34233,7 @@ trainerdata 659, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -34170,7 +34249,7 @@ trainerdata 659, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -34186,7 +34265,7 @@ trainerdata 659, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34217,7 +34296,7 @@ trainerdata 660, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -34233,7 +34312,7 @@ trainerdata 660, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -34249,7 +34328,7 @@ trainerdata 660, "Tanner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VOLT_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34280,7 +34359,7 @@ trainerdata 661, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -34296,7 +34375,7 @@ trainerdata 661, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -34312,7 +34391,7 @@ trainerdata 661, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -34343,7 +34422,7 @@ trainerdata 662, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -34359,7 +34438,7 @@ trainerdata 662, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -34375,7 +34454,7 @@ trainerdata 662, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -34391,7 +34470,7 @@ trainerdata 662, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HYPER_CUTTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -34422,7 +34501,7 @@ trainerdata 663, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -34438,7 +34517,7 @@ trainerdata 663, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TOXIC_DEBRIS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -34454,7 +34533,7 @@ trainerdata 663, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34470,7 +34549,7 @@ trainerdata 663, "Kyle"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HYPER_CUTTER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34501,7 +34580,7 @@ trainerdata 664, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34517,7 +34596,7 @@ trainerdata 664, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34533,7 +34612,7 @@ trainerdata 664, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34549,7 +34628,7 @@ trainerdata 664, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34580,7 +34659,7 @@ trainerdata 665, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34596,7 +34675,7 @@ trainerdata 665, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34612,7 +34691,7 @@ trainerdata 665, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34628,7 +34707,7 @@ trainerdata 665, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34644,7 +34723,7 @@ trainerdata 665, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34675,7 +34754,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34691,7 +34770,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34707,7 +34786,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34723,7 +34802,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34739,7 +34818,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34755,7 +34834,7 @@ trainerdata 666, "Kyler"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -35261,7 +35340,7 @@ trainerdata 672, "Alfred"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -35292,7 +35371,7 @@ trainerdata 673, "Alfred"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -35323,7 +35402,7 @@ trainerdata 674, "Alfred"
         move MOVE_AIR_SLASH
         move MOVE_REFLECT
         ability ABILITY_TINTED_LENS
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -35385,7 +35464,7 @@ trainerdata 676, "Parker"
         move MOVE_TWISTER
         move MOVE_AGILITY
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -35401,7 +35480,7 @@ trainerdata 676, "Parker"
         move MOVE_TWISTER
         move MOVE_AGILITY
         ability ABILITY_SNIPER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -35432,7 +35511,7 @@ trainerdata 677, "Eddie"
         move MOVE_DOUBLE_EDGE
         move MOVE_AQUA_TAIL
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -35463,7 +35542,7 @@ trainerdata 678, "Joy"
         move MOVE_AURORA_BEAM
         move MOVE_ATTRACT
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -35494,7 +35573,7 @@ trainerdata 679, "Callie"
         move MOVE_DOUBLE_SLAP
         move MOVE_METRONOME
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -35510,7 +35589,7 @@ trainerdata 679, "Callie"
         move MOVE_POUND
         move MOVE_DISABLE
         ability ABILITY_SHEER_FORCE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -35541,7 +35620,7 @@ trainerdata 680, "Kassandra"
         move MOVE_POUND
         move MOVE_DISABLE
         ability ABILITY_SHEER_FORCE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -35557,7 +35636,7 @@ trainerdata 680, "Kassandra"
         move MOVE_DOUBLE_SLAP
         move MOVE_METRONOME
         ability ABILITY_CUTE_CHARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -35807,7 +35886,7 @@ trainerdata 686, "Bryce"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -35823,7 +35902,7 @@ trainerdata 686, "Bryce"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -35854,7 +35933,7 @@ trainerdata 687, "Shaun"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -35870,7 +35949,7 @@ trainerdata 687, "Shaun"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -35901,7 +35980,7 @@ trainerdata 688, "Cady"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -35932,7 +36011,7 @@ trainerdata 689, "Cary"
         move MOVE_BODY_SLAM
         move MOVE_IRON_DEFENSE
         ability ABILITY_WHITE_SMOKE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -35963,7 +36042,7 @@ trainerdata 690, "Waldo"
         move MOVE_EARTH_POWER
         move MOVE_MAGNITUDE
         ability ABILITY_SIMPLE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -35994,7 +36073,7 @@ trainerdata 691, "Merle"
         move MOVE_YAWN
         move MOVE_RECOVER
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -36025,7 +36104,7 @@ trainerdata 692, "Lowell"
         move MOVE_FIRE_FANG
         move MOVE_THUNDER_FANG
         ability ABILITY_INTIMIDATE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -36056,7 +36135,7 @@ trainerdata 693, "Linden"
         move MOVE_CONFUSE_RAY
         move MOVE_FEINT_ATTACK
         ability ABILITY_FLAME_BODY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -36087,7 +36166,7 @@ trainerdata 694, "Daniel"
         move MOVE_QUICK_ATTACK
         move MOVE_ROAR
         ability ABILITY_FLASH_FIRE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -36118,7 +36197,7 @@ trainerdata 695, "Dane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -36134,7 +36213,7 @@ trainerdata 695, "Dane"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -36165,7 +36244,7 @@ trainerdata 696, "Dion"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -36196,7 +36275,7 @@ trainerdata 697, "Stacey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -36212,7 +36291,7 @@ trainerdata 697, "Stacey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -36228,7 +36307,7 @@ trainerdata 697, "Stacey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -36259,7 +36338,7 @@ trainerdata 698, "Ellis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHIELD_DUST
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -36275,7 +36354,7 @@ trainerdata 698, "Ellis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHED_SKIN
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -36291,7 +36370,7 @@ trainerdata 698, "Ellis"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -36322,7 +36401,7 @@ trainerdata 699, "Abner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -36338,7 +36417,7 @@ trainerdata 699, "Abner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SWARM
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -36354,7 +36433,7 @@ trainerdata 699, "Abner"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STATIC
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -37066,7 +37145,7 @@ trainerdata 707, "Palmer"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -37097,7 +37176,7 @@ trainerdata 708, "Argenta"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -37128,7 +37207,7 @@ trainerdata 709, "Thorton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -37159,7 +37238,7 @@ trainerdata 710, "Dahlia"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -37190,7 +37269,7 @@ trainerdata 711, "Darach"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -38997,7 +39076,7 @@ trainerdata 728, "Charlotte"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -39028,7 +39107,7 @@ trainerdata 729, "Duff & Eda"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_STURDY
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -39044,7 +39123,7 @@ trainerdata 729, "Duff & Eda"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SKILL_LINK
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -39122,7 +39201,7 @@ trainerdata 731, "Devin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SERENE_GRACE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -39138,7 +39217,7 @@ trainerdata 731, "Devin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SERENE_GRACE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -39154,7 +39233,7 @@ trainerdata 731, "Devin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SERENE_GRACE
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -39185,7 +39264,7 @@ trainerdata 732, "Grant"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -39201,7 +39280,7 @@ trainerdata 732, "Grant"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_HUGE_POWER
-        setivs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0

@@ -65,7 +65,7 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                             scriptnum = SUB_SEQ_OVERWORLD_SANDSTORM;
                             ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                             break;
-                        case WEATHER_SYS_MIST1:
+                        case WEATHER_SYS_MIST1:                           
                         case WEATHER_SYS_MIST2:
                             scriptnum = SUB_SEQ_OVERWORLD_FOG;
                             ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
@@ -78,10 +78,71 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                             scriptnum = SUB_SEQ_OVERWORLD_TRICK_ROOM;
                             ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                             break;
-							case WEATHER_SYS_STRONG_WINDS:
+						case WEATHER_SYS_STRONG_WINDS:
 							scriptnum = SUB_SEQ_DELTA_STREAM;
 							ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
 							break;
+                            
+                        default:
+                            if (CheckScriptFlag(PERMANENT_OW_WEATHER_FLAG))
+                            {
+                                scriptnum = SUB_SEQ_OVERWORLD_TRICK_ROOM;
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+
+                                u32 weatherCase = GetScriptVar(PERMANENT_OW_WEATHER_VARIABLE);
+                                debug_printf("weather %d\n", weatherCase);
+                                switch (weatherCase)
+                                {
+                                case 0:
+                                scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                sp->calc_work = sp->current_move_index;
+                                sp->current_move_index = MOVE_MISTY_TERRAIN;  // need this for UpdateTerrainOverlay
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break; // Misty terrain 
+                                case 1: //Delta Stream
+                                    scriptnum = SUB_SEQ_DELTA_STREAM;
+							        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+							        break;
+                                case 2:
+                                    sp->koban_counter = 2;
+                                    break;
+                                case 3://no switch
+                                    scriptnum = 0;
+                                    break;
+                                case 4:
+                                    sp->koban_counter = 4;
+                                    sp->addeffect_type = ADD_EFFECT_ABILITY; // need to restore the current move index after the animation has played
+                                    sp->current_move_index = MOVE_GRASSY_TERRAIN; // need this for UpdateTerrainOverlay
+                                    switch (BattleRand(bw) % 4)
+                                    {
+                                    case 0:
+                                        sp->current_move_index = MOVE_PSYCHIC_TERRAIN;
+                                        break;
+                                    case 1:
+                                        sp->current_move_index = MOVE_MISTY_TERRAIN;
+                                        break;
+                                    case 2:
+                                        sp->current_move_index = MOVE_ELECTRIC_TERRAIN;
+                                        break;
+                                    }
+                                    break;
+                                case 5:
+                                    scriptnum = SUB_SEQ_OVERWORLD_FOG;
+                                    break;
+                                case 6:
+                                    sp->koban_counter = 6; //tailwind
+                                    break;
+                                case 7: //crit
+                                    scriptnum = 0;
+                                    break;
+                                case 8:
+                                    sp->koban_counter = 8; //crit + tailwind
+                                    break;
+                                default:
+                                    break;
+                                }
+                            }
+                            break;
                     }
                     if (ret == SWITCH_IN_CHECK_MOVE_SCRIPT) {
                         sp->weather_check_flag = 1;

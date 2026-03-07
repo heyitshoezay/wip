@@ -589,7 +589,6 @@ void CalcDamageOverall(void *bw, struct BattleStruct *sp) {
                         debug_printf("[CalcBaseDamage] finalModifier: %d\n", finalModifier);
 #endif
                     }
-
                     // 6.9.8 Solid Rock / Filter / Prism Armor
                     if ((sp->rawSpeedNonRNGClientOrder[i] == defender)
                         && (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_SOLID_ROCK) || MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_FILTER) || defenderAbility == ABILITY_PRISM_ARMOR)) {

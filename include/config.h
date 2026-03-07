@@ -10,7 +10,9 @@
 #define RANDOMIZE_EGG
 #define RANDOMIZE_EGG_FLAG 2598
 
+#define PERMANENT_OW_WEATHER_FLAG 2598
 
+#define PERMANENT_OW_WEATHER_VARIABLE 0x4025
 
 #define GEN_LATEST 9
 
@@ -208,7 +210,7 @@
 //#define THUNDER_STORM_WEATHER_ELECTRIC_TERRAIN
 
 // FOG_SETS_MISTY_TERRAIN makes the Fog map header weather set permanent Misty Terrain in battle
-//#define FOG_WEATHER_MISTY_TERRAIN
+#define FOG_WEATHER_MISTY_TERRAIN
 
 // NATURAL_GIFT_POWER_GEN defines the power of Natural Gift based on generation. Gen 6 or higher are modernized values.
 #define NATURAL_GIFT_POWER_GEN GEN_LATEST

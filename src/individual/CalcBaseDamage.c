@@ -15,26 +15,26 @@
 
 
 
-extern const u8 HeldItemPowerUpTable[36][2];
+//extern const u8 HeldItemPowerUpTable[36][2];
 
 // this has been moved to src/battle/other_battle_calculators.c so it can be used in
-extern const u16 PunchingMovesTable[24];
+//extern const u16 PunchingMovesTable[24];
 
-extern const u16 StrongJawMovesTable[10];
+//extern const u16 StrongJawMovesTable[10];
 
-extern const u16 MegaLauncherMovesTable[7];
+//extern const u16 MegaLauncherMovesTable[7];
 
-extern const u16 SharpnessMovesTable[24];
+//extern const u16 SharpnessMovesTable[24];
 
-static const u16 sLowKickWeightToPower[][2] =
-{
-    {   100,     20}, //   0- 10 kg ->  20 bp
-    {   250,     40}, //  10- 25 kg ->  40 bp
-    {   500,     60}, //  25- 50 kg ->  60 bp
-    {  1000,     80}, //  50-100 kg ->  80 bp
-    {  2000,    100}, // 100-200 kg -> 100 bp
-    {0xFFFF, 0xFFFF},
-};
+//static const u16 sLowKickWeightToPower[][2] =
+//{
+    //{   100,     20}, //   0- 10 kg ->  20 bp
+    //{   250,     40}, //  10- 25 kg ->  40 bp
+    //{   500,     60}, //  25- 50 kg ->  60 bp
+    //{  1000,     80}, //  50-100 kg ->  80 bp
+    //{  2000,    100}, // 100-200 kg -> 100 bp
+    //{0xFFFF, 0xFFFF},
+//};
 
 
 // TODO
