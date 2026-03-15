@@ -1464,9 +1464,9 @@ _0D04: // Trainer 93
     trainertextentry  93, TEXT_DEFEATED_IN_OVERWORLD, "I heard roars from deep inside\nthe islands.\n"
 
 _0D10: // Trainer 94
-    trainertextentry  94, TEXT_NOTICE_IN_OVERWORLD, "At night, STARYU gather near the\nwater’s surface.\r"
+    trainertextentry  94, TEXT_NOTICE_IN_OVERWORLD, "At night, Staryu gather near the\nwater’s surface.\r"
     trainertextentry  94, TEXT_DEFEATED_IN_BATTLE, "Oh, dear...\n"
-    trainertextentry  94, TEXT_DEFEATED_IN_OVERWORLD, "The clusters of STARYU light up at the\nsame time. It’s so beautiful,\fit’s scary.\n"
+    trainertextentry  94, TEXT_DEFEATED_IN_OVERWORLD, "The clusters of Staryu light up at the\nsame time. It’s so beautiful,\fit’s scary.\n"
 
 _0D1C: // Trainer 123
     trainertextentry 123, TEXT_NOTICE_IN_OVERWORLD, "Let me demonstrate the power of the\nPokémon I caught!\r"
@@ -1507,7 +1507,7 @@ _0D68: // Trainer 131
 
 _0D78: // Trainer 132
     trainertextentry 132, TEXT_NOTICE_IN_OVERWORLD, "Would you get this?\rSome red-haired kid made fun of my\nprecious Pokémon!\rHumph! My Pokémon’s great!\r"
-    trainertextentry 132, TEXT_DEFEATED_IN_BATTLE, "My NIDOKING was outstanding!\n"
+    trainertextentry 132, TEXT_DEFEATED_IN_BATTLE, "My Dragalge was outstanding!\n"
     trainertextentry 132, TEXT_DEFEATED_IN_OVERWORLD, "It’s OK for people to like different\ntypes of Pokémon.\rPokémon isn’t just about having the\nmost powerful one.\n"
 
 _0D84: // Trainer 402

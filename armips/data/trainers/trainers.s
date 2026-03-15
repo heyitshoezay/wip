@@ -126,7 +126,7 @@ trainerdata 1, "Silver"
     endparty
 
 trainerdata 2, "Silver"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
     nummons 1
     item ITEM_NONE
@@ -144,10 +144,6 @@ trainerdata 2, "Silver"
         level 5
         pokemon SPECIES_CYNDAQUIL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_BLAZE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -157,7 +153,7 @@ trainerdata 2, "Silver"
     endparty
 
 trainerdata 3, "Silver"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
     nummons 1
     item ITEM_NONE
@@ -175,10 +171,6 @@ trainerdata 3, "Silver"
         level 5
         pokemon SPECIES_TOTODILE
         item ITEM_NONE
-        move MOVE_TACKLE
-        move MOVE_LEER
-        move MOVE_WATER_GUN
-        move MOVE_NONE
         ability ABILITY_SHEER_FORCE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -283,7 +275,7 @@ trainerdata 6, "Keith"
     endparty
 
 trainerdata 7, "Irwin"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_JUGGLER
     nummons 4
     item ITEM_NONE
@@ -298,13 +290,9 @@ trainerdata 7, "Irwin"
         // mon 0
         ivs 255
         abilityslot 0
-        level 2
+        level 12
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -314,13 +302,9 @@ trainerdata 7, "Irwin"
         // mon 1
         ivs 255
         abilityslot 0
-        level 6
+        level 16
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -330,13 +314,9 @@ trainerdata 7, "Irwin"
         // mon 2
         ivs 255
         abilityslot 0
-        level 10
+        level 20
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -346,13 +326,9 @@ trainerdata 7, "Irwin"
         // mon 3
         ivs 255
         abilityslot 0
-        level 14
-        pokemon SPECIES_VOLTORB
+        level 24
+        monwithform SPECIES_VOLTORB, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -408,7 +384,7 @@ trainerdata 8, "Joey"
     endparty
 
 trainerdata 9, "Elaine"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 1
     item ITEM_NONE
@@ -423,13 +399,9 @@ trainerdata 9, "Elaine"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_STARYU
+        level 39
+        pokemon SPECIES_STARMIE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_NATURAL_CURE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -451,36 +423,36 @@ trainerdata 10, "Amy & Mimi"
     endentry
 
     party 10
-        // mon 0
+         // mon 0
         ivs 255
         abilityslot 0
-        level 10
-        pokemon SPECIES_SPINARAK
+        level 20
+        pokemon SPECIES_VOLBEAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_INSOMNIA
+        move MOVE_FLASH
+        move MOVE_THUNDER_WAVE
+        move MOVE_QUICK_ATTACK
+        move MOVE_STRUGGLE_BUG
+        ability ABILITY_PRANKSTER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 10
-        pokemon SPECIES_LEDYBA
+        level 20
+        pokemon SPECIES_ILLUMISE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_EARLY_BIRD
+        move MOVE_COVET
+        move MOVE_BUG_BITE
+        move MOVE_QUICK_ATTACK
+        move MOVE_MOONLIGHT
+        ability ABILITY_TINTED_LENS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -627,7 +599,7 @@ trainerdata 12, "Grunt"
         abilityslot 0
         level 18
         pokemon SPECIES_RATICATE
-        item ITEM_ORAN_BERRY
+        item ITEM_NONE
 		move MOVE_QUICK_ATTACK
         move MOVE_HYPER_FANG
         move MOVE_ZEN_HEADBUTT
@@ -643,7 +615,7 @@ trainerdata 12, "Grunt"
         abilityslot 0
         level 18
         pokemon SPECIES_ZUBAT
-        item ITEM_SCOPE_LENS
+        item ITEM_NONE
         move MOVE_LEECH_LIFE
         move MOVE_WING_ATTACK
         move MOVE_BITE
@@ -659,7 +631,7 @@ trainerdata 12, "Grunt"
         abilityslot 0
         level 18
         pokemon SPECIES_GULPIN
-        item ITEM_ORAN_BERRY
+        item ITEM_NONE
         move MOVE_SLUDGE
         move MOVE_YAWN
         move MOVE_BULLET_SEED
@@ -690,7 +662,7 @@ trainerdata 13, "Grunt"
         abilityslot 0
         level 19
         pokemon SPECIES_ZUBAT
-        item ITEM_SCOPE_LENS
+        item ITEM_NONE
         move MOVE_AIR_CUTTER
         move MOVE_WING_ATTACK
         move MOVE_BITE
@@ -706,7 +678,7 @@ trainerdata 13, "Grunt"
         abilityslot 0
         level 19
         pokemon SPECIES_EKANS
-        item ITEM_BERRY_JUICE
+        item ITEM_NONE
         move MOVE_POISON_TAIL
         move MOVE_BITE
         move MOVE_GLARE
@@ -720,9 +692,9 @@ trainerdata 13, "Grunt"
     endparty
 
 trainerdata 14, "Duncan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BURGLAR
-    nummons 3
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -735,49 +707,13 @@ trainerdata 14, "Duncan"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_KOFFING
+        level 51
+        pokemon SPECIES_MAGMORTAR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
-        ballseal 0
-
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 25
-        pokemon SPECIES_MAGMAR
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FLAME_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 23
-        pokemon SPECIES_KOFFING
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
         ballseal 0
 
     endparty
@@ -846,7 +782,7 @@ trainerdata 15, "Otis"
     endparty
 
 trainerdata 16, "Simon"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 2
     item ITEM_NONE
@@ -861,13 +797,9 @@ trainerdata 16, "Simon"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_TENTACOOL
+        level 38
+        pokemon SPECIES_TENTACRUEL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CLEAR_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -877,14 +809,10 @@ trainerdata 16, "Simon"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_TENTACOOL
+        level 38
+        pokemon SPECIES_SWAMPERT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LIQUID_OOZE
+        ability ABILITY_TORRENT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
@@ -916,7 +844,7 @@ trainerdata 17, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -942,7 +870,7 @@ trainerdata 18, "Justin"
         level 20
         pokemon SPECIES_GYARADOS
         move MOVE_TACKLE
-        move MOVE_NONE
+        move MOVE_BITE
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
@@ -1313,7 +1241,7 @@ trainerdata 23, "Larry"
     endparty
 
 trainerdata 24, "Alan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCHOOL_KID_M
     nummons 1
     item ITEM_NONE
@@ -1328,13 +1256,9 @@ trainerdata 24, "Alan"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
+        level 28
         pokemon SPECIES_TANGELA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -1517,7 +1441,7 @@ trainerdata 28, "Jake"
         move MOVE_SLASH
         move MOVE_SWORDS_DANCE
         ability ABILITY_DRY_SKIN
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -1533,7 +1457,7 @@ trainerdata 28, "Jake"
         move MOVE_WATER_PULSE
         move MOVE_FURY_SWIPES
         ability ABILITY_CLOUD_NINE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -1549,7 +1473,7 @@ trainerdata 28, "Jake"
         move MOVE_SAND_ATTACK
         move MOVE_SURF
         ability ABILITY_WATER_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -1580,7 +1504,7 @@ trainerdata 29, "Rod"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -1596,7 +1520,7 @@ trainerdata 29, "Rod"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -1700,15 +1624,15 @@ trainerdata 30, "Whitney"
         ivs 255
         abilityslot 1
         level 27
-        pokemon SPECIES_SYLVEON
-        item ITEM_SITRUS_BERRY
+        pokemon SPECIES_AUDINO
+        item ITEM_AUDINITE
         move MOVE_HYPER_VOICE
         move MOVE_DAZZLING_GLEAM
         move MOVE_PSYSHOCK
-        move MOVE_TRAILBLAZE
-        ability ABILITY_PIXILATE
+        move MOVE_DRAINING_KISS
+        ability ABILITY_REGENERATOR
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 252, 0, 0
+        setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
     endparty
@@ -1716,7 +1640,7 @@ trainerdata 30, "Whitney"
 trainerdata 31, "Morty"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_MORTY
-    nummons 4
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -1729,73 +1653,104 @@ trainerdata 31, "Morty"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_LICK
-        move MOVE_SPITE
-        move MOVE_MEAN_LOOK
+        level 35
+        pokemon SPECIES_COFAGRIGUS
+        item ITEM_SPELL_TAG
+        move MOVE_WILL_O_WISP
+        move MOVE_HEX
         move MOVE_CURSE
-        ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        move MOVE_SHADOW_BALL
+        ability ABILITY_MUMMY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_HYPNOSIS
-        move MOVE_DREAM_EATER
-        move MOVE_CURSE
-        move MOVE_NIGHTMARE
-        ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        level 35
+        pokemon SPECIES_CERULEDGE
+        item ITEM_LUM_BERRY
+        move MOVE_SWORDS_DANCE
+        move MOVE_BITTER_BLADE
+        move MOVE_SHADOW_CLAW
+        move MOVE_FLARE_BLITZ
+        ability ABILITY_SHARPNESS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 6, 0
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_GENGAR
-        item ITEM_SITRUS_BERRY
-        move MOVE_HYPNOSIS
-        move MOVE_SHADOW_BALL
-        move MOVE_MEAN_LOOK
-        move MOVE_SUCKER_PUNCH
-        ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        level 34
+        pokemon SPECIES_GOLURK
+        item ITEM_ASSAULT_VEST
+        move MOVE_HIGH_HORSEPOWER
+        move MOVE_SHADOW_PUNCH
+        move MOVE_MEGA_PUNCH
+        move MOVE_FIRE_PUNCH
+        ability ABILITY_IRON_FIST
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 6, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_CURSE
-        move MOVE_MEAN_LOOK
-        move MOVE_SUCKER_PUNCH
-        move MOVE_NIGHT_SHADE
-        ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
+        level 35
+        monwithform SPECIES_ZOROARK, 1
+        item ITEM_SITRUS_BERRY
+        move MOVE_BITTER_MALICE
+        move MOVE_SHADOW_BALL
+        move MOVE_DESTINY_BOND
+        move MOVE_TAUNT
+        ability ABILITY_ILLUSION
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 34
+        pokemon SPECIES_MISMAGIUS
+        item ITEM_WISE_GLASSES
+        move MOVE_MYSTICAL_FIRE
+        move MOVE_SHADOW_BALL
+        move MOVE_MOONBLAST
+        move MOVE_POWER_GEM
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
+		
+		// mon 5
+        ivs 255
+        abilityslot 0
+        level 36
+        pokemon SPECIES_GENGAR
+        item ITEM_GENGARITE
+        move MOVE_HYPNOSIS
+        move MOVE_SHADOW_BALL
+        move MOVE_MEAN_LOOK
+        move MOVE_SLUDGE_BOMB
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
     endparty
 
 trainerdata 32, "Pryce"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_PRYCE
-    nummons 3
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -1808,57 +1763,105 @@ trainerdata 32, "Pryce"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_SEEL
-        item ITEM_NONE
-        move MOVE_SNORE
-        move MOVE_HAIL
-        move MOVE_ICY_WIND
-        move MOVE_REST
-        ability ABILITY_THICK_FAT
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        level 48
+        monwithform SPECIES_SANDSLASH, 1
+        item ITEM_FOCUS_SASH
+        move MOVE_ICE_SHARD
+        move MOVE_ICICLE_CRASH
+        move MOVE_IRON_HEAD
+        move MOVE_KNOCK_OFF
+        ability ABILITY_SLUSH_RUSH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_DEWGONG
-        item ITEM_NONE
-        move MOVE_SLEEP_TALK
-        move MOVE_ICE_SHARD
-        move MOVE_AURORA_BEAM
-        move MOVE_REST
-        ability ABILITY_THICK_FAT
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        level 48
+        pokemon SPECIES_WALREIN
+        item ITEM_LEFTOVERS
+        move MOVE_BLIZZARD
+        move MOVE_SURF
+        move MOVE_SIGNAL_BEAM
+        move MOVE_YAWN
+        ability ABILITY_FUR_COAT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_BOLD
         ballseal 0
 
-        // mon 2
+         // mon 2
         ivs 255
         abilityslot 0
-        level 34
-        pokemon SPECIES_PILOSWINE
-        item ITEM_SITRUS_BERRY
-        move MOVE_HAIL
-        move MOVE_ICE_FANG
-        move MOVE_MUD_BOMB
+        level 48
+        pokemon SPECIES_FROSLASS
+        item ITEM_LIFE_ORB
+        move MOVE_ICE_SHARD
+        move MOVE_SHADOW_BALL
         move MOVE_BLIZZARD
-        ability ABILITY_OBLIVIOUS
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        move MOVE_DESTINY_BOND
+        ability ABILITY_STAKEOUT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
+		 // mon 3
+        ivs 255
+        abilityslot 0
+        level 48
+        pokemon SPECIES_BEARTIC
+        item ITEM_ASSAULT_VEST
+        move MOVE_ICE_HAMMER
+        move MOVE_CLOSE_COMBAT
+        move MOVE_AQUA_JET
+        move MOVE_PLAY_ROUGH
+        ability ABILITY_SLUSH_RUSH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 129, 252, 0, 129, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+		
+		 // mon 4
+        ivs 255
+        abilityslot 0
+        level 49
+        pokemon SPECIES_MAMOSWINE
+        item ITEM_SITRUS_BERRY
+        move MOVE_ICE_SHARD
+        move MOVE_ICICLE_CRASH
+        move MOVE_IRON_HEAD
+        move MOVE_EARTHQUAKE
+        ability ABILITY_THICK_FAT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+		
+		 // mon 5
+        ivs 255
+        abilityslot 0
+        level 50
+        pokemon SPECIES_ABOMASNOW
+        item ITEM_ABOMASITE
+        move MOVE_ICE_SHARD
+        move MOVE_BLIZZARD
+        move MOVE_GIGA_DRAIN
+        move MOVE_EARTH_POWER
+        ability ABILITY_SLUSH_RUSH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
+		
     endparty
 
 trainerdata 33, "Jasmine"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_JASMINE
-    nummons 3
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -1871,49 +1874,97 @@ trainerdata 33, "Jasmine"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_THUNDERBOLT
-        move MOVE_SUPERSONIC
-        move MOVE_SONIC_BOOM
-        move MOVE_THUNDER_WAVE
-        ability ABILITY_MAGNET_PULL
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        level 43
+        monwithform SPECIES_DUGTRIO, 1
+        item ITEM_FOCUS_SASH
+        move MOVE_STEALTH_ROCK
+        move MOVE_SUCKER_PUNCH
+        move MOVE_IRON_HEAD
+        move MOVE_EARTHQUAKE
+        ability ABILITY_TANGLING_HAIR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_THUNDERBOLT
-        move MOVE_SUPERSONIC
-        move MOVE_SONIC_BOOM
-        move MOVE_THUNDER_WAVE
+        level 43
+        pokemon SPECIES_AGGRON
+        item ITEM_CUSTAP_BERRY
+        move MOVE_ROCK_SLIDE
+        move MOVE_HEAVY_SLAM
+        move MOVE_METAL_BURST
+        move MOVE_BODY_PRESS
         ability ABILITY_STURDY
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 4, 252, 252, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 35
+        level 42
+        pokemon SPECIES_SAMUROTT
+        item ITEM_ASSAULT_VEST
+        move MOVE_AQUA_JET
+        move MOVE_SMART_STRIKE
+        move MOVE_RAZOR_SHELL
+        move MOVE_SHELL_SMASH
+        ability ABILITY_SHARPNESS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+
+        // mon 3
+        ivs 255
+        abilityslot 0
+        level 43
+        pokemon SPECIES_FERROTHORN
+        item ITEM_ROCKY_HELMET
+        move MOVE_GYRO_BALL
+        move MOVE_POWER_WHIP
+        move MOVE_PAYBACK
+        move MOVE_KNOCK_OFF
+        ability ABILITY_IRON_BARBS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 129, 0, 0, 129
+        nature NATURE_ADAMANT
+        ballseal 0
+
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 44
+        pokemon SPECIES_MAGNEZONE
+        item ITEM_LIFE_ORB
+        move MOVE_TRI_ATTACK
+        move MOVE_THUNDERBOLT
+        move MOVE_FLASH_CANNON
+        move MOVE_MIRROR_COAT
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 0, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_QUIET
+        ballseal 0
+
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 45
         pokemon SPECIES_STEELIX
-        item ITEM_SITRUS_BERRY
-        move MOVE_SCREECH
-        move MOVE_SANDSTORM
-        move MOVE_ROCK_THROW
-        move MOVE_IRON_TAIL
+        item ITEM_STEELIXITE
+        move MOVE_EARTHQUAKE
+        move MOVE_HEAVY_SLAM
+        move MOVE_CURSE
+        move MOVE_ICE_FANG
         ability ABILITY_STURDY
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_BRAVE
         ballseal 0
 
     endparty
@@ -1921,7 +1972,7 @@ trainerdata 33, "Jasmine"
 trainerdata 34, "Chuck"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_CHUCK
-    nummons 2
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -1934,33 +1985,97 @@ trainerdata 34, "Chuck"
         // mon 0
         ivs 255
         abilityslot 0
-        level 29
-        pokemon SPECIES_PRIMEAPE
-        item ITEM_NONE
-        move MOVE_LEER
-        move MOVE_DOUBLE_TEAM
-        move MOVE_FOCUS_PUNCH
-        move MOVE_ROCK_SLIDE
-        ability ABILITY_VITAL_SPIRIT
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        level 40
+        pokemon SPECIES_HITMONTOP
+        item ITEM_EXPERT_BELT
+        move MOVE_MACH_PUNCH
+        move MOVE_DRILL_RUN
+        move MOVE_FAKE_OUT
+        move MOVE_RAPID_SPIN
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 31
-        pokemon SPECIES_POLIWRATH
+        level 40
+        pokemon SPECIES_BLAZIKEN
+        item ITEM_LIFE_ORB
+        move MOVE_PROTECT
+        move MOVE_SWORDS_DANCE
+        move MOVE_BLAZE_KICK
+        move MOVE_CLOSE_COMBAT
+        ability ABILITY_SPEED_BOOST
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+
+        // mon 2
+        ivs 255
+        abilityslot 0
+        level 40
+        pokemon SPECIES_TOXICROAK
+        item ITEM_BLACK_SLUDGE
+        move MOVE_POISON_JAB
+        move MOVE_SUCKER_PUNCH
+        move MOVE_DRAIN_PUNCH
+        move MOVE_TOXIC
+        ability ABILITY_DRY_SKIN
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_JOLLY
+        ballseal 0
+
+        // mon 3
+        ivs 255
+        abilityslot 0
+        level 41
+        pokemon SPECIES_HERACROSS
+        item ITEM_COBA_BERRY
+        move MOVE_BRICK_BREAK
+        move MOVE_KNOCK_OFF
+        move MOVE_STONE_EDGE
+        move MOVE_MEGAHORN
+        ability ABILITY_MOXIE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 4, 0
+        nature NATURE_JOLLY
+        ballseal 0
+
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 41
+        pokemon SPECIES_BEWEAR
         item ITEM_SITRUS_BERRY
-        move MOVE_HYPNOSIS
-        move MOVE_SURF
-        move MOVE_FOCUS_PUNCH
-        move MOVE_BODY_SLAM
-        ability ABILITY_WATER_ABSORB
-        setivs 18, 18, 18, 18, 18, 18
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        move MOVE_SWORDS_DANCE
+        move MOVE_CLOSE_COMBAT
+        move MOVE_PAYBACK
+        move MOVE_EARTHQUAKE
+        ability ABILITY_FLUFFY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_SASSY
+        ballseal 0
+
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 42
+        pokemon SPECIES_GALLADE
+        item ITEM_GALLADITE
+        move MOVE_AQUA_CUTTER
+        move MOVE_CLOSE_COMBAT
+        move MOVE_PSYCHO_CUT
+        move MOVE_BULK_UP
+        ability ABILITY_SHARPNESS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
     endparty
@@ -1989,7 +2104,7 @@ trainerdata 35, "Clair"
         move MOVE_BITE
         move MOVE_DRAGON_PULSE
         ability ABILITY_INTIMIDATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -2005,7 +2120,7 @@ trainerdata 35, "Clair"
         move MOVE_SLAM
         move MOVE_DRAGON_PULSE
         ability ABILITY_SHED_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -2021,7 +2136,7 @@ trainerdata 35, "Clair"
         move MOVE_SLAM
         move MOVE_DRAGON_PULSE
         ability ABILITY_SHED_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -2037,7 +2152,7 @@ trainerdata 35, "Clair"
         move MOVE_HYPER_BEAM
         move MOVE_DRAGON_PULSE
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -2068,7 +2183,7 @@ trainerdata 36, "Joyce"
         move MOVE_THUNDERBOLT
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -2084,7 +2199,7 @@ trainerdata 36, "Joyce"
         move MOVE_SURF
         move MOVE_RAIN_DANCE
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -2092,7 +2207,7 @@ trainerdata 36, "Joyce"
     endparty
 
 trainerdata 37, "Preston"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_GENTLEMAN
     nummons 2
     item ITEM_NONE
@@ -2107,13 +2222,9 @@ trainerdata 37, "Preston"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GROWLITHE
+        level 38
+        pokemon SPECIES_ARCANINE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -2123,13 +2234,9 @@ trainerdata 37, "Preston"
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GROWLITHE
+        level 38
+        monwithform SPECIES_ARCANINE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -2170,7 +2277,7 @@ trainerdata 38, "Colette"
     endparty
 
 trainerdata 39, "Eugene"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SAILOR
     nummons 3
     item ITEM_NONE
@@ -2185,13 +2292,9 @@ trainerdata 39, "Eugene"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_POLIWHIRL
+        level 36
+        pokemon SPECIES_POLIWRATH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -2201,33 +2304,25 @@ trainerdata 39, "Eugene"
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
+        level 36
         pokemon SPECIES_RATICATE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MILD
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_KRABBY
+        level 36
+        pokemon SPECIES_KINGLER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -2377,7 +2472,7 @@ trainerdata 43, "Chow"
     endparty
 
 trainerdata 44, "Derek"
-    trainermontype TRAINER_DATA_TYPE_BALL | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS | 0
+trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKEFAN_M
     nummons 1
     item ITEM_NONE
@@ -2392,23 +2487,18 @@ trainerdata 44, "Derek"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        monwithform SPECIES_GROWLITHE, 1
-        move MOVE_EMBER
-        move MOVE_ROCK_TOMB
-        move MOVE_NONE
-        move MOVE_NONE
-        ball ITEM_MASTER_BALL
+        level 37
+        pokemon SPECIES_RAICHU
+		ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        additionalflags TRAINER_DATA_EXTRA_TYPE_NICKNAME
-        nickname _H, _a_, _m_, _i_, _l_, _t_, _o_, _n_, _endstr, 0, 0
-        ballseal 4
+		nature NATURE_TIMID
+        ballseal 0
 
     endparty
 
 trainerdata 45, "Ruth"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKEFAN
     nummons 1
     item ITEM_NONE
@@ -2423,14 +2513,10 @@ trainerdata 45, "Ruth"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_PIKACHU
+        level 37
+        monwithform SPECIES_RAICHU, 1
         item ITEM_NONE
-        move MOVE_DOUBLE_TEAM
-        move MOVE_QUICK_ATTACK
-        move MOVE_TAIL_WHIP
-        move MOVE_THUNDER_SHOCK
-        ability ABILITY_STATIC
+        ability ABILITY_SURGE_SURFER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
@@ -2439,7 +2525,7 @@ trainerdata 45, "Ruth"
     endparty
 
 trainerdata 46, "Martha"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_MEDIUM
     nummons 3
     item ITEM_NONE
@@ -2454,14 +2540,10 @@ trainerdata 46, "Martha"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GASTLY
+        level 33
+        pokemon SPECIES_YAMASK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        ability ABILITY_MUMMY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
@@ -2470,14 +2552,10 @@ trainerdata 46, "Martha"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_HAUNTER
+        level 33
+        pokemon SPECIES_FRILLISH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
@@ -2486,14 +2564,10 @@ trainerdata 46, "Martha"
         // mon 2
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_GASTLY
+        level 33
+        pokemon SPECIES_TREVENANT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        ability ABILITY_HARVEST
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
@@ -2661,7 +2735,7 @@ trainerdata 50, "Abe"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -3191,7 +3265,7 @@ trainerdata 63, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -3559,9 +3633,9 @@ trainerdata 71, "Cathy"
     endparty
 
 trainerdata 72, "Bryan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BIRD_KEEPER_GS
-    nummons 2
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -3574,31 +3648,11 @@ trainerdata 72, "Bryan"
         // mon 0
         ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_PIDGEY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CALM
-        ballseal 0
-
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 14
+        level 25
         pokemon SPECIES_PIDGEOTTO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -3608,7 +3662,7 @@ trainerdata 72, "Bryan"
 trainerdata 73, "Theo"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BIRD_KEEPER_GS
-    nummons 5
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -3621,87 +3675,23 @@ trainerdata 73, "Theo"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_PIDGEY
+        level 38
+        pokemon SPECIES_PIDGEOT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        move MOVE_HEAT_WAVE
+        move MOVE_HURRICANE
+        move MOVE_FOCUS_BLAST
+        move MOVE_UPROAR
+        ability ABILITY_NO_GUARD
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
-        ballseal 0
-
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 15
-        pokemon SPECIES_PIDGEY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 19
-        pokemon SPECIES_PIDGEY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
-        ballseal 0
-
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 15
-        pokemon SPECIES_PIDGEY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
-        ballseal 0
-
-        // mon 4
-        ivs 255
-        abilityslot 0
-        level 15
-        pokemon SPECIES_PIDGEY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
         ballseal 0
 
     endparty
 
 trainerdata 74, "Ivan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_CAMPER
     nummons 3
     item ITEM_NONE
@@ -3716,29 +3706,21 @@ trainerdata 74, "Ivan"
         // mon 0
         ivs 255
         abilityslot 0
-        level 10
-        pokemon SPECIES_DIGLETT
+        level 23
+        pokemon SPECIES_DUGTRIO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SAND_VEIL
+        ability ABILITY_ARENA_TRAP
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 10
-        pokemon SPECIES_ZUBAT
+        level 23
+        pokemon SPECIES_GOLBAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SNIPER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3748,14 +3730,10 @@ trainerdata 74, "Ivan"
         // mon 2
         ivs 255
         abilityslot 0
-        level 14
-        pokemon SPECIES_DIGLETT
+        level 24
+        monwithform SPECIES_DUGTRIO, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SAND_VEIL
+        ability ABILITY_TANGLING_HAIR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
@@ -3764,7 +3742,7 @@ trainerdata 74, "Ivan"
     endparty
 
 trainerdata 75, "Elliot"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_CAMPER
     nummons 2
     item ITEM_NONE
@@ -3779,30 +3757,22 @@ trainerdata 75, "Elliot"
         // mon 0
         ivs 255
         abilityslot 0
-        level 13
-        pokemon SPECIES_SANDSHREW
+        level 24
+        pokemon SPECIES_SANDSLASH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SAND_VEIL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_MARILL
+        level 25
+        pokemon SPECIES_AZUMARILL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_HUGE_POWER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
@@ -3811,7 +3781,7 @@ trainerdata 75, "Elliot"
     endparty
 
 trainerdata 76, "Brooke"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PICNICKER
     nummons 1
     item ITEM_NONE
@@ -3826,13 +3796,9 @@ trainerdata 76, "Brooke"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_PIKACHU
+        level 26
+        pokemon SPECIES_RAICHU
         item ITEM_NONE
-        move MOVE_THUNDER_SHOCK
-        move MOVE_GROWL
-        move MOVE_QUICK_ATTACK
-        move MOVE_DOUBLE_TEAM
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3842,7 +3808,7 @@ trainerdata 76, "Brooke"
     endparty
 
 trainerdata 77, "Kim"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PICNICKER
     nummons 1
     item ITEM_NONE
@@ -3857,13 +3823,9 @@ trainerdata 77, "Kim"
         // mon 0
         ivs 255
         abilityslot 0
-        level 15
+        level 25
         pokemon SPECIES_VULPIX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FLASH_FIRE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3873,7 +3835,7 @@ trainerdata 77, "Kim"
     endparty
 
 trainerdata 78, "Arnie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BUG_CATCHER
     nummons 1
     item ITEM_NONE
@@ -3888,13 +3850,9 @@ trainerdata 78, "Arnie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 15
+        level 25
         pokemon SPECIES_VENONAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3951,7 +3909,7 @@ trainerdata 79, "Ken"
     endparty
 
 trainerdata 80, "Dirk"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POLICEMAN
     nummons 2
     item ITEM_NONE
@@ -3969,10 +3927,6 @@ trainerdata 80, "Dirk"
         level 14
         pokemon SPECIES_GROWLITHE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3983,12 +3937,8 @@ trainerdata 80, "Dirk"
         ivs 255
         abilityslot 0
         level 14
-        pokemon SPECIES_GROWLITHE
+        monwithform SPECIES_GROWLITHE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -3998,7 +3948,7 @@ trainerdata 80, "Dirk"
     endparty
 
 trainerdata 81, "Tori & Til"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TWINS
     nummons 2
     item ITEM_NONE
@@ -4013,14 +3963,10 @@ trainerdata 81, "Tori & Til"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_MARILL
+        level 30
+        pokemon SPECIES_AZUMARILL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_HUGE_POWER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
@@ -4029,13 +3975,9 @@ trainerdata 81, "Tori & Til"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_MAREEP
+        level 30
+        pokemon SPECIES_AMPHAROS
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4045,7 +3987,7 @@ trainerdata 81, "Tori & Til"
     endparty
 
 trainerdata 82, "Toby"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BIRD_KEEPER_GS
     nummons 1
     item ITEM_NONE
@@ -4060,20 +4002,13 @@ trainerdata 82, "Toby"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
+        level 36
         pokemon SPECIES_SWELLOW
         item ITEM_SILK_SCARF
-        move MOVE_FACADE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 0, 252, 0, 252, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
-        additionalflags TRAINER_DATA_EXTRA_TYPE_STATUS | TRAINER_DATA_EXTRA_TYPE_PP_COUNTS
-        status 0x10
-        ppcounts 32, 0, 0, 0
         ballseal 0
 
     endparty
@@ -4141,7 +4076,7 @@ trainerdata 84, "Barry"
     endparty
 
 trainerdata 85, "Paula"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 2
     item ITEM_NONE
@@ -4156,14 +4091,10 @@ trainerdata 85, "Paula"
         // mon 0
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_STARYU
+        level 38
+        pokemon SPECIES_SLOWBRO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_NATURAL_CURE
+        ability ABILITY_OWN_TEMPO
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
@@ -4172,13 +4103,9 @@ trainerdata 85, "Paula"
         // mon 1
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_SHELLDER
+        level 38
+        pokemon SPECIES_CLOYSTER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SKILL_LINK
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4188,7 +4115,7 @@ trainerdata 85, "Paula"
     endparty
 
 trainerdata 86, "Randall"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 3
     item ITEM_NONE
@@ -4203,14 +4130,10 @@ trainerdata 86, "Randall"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_SHELLDER
+        level 37
+        pokemon SPECIES_SEAKING
         item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_ICICLE_SPEAR
-        move MOVE_WITHDRAW
-        move MOVE_TACKLE
-        ability ABILITY_SHELL_ARMOR
+        ability ABILITY_LIGHTNING_ROD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
@@ -4219,13 +4142,9 @@ trainerdata 86, "Randall"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_WARTORTLE
+        level 37
+        pokemon SPECIES_BLASTOISE
         item ITEM_NONE
-        move MOVE_RAPID_SPIN
-        move MOVE_BITE
-        move MOVE_WATER_GUN
-        move MOVE_TAIL_WHIP
         ability ABILITY_TORRENT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4235,14 +4154,10 @@ trainerdata 86, "Randall"
         // mon 2
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_SHELLDER
+        level 37
+        pokemon SPECIES_LANTURN
         item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_ICICLE_SPEAR
-        move MOVE_WITHDRAW
-        move MOVE_TACKLE
-        ability ABILITY_SKILL_LINK
+        ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
@@ -4377,7 +4292,7 @@ trainerdata 88, "Mickey"
     endparty
 
 trainerdata 89, "Grace"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_MEDIUM
     nummons 2
     item ITEM_NONE
@@ -4392,13 +4307,9 @@ trainerdata 89, "Grace"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_HAUNTER
+        level 34
+        pokemon SPECIES_DUSKULL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4408,25 +4319,21 @@ trainerdata 89, "Grace"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_HAUNTER
+        level 34
+        pokemon SPECIES_DRIFBLIM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        ability ABILITY_AFTERMATH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        nature NATURE_TIMID
         ballseal 0
 
     endparty
 
 trainerdata 90, "Kaylee"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
-    nummons 3
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -4439,46 +4346,22 @@ trainerdata 90, "Kaylee"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GOLDEEN
+        level 38
+        pokemon SPECIES_SWANNA
         item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_HORN_ATTACK
-        move MOVE_SUPERSONIC
-        move MOVE_PECK
-        ability ABILITY_WATER_VEIL
+        ability ABILITY_NO_GUARD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 20
-        pokemon SPECIES_GOLDEEN
-        item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_HORN_ATTACK
-        move MOVE_SUPERSONIC
-        move MOVE_PECK
-        ability ABILITY_LIGHTNING_ROD
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
-        ballseal 0
-
         // mon 2
         ivs 255
         abilityslot 0
-        level 20
+        level 38
         pokemon SPECIES_SEAKING
         item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_HORN_ATTACK
-        move MOVE_SUPERSONIC
-        move MOVE_PECK
-        ability ABILITY_WATER_VEIL
+        ability ABILITY_LIGHTNING_ROD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
@@ -4487,7 +4370,7 @@ trainerdata 90, "Kaylee"
     endparty
 
 trainerdata 91, "Susie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 2
     item ITEM_NONE
@@ -4502,13 +4385,9 @@ trainerdata 91, "Susie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_PSYDUCK
+        level 38
+        pokemon SPECIES_GOLDUCK
         item ITEM_NONE
-        move MOVE_SCRATCH
-        move MOVE_WATER_GUN
-        move MOVE_DISABLE
-        move MOVE_CONFUSION
         ability ABILITY_DAMP
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4518,14 +4397,10 @@ trainerdata 91, "Susie"
         // mon 1
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_GOLDEEN
+        level 38
+        pokemon SPECIES_SIMIPOUR
         item ITEM_NONE
-        move MOVE_FLAIL
-        move MOVE_WATER_PULSE
-        move MOVE_SUPERSONIC
-        move MOVE_HORN_ATTACK
-        ability ABILITY_LIGHTNING_ROD
+        ability ABILITY_GLUTTONY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -4534,7 +4409,7 @@ trainerdata 91, "Susie"
     endparty
 
 trainerdata 92, "Denise"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 1
     item ITEM_NONE
@@ -4549,13 +4424,9 @@ trainerdata 92, "Denise"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_SEEL
+        level 40
+        pokemon SPECIES_DEWGONG
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_THICK_FAT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4565,7 +4436,7 @@ trainerdata 92, "Denise"
     endparty
 
 trainerdata 93, "Kara"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 2
     item ITEM_NONE
@@ -4580,14 +4451,10 @@ trainerdata 93, "Kara"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_STARYU
+        level 39
+        pokemon SPECIES_DREDNAW
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_NATURAL_CURE
+        ability ABILITY_SHELL_ARMOR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -4596,14 +4463,10 @@ trainerdata 93, "Kara"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_STARMIE
+        level 39
+        pokemon SPECIES_TOXAPEX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_NATURAL_CURE
+        ability ABILITY_LIMBER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -4612,7 +4475,7 @@ trainerdata 93, "Kara"
     endparty
 
 trainerdata 94, "Wendy"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 2
     item ITEM_NONE
@@ -4627,13 +4490,9 @@ trainerdata 94, "Wendy"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_HORSEA
+        level 38
+        pokemon SPECIES_SEADRA
         item ITEM_NONE
-        move MOVE_BUBBLE
-        move MOVE_SMOKESCREEN
-        move MOVE_LEER
-        move MOVE_BUBBLE_BEAM
         ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4643,14 +4502,10 @@ trainerdata 94, "Wendy"
         // mon 1
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_HORSEA
+        level 38
+        pokemon SPECIES_BRUXISH
         item ITEM_NONE
-        move MOVE_FOCUS_ENERGY
-        move MOVE_SMOKESCREEN
-        move MOVE_LEER
-        move MOVE_BUBBLE_BEAM
-        ability ABILITY_SNIPER
+        ability ABILITY_STRONG_JAW
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -4659,7 +4514,7 @@ trainerdata 94, "Wendy"
     endparty
 
 trainerdata 95, "Charlie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 3
     item ITEM_NONE
@@ -4674,14 +4529,10 @@ trainerdata 95, "Charlie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_SHELLDER
+        level 38
+        pokemon SPECIES_QUAGSIRE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SKILL_LINK
+        ability ABILITY_DAMP
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
@@ -4690,14 +4541,10 @@ trainerdata 95, "Charlie"
         // mon 1
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_TENTACOOL
+        level 38
+        pokemon SPECIES_QWILFISH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CLEAR_BODY
+        ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -4706,14 +4553,10 @@ trainerdata 95, "Charlie"
         // mon 2
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_TENTACRUEL
+        level 38
+        pokemon SPECIES_OCTILLERY
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LIQUID_OOZE
+        ability ABILITY_MEGA_LAUNCHER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
@@ -4722,7 +4565,7 @@ trainerdata 95, "Charlie"
     endparty
 
 trainerdata 96, "George"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 6
     item ITEM_NONE
@@ -4737,13 +4580,9 @@ trainerdata 96, "George"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_TENTACOOL
+        level 35
+        pokemon SPECIES_TENTACRUEL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CLEAR_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4753,14 +4592,10 @@ trainerdata 96, "George"
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_TENTACOOL
+        level 35
+        pokemon SPECIES_LUDICOLO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LIQUID_OOZE
+        ability ABILITY_RAIN_DISH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -4769,14 +4604,10 @@ trainerdata 96, "George"
         // mon 2
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_TENTACOOL
+        level 35
+        pokemon SPECIES_SHARPEDO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CLEAR_BODY
+        ability ABILITY_ROUGH_SKIN
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
@@ -4785,14 +4616,10 @@ trainerdata 96, "George"
         // mon 3
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_STARYU
+        level 35
+        pokemon SPECIES_WHISCASH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_NATURAL_CURE
+        ability ABILITY_HYDRATION
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
@@ -4801,14 +4628,10 @@ trainerdata 96, "George"
         // mon 4
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_TENTACOOL
+        level 35
+        pokemon SPECIES_LUMINEON
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CLEAR_BODY
+        ability ABILITY_STORM_DRAIN
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -4817,14 +4640,10 @@ trainerdata 96, "George"
         // mon 5
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_REMORAID
+        level 35
+        pokemon SPECIES_MANTINE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_HUSTLE
+        ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
@@ -4833,7 +4652,7 @@ trainerdata 96, "George"
     endparty
 
 trainerdata 97, "Berke"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 1
     item ITEM_NONE
@@ -4848,14 +4667,10 @@ trainerdata 97, "Berke"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_QWILFISH
+        level 40
+        monwithform SPECIES_QWILFISH, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_TOXIC_DEBRIS
+        ability ABILITY_POISON_TOUCH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -4864,7 +4679,7 @@ trainerdata 97, "Berke"
     endparty
 
 trainerdata 98, "Ronald"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 2
     item ITEM_NONE
@@ -4879,14 +4694,10 @@ trainerdata 98, "Ronald"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_GYARADOS
+        level 19
+        pokemon SPECIES_MAGIKARP
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_INTIMIDATE
+        ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
@@ -4895,13 +4706,9 @@ trainerdata 98, "Ronald"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
+        level 39
         pokemon SPECIES_GYARADOS
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -4911,7 +4718,7 @@ trainerdata 98, "Ronald"
     endparty
 
 trainerdata 99, "Matthew"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 1
     item ITEM_NONE
@@ -4926,17 +4733,13 @@ trainerdata 99, "Matthew"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_KRABBY
+        level 40
+        pokemon SPECIES_BARBARACLE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_HYPER_CUTTER
+        ability ABILITY_TOUGH_CLAWS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIET
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -5059,7 +4862,7 @@ trainerdata 102, "Gaven"
         move MOVE_ACID
         move MOVE_RAZOR_LEAF
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -5075,7 +4878,7 @@ trainerdata 102, "Gaven"
         move MOVE_GUILLOTINE
         move MOVE_PROTECT
         ability ABILITY_HYPER_CUTTER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -5091,7 +4894,7 @@ trainerdata 102, "Gaven"
         move MOVE_BITE
         move MOVE_EMBER
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -5122,7 +4925,7 @@ trainerdata 103, "Blake"
         move MOVE_MAGNET_BOMB
         move MOVE_SCREECH
         ability ABILITY_STURDY
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -5138,7 +4941,7 @@ trainerdata 103, "Blake"
         move MOVE_YAWN
         move MOVE_EARTHQUAKE
         ability ABILITY_WATER_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -5154,7 +4957,7 @@ trainerdata 103, "Blake"
         move MOVE_SLEEP_POWDER
         move MOVE_SOLAR_BEAM
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -5185,7 +4988,7 @@ trainerdata 104, "Brian"
         move MOVE_COTTON_SPORE
         move MOVE_TACKLE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -5405,7 +5208,7 @@ trainerdata 108, "Ryan"
         move MOVE_WHIRLWIND
         move MOVE_WING_ATTACK
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -5421,7 +5224,7 @@ trainerdata 108, "Ryan"
         move MOVE_SWIFT
         move MOVE_SCREECH
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -5452,7 +5255,7 @@ trainerdata 109, "Alton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -5468,7 +5271,7 @@ trainerdata 109, "Alton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_BLAZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -5484,7 +5287,7 @@ trainerdata 109, "Alton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -5656,7 +5459,7 @@ trainerdata 113, "Jamie"
         move MOVE_WILL_O_WISP
         move MOVE_AGILITY
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -5672,7 +5475,7 @@ trainerdata 113, "Jamie"
         move MOVE_THUNDER_WAVE
         move MOVE_CHARGE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -5703,7 +5506,7 @@ trainerdata 114, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -5719,7 +5522,7 @@ trainerdata 114, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -5735,7 +5538,7 @@ trainerdata 114, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -5766,7 +5569,7 @@ trainerdata 115, "Megan"
         move MOVE_TAKE_DOWN
         move MOVE_RAZOR_LEAF
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -5782,7 +5585,7 @@ trainerdata 115, "Megan"
         move MOVE_POISON_POWDER
         move MOVE_PETAL_DANCE
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -5798,7 +5601,7 @@ trainerdata 115, "Megan"
         move MOVE_DOUBLE_EDGE
         move MOVE_LEECH_SEED
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -5829,7 +5632,7 @@ trainerdata 116, "Lois"
         move MOVE_THUNDER_WAVE
         move MOVE_CHARGE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -5845,7 +5648,7 @@ trainerdata 116, "Lois"
         move MOVE_CONFUSE_RAY
         move MOVE_NASTY_PLOT
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -5923,7 +5726,7 @@ trainerdata 118, "Kate"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -5939,7 +5742,7 @@ trainerdata 118, "Kate"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SHELL_ARMOR
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6001,7 +5804,7 @@ trainerdata 120, "Irene"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -6017,7 +5820,7 @@ trainerdata 120, "Irene"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LIGHTNING_ROD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -6048,7 +5851,7 @@ trainerdata 121, "Kelly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_THICK_FAT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -6064,7 +5867,7 @@ trainerdata 121, "Kelly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -6080,7 +5883,7 @@ trainerdata 121, "Kelly"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -6088,7 +5891,7 @@ trainerdata 121, "Kelly"
     endparty
 
 trainerdata 122, "Marvin"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_FISHERMAN
     nummons 3
     item ITEM_NONE
@@ -6103,13 +5906,9 @@ trainerdata 122, "Marvin"
         // mon 0
         ivs 255
         abilityslot 0
-        level 10
-        pokemon SPECIES_MAGIKARP
+        level 25
+        pokemon SPECIES_CARVANHA
         item ITEM_NONE
-        move MOVE_SPLASH
-        move MOVE_TACKLE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6119,13 +5918,9 @@ trainerdata 122, "Marvin"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
+        level 42
         pokemon SPECIES_GYARADOS
         item ITEM_NONE
-        move MOVE_THRASH
-        move MOVE_SURF
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6135,14 +5930,10 @@ trainerdata 122, "Marvin"
         // mon 2
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_MAGIKARP
+        level 25
+        pokemon SPECIES_CORPHISH
         item ITEM_NONE
-        move MOVE_SPLASH
-        move MOVE_TACKLE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SWIFT_SWIM
+        ability ABILITY_SHELL_ARMOR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
@@ -6151,7 +5942,7 @@ trainerdata 122, "Marvin"
     endparty
 
 trainerdata 123, "Tully"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_FISHERMAN
     nummons 1
     item ITEM_NONE
@@ -6166,14 +5957,10 @@ trainerdata 123, "Tully"
         // mon 0
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_QWILFISH
+        level 45
+        pokemon SPECIES_OVERQWIL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_TOXIC_DEBRIS
+        ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
@@ -6481,7 +6268,7 @@ trainerdata 128, "Jonah"
     endparty
 
 trainerdata 129, "Shane"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKE_MANIAC
     nummons 2
     item ITEM_NONE
@@ -6496,13 +6283,9 @@ trainerdata 129, "Shane"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_NIDORINA
+        level 44
+        pokemon SPECIES_NIDOQUEEN
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_POISON_TOUCH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6512,13 +6295,9 @@ trainerdata 129, "Shane"
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_NIDORINO
+        level 44
+        pokemon SPECIES_NIDOKING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_POISON_TOUCH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6528,7 +6307,7 @@ trainerdata 129, "Shane"
     endparty
 
 trainerdata 130, "Beckett"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKE_MANIAC
     nummons 1
     item ITEM_NONE
@@ -6543,13 +6322,9 @@ trainerdata 130, "Beckett"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_SLOWBRO
+        level 44
+        pokemon SPECIES_SLOWKING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_OBLIVIOUS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6559,7 +6334,7 @@ trainerdata 130, "Beckett"
     endparty
 
 trainerdata 131, "Brent"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKE_MANIAC
     nummons 2
     item ITEM_NONE
@@ -6574,13 +6349,9 @@ trainerdata 131, "Brent"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_NIDORINA
+        level 36
+        pokemon SPECIES_NIDOQUEEN
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_POISON_TOUCH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6590,13 +6361,9 @@ trainerdata 131, "Brent"
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_NIDORINO
+        level 42
+        pokemon SPECIES_NIDOKING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_POISON_TOUCH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6606,7 +6373,7 @@ trainerdata 131, "Brent"
     endparty
 
 trainerdata 132, "Ron"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKE_MANIAC
     nummons 1
     item ITEM_NONE
@@ -6621,14 +6388,10 @@ trainerdata 132, "Ron"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_NIDOKING
+        level 44
+        pokemon SPECIES_DRAGALGE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_RIVALRY
+        ability ABILITY_ADAPTABILITY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
@@ -6684,7 +6447,7 @@ trainerdata 133, "Morgan"
     endparty
 
 trainerdata 134, "Benjamin"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_HIKER
     nummons 3
     item ITEM_NONE
@@ -6699,13 +6462,9 @@ trainerdata 134, "Benjamin"
         // mon 0
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_DIGLETT
+        level 43
+        pokemon SPECIES_DUGTRIO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SAND_VEIL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6715,13 +6474,9 @@ trainerdata 134, "Benjamin"
         // mon 1
         ivs 255
         abilityslot 0
-        level 15
-        pokemon SPECIES_GEODUDE
+        level 43
+        pokemon SPECIES_GOLEM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STURDY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6731,14 +6486,10 @@ trainerdata 134, "Benjamin"
         // mon 2
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_DUGTRIO
+        level 43
+        pokemon SPECIES_DONPHAN
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SAND_VEIL
+        ability ABILITY_STURDY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -6896,7 +6647,7 @@ trainerdata 137, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -6912,7 +6663,7 @@ trainerdata 137, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -7782,7 +7533,7 @@ trainerdata 155, "Anthony"
     endparty
 
 trainerdata 156, "Yoshi"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BLACK_BELT
     nummons 1
     item ITEM_NONE
@@ -7797,15 +7548,11 @@ trainerdata 156, "Yoshi"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
+        level 40
         pokemon SPECIES_HITMONLEE
         item ITEM_NONE
-        move MOVE_DOUBLE_KICK
-        move MOVE_MEDITATE
-        move MOVE_JUMP_KICK
-        move MOVE_FOCUS_ENERGY
         ability ABILITY_RECKLESS
-        setivs 4, 4, 4, 4, 4, 4
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -7828,7 +7575,7 @@ trainerdata 157, "Lao"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
+        level 40
         pokemon SPECIES_HITMONCHAN
         item ITEM_NONE
         move MOVE_MACH_PUNCH
@@ -7836,7 +7583,7 @@ trainerdata 157, "Lao"
         move MOVE_ICE_PUNCH
         move MOVE_FIRE_PUNCH
         ability ABILITY_IRON_FIST
-        setivs 4, 4, 4, 4, 4, 4
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -7867,7 +7614,7 @@ trainerdata 158, "Kiyo"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RECKLESS
-        setivs 12, 12, 12, 12, 12, 12
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7883,7 +7630,7 @@ trainerdata 158, "Kiyo"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_IRON_FIST
-        setivs 12, 12, 12, 12, 12, 12
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -7891,7 +7638,7 @@ trainerdata 158, "Kiyo"
     endparty
 
 trainerdata 159, "Lung"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BLACK_BELT
     nummons 3
     item ITEM_NONE
@@ -7906,15 +7653,11 @@ trainerdata 159, "Lung"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_MANKEY
+        level 38
+        pokemon SPECIES_TYROGUE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_VITAL_SPIRIT
-        setivs 4, 4, 4, 4, 4, 4
+        ability ABILITY_GUTS
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7922,31 +7665,23 @@ trainerdata 159, "Lung"
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_MANKEY
+        level 38
+        pokemon SPECIES_GURDURR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_ANGER_POINT
-        setivs 4, 4, 4, 4, 4, 4
+        ability ABILITY_SHEER_FORCE
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_JOLLY
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
+        level 39
         pokemon SPECIES_PRIMEAPE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_ANGER_POINT
-        setivs 4, 4, 4, 4, 4, 4
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -7977,7 +7712,7 @@ trainerdata 160, "Naoko"
         move MOVE_PSYCH_UP
         move MOVE_SWIFT
         ability ABILITY_SYNCHRONIZE
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -8008,7 +7743,7 @@ trainerdata 161, "Sayo"
         move MOVE_DOUBLE_TEAM
         move MOVE_THUNDER_WAVE
         ability ABILITY_VOLT_ABSORB
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -8039,7 +7774,7 @@ trainerdata 162, "Zuki"
         move MOVE_CONFUSE_RAY
         move MOVE_SHADOW_BALL
         ability ABILITY_SYNCHRONIZE
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -8070,7 +7805,7 @@ trainerdata 163, "Kuni"
         move MOVE_QUICK_ATTACK
         move MOVE_AURORA_BEAM
         ability ABILITY_WATER_ABSORB
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -8101,7 +7836,7 @@ trainerdata 164, "Miki"
         move MOVE_QUICK_ATTACK
         move MOVE_WILL_O_WISP
         ability ABILITY_FLASH_FIRE
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -8893,7 +8628,7 @@ trainerdata 180, "Mickey"
     endparty
 
 trainerdata 181, "William"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKEFAN_M
     nummons 1
     item ITEM_NONE
@@ -8908,13 +8643,9 @@ trainerdata 181, "William"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
+        level 26
         pokemon SPECIES_RAICHU
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -8924,7 +8655,7 @@ trainerdata 181, "William"
     endparty
 
 trainerdata 182, "Beverly"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_POKEFAN
     nummons 1
     item ITEM_NONE
@@ -8939,13 +8670,9 @@ trainerdata 182, "Beverly"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_SNUBBULL
+        level 26
+        pokemon SPECIES_GRANBULL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -9065,7 +8792,7 @@ trainerdata 184, "Krise"
     endparty
 
 trainerdata 185, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -9080,39 +8807,31 @@ trainerdata 185, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_RATICATE
+        level 48
+        monwithform SPECIES_RATICATE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_RATICATE
+        level 48
+        pokemon SPECIES_SHIFTRY
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_WIND_RIDER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        nature NATURE_SERIOUS
         ballseal 0
 
     endparty
 
 trainerdata 186, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
@@ -9127,15 +8846,11 @@ trainerdata 186, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_GRIMER
+        level 48
+        monwithform SPECIES_MUK, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -9143,15 +8858,11 @@ trainerdata 186, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_GRIMER
+        level 48
+        pokemon SPECIES_THIEVUL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_STAKEOUT
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -9159,15 +8870,11 @@ trainerdata 186, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
+        level 48
         pokemon SPECIES_MUK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_REGENERATOR
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -9175,9 +8882,9 @@ trainerdata 186, "Grunt"
     endparty
 
 trainerdata 187, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
-    nummons 5
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -9190,87 +8897,31 @@ trainerdata 187, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_RATTATA
+        level 49
+        pokemon SPECIES_SHARPEDO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_RATTATA
+        level 49
+        pokemon SPECIES_CACTURNE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_WATER_ABSORB
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 23
-        pokemon SPECIES_RATTATA
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
-        ballseal 0
-
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 23
-        pokemon SPECIES_RATTATA
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
-        ballseal 0
-
-        // mon 4
-        ivs 255
-        abilityslot 0
-        level 23
-        pokemon SPECIES_RATTATA
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
         ballseal 0
 
     endparty
 
 trainerdata 188, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -9285,31 +8936,23 @@ trainerdata 188, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_ZUBAT
+        level 48
+        pokemon SPECIES_CROBAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAIVE
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_ZUBAT
+        level 48
+        pokemon SPECIES_MALAMAR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_CONTRARY
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -9317,9 +8960,9 @@ trainerdata 188, "Grunt"
     endparty
 
 trainerdata 189, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
-    nummons 4
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -9332,15 +8975,11 @@ trainerdata 189, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_KOFFING
+        level 48
+        pokemon SPECIES_VICTREEBEL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_GLUTTONY
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -9348,15 +8987,11 @@ trainerdata 189, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_GRIMER
+        level 48
+        pokemon SPECIES_DUSTOX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -9364,34 +8999,15 @@ trainerdata 189, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_ZUBAT
+        level 48
+        pokemon SPECIES_SEVIPER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_SHED_SKIN
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 23
-        pokemon SPECIES_RATTATA
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
-        ballseal 0
 
     endparty
 
@@ -9411,7 +9027,7 @@ trainerdata 190, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 26
+        level 51
         pokemon SPECIES_WEEZING
         item ITEM_NONE
         move MOVE_NONE
@@ -9419,7 +9035,7 @@ trainerdata 190, "Grunt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -9427,7 +9043,7 @@ trainerdata 190, "Grunt"
     endparty
 
 trainerdata 191, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -9442,15 +9058,11 @@ trainerdata 191, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_RATICATE
+        level 50
+        pokemon SPECIES_SCOLIPEDE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_SPEED_BOOST
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -9459,14 +9071,10 @@ trainerdata 191, "Grunt"
         ivs 255
         abilityslot 0
         level 26
-        pokemon SPECIES_KOFFING
+        pokemon SPECIES_TOXAPEX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_REGENERATOR
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -9474,7 +9082,7 @@ trainerdata 191, "Grunt"
     endparty
 
 trainerdata 192, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
@@ -9489,15 +9097,11 @@ trainerdata 192, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_ZUBAT
+        level 48
+        pokemon SPECIES_TOXICROAK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_DRY_SKIN
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -9505,39 +9109,31 @@ trainerdata 192, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_GOLBAT
+        level 48
+        pokemon SPECIES_CROBAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_IMPISH
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_GRIMER
+        level 48
+        pokemon SPECIES_SWALOT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LONELY
+        nature NATURE_MODEST
         ballseal 0
 
     endparty
 
 trainerdata 193, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
@@ -9552,15 +9148,11 @@ trainerdata 193, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 23
+        level 49
         pokemon SPECIES_MUK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_REGENERATOR
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -9568,15 +9160,11 @@ trainerdata 193, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_KOFFING
+        level 49
+        pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -9584,15 +9172,11 @@ trainerdata 193, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_RATTATA
+        level 49
+        pokemon SPECIES_RATICATE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -9631,7 +9215,7 @@ trainerdata 194, "Mickey"
     endparty
 
 trainerdata 195, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 1
     item ITEM_NONE
@@ -9646,15 +9230,11 @@ trainerdata 195, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_RATTATA
+        level 51
+        pokemon SPECIES_URSARING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -9662,7 +9242,7 @@ trainerdata 195, "Grunt"
     endparty
 
 trainerdata 196, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -9677,15 +9257,11 @@ trainerdata 196, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_RATICATE
+        level 50
+		monwithform SPECIES_LINOONE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -9693,15 +9269,11 @@ trainerdata 196, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_GOLBAT
+        level 50
+        pokemon SPECIES_EXPLOUD
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_SCRAPPY
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -9709,7 +9281,7 @@ trainerdata 196, "Grunt"
     endparty
 
 trainerdata 197, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -9724,15 +9296,11 @@ trainerdata 197, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_GRIMER
+        level 50
+        pokemon SPECIES_PURUGLY
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_LIMBER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -9740,15 +9308,11 @@ trainerdata 197, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
+        level 50
         pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -9756,7 +9320,7 @@ trainerdata 197, "Grunt"
     endparty
 
 trainerdata 198, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET_F
     nummons 1
     item ITEM_NONE
@@ -9771,23 +9335,19 @@ trainerdata 198, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 26
+        level 50
         pokemon SPECIES_ARBOK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIRKY
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
 
 trainerdata 199, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET_F
     nummons 2
     item ITEM_NONE
@@ -9802,15 +9362,11 @@ trainerdata 199, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_GLOOM
+        level 50
+        pokemon SPECIES_BELLOSSOM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -9818,15 +9374,11 @@ trainerdata 199, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_GLOOM
+        level 50
+        pokemon SPECIES_VILEPLUME
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -9834,9 +9386,9 @@ trainerdata 199, "Grunt"
     endparty
 
 trainerdata 200, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET_F
-    nummons 4
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -9849,63 +9401,35 @@ trainerdata 200, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_EKANS
+        level 48
+        pokemon SPECIES_ARBOK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_INTIMIDATE
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_STRONG_JAW
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 23
-        pokemon SPECIES_ODDISH
+        level 48
+        pokemon SPECIES_VILEPLUME
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 21
-        pokemon SPECIES_EKANS
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SHED_SKIN
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_GLOOM
+        level 48
+        pokemon SPECIES_TOXAPEX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_CHLOROPHYLL
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_REGENERATOR
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -10108,7 +9632,7 @@ trainerdata 205, "Nick"
         move MOVE_DRAGON_RAGE
         move MOVE_SCARY_FACE
         ability ABILITY_BLAZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -10124,7 +9648,7 @@ trainerdata 205, "Nick"
         move MOVE_BITE
         move MOVE_CURSE
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -10140,7 +9664,7 @@ trainerdata 205, "Nick"
         move MOVE_SLEEP_POWDER
         move MOVE_RAZOR_LEAF
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -10171,7 +9695,7 @@ trainerdata 206, "Gwen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ADAPTABILITY
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -10187,7 +9711,7 @@ trainerdata 206, "Gwen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -10203,7 +9727,7 @@ trainerdata 206, "Gwen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -10219,7 +9743,7 @@ trainerdata 206, "Gwen"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VOLT_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -10399,7 +9923,7 @@ trainerdata 210, "Caroline"
     endparty
 
 trainerdata 211, "Huey"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SAILOR
     nummons 2
     item ITEM_NONE
@@ -10414,13 +9938,9 @@ trainerdata 211, "Huey"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_POLIWAG
+        level 37
+        pokemon SPECIES_POLIWRATH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -10430,13 +9950,9 @@ trainerdata 211, "Huey"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_POLIWHIRL
+        level 37
+        pokemon SPECIES_POLITOED
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -10446,7 +9962,7 @@ trainerdata 211, "Huey"
     endparty
 
 trainerdata 212, "Terrell"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SAILOR
     nummons 1
     item ITEM_NONE
@@ -10461,14 +9977,10 @@ trainerdata 212, "Terrell"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_POLIWHIRL
+        level 38
+        pokemon SPECIES_CLAWITZER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_WATER_ABSORB
+        ability ABILITY_MEGA_LAUNCHER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -10477,7 +9989,7 @@ trainerdata 212, "Terrell"
     endparty
 
 trainerdata 213, "Kent"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SAILOR
     nummons 2
     item ITEM_NONE
@@ -10492,29 +10004,21 @@ trainerdata 213, "Kent"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_KRABBY
+        level 37
+        pokemon SPECIES_KINGLER
         item ITEM_NONE
-        move MOVE_BUBBLE_BEAM
-        move MOVE_LEER
-        move MOVE_VICE_GRIP
-        move MOVE_HARDEN
         ability ABILITY_HYPER_CUTTER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_KRABBY
+        level 37
+        pokemon SPECIES_CRAWDAUNT
         item ITEM_NONE
-        move MOVE_BUBBLE_BEAM
-        move MOVE_MUD_SHOT
-        move MOVE_VICE_GRIP
-        move MOVE_HARDEN
         ability ABILITY_SHELL_ARMOR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -10524,7 +10028,7 @@ trainerdata 213, "Kent"
     endparty
 
 trainerdata 214, "Roberto"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SAILOR
     nummons 3
     item ITEM_NONE
@@ -10539,13 +10043,9 @@ trainerdata 214, "Roberto"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_MACHOP
+        level 36
+        pokemon SPECIES_MACHAMP
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -10555,14 +10055,10 @@ trainerdata 214, "Roberto"
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_MACHOP
+        level 36
+        pokemon SPECIES_HARIYAMA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_NO_GUARD
+        ability ABILITY_THICK_FAT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
@@ -10571,14 +10067,10 @@ trainerdata 214, "Roberto"
         // mon 2
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_POLIWHIRL
+        level 36
+        pokemon SPECIES_THROH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_WATER_ABSORB
+        ability ABILITY_GUTS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -10602,23 +10094,23 @@ trainerdata 215, "Connie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_MARILL
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        level 39
+        pokemon SPECIES_AZUMARILL
+        item ITEM_SITRUS_BERRY
+        move MOVE_AQUA_JET
+        move MOVE_ICE_PUNCH
+        move MOVE_BELLY_DRUM
+        move MOVE_PLAY_ROUGH
+        ability ABILITY_HUGE_POWER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
 
 trainerdata 216, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 4
     item ITEM_NONE
@@ -10633,15 +10125,11 @@ trainerdata 216, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_RATTATA
+        level 42
+        pokemon SPECIES_TOXICROAK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_DRY_SKIN
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -10649,15 +10137,11 @@ trainerdata 216, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_RATTATA
+        level 42
+        pokemon SPECIES_SALAZZLE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_CORROSION
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -10665,15 +10149,11 @@ trainerdata 216, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_RATTATA
+        level 42
+        pokemon SPECIES_SWALOT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -10681,15 +10161,11 @@ trainerdata 216, "Grunt"
         // mon 3
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_RATTATA
+        level 42
+        pokemon SPECIES_AMOONGUSS
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_EFFECT_SPORE
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -10697,9 +10173,9 @@ trainerdata 216, "Grunt"
     endparty
 
 trainerdata 217, "Denis"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BIRD_KEEPER_GS
-    nummons 3
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -10715,12 +10191,8 @@ trainerdata 217, "Denis"
         level 18
         pokemon SPECIES_SPEAROW
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -10728,39 +10200,19 @@ trainerdata 217, "Denis"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
+        level 38
         pokemon SPECIES_FEAROW
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        ability ABILITY_TECHNICIAN
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 18
-        pokemon SPECIES_SPEAROW
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MILD
-        ballseal 0
-
+		
     endparty
 
 trainerdata 218, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 1
     item ITEM_NONE
@@ -10775,23 +10227,19 @@ trainerdata 218, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GOLBAT
+        level 46
+        pokemon SPECIES_CROBAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
 
 trainerdata 219, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
@@ -10803,34 +10251,26 @@ trainerdata 219, "Grunt"
     endentry
 
     party 219
-        // mon 0
+        // mon 2
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_RATTATA
+        level 43
+        monwithform SPECIES_RATICATE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAIVE
+        nature NATURE_BRAVE
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_ZUBAT
+        level 43
+        pokemon SPECIES_ARIADOS
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -10838,15 +10278,11 @@ trainerdata 219, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_RATTATA
+        level 43
+        pokemon SPECIES_CLODSIRE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_WATER_ABSORB
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -10854,7 +10290,7 @@ trainerdata 219, "Grunt"
     endparty
 
 trainerdata 220, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -10869,33 +10305,25 @@ trainerdata 220, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_VENONAT
+        level 44
+        pokemon SPECIES_VENOMOTH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_COMPOUND_EYES
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_VENONAT
+        level 44
+        pokemon SPECIES_BEEDRILL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_TINTED_LENS
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_JOLLY
         ballseal 0
 
     endparty
@@ -10924,7 +10352,7 @@ trainerdata 221, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 12, 12, 12, 12, 12, 12
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -10932,7 +10360,7 @@ trainerdata 221, "Mickey"
     endparty
 
 trainerdata 222, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 1
     item ITEM_NONE
@@ -10947,15 +10375,11 @@ trainerdata 222, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_RATICATE
+        level 45
+        pokemon SPECIES_OBSTAGOON
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -10978,15 +10402,15 @@ trainerdata 223, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_DROWZEE
+        level 44
+        pokemon SPECIES_HYPNO
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_INSOMNIA
-        setivs 3, 3, 3, 3, 3, 3
+        move MOVE_HYPNOSIS
+        move MOVE_PSYCHIC
+        move MOVE_DREAM_EATER
+        move MOVE_SHADOW_BALL
+        ability ABILITY_BAD_DREAMS
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -10994,23 +10418,23 @@ trainerdata 223, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_ZUBAT
+        level 44
+        pokemon SPECIES_CROBAT
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_CROSS_POISON
+        move MOVE_BITE
+        move MOVE_DUAL_WINGBEAT
+        move MOVE_LEECH_LIFE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
 
 trainerdata 224, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 3
     item ITEM_NONE
@@ -11025,15 +10449,11 @@ trainerdata 224, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_ZUBAT
+        level 43
+        monwithform SPECIES_QWILFISH, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -11041,15 +10461,11 @@ trainerdata 224, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_GRIMER
+        level 43
+        pokemon SPECIES_MUK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -11057,15 +10473,11 @@ trainerdata 224, "Grunt"
         // mon 2
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_RATTATA
+        level 43
+        monwithform SPECIES_RATICATE, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -11135,7 +10547,7 @@ trainerdata 226, "Mickey"
     endparty
 
 trainerdata 227, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -11150,15 +10562,11 @@ trainerdata 227, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_KOFFING
+        level 50
+        pokemon SPECIES_DIGGERSBY
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        ability ABILITY_HUGE_POWER
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -11166,15 +10574,11 @@ trainerdata 227, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_KOFFING
+        level 50
+        pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -11182,7 +10586,7 @@ trainerdata 227, "Grunt"
     endparty
 
 trainerdata 228, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
@@ -11197,15 +10601,11 @@ trainerdata 228, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_KOFFING
+        level 50
+        monwithform SPECIES_WEEZING, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -11213,15 +10613,11 @@ trainerdata 228, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_MUK
+        level 50
+        monwithform SPECIES_MUK, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_REGENERATOR
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -11597,7 +10993,7 @@ trainerdata 236, "Shaye"
         move MOVE_QUICK_ATTACK
         move MOVE_SAND_ATTACK
         ability ABILITY_VOLT_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -11613,7 +11009,7 @@ trainerdata 236, "Shaye"
         move MOVE_GIGA_DRAIN
         move MOVE_INGRAIN
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -11629,7 +11025,7 @@ trainerdata 236, "Shaye"
         move MOVE_PAYBACK
         move MOVE_SCARY_FACE
         ability ABILITY_ANGER_POINT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -11660,7 +11056,7 @@ trainerdata 237, "Carol"
         move MOVE_SWIFT
         move MOVE_RAIN_DANCE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -11676,7 +11072,7 @@ trainerdata 237, "Carol"
         move MOVE_THUNDER
         move MOVE_PSYCHIC
         ability ABILITY_NATURAL_CURE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -11692,7 +11088,7 @@ trainerdata 237, "Carol"
         move MOVE_CONFUSE_RAY
         move MOVE_WILL_O_WISP
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -12565,7 +11961,7 @@ trainerdata 250, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -12581,7 +11977,7 @@ trainerdata 250, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_UNBURDEN
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -12597,7 +11993,7 @@ trainerdata 250, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -12613,7 +12009,7 @@ trainerdata 250, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -12636,15 +12032,15 @@ trainerdata 251, "Nob"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_MACHOP
+        level 39
+        pokemon SPECIES_MACHOKE
         item ITEM_NONE
         move MOVE_VITAL_THROW
         move MOVE_FOCUS_ENERGY
         move MOVE_KARATE_CHOP
         move MOVE_SEISMIC_TOSS
         ability ABILITY_NO_GUARD
-        setivs 4, 4, 4, 4, 4, 4
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -12652,7 +12048,7 @@ trainerdata 251, "Nob"
         // mon 1
         ivs 255
         abilityslot 0
-        level 25
+        level 39
         pokemon SPECIES_MACHOKE
         item ITEM_NONE
         move MOVE_LEER
@@ -12660,7 +12056,7 @@ trainerdata 251, "Nob"
         move MOVE_SEISMIC_TOSS
         move MOVE_ROCK_SLIDE
         ability ABILITY_NO_GUARD
-        setivs 4, 4, 4, 4, 4, 4
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -12738,7 +12134,7 @@ trainerdata 253, "Brock"
         move MOVE_ROLLOUT
         move MOVE_EARTHQUAKE
         ability ABILITY_STURDY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -12754,7 +12150,7 @@ trainerdata 253, "Brock"
         move MOVE_EARTHQUAKE
         move MOVE_HORN_DRILL
         ability ABILITY_LIGHTNING_ROD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -12770,7 +12166,7 @@ trainerdata 253, "Brock"
         move MOVE_PROTECT
         move MOVE_SPIKE_CANNON
         ability ABILITY_SHELL_ARMOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -12786,7 +12182,7 @@ trainerdata 253, "Brock"
         move MOVE_SCREECH
         move MOVE_SANDSTORM
         ability ABILITY_ROCK_HEAD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -12802,7 +12198,7 @@ trainerdata 253, "Brock"
         move MOVE_ENDURE
         move MOVE_GIGA_DRAIN
         ability ABILITY_SHARPNESS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -12833,7 +12229,7 @@ trainerdata 254, "Misty"
         move MOVE_PSYCH_UP
         move MOVE_PSYCHIC
         ability ABILITY_SWIFT_SWIM
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -12849,7 +12245,7 @@ trainerdata 254, "Misty"
         move MOVE_EARTHQUAKE
         move MOVE_RAIN_DANCE
         ability ABILITY_WATER_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -12865,7 +12261,7 @@ trainerdata 254, "Misty"
         move MOVE_ICE_BEAM
         move MOVE_BODY_SLAM
         ability ABILITY_WATER_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -12881,7 +12277,7 @@ trainerdata 254, "Misty"
         move MOVE_RECOVER
         move MOVE_ICE_BEAM
         ability ABILITY_NATURAL_CURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -12912,7 +12308,7 @@ trainerdata 255, "Surge"
         move MOVE_SHOCK_WAVE
         move MOVE_DOUBLE_TEAM
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -12928,7 +12324,7 @@ trainerdata 255, "Surge"
         move MOVE_SHOCK_WAVE
         move MOVE_LIGHT_SCREEN
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -12944,7 +12340,7 @@ trainerdata 255, "Surge"
         move MOVE_SHOCK_WAVE
         move MOVE_MIRROR_SHOT
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -12960,7 +12356,7 @@ trainerdata 255, "Surge"
         move MOVE_SELF_DESTRUCT
         move MOVE_CHARGE_BEAM
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -12976,7 +12372,7 @@ trainerdata 255, "Surge"
         move MOVE_LIGHT_SCREEN
         move MOVE_LOW_KICK
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -13007,7 +12403,7 @@ trainerdata 256, "Erika"
         move MOVE_SUNNY_DAY
         move MOVE_GIGA_DRAIN
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -13023,7 +12419,7 @@ trainerdata 256, "Erika"
         move MOVE_GIGA_DRAIN
         move MOVE_SLEEP_POWDER
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -13039,7 +12435,7 @@ trainerdata 256, "Erika"
         move MOVE_GRASS_KNOT
         move MOVE_LEAF_STORM
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -13055,7 +12451,7 @@ trainerdata 256, "Erika"
         move MOVE_GIGA_DRAIN
         move MOVE_SOLAR_BEAM
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -13086,7 +12482,7 @@ trainerdata 257, "Janine"
         move MOVE_CONFUSE_RAY
         move MOVE_WING_ATTACK
         ability ABILITY_INFILTRATOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -13102,7 +12498,7 @@ trainerdata 257, "Janine"
         move MOVE_TOXIC
         move MOVE_EXPLOSION
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -13118,7 +12514,7 @@ trainerdata 257, "Janine"
         move MOVE_PIN_MISSILE
         move MOVE_PSYCHIC
         ability ABILITY_NO_GUARD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -13134,7 +12530,7 @@ trainerdata 257, "Janine"
         move MOVE_SWAGGER
         move MOVE_NIGHT_SHADE
         ability ABILITY_SWARM
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -13150,7 +12546,7 @@ trainerdata 257, "Janine"
         move MOVE_SIGNAL_BEAM
         move MOVE_PSYCHIC
         ability ABILITY_SHIELD_DUST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -13181,7 +12577,7 @@ trainerdata 258, "Sabrina"
         move MOVE_CALM_MIND
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -13197,7 +12593,7 @@ trainerdata 258, "Sabrina"
         move MOVE_SKILL_SWAP
         move MOVE_PSYCHIC
         ability ABILITY_FILTER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -13213,7 +12609,7 @@ trainerdata 258, "Sabrina"
         move MOVE_ENERGY_BALL
         move MOVE_REFLECT
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -13244,7 +12640,7 @@ trainerdata 259, "Blaine"
         move MOVE_OVERHEAT
         move MOVE_ROCK_SLIDE
         ability ABILITY_FLAME_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -13260,7 +12656,7 @@ trainerdata 259, "Blaine"
         move MOVE_SUNNY_DAY
         move MOVE_CONFUSE_RAY
         ability ABILITY_FLAME_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -13276,7 +12672,7 @@ trainerdata 259, "Blaine"
         move MOVE_BOUNCE
         move MOVE_OVERHEAT
         ability ABILITY_FLASH_FIRE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -13529,7 +12925,7 @@ trainerdata 262, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -13545,7 +12941,7 @@ trainerdata 262, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -13561,7 +12957,7 @@ trainerdata 262, "Mickey"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -13571,7 +12967,7 @@ trainerdata 262, "Mickey"
 trainerdata 263, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 4
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -13584,63 +12980,79 @@ trainerdata 263, "Silver"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
+        level 21
         pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_LICK
-        move MOVE_CONFUSE_RAY
-        move MOVE_MEAN_LOOK
+        item ITEM_WISE_GLASSES
+        move MOVE_OMINOUS_WIND
         move MOVE_CURSE
+        move MOVE_SLUDGE
+        move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_THUNDER_WAVE
-        move MOVE_THUNDER_SHOCK
-        move MOVE_SUPERSONIC
-        move MOVE_SONIC_BOOM
-        ability ABILITY_MAGNET_PULL
-        setivs 9, 9, 9, 9, 9, 9
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 20
+        level 21
         pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_SUPERSONIC
+        item ITEM_SCOPE_LENS
         move MOVE_BITE
         move MOVE_WING_ATTACK
+        move MOVE_ZEN_HEADBUTT
+        move MOVE_VENOSHOCK
         ability ABILITY_SNIPER
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
+        nature NATURE_ADAMANT
         ballseal 0
 
-        // mon 3
+		 // mon 2
+        ivs 255
+        abilityslot 0
+        level 21
+        pokemon SPECIES_MAGNEMITE
+        item ITEM_MAGNET
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_SONIC_BOOM
+        ability ABILITY_ANALYTIC
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+		 // mon 3
         ivs 255
         abilityslot 0
         level 22
-        pokemon SPECIES_BAYLEEF
-        item ITEM_NONE
-        move MOVE_SYNTHESIS
+        pokemon SPECIES_KADABRA
+        item ITEM_TWISTED_SPOON
+        move MOVE_PSYBEAM
         move MOVE_REFLECT
-        move MOVE_MAGICAL_LEAF
-        move MOVE_POISON_POWDER
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_CHARGE_BEAM
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 23
+        pokemon SPECIES_BAYLEEF
+        item ITEM_SITRUS_BERRY
+        move MOVE_MEGA_DRAIN
+        move MOVE_FLASH
+        move MOVE_BODY_SLAM
+        move MOVE_ANCIENT_POWER
         ability ABILITY_OVERGROW
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -13886,7 +13298,7 @@ trainerdata 266, "Silver"
 trainerdata 267, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 4
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -13896,67 +13308,83 @@ trainerdata 267, "Silver"
     endentry
 
     party 267
-        // mon 0
+      // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_LICK
+        level 32
+        pokemon SPECIES_HAUNTER
+        item ITEM_WISE_GLASSES
+        move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
         move MOVE_MEAN_LOOK
         move MOVE_CURSE
         ability ABILITY_LEVITATE
-        setivs 9, 9, 9, 9, 9, 9
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
+        level 32
+        pokemon SPECIES_MAGNETON
+        item ITEM_MAGNET
         move MOVE_THUNDER_WAVE
-        move MOVE_THUNDER_SHOCK
+        move MOVE_THUNDERBOLT
         move MOVE_SUPERSONIC
-        move MOVE_SONIC_BOOM
-        ability ABILITY_MAGNET_PULL
-        setivs 9, 9, 9, 9, 9, 9
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        move MOVE_FLASH_CANNON
+        ability ABILITY_STURDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_SUPERSONIC
+        level 33
+        pokemon SPECIES_GOLBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_POISON_FANG
+        move MOVE_CONFUSE_RAY
         move MOVE_BITE
         move MOVE_WING_ATTACK
         ability ABILITY_SNIPER
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 6, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 3
+        ivs 255
+        abilityslot 0
+        level 32
+        pokemon SPECIES_KADABRA
+        item ITEM_LIFE_ORB
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_FLASH
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RELAXED
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 22
+        level 35
         pokemon SPECIES_QUILAVA
-        item ITEM_NONE
+        item ITEM_SITRUS_BERRY
         move MOVE_FLAME_WHEEL
-        move MOVE_SMOKESCREEN
-        move MOVE_EMBER
-        move MOVE_QUICK_ATTACK
+        move MOVE_EXTRASENSORY
+        move MOVE_MYSTICAL_FIRE
+        move MOVE_SCORCHING_SANDS
         ability ABILITY_BLAZE
-        setivs 9, 9, 9, 9, 9, 9
-        setevs 0, 0, 0, 0, 0, 0
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 252, 252, 6
         nature NATURE_TIMID
         ballseal 0
 
@@ -14160,7 +13588,7 @@ trainerdata 269, "Silver"
         move MOVE_AQUA_JET
         move MOVE_BITE
         move MOVE_METAL_CLAW
-        ability ABILITY_BLAZE
+        ability ABILITY_SHEER_FORCE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
@@ -14181,83 +13609,83 @@ trainerdata 270, "Silver"
     endentry
 
    party 270
-        // mon 0
+       // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_GASTLY
+        level 32
+        pokemon SPECIES_HAUNTER
         item ITEM_WISE_GLASSES
-        move MOVE_OMINOUS_WIND
-        move MOVE_CURSE
-        move MOVE_SLUDGE
+        move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
+        move MOVE_MEAN_LOOK
+        move MOVE_CURSE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_ZUBAT
-        item ITEM_SCOPE_LENS
-        move MOVE_BITE
-        move MOVE_WING_ATTACK
-        move MOVE_ZEN_HEADBUTT
-        move MOVE_VENOSHOCK
-        ability ABILITY_SNIPER
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
-        ballseal 0
-
-		 // mon 2
-        ivs 255
-        abilityslot 0
-        level 21
-        pokemon SPECIES_MAGNEMITE
+        level 32
+        pokemon SPECIES_MAGNETON
         item ITEM_MAGNET
-        move MOVE_SHOCK_WAVE
-        move MOVE_MIRROR_SHOT
-        move MOVE_LIGHT_SCREEN
-        move MOVE_SONIC_BOOM
-        ability ABILITY_ANALYTIC
+        move MOVE_THUNDER_WAVE
+        move MOVE_THUNDERBOLT
+        move MOVE_SUPERSONIC
+        move MOVE_FLASH_CANNON
+        ability ABILITY_STURDY
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
+        setevs 252, 0, 6, 0, 252, 0
         nature NATURE_MODEST
         ballseal 0
-		
-		 // mon 3
+
+        // mon 2
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_KADABRA
-        item ITEM_TWISTED_SPOON
-        move MOVE_PSYBEAM
-        move MOVE_REFLECT
-        move MOVE_DAZZLING_GLEAM
-        move MOVE_CHARGE_BEAM
+        level 33
+        pokemon SPECIES_GOLBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_POISON_FANG
+        move MOVE_CONFUSE_RAY
+        move MOVE_BITE
+        move MOVE_WING_ATTACK
         ability ABILITY_SNIPER
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
+        setevs 0, 252, 6, 252, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
-				
-        // mon 4
+		
+		// mon 3
         ivs 255
         abilityslot 0
-        level 23
+        level 32
+        pokemon SPECIES_KADABRA
+        item ITEM_LIFE_ORB
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_FLASH
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 0, 0, 0
+        nature NATURE_TIMID
+        ballseal 0
+				
+        // mon 3
+        ivs 255
+        abilityslot 0
+        level 35
         pokemon SPECIES_CROCONAW
         item ITEM_SITRUS_BERRY
         move MOVE_ICE_FANG
         move MOVE_AQUA_JET
-        move MOVE_BITE
-        move MOVE_METAL_CLAW
-        ability ABILITY_BLAZE
+        move MOVE_CRUNCH
+        move MOVE_CUT
+        ability ABILITY_SHEER_FORCE
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
+        setevs 252, 252, 6, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
 
@@ -14266,7 +13694,7 @@ trainerdata 270, "Silver"
 trainerdata 271, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 5
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -14279,83 +13707,98 @@ trainerdata 271, "Silver"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_GOLBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_BITE
-        move MOVE_CONFUSE_RAY
-        move MOVE_AIR_CUTTER
-        ability ABILITY_SNIPER
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BASHFUL
+        level 52
+        pokemon SPECIES_SNEASLER
+        item ITEM_FOCUS_SASH
+        move MOVE_DIRE_CLAW
+        move MOVE_DRAIN_PUNCH
+        move MOVE_ACROBATICS
+        move MOVE_KNOCK_OFF
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
-        // mon 1
+		
+		// mon 1
         ivs 255
         abilityslot 0
-        level 28
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_SPARK
-        move MOVE_SONIC_BOOM
-        move MOVE_THUNDER_WAVE
-        ability ABILITY_MAGNET_PULL
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        level 52
+        pokemon SPECIES_GENGAR
+        item ITEM_WISE_GLASSES
+        move MOVE_SHADOW_BALL
+        move MOVE_SLUDGE_WAVE
+        move MOVE_THUNDERBOLT
+        move MOVE_AURA_SPHERE
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
         // mon 2
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_CONFUSE_RAY
-        move MOVE_MEAN_LOOK
-        move MOVE_CURSE
-        move MOVE_SHADOW_BALL
-        ability ABILITY_LEVITATE
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        level 52
+        pokemon SPECIES_MAGNEZONE
+        item ITEM_MAGNET
+        move MOVE_BODY_PRESS
+        move MOVE_THUNDERBOLT
+        move MOVE_TRI_ATTACK
+        move MOVE_FLASH_CANNON
+        ability ABILITY_STURDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_SNEASEL
-        item ITEM_NONE
-        move MOVE_ICY_WIND
-        move MOVE_QUICK_ATTACK
-        move MOVE_FURY_SWIPES
-        move MOVE_FEINT_ATTACK
-        ability ABILITY_INNER_FOCUS
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
+        level 52
+        pokemon SPECIES_CROBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_POISON_FANG
+        move MOVE_U_TURN
+        move MOVE_LEECH_LIFE
+        move MOVE_DUAL_WINGBEAT
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 6, 252, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
-
-        // mon 4
+		
+		// mon 4
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_FERALIGATR
-        item ITEM_NONE
-        move MOVE_ICE_FANG
-        move MOVE_WATER_GUN
-        move MOVE_CRUNCH
-        move MOVE_THRASH
-        ability ABILITY_SHEER_FORCE
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIET
+        level 52
+        pokemon SPECIES_ALAKAZAM
+        item ITEM_LIFE_ORB
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_SHADOW_BALL
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
+		// mon 5
+		ivs 255
+		abilityslot 0
+		level 53
+		pokemon SPECIES_FERALIGATR
+		item ITEM_LIFE_ORB
+		move MOVE_DRAGON_DANCE
+		move MOVE_ICE_PUNCH
+		move MOVE_LIQUIDATION
+		move MOVE_CRUNCH
+		ability ABILITY_SHEER_FORCE
+		setivs 31, 31, 31, 31, 31, 31
+		setevs 0, 252, 4, 252, 0, 0
+		nature NATURE_JOLLY
+		ballseal 0
     endparty
 
 trainerdata 272, "Silver"
@@ -14808,7 +14251,7 @@ trainerdata 278, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -14824,7 +14267,7 @@ trainerdata 278, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -14840,7 +14283,7 @@ trainerdata 278, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -14856,7 +14299,7 @@ trainerdata 278, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_UNBURDEN
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15020,7 +14463,7 @@ trainerdata 282, "Ned"
     endparty
 
 trainerdata 283, "Orson"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BURGLAR
     nummons 2
     item ITEM_NONE
@@ -15035,13 +14478,9 @@ trainerdata 283, "Orson"
         // mon 0
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_GROWLITHE
+        level 50
+        pokemon SPECIES_ARCANINE
         item ITEM_NONE
-        move MOVE_ROAR
-        move MOVE_FLAME_WHEEL
-        move MOVE_LEER
-        move MOVE_BITE
         ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -15051,13 +14490,9 @@ trainerdata 283, "Orson"
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_KOFFING
+        level 50
+        pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_TACKLE
-        move MOVE_SMOG
-        move MOVE_SLUDGE
-        move MOVE_SMOKESCREEN
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -15169,7 +14604,7 @@ trainerdata 285, "Silver"
         move MOVE_FEINT_ATTACK
         move MOVE_SHADOW_CLAW
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -15185,7 +14620,7 @@ trainerdata 285, "Silver"
         move MOVE_CONFUSE_RAY
         move MOVE_AIR_CUTTER
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -15201,7 +14636,7 @@ trainerdata 285, "Silver"
         move MOVE_THUNDER_WAVE
         move MOVE_MAGNET_BOMB
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -15217,7 +14652,7 @@ trainerdata 285, "Silver"
         move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -15233,7 +14668,7 @@ trainerdata 285, "Silver"
         move MOVE_REFLECT
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -15249,7 +14684,7 @@ trainerdata 285, "Silver"
         move MOVE_SYNTHESIS
         move MOVE_LIGHT_SCREEN
         ability ABILITY_OVERGROW
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -15280,7 +14715,7 @@ trainerdata 286, "Silver"
         move MOVE_FEINT_ATTACK
         move MOVE_SHADOW_CLAW
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -15296,7 +14731,7 @@ trainerdata 286, "Silver"
         move MOVE_CONFUSE_RAY
         move MOVE_AIR_CUTTER
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -15312,7 +14747,7 @@ trainerdata 286, "Silver"
         move MOVE_THUNDER_WAVE
         move MOVE_MAGNET_BOMB
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -15328,7 +14763,7 @@ trainerdata 286, "Silver"
         move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -15344,7 +14779,7 @@ trainerdata 286, "Silver"
         move MOVE_REFLECT
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -15360,7 +14795,7 @@ trainerdata 286, "Silver"
         move MOVE_FLAME_WHEEL
         move MOVE_SWIFT
         ability ABILITY_BLAZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -15391,7 +14826,7 @@ trainerdata 287, "Silver"
         move MOVE_FEINT_ATTACK
         move MOVE_SHADOW_CLAW
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -15407,7 +14842,7 @@ trainerdata 287, "Silver"
         move MOVE_CONFUSE_RAY
         move MOVE_AIR_CUTTER
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -15423,7 +14858,7 @@ trainerdata 287, "Silver"
         move MOVE_THUNDER_WAVE
         move MOVE_MAGNET_BOMB
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -15439,7 +14874,7 @@ trainerdata 287, "Silver"
         move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -15455,7 +14890,7 @@ trainerdata 287, "Silver"
         move MOVE_REFLECT
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -15471,7 +14906,7 @@ trainerdata 287, "Silver"
         move MOVE_CRUNCH
         move MOVE_SLASH
         ability ABILITY_SHEER_FORCE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -15481,7 +14916,7 @@ trainerdata 287, "Silver"
 trainerdata 288, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 5
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -15491,84 +14926,100 @@ trainerdata 288, "Silver"
     endentry
 
     party 288
-        // mon 0
+         // mon 0
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_GOLBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_BITE
-        move MOVE_CONFUSE_RAY
-        move MOVE_AIR_CUTTER
-        ability ABILITY_SNIPER
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LONELY
+        level 52
+        pokemon SPECIES_SNEASLER
+        item ITEM_FOCUS_SASH
+        move MOVE_DIRE_CLAW
+        move MOVE_DRAIN_PUNCH
+        move MOVE_ACROBATICS
+        move MOVE_KNOCK_OFF
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
-        // mon 1
+		
+		// mon 1
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_SPARK
-        move MOVE_SONIC_BOOM
-        move MOVE_THUNDER_WAVE
-        ability ABILITY_MAGNET_PULL
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
+        level 52
+        pokemon SPECIES_GENGAR
+        item ITEM_WISE_GLASSES
+        move MOVE_SHADOW_BALL
+        move MOVE_SLUDGE_WAVE
+        move MOVE_THUNDERBOLT
+        move MOVE_AURA_SPHERE
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
         // mon 2
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_CONFUSE_RAY
-        move MOVE_MEAN_LOOK
-        move MOVE_CURSE
-        move MOVE_SHADOW_BALL
-        ability ABILITY_LEVITATE
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIRKY
+        level 52
+        pokemon SPECIES_MAGNEZONE
+        item ITEM_MAGNET
+        move MOVE_BODY_PRESS
+        move MOVE_THUNDERBOLT
+        move MOVE_TRI_ATTACK
+        move MOVE_FLASH_CANNON
+        ability ABILITY_STURDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 34
-        pokemon SPECIES_SNEASEL
-        item ITEM_NONE
-        move MOVE_ICY_WIND
-        move MOVE_QUICK_ATTACK
-        move MOVE_FURY_SWIPES
-        move MOVE_FEINT_ATTACK
-        ability ABILITY_INNER_FOCUS
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        level 52
+        pokemon SPECIES_CROBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_POISON_FANG
+        move MOVE_U_TURN
+        move MOVE_LEECH_LIFE
+        move MOVE_DUAL_WINGBEAT
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 6, 252, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
-
-        // mon 4
+		
+		// mon 4
         ivs 255
         abilityslot 0
-        level 34
+        level 52
+        pokemon SPECIES_ALAKAZAM
+        item ITEM_LIFE_ORB
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_SHADOW_BALL
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
+		
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 53
         pokemon SPECIES_MEGANIUM
-        item ITEM_NONE
-        move MOVE_REFLECT
-        move MOVE_SYNTHESIS
-        move MOVE_POISON_POWDER
+        item ITEM_ASSAULT_VEST
+        move MOVE_DRAINING_KISS
         move MOVE_PETAL_DANCE
-        ability ABILITY_OVERGROW
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ANCIENT_POWER
+        ability ABILITY_TRIAGE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_CALM
         ballseal 0
 
     endparty
@@ -15576,7 +15027,7 @@ trainerdata 288, "Silver"
 trainerdata 289, "Silver"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_RIVAL
-    nummons 5
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -15586,84 +15037,100 @@ trainerdata 289, "Silver"
     endentry
 
     party 289
-        // mon 0
+       // mon 0
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_GOLBAT
-        item ITEM_NONE
-        move MOVE_ASTONISH
-        move MOVE_BITE
-        move MOVE_CONFUSE_RAY
-        move MOVE_AIR_CUTTER
-        ability ABILITY_SNIPER
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
+        level 52
+        pokemon SPECIES_SNEASLER
+        item ITEM_FOCUS_SASH
+        move MOVE_DIRE_CLAW
+        move MOVE_DRAIN_PUNCH
+        move MOVE_ACROBATICS
+        move MOVE_KNOCK_OFF
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
-        // mon 1
+		
+		// mon 1
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_SPARK
-        move MOVE_SONIC_BOOM
-        move MOVE_THUNDER_WAVE
-        ability ABILITY_MAGNET_PULL
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        level 52
+        pokemon SPECIES_GENGAR
+        item ITEM_WISE_GLASSES
+        move MOVE_SHADOW_BALL
+        move MOVE_SLUDGE_WAVE
+        move MOVE_THUNDERBOLT
+        move MOVE_AURA_SPHERE
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 6, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
-
+		
         // mon 2
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_CONFUSE_RAY
-        move MOVE_MEAN_LOOK
-        move MOVE_CURSE
-        move MOVE_SHADOW_BALL
-        ability ABILITY_LEVITATE
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        level 52
+        pokemon SPECIES_MAGNEZONE
+        item ITEM_MAGNET
+        move MOVE_BODY_PRESS
+        move MOVE_THUNDERBOLT
+        move MOVE_TRI_ATTACK
+        move MOVE_FLASH_CANNON
+        ability ABILITY_STURDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 6, 0, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 34
-        pokemon SPECIES_SNEASEL
-        item ITEM_NONE
-        move MOVE_ICY_WIND
-        move MOVE_QUICK_ATTACK
-        move MOVE_FURY_SWIPES
-        move MOVE_FEINT_ATTACK
-        ability ABILITY_INNER_FOCUS
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        level 52
+        pokemon SPECIES_CROBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_POISON_FANG
+        move MOVE_U_TURN
+        move MOVE_LEECH_LIFE
+        move MOVE_DUAL_WINGBEAT
+        ability ABILITY_SNIPER
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 6, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 52
+        pokemon SPECIES_ALAKAZAM
+        item ITEM_LIFE_ORB
+        move MOVE_PSYBEAM
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ENERGY_BALL
+        move MOVE_SHADOW_BALL
+        ability ABILITY_MAGIC_GUARD
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 4
         ivs 255
         abilityslot 0
-        level 34
-        pokemon SPECIES_QUILAVA
-        item ITEM_NONE
-        move MOVE_SMOKESCREEN
-        move MOVE_SWIFT
-        move MOVE_QUICK_ATTACK
-        move MOVE_FLAME_WHEEL
-        ability ABILITY_BLAZE
-        setivs 14, 14, 14, 14, 14, 14
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        level 53
+        pokemon SPECIES_TYPHLOSION
+        item ITEM_LIFE_ORB
+        move MOVE_SCORCHING_SANDS
+        move MOVE_EXTRASENSORY
+        move MOVE_FLAMETHROWER
+        move MOVE_AURA_SPHERE
+        ability ABILITY_FLASH_FIRE
+         setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
     endparty
@@ -16087,7 +15554,7 @@ trainerdata 299, "Hank"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -16103,7 +15570,7 @@ trainerdata 299, "Hank"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -16134,7 +15601,7 @@ trainerdata 300, "Roy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -16150,7 +15617,7 @@ trainerdata 300, "Roy"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -16181,7 +15648,7 @@ trainerdata 301, "Boris"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -16197,7 +15664,7 @@ trainerdata 301, "Boris"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -16213,7 +15680,7 @@ trainerdata 301, "Boris"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_EARLY_BIRD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -16244,7 +15711,7 @@ trainerdata 302, "Bob"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -16275,7 +15742,7 @@ trainerdata 303, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -16622,7 +16089,7 @@ trainerdata 308, "Jerry"
         move MOVE_HAMMER_ARM
         move MOVE_TAKE_DOWN
         ability ABILITY_ROCK_HEAD
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -18142,7 +17609,7 @@ trainerdata 339, "Wai"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -18158,7 +17625,7 @@ trainerdata 339, "Wai"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NO_GUARD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -18174,7 +17641,7 @@ trainerdata 339, "Wai"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_PURE_POWER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -18816,7 +18283,7 @@ trainerdata 353, "Grunt"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SNIPER
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -19154,7 +18621,7 @@ trainerdata 359, "Jim"
     endparty
 
 trainerdata 360, "Arnie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BUG_CATCHER
     nummons 1
     item ITEM_NONE
@@ -19170,13 +18637,9 @@ trainerdata 360, "Arnie"
         ivs 255
         abilityslot 0
         level 36
-        pokemon SPECIES_VENONAT
+        pokemon SPECIES_VENOMOTH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_COMPOUND_EYES
+        ability ABILITY_TINTED_LENS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
@@ -19208,7 +18671,7 @@ trainerdata 361, "Kevin"
         move MOVE_HORN_DRILL
         move MOVE_EARTHQUAKE
         ability ABILITY_ROCK_HEAD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19224,7 +18687,7 @@ trainerdata 361, "Kevin"
         move MOVE_SCARY_FACE
         move MOVE_AERIAL_ACE
         ability ABILITY_BLAZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -19240,7 +18703,7 @@ trainerdata 361, "Kevin"
         move MOVE_BITE
         move MOVE_SWAGGER
         ability ABILITY_TORRENT
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19271,7 +18734,7 @@ trainerdata 362, "Quinn"
         move MOVE_SYNTHESIS
         move MOVE_SLUDGE_BOMB
         ability ABILITY_OVERGROW
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -19287,7 +18750,7 @@ trainerdata 362, "Quinn"
         move MOVE_THUNDERBOLT
         move MOVE_WATER_PULSE
         ability ABILITY_NATURAL_CURE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -19318,7 +18781,7 @@ trainerdata 363, "Emma"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_WATER_ABSORB
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -19459,7 +18922,7 @@ trainerdata 366, "Pat"
         move MOVE_ICE_BEAM
         move MOVE_SOLAR_BEAM
         ability ABILITY_DOWNLOAD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -20439,14 +19902,14 @@ trainerdata 386, "Greg"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_DROWZEE
+        level 31
+        pokemon SPECIES_HYPNO
         item ITEM_NONE
         move MOVE_HYPNOSIS
         move MOVE_DISABLE
         move MOVE_DREAM_EATER
-        move MOVE_NONE
-        ability ABILITY_INSOMNIA
+        move MOVE_PSYCHIC
+        ability ABILITY_BAD_DREAMS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
@@ -20502,7 +19965,7 @@ trainerdata 387, "Amy & Mimi"
     endparty
 
 trainerdata 388, "Walt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_FIREBREATHER
     nummons 2
     item ITEM_NONE
@@ -20517,13 +19980,9 @@ trainerdata 388, "Walt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 11
+        level 23
         pokemon SPECIES_MAGMAR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FLAME_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -20533,13 +19992,9 @@ trainerdata 388, "Walt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 23
         pokemon SPECIES_MAGMAR
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_FLAME_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -20549,7 +20004,7 @@ trainerdata 388, "Walt"
     endparty
 
 trainerdata 389, "Nelson"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PSYCHIC_M
     nummons 2
     item ITEM_NONE
@@ -20564,13 +20019,9 @@ trainerdata 389, "Nelson"
         // mon 0
         ivs 255
         abilityslot 0
-        level 17
-        pokemon SPECIES_SLOWPOKE
+        level 37
+        pokemon SPECIES_SLOWBRO
         item ITEM_NONE
-        move MOVE_TACKLE
-        move MOVE_GROWL
-        move MOVE_WATER_GUN
-        move MOVE_NONE
         ability ABILITY_OBLIVIOUS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -20580,14 +20031,10 @@ trainerdata 389, "Nelson"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_SLOWPOKE
+        level 37
+        monwithform SPECIES_SLOWBRO, 1
         item ITEM_NONE
-        move MOVE_CURSE
-        move MOVE_HEADBUTT
-        move MOVE_WATER_GUN
-        move MOVE_CONFUSION
-        ability ABILITY_OWN_TEMPO
+        ability ABILITY_QUICK_DRAW
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
@@ -20834,7 +20281,7 @@ trainerdata 394, "Mickey"
 trainerdata 395, "Mark"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PSYCHIC_M
-    nummons 3
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -20847,8 +20294,8 @@ trainerdata 395, "Mark"
         // mon 0
         ivs 255
         abilityslot 0
-        level 14
-        pokemon SPECIES_ABRA
+        level 27
+        pokemon SPECIES_KADABRA
         item ITEM_NONE
         move MOVE_TELEPORT
         move MOVE_FLASH
@@ -20857,35 +20304,19 @@ trainerdata 395, "Mark"
         ability ABILITY_SYNCHRONIZE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 14
-        pokemon SPECIES_ABRA
-        item ITEM_NONE
-        move MOVE_TELEPORT
-        move MOVE_FLASH
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SYNCHRONIZE
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 16
+        level 28
         pokemon SPECIES_KADABRA
         item ITEM_NONE
         move MOVE_TELEPORT
         move MOVE_KINESIS
         move MOVE_CONFUSION
-        move MOVE_NONE
+        move MOVE_CALM_MIND
         ability ABILITY_SYNCHRONIZE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -20958,7 +20389,7 @@ trainerdata 396, "Horton"
     endparty
 
 trainerdata 397, "Chad"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCHOOL_KID_M
     nummons 1
     item ITEM_NONE
@@ -20973,13 +20404,9 @@ trainerdata 397, "Chad"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
+        level 36
         pokemon SPECIES_MR_MIME
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -20989,7 +20416,7 @@ trainerdata 397, "Chad"
     endparty
 
 trainerdata 398, "Valerie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BEAUTY
     nummons 2
     item ITEM_NONE
@@ -21004,13 +20431,9 @@ trainerdata 398, "Valerie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_HOPPIP
+        level 35
+        pokemon SPECIES_JUMPLUFF
         item ITEM_NONE
-        move MOVE_MEGA_DRAIN
-        move MOVE_TAIL_WHIP
-        move MOVE_TACKLE
-        move MOVE_POISON_POWDER
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -21021,16 +20444,12 @@ trainerdata 398, "Valerie"
         ivs 255
         abilityslot 0
         level 18
-        pokemon SPECIES_SKIPLOOM
+        pokemon SPECIES_SUNFLORA
         item ITEM_NONE
-        move MOVE_MEGA_DRAIN
-        move MOVE_TAIL_WHIP
-        move MOVE_TACKLE
-        move MOVE_STUN_SPORE
-        ability ABILITY_LEAF_GUARD
+        ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        nature NATURE_MODEST
         ballseal 0
 
     endparty
@@ -21114,30 +20533,30 @@ trainerdata 400, "Dana"
         // mon 0
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_FLAAFFY
+        level 35
+        pokemon SPECIES_AMPHAROS
         item ITEM_NONE
-        move MOVE_TACKLE
-        move MOVE_GROWL
-        move MOVE_THUNDER_SHOCK
-        move MOVE_THUNDER_WAVE
+        move MOVE_COTTON_GUARD
+        move MOVE_POWER_GEM
+        move MOVE_DRAGON_PULSE
+        move MOVE_THUNDERBOLT
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_JOLLY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 19
-        pokemon SPECIES_PSYDUCK
+        level 35
+        pokemon SPECIES_GOLDUCK
         item ITEM_NONE
-        move MOVE_WATER_GUN
-        move MOVE_TAIL_WHIP
-        move MOVE_DISABLE
-        move MOVE_CONFUSION
-        ability ABILITY_DAMP
+        move MOVE_SURF
+        move MOVE_PSYCHIC
+        move MOVE_AQUA_JET
+        move MOVE_ICY_WIND
+        ability ABILITY_CLOUD_NINE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
@@ -21146,7 +20565,7 @@ trainerdata 400, "Dana"
     endparty
 
 trainerdata 401, "Alfred"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_GENTLEMAN
     nummons 1
     item ITEM_NONE
@@ -21161,13 +20580,9 @@ trainerdata 401, "Alfred"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
+        level 38
         pokemon SPECIES_NOCTOWL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_TINTED_LENS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -21177,7 +20592,7 @@ trainerdata 401, "Alfred"
     endparty
 
 trainerdata 402, "Tiffany"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_PICNICKER
     nummons 1
     item ITEM_NONE
@@ -21192,13 +20607,9 @@ trainerdata 402, "Tiffany"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_CLEFAIRY
+        level 44
+        pokemon SPECIES_CLEFABLE
         item ITEM_NONE
-        move MOVE_ENCORE
-        move MOVE_SING
-        move MOVE_DOUBLE_SLAP
-        move MOVE_MINIMIZE
         ability ABILITY_CUTE_CHARM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -21208,7 +20619,7 @@ trainerdata 402, "Tiffany"
     endparty
 
 trainerdata 403, "Spencer"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_CAMPER
     nummons 3
     item ITEM_NONE
@@ -21223,30 +20634,22 @@ trainerdata 403, "Spencer"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_SANDSHREW
+        level 43
+        pokemon SPECIES_SANDSLASH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SAND_VEIL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_SANDSLASH
+        level 43
+        monwithform SPECIES_SANDSLASH, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SAND_VEIL
+        ability ABILITY_SLUSH_RUSH
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
@@ -21255,14 +20658,10 @@ trainerdata 403, "Spencer"
         // mon 2
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_ZUBAT
+        level 43
+        pokemon SPECIES_CLAYDOL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
+        ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
@@ -21271,7 +20670,7 @@ trainerdata 403, "Spencer"
     endparty
 
 trainerdata 404, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET_F
     nummons 2
     item ITEM_NONE
@@ -21286,15 +20685,11 @@ trainerdata 404, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_EKANS
+        level 44
+        pokemon SPECIES_MIGHTYENA
         item ITEM_NONE
-        move MOVE_WRAP
-        move MOVE_LEER
-        move MOVE_POISON_STING
-        move MOVE_BITE
         ability ABILITY_INTIMIDATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -21302,15 +20697,11 @@ trainerdata 404, "Grunt"
         // mon 1
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_GLOOM
+        level 44
+        pokemon SPECIES_BELLOSSOM
         item ITEM_NONE
-        move MOVE_ABSORB
-        move MOVE_SWEET_SCENT
-        move MOVE_STUN_SPORE
-        move MOVE_SLEEP_POWDER
         ability ABILITY_CHLOROPHYLL
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -21419,7 +20810,7 @@ trainerdata 407, "Allen"
         move MOVE_FIRE_FANG
         move MOVE_SCARY_FACE
         ability ABILITY_BLAZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -21435,7 +20826,7 @@ trainerdata 407, "Allen"
         move MOVE_SUPERSONIC
         move MOVE_METAL_SOUND
         ability ABILITY_MAGNET_PULL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -21466,7 +20857,7 @@ trainerdata 408, "Cybil"
         move MOVE_CHARGE
         move MOVE_TACKLE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -21482,7 +20873,7 @@ trainerdata 408, "Cybil"
         move MOVE_ACID
         move MOVE_MAGICAL_LEAF
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -21552,13 +20943,13 @@ trainerdata 410, "Harry"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_WOOPER
+        level 36
+        pokemon SPECIES_QUAGSIRE
         item ITEM_NONE
-        move MOVE_WATER_GUN
-        move MOVE_MUD_BOMB
+        move MOVE_ICE_PUNCH
+        move MOVE_BRICK_BREAK
         move MOVE_SLAM
-        move MOVE_MUD_SHOT
+        move MOVE_EARTHQUAKE
         ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -21748,7 +21139,7 @@ trainerdata 414, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -21889,7 +21280,7 @@ trainerdata 417, "Jenn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -21905,7 +21296,7 @@ trainerdata 417, "Jenn"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ILLUMINATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -22078,7 +21469,7 @@ trainerdata 420, "Perry"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INNER_FOCUS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -22109,7 +21500,7 @@ trainerdata 421, "Bret"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -22125,7 +21516,7 @@ trainerdata 421, "Bret"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -22509,7 +21900,7 @@ trainerdata 429, "Ricky"
     endparty
 
 trainerdata 430, "Jack"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCHOOL_KID_M
     nummons 2
     item ITEM_NONE
@@ -22524,13 +21915,9 @@ trainerdata 430, "Jack"
         // mon 0
         ivs 255
         abilityslot 0
-        level 29
+        level 25
         pokemon SPECIES_GLOOM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -22540,13 +21927,9 @@ trainerdata 430, "Jack"
         // mon 1
         ivs 255
         abilityslot 0
-        level 17
+        level 26
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -22603,7 +21986,7 @@ trainerdata 431, "Jack"
     endparty
 
 trainerdata 432, "Alan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCHOOL_KID_M
     nummons 2
     item ITEM_NONE
@@ -22621,10 +22004,6 @@ trainerdata 432, "Alan"
         level 32
         pokemon SPECIES_TANGELA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -22637,10 +22016,6 @@ trainerdata 432, "Alan"
         level 30
         pokemon SPECIES_YANMA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SPEED_BOOST
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -23190,7 +22565,7 @@ trainerdata 444, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -23206,7 +22581,7 @@ trainerdata 444, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -23222,7 +22597,7 @@ trainerdata 444, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -23253,7 +22628,7 @@ trainerdata 445, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_INTIMIDATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -23269,7 +22644,7 @@ trainerdata 445, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_POISON_TOUCH
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -23285,7 +22660,7 @@ trainerdata 445, "Reena"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_NATURAL_CURE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -23316,7 +22691,7 @@ trainerdata 446, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -23332,7 +22707,7 @@ trainerdata 446, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -23363,7 +22738,7 @@ trainerdata 447, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -23379,7 +22754,7 @@ trainerdata 447, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -23410,7 +22785,7 @@ trainerdata 448, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -23426,7 +22801,7 @@ trainerdata 448, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -23442,7 +22817,7 @@ trainerdata 448, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -23701,7 +23076,7 @@ trainerdata 453, "Erin"
     endparty
 
 trainerdata 454, "Irwin"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_JUGGLER
     nummons 4
     item ITEM_NONE
@@ -23719,10 +23094,6 @@ trainerdata 454, "Irwin"
         level 22
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -23735,10 +23106,6 @@ trainerdata 454, "Irwin"
         level 26
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -23751,10 +23118,6 @@ trainerdata 454, "Irwin"
         level 28
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_SOUNDPROOF
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -23767,10 +23130,6 @@ trainerdata 454, "Irwin"
         level 34
         pokemon SPECIES_VOLTORB
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -23882,7 +23241,7 @@ trainerdata 456, "Gaven"
         move MOVE_ACID
         move MOVE_RAZOR_LEAF
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -23898,7 +23257,7 @@ trainerdata 456, "Gaven"
         move MOVE_GUILLOTINE
         move MOVE_PROTECT
         ability ABILITY_HYPER_CUTTER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -23914,7 +23273,7 @@ trainerdata 456, "Gaven"
         move MOVE_BITE
         move MOVE_FIRE_BLAST
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -23945,7 +23304,7 @@ trainerdata 457, "Gaven"
         move MOVE_ACID
         move MOVE_RAZOR_LEAF
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -23961,7 +23320,7 @@ trainerdata 457, "Gaven"
         move MOVE_X_SCISSOR
         move MOVE_PROTECT
         ability ABILITY_HYPER_CUTTER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -23977,7 +23336,7 @@ trainerdata 457, "Gaven"
         move MOVE_SAND_ATTACK
         move MOVE_FIRE_SPIN
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -24008,7 +23367,7 @@ trainerdata 458, "Jamie"
         move MOVE_FLAME_WHEEL
         move MOVE_EMBER
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -24024,7 +23383,7 @@ trainerdata 458, "Jamie"
         move MOVE_CHARGE
         move MOVE_THUNDER_PUNCH
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -24055,7 +23414,7 @@ trainerdata 459, "Jamie"
         move MOVE_FIRE_BLAST
         move MOVE_EMBER
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -24071,7 +23430,7 @@ trainerdata 459, "Jamie"
         move MOVE_CHARGE
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -24330,33 +23689,33 @@ trainerdata 464, "Dana"
         // mon 0
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_FLAAFFY
+        level 45
+        pokemon SPECIES_AMPHAROS
         item ITEM_NONE
-        move MOVE_COTTON_SPORE
-        move MOVE_CHARGE
-        move MOVE_DISCHARGE
-        move MOVE_THUNDER_WAVE
+        move MOVE_COTTON_GUARD
+        move MOVE_POWER_GEM
+        move MOVE_DRAGON_PULSE
+        move MOVE_THUNDERBOLT
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SASSY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 31
-        pokemon SPECIES_PSYDUCK
+        level 45
+        pokemon SPECIES_GOLDUCK
         item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_SCREECH
-        move MOVE_DISABLE
-        move MOVE_CONFUSION
-        ability ABILITY_DAMP
+        move MOVE_SURF
+        move MOVE_PSYCHIC
+        move MOVE_AQUA_JET
+        move MOVE_ICY_WIND
+        ability ABILITY_CLOUD_NINE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MILD
+        nature NATURE_BOLD
         ballseal 0
 
     endparty
@@ -24471,9 +23830,9 @@ trainerdata 467, "Tiffany"
     endparty
 
 trainerdata 468, "Ross"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCIENTIST_GS
-    nummons 2
+	nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -24486,13 +23845,9 @@ trainerdata 468, "Ross"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_KOFFING
+        level 44
+        pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -24502,13 +23857,9 @@ trainerdata 468, "Ross"
         // mon 1
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_KOFFING
+        level 44
+        monwithform SPECIES_WEEZING, 1
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -24518,7 +23869,7 @@ trainerdata 468, "Ross"
     endparty
 
 trainerdata 469, "Mitch"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCIENTIST_GS
     nummons 1
     item ITEM_NONE
@@ -24533,25 +23884,21 @@ trainerdata 469, "Mitch"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_DITTO
+        level 45
+        pokemon SPECIES_PORYGON_Z
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LIMBER
+        ability ABILITY_DOWNLOAD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        nature NATURE_MODEST
         ballseal 0
 
     endparty
 
 trainerdata 470, "Gregg"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCIENTIST_GS
-    nummons 3
+	nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -24564,13 +23911,9 @@ trainerdata 470, "Gregg"
         // mon 0
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_MAGNEMITE
+        level 42
+        pokemon SPECIES_MAGNEZONE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_MAGNET_PULL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -24580,14 +23923,10 @@ trainerdata 470, "Gregg"
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_MAGNEMITE
+        level 42
+        pokemon SPECIES_GOLURK
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STURDY
+        ability ABILITY_IRON_FIST
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
@@ -24596,14 +23935,10 @@ trainerdata 470, "Gregg"
         // mon 2
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_MAGNEMITE
+        level 42
+        pokemon SPECIES_PORYGON2
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_MAGNET_PULL
+        ability ABILITY_DOWNLOAD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
@@ -24612,9 +23947,9 @@ trainerdata 470, "Gregg"
     endparty
 
 trainerdata 471, "Garett"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCIENTIST_GS
-    nummons 3
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -24627,55 +23962,20 @@ trainerdata 471, "Garett"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_MAGNEMITE
+        level 50
+        pokemon SPECIES_MAGNEZONE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STURDY
+        ability ABILITY_ANALYTIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
 
-        // mon 1
-        ivs 255
-        abilityslot 0
-        level 27
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_MAGNET_PULL
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
-        ballseal 0
-
-        // mon 2
-        ivs 255
-        abilityslot 0
-        level 27
-        pokemon SPECIES_MAGNEMITE
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_MAGNET_PULL
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
-        ballseal 0
 
     endparty
 
 trainerdata 472, "Trenton"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SCIENTIST_GS
     nummons 1
     item ITEM_NONE
@@ -24690,13 +23990,9 @@ trainerdata 472, "Trenton"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_PORYGON
+        level 50
+        pokemon SPECIES_PORYGON_Z
         item ITEM_NONE
-        move MOVE_CONVERSION
-        move MOVE_CONVERSION_2
-        move MOVE_RECOVER
-        move MOVE_CHARGE_BEAM
         ability ABILITY_DOWNLOAD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -24943,7 +24239,7 @@ trainerdata 477, "Mickey"
 trainerdata 478, "Ariana"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_EXECUTIVE_ARIANA
-    nummons 3
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -24956,51 +24252,98 @@ trainerdata 478, "Ariana"
         // mon 0
         ivs 255
         abilityslot 0
-        level 32
+        level 53
         pokemon SPECIES_ARBOK
-        item ITEM_NONE
-        move MOVE_WRAP
-        move MOVE_POISON_STING
+        item ITEM_LIFE_ORB
         move MOVE_CRUNCH
-        move MOVE_GLARE
+        move MOVE_POISON_JAB
+        move MOVE_ICE_FANG
+        move MOVE_JAW_LOCK
         ability ABILITY_INTIMIDATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_IMPISH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_VILEPLUME
-        item ITEM_NONE
-        move MOVE_MEGA_DRAIN
-        move MOVE_SWEET_SCENT
-        move MOVE_SLEEP_POWDER
-        move MOVE_ACID
-        ability ABILITY_CHLOROPHYLL
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        level 53
+        pokemon SPECIES_GARBODOR
+        item ITEM_ZOOM_LENS
+        move MOVE_GUNK_SHOT
+        move MOVE_BODY_PRESS
+        move MOVE_DRAIN_PUNCH
+        move MOVE_EARTHQUAKE
+        ability ABILITY_GOOEY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_BRAVE
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 32
-        pokemon SPECIES_MURKROW
-        item ITEM_NONE
-        move MOVE_WING_ATTACK
-        move MOVE_PURSUIT
-        move MOVE_ASTONISH
-        move MOVE_NIGHT_SHADE
+        level 53
+        pokemon SPECIES_HONCHKROW
+        item ITEM_SITRUS_BERRY
+        move MOVE_DRILL_PECK
+        move MOVE_KNOCK_OFF
+        move MOVE_SUCKER_PUNCH
+        move MOVE_STEEL_WING
         ability ABILITY_SUPER_LUCK
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+		
+		// mon 3
+        ivs 255
+        abilityslot 0
+        level 53
+        pokemon SPECIES_SALAZZLE
+        item ITEM_FOCUS_SASH
+        move MOVE_DRAGON_PULSE
+        move MOVE_FLAMETHROWER
+        move MOVE_SLUDGE_WAVE
+        move MOVE_WILL_O_WISP
+        ability ABILITY_CORROSION
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
+        // mon 4
+        ivs 255
+        abilityslot 1
+        level 53
+        pokemon SPECIES_ROSERADE
+        item ITEM_MIRACLE_SEED
+        move MOVE_MEGA_DRAIN
+        move MOVE_SLUDGE_BOMB
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_ANCIENT_POWER
+        ability ABILITY_TECHNICIAN
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_MODEST
+        ballseal 0
+
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 54
+        pokemon SPECIES_MAWILE
+        item ITEM_MAWILITE
+        move MOVE_IRON_HEAD
+        move MOVE_PLAY_ROUGH
+        move MOVE_SUCKER_PUNCH
+        move MOVE_THUNDER_PUNCH
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
     endparty
 
 trainerdata 479, "Ariana"
@@ -25019,55 +24362,55 @@ trainerdata 479, "Ariana"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
+        level 45
         pokemon SPECIES_ARBOK
-        item ITEM_NONE
-        move MOVE_WRAP
-        move MOVE_POISON_STING
+        item ITEM_LIFE_ORB
         move MOVE_CRUNCH
-        move MOVE_GLARE
+        move MOVE_POISON_JAB
+        move MOVE_ICE_FANG
+        move MOVE_JAW_LOCK
         ability ABILITY_INTIMIDATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_GLOOM
-        item ITEM_NONE
-        move MOVE_MEGA_DRAIN
-        move MOVE_SWEET_SCENT
-        move MOVE_SLEEP_POWDER
-        move MOVE_ACID
-        ability ABILITY_CHLOROPHYLL
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
+        level 45
+        pokemon SPECIES_VILEPLUME
+        item ITEM_MIRACLE_SEED
+        move MOVE_GIGA_DRAIN
+        move MOVE_SLUDGE_BOMB
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_REFLECT
+        ability ABILITY_EFFECT_SPORE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
         nature NATURE_MODEST
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_MURKROW
-        item ITEM_NONE
-        move MOVE_WING_ATTACK
-        move MOVE_PURSUIT
-        move MOVE_ASTONISH
-        move MOVE_NIGHT_SHADE
+        level 47
+        pokemon SPECIES_HONCHKROW
+        item ITEM_SITRUS_BERRY
+        move MOVE_DRILL_PECK
+        move MOVE_KNOCK_OFF
+        move MOVE_SUCKER_PUNCH
+        move MOVE_STEEL_WING
         ability ABILITY_SUPER_LUCK
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
 
     endparty
 
 trainerdata 480, "Diana"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SKIER
     nummons 1
     item ITEM_NONE
@@ -25082,13 +24425,9 @@ trainerdata 480, "Diana"
         // mon 0
         ivs 255
         abilityslot 0
-        level 29
+        level 47
         pokemon SPECIES_JYNX
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_DRY_SKIN
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -25098,7 +24437,7 @@ trainerdata 480, "Diana"
     endparty
 
 trainerdata 481, "Jill"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SKIER
     nummons 1
     item ITEM_NONE
@@ -25113,23 +24452,19 @@ trainerdata 481, "Jill"
         // mon 0
         ivs 255
         abilityslot 0
-        level 29
-        pokemon SPECIES_DEWGONG
+        level 48
+        pokemon SPECIES_CRYOGONAL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_MODEST
         ballseal 0
 
     endparty
 
 trainerdata 482, "Deandre"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BOARDER
     nummons 3
     item ITEM_NONE
@@ -25144,14 +24479,10 @@ trainerdata 482, "Deandre"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_SEEL
+        level 46
+        pokemon SPECIES_DELIBIRD
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_REFRIGERATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
@@ -25160,14 +24491,10 @@ trainerdata 482, "Deandre"
         // mon 1
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_DEWGONG
+        level 46
+        pokemon SPECIES_GLALIE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_REFRIGERATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
@@ -25176,14 +24503,10 @@ trainerdata 482, "Deandre"
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_SEEL
+        level 46
+        pokemon SPECIES_VANILLISH
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        ability ABILITY_ICE_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
@@ -25192,7 +24515,7 @@ trainerdata 482, "Deandre"
     endparty
 
 trainerdata 483, "Patton"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BOARDER
     nummons 2
     item ITEM_NONE
@@ -25207,13 +24530,9 @@ trainerdata 483, "Patton"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_SWINUB
+        level 47
+        pokemon SPECIES_PILOSWINE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_OBLIVIOUS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -25223,14 +24542,10 @@ trainerdata 483, "Patton"
         // mon 1
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_SWINUB
+        level 47
+        pokemon SPECIES_DEWGONG
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_OBLIVIOUS
+        ability ABILITY_THICK_FAT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
@@ -25239,7 +24554,7 @@ trainerdata 483, "Patton"
     endparty
 
 trainerdata 484, "Gerardo"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BOARDER
     nummons 3
     item ITEM_NONE
@@ -25254,13 +24569,9 @@ trainerdata 484, "Gerardo"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_SHELLDER
+        level 46
+        pokemon SPECIES_CLOYSTER
         item ITEM_NONE
-        move MOVE_ICE_SHARD
-        move MOVE_SUPERSONIC
-        move MOVE_ICICLE_SPEAR
-        move MOVE_LEER
         ability ABILITY_SHELL_ARMOR
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -25270,14 +24581,10 @@ trainerdata 484, "Gerardo"
         // mon 1
         ivs 255
         abilityslot 0
-        level 26
-        pokemon SPECIES_CLOYSTER
+        level 46
+        pokemon SPECIES_SNEASEL
         item ITEM_NONE
-        move MOVE_ICE_SHARD
-        move MOVE_AURORA_BEAM
-        move MOVE_SUPERSONIC
-        move MOVE_TOXIC_SPIKES
-        ability ABILITY_SHELL_ARMOR
+        ability ABILITY_INNER_FOCUS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
@@ -25286,13 +24593,9 @@ trainerdata 484, "Gerardo"
         // mon 2
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_SEEL
+        level 46
+        pokemon SPECIES_DEWGONG
         item ITEM_NONE
-        move MOVE_ICE_SHARD
-        move MOVE_AQUA_RING
-        move MOVE_ENCORE
-        move MOVE_ICY_WIND
         ability ABILITY_THICK_FAT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -25302,9 +24605,9 @@ trainerdata 484, "Gerardo"
     endparty
 
 trainerdata 485, "Archer"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS
     trainerclass TRAINERCLASS_EXECUTIVE_ARCHER
-    nummons 3
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -25317,55 +24620,110 @@ trainerdata 485, "Archer"
         // mon 0
         ivs 255
         abilityslot 0
-        level 35
-        pokemon SPECIES_HOUNDOUR
-        item ITEM_NONE
-        move MOVE_FIRE_FANG
-        move MOVE_ROAR
-        move MOVE_BITE
-        move MOVE_FEINT_ATTACK
-        ability ABILITY_EARLY_BIRD
-        setivs 24, 24, 24, 24, 24, 24
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
+        level 53
+        pokemon SPECIES_SPIRITOMB
+        item ITEM_LEFTOVERS
+        move MOVE_CONFUSE_RAY
+        move MOVE_SHADOW_BALL
+        move MOVE_DARK_PULSE
+        move MOVE_EXTRASENSORY
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_BOLD
+		additionalflags 0
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 35
-        pokemon SPECIES_KOFFING
-        item ITEM_NONE
-        move MOVE_TACKLE
-        move MOVE_SLUDGE
-        move MOVE_SMOKESCREEN
-        move MOVE_HAZE
-        ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIRKY
+        level 53
+        pokemon SPECIES_KROOKODILE
+        item ITEM_SALAC_BERRY
+        move MOVE_EARTHQUAKE
+        move MOVE_WICKED_BLOW
+        move MOVE_LOW_SWEEP
+        move MOVE_STONE_EDGE
+        ability ABILITY_MOXIE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+		additionalflags 0
         ballseal 0
-
-        // mon 2
+		
+		// mon 2
         ivs 255
         abilityslot 0
-        level 38
+        level 53
+        monwithform SPECIES_SAMUROTT, 1
+        item ITEM_SITRUS_BERRY
+        move MOVE_CEASELESS_EDGE
+        move MOVE_AQUA_JET
+        move MOVE_SACRED_SWORD
+        move MOVE_RAZOR_SHELL
+        ability ABILITY_SHARPNESS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
+		additionalflags 0
+        ballseal 0
+
+        // mon 3
+        ivs 255
+        abilityslot 0
+        level 53
+        pokemon SPECIES_LUXRAY
+        item ITEM_MUSCLE_BAND
+        move MOVE_ZING_ZAP
+        move MOVE_SUCKER_PUNCH
+        move MOVE_ICE_FANG
+        move MOVE_FACADE
+        ability ABILITY_GUTS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+		additionalflags TRAINER_DATA_EXTRA_TYPE_STATUS
+		status 16
+        ballseal 0
+		
+		 // mon 4
+        ivs 255
+        abilityslot 0
+        level 53
+        pokemon SPECIES_OBSTAGOON
+        item ITEM_ASSAULT_VEST
+        move MOVE_CROSS_CHOP
+        move MOVE_NIGHT_SLASH
+        move MOVE_SEED_BOMB
+        move MOVE_DOUBLE_EDGE
+        ability ABILITY_DEFIANT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+		additionalflags 0
+        ballseal 0
+		
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 54
         pokemon SPECIES_HOUNDOOM
-        item ITEM_NONE
-        move MOVE_FIRE_FANG
-        move MOVE_SMOG
-        move MOVE_BITE
-        move MOVE_FEINT_ATTACK
-        ability ABILITY_EARLY_BIRD
-        setivs 24, 24, 24, 24, 24, 24
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        item ITEM_HOUNDOOMINITE
+        move MOVE_DARK_PULSE
+        move MOVE_FLAMETHROWER
+        move MOVE_SCORCHING_SANDS
+        move MOVE_SLUDGE_BOMB
+        ability ABILITY_UNNERVE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 252, 252, 4
+        nature NATURE_TIMID
+		additionalflags 0
         ballseal 0
 
     endparty
 
 trainerdata 486, "Proton"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_BALL | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_EXECUTIVE_PROTON
     nummons 6
     item ITEM_NONE
@@ -25388,7 +24746,6 @@ trainerdata 486, "Proton"
         move MOVE_POISON_FANG
         move MOVE_ZEN_HEADBUTT
         ability ABILITY_SNIPER
-		ball ITEM_DUSK_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -25405,7 +24762,6 @@ trainerdata 486, "Proton"
         move MOVE_FLASH
         move MOVE_WILL_O_WISP
         ability ABILITY_LEVITATE
-		ball ITEM_ULTRA_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -25422,7 +24778,6 @@ trainerdata 486, "Proton"
         move MOVE_KNOCK_OFF
         move MOVE_POWER_UP_PUNCH
         ability ABILITY_POISON_TOUCH
-		ball ITEM_FRIEND_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -25439,7 +24794,6 @@ trainerdata 486, "Proton"
         move MOVE_FIRE_FANG
         move MOVE_CRUNCH
         ability ABILITY_STRONG_JAW
-		ball ITEM_MOON_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -25456,7 +24810,6 @@ trainerdata 486, "Proton"
         move MOVE_FIRE_FANG
         move MOVE_CRUNCH
         ability ABILITY_INTIMIDATE
-		ball ITEM_POKE_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
@@ -25473,7 +24826,6 @@ trainerdata 486, "Proton"
         move MOVE_THUNDER_PUNCH
         move MOVE_IRON_HEAD
         ability ABILITY_MOXIE
-		ball ITEM_MOON_BALL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -25482,9 +24834,9 @@ trainerdata 486, "Proton"
     endparty
 
 trainerdata 487, "Petrel"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS | TRAINER_DATA_TYPE_ABILITY | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_EXECUTIVE_PETREL
-    nummons 2
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -25497,37 +24849,98 @@ trainerdata 487, "Petrel"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_SABLEYE
-        move MOVE_FURY_SWIPES
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_WONDER_GUARD
+        level 51
+        pokemon SPECIES_PANGORO
+        item ITEM_FOCUS_SASH
+        move MOVE_FIRE_PUNCH
+        move MOVE_DRAIN_PUNCH
+        move MOVE_BULLET_PUNCH
+        move MOVE_KNOCK_OFF
+        ability ABILITY_BATTLE_ARMOR
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        additionalflags 0
+        setevs 252, 252, 0, 0, 0, 4
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 69
-        pokemon SPECIES_RATTATA
-        move MOVE_SCRATCH
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_ADAPTABILITY
+        level 51
+        pokemon SPECIES_DRAPION
+        item ITEM_SHUCA_BERRY
+        move MOVE_EARTHQUAKE
+        move MOVE_CROSS_POISON
+        move MOVE_POISON_JAB
+        move MOVE_KNOCK_OFF
+        ability ABILITY_BATTLE_ARMOR
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        additionalflags TRAINER_DATA_EXTRA_TYPE_HP | TRAINER_DATA_EXTRA_TYPE_ATK | TRAINER_DATA_EXTRA_TYPE_DEF | TRAINER_DATA_EXTRA_TYPE_SPEED | TRAINER_DATA_EXTRA_TYPE_SP_ATK | TRAINER_DATA_EXTRA_TYPE_SP_DEF
-        stathp 1
-        statatk 999
-        statdef 1
-        statspeed 999
-        statspatk 1
-        statspdef 1
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 2
+        ivs 255
+        abilityslot 0
+        level 51
+        pokemon SPECIES_BISHARP
+        item ITEM_LIFE_ORB
+        move MOVE_KNOCK_OFF
+        move MOVE_IRON_HEAD
+        move MOVE_SUCKER_PUNCH
+        move MOVE_BRICK_BREAK
+        ability ABILITY_DEFIANT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 3
+        ivs 255
+        abilityslot 0
+        level 51
+        pokemon SPECIES_SKUNTANK
+        item ITEM_WIDE_LENS
+        move MOVE_GUNK_SHOT
+        move MOVE_SUCKER_PUNCH
+        move MOVE_TOXIC
+        move MOVE_KNOCK_OFF
+        ability ABILITY_AFTERMATH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 0, 0, 0, 4
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 5
+        ivs 255
+        abilityslot 0
+        level 51
+        pokemon SPECIES_WEEZING
+        item ITEM_SITRUS_BERRY
+        move MOVE_SLUDGE_WAVE
+        move MOVE_DESTINY_BOND
+        move MOVE_DARK_PULSE
+        move MOVE_THUNDERBOLT
+        ability ABILITY_LEVITATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_QUIET
+        ballseal 0
+
+		
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 52
+        pokemon SPECIES_VENUSAUR
+        item ITEM_VENUSAURITE
+        move MOVE_EARTH_POWER
+        move MOVE_SLUDGE_BOMB
+        move MOVE_GIGA_DRAIN
+        move MOVE_SLEEP_POWDER
+        ability ABILITY_OVERGROW
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
     endparty
@@ -25535,7 +24948,7 @@ trainerdata 487, "Petrel"
 trainerdata 488, "Petrel"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_EXECUTIVE_PETREL
-    nummons 3
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -25548,49 +24961,97 @@ trainerdata 488, "Petrel"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_ZUBAT
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_SNIPER
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RELAXED
+        level 45
+        pokemon SPECIES_PANGORO
+        item ITEM_FOCUS_SASH
+        move MOVE_FIRE_PUNCH
+        move MOVE_DRAIN_PUNCH
+        move MOVE_BULLET_PUNCH
+        move MOVE_KNOCK_OFF
+        ability ABILITY_BATTLE_ARMOR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 0, 0, 0, 4
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_RATICATE
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        level 45
+        pokemon SPECIES_DRAPION
+        item ITEM_SHUCA_BERRY
+        move MOVE_EARTHQUAKE
+        move MOVE_CROSS_POISON
+        move MOVE_POISON_JAB
+        move MOVE_KNOCK_OFF
+        ability ABILITY_BATTLE_ARMOR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_ADAMANT
         ballseal 0
-
-        // mon 2
+		
+		// mon 2
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_KOFFING
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        level 45
+        pokemon SPECIES_BISHARP
+        item ITEM_LIFE_ORB
+        move MOVE_KNOCK_OFF
+        move MOVE_IRON_HEAD
+        move MOVE_SUCKER_PUNCH
+        move MOVE_BRICK_BREAK
+        ability ABILITY_DEFIANT
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 3
+        ivs 255
+        abilityslot 0
+        level 45
+        pokemon SPECIES_SKUNTANK
+        item ITEM_WIDE_LENS
+        move MOVE_GUNK_SHOT
+        move MOVE_SUCKER_PUNCH
+        move MOVE_TOXIC
+        move MOVE_KNOCK_OFF
+        ability ABILITY_AFTERMATH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 0, 0, 0, 4
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 45
+        monwithform SPECIES_SLOWKING, 1
+        item ITEM_ASSAULT_VEST
+        move MOVE_POWER_GEM
+        move MOVE_PSYCHIC
+        move MOVE_AURA_SPHERE
+        move MOVE_ICE_BEAM
+        ability ABILITY_REGENERATOR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 0, 0, 252, 4
+        nature NATURE_MODEST
+        ballseal 0
+		
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 46
+        pokemon SPECIES_WEEZING
+        item ITEM_SITRUS_BERRY
+        move MOVE_SLUDGE_WAVE
+        move MOVE_DESTINY_BOND
+        move MOVE_DARK_PULSE
+        move MOVE_THUNDERBOLT
         ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BASHFUL
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_QUIET
         ballseal 0
 
     endparty
@@ -25992,7 +25453,7 @@ trainerdata 492, "Alex"
     endparty
 
 trainerdata 493, "Edith"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_MEDIUM
     nummons 1
     item ITEM_NONE
@@ -26007,14 +25468,10 @@ trainerdata 493, "Edith"
         // mon 0
         ivs 255
         abilityslot 0
-        level 22
-        pokemon SPECIES_HAUNTER
+        level 35
+        pokemon SPECIES_DHELMISE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        ability ABILITY_STEELWORKER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
@@ -26023,9 +25480,9 @@ trainerdata 493, "Edith"
     endparty
 
 trainerdata 494, "Georgina"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_MEDIUM
-    nummons 5
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -26038,13 +25495,9 @@ trainerdata 494, "Georgina"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_GASTLY
+        level 33
+        pokemon SPECIES_HAUNTER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -26054,13 +25507,9 @@ trainerdata 494, "Georgina"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_GASTLY
+        level 33
+        pokemon SPECIES_MISDREAVUS
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -26070,50 +25519,15 @@ trainerdata 494, "Georgina"
         // mon 2
         ivs 255
         abilityslot 0
-        level 16
-        pokemon SPECIES_GASTLY
+        level 33
+        pokemon SPECIES_SHUPPET
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
 
-        // mon 3
-        ivs 255
-        abilityslot 0
-        level 16
-        pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
-        ballseal 0
-
-        // mon 4
-        ivs 255
-        abilityslot 0
-        level 16
-        pokemon SPECIES_GASTLY
-        item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
-        setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_LAX
-        ballseal 0
 
     endparty
 
@@ -26226,15 +25640,15 @@ trainerdata 498, "Eusine"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_DROWZEE
-        item ITEM_NONE
+        level 38
+        pokemon SPECIES_HYPNO
+        item ITEM_LEFTOVERS
         move MOVE_DREAM_EATER
         move MOVE_HYPNOSIS
         move MOVE_DISABLE
-        move MOVE_CONFUSION
-        ability ABILITY_INSOMNIA
-        setivs 18, 18, 18, 18, 18, 18
+        move MOVE_PSYCHIC
+        ability ABILITY_BAD_DREAMS
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -26242,15 +25656,15 @@ trainerdata 498, "Eusine"
         // mon 1
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_HAUNTER
-        item ITEM_NONE
-        move MOVE_LICK
+        level 38
+        pokemon SPECIES_GENGAR
+        item ITEM_SPELL_TAG
+        move MOVE_SHADOW_BALL
         move MOVE_HYPNOSIS
         move MOVE_MEAN_LOOK
         move MOVE_CURSE
         ability ABILITY_LEVITATE
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -26258,15 +25672,15 @@ trainerdata 498, "Eusine"
         // mon 2
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_ELECTRODE
-        item ITEM_NONE
+        level 41
+        monwithform SPECIES_ELECTRODE, 1
+        item ITEM_FOCUS_SASH
         move MOVE_SCREECH
-        move MOVE_SONIC_BOOM
+        move MOVE_ENERGY_BALL
         move MOVE_THUNDER
-        move MOVE_ROLLOUT
+        move MOVE_ELECTRO_BALL
         ability ABILITY_STATIC
-        setivs 18, 18, 18, 18, 18, 18
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -26276,7 +25690,7 @@ trainerdata 498, "Eusine"
 trainerdata 499, "Grunt"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
-    nummons 2
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -26289,35 +25703,50 @@ trainerdata 499, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 18
-        pokemon SPECIES_DROWZEE
-        item ITEM_NONE
-        move MOVE_HYPNOSIS
-        move MOVE_DISABLE
-        move MOVE_CONFUSION
-        move MOVE_HEADBUTT
-        ability ABILITY_INSOMNIA
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAIVE
+        level 45
+        pokemon SPECIES_SCRAFTY
+        item ITEM_KINGS_ROCK
+        move MOVE_PAYBACK
+        move MOVE_DRAIN_PUNCH
+        move MOVE_DRAGON_CLAW
+        move MOVE_IRON_HEAD
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 20
-        pokemon SPECIES_GRIMER
-        item ITEM_NONE
-        move MOVE_SLUDGE
-        move MOVE_DISABLE
-        move MOVE_MUD_SLAP
-        move MOVE_MINIMIZE
-        ability ABILITY_STENCH
-        setivs 3, 3, 3, 3, 3, 3
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        level 45
+        monwithform SPECIES_MUK, 1
+        item ITEM_BLACK_SLUDGE
+        move MOVE_POISON_FANG
+        move MOVE_KNOCK_OFF
+        move MOVE_ICE_PUNCH
+        move MOVE_POWER_UP_PUNCH
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
-
+		
+		// mon 1
+        ivs 255
+        abilityslot 0
+        level 45
+        monwithform SPECIES_SLOWBRO, 2
+        item ITEM_SITRUS_BERRY
+        move MOVE_PSYCHIC
+        move MOVE_SURF
+        move MOVE_FLAMETHROWER
+        move MOVE_SLUDGE_BOMB
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_ADAMANT
+        ballseal 0
     endparty
 
 trainerdata 500, "Kobe"
@@ -26344,7 +25773,7 @@ trainerdata 500, "Kobe"
         move MOVE_DRAGON_RAGE
         move MOVE_IRON_TAIL
         ability ABILITY_SHED_SKIN
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -26375,7 +25804,7 @@ trainerdata 501, "Piper"
         move MOVE_BRINE
         move MOVE_TWISTER
         ability ABILITY_SNIPER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -26391,7 +25820,7 @@ trainerdata 501, "Piper"
         move MOVE_BRINE
         move MOVE_TWISTER
         ability ABILITY_SNIPER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -26407,7 +25836,7 @@ trainerdata 501, "Piper"
         move MOVE_WATERFALL
         move MOVE_TWISTER
         ability ABILITY_SNIPER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -27921,36 +27350,36 @@ trainerdata 528, "Dana"
     endentry
 
     party 528
-        // mon 0
+       // mon 0
         ivs 255
         abilityslot 0
-        level 51
-        pokemon SPECIES_GOLDUCK
+        level 65
+        pokemon SPECIES_AMPHAROS
         item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_AMNESIA
-        move MOVE_CONFUSION
-        move MOVE_SCREECH
-        ability ABILITY_SWIFT_SWIM
+        move MOVE_COTTON_GUARD
+        move MOVE_POWER_GEM
+        move MOVE_DRAGON_PULSE
+        move MOVE_THUNDERBOLT
+        ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 54
-        pokemon SPECIES_AMPHAROS
+        level 65
+        pokemon SPECIES_GOLDUCK
         item ITEM_NONE
-        move MOVE_THUNDER
-        move MOVE_DISCHARGE
-        move MOVE_THUNDER_WAVE
-        move MOVE_SIGNAL_BEAM
-        ability ABILITY_STATIC
+        move MOVE_SURF
+        move MOVE_PSYCHIC
+        move MOVE_AQUA_JET
+        move MOVE_ICY_WIND
+        ability ABILITY_CLOUD_NINE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CAREFUL
+        nature NATURE_BOLD
         ballseal 0
 
     endparty
@@ -28255,7 +27684,7 @@ trainerdata 533, "Wayne"
     endparty
 
 trainerdata 534, "Kimberly"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BEAUTY
     nummons 1
     item ITEM_NONE
@@ -28273,10 +27702,6 @@ trainerdata 534, "Kimberly"
         level 19
         pokemon SPECIES_CORSOLA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_HUSTLE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -28715,7 +28140,7 @@ trainerdata 545, "French"
         move MOVE_SLASH
         move MOVE_QUICK_ATTACK
         ability ABILITY_SUPER_LUCK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -28731,7 +28156,7 @@ trainerdata 545, "French"
         move MOVE_ENERGY_BALL
         move MOVE_CHARGE_BEAM
         ability ABILITY_SYNCHRONIZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -28872,7 +28297,7 @@ trainerdata 548, "Manford"
         move MOVE_MUD_SHOT
         move MOVE_HYPNOSIS
         ability ABILITY_WATER_ABSORB
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -28903,7 +28328,7 @@ trainerdata 549, "Zac & Jen"
         move MOVE_THUNDERBOLT
         move MOVE_LOW_KICK
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -28919,7 +28344,7 @@ trainerdata 549, "Zac & Jen"
         move MOVE_GROWL
         move MOVE_NIGHT_SLASH
         ability ABILITY_ARENA_TRAP
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -28950,7 +28375,7 @@ trainerdata 550, "Ander"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_VITAL_SPIRIT
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -28966,7 +28391,7 @@ trainerdata 550, "Ander"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -28982,7 +28407,7 @@ trainerdata 550, "Ander"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -29185,7 +28610,7 @@ trainerdata 555, "Justin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_SYNCHRONIZE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -29201,7 +28626,7 @@ trainerdata 555, "Justin"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -29232,7 +28657,7 @@ trainerdata 556, "Gail"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -29248,7 +28673,7 @@ trainerdata 556, "Gail"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -29607,7 +29032,7 @@ trainerdata 565, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -30293,7 +29718,7 @@ trainerdata 583, "Bert"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -30309,7 +29734,7 @@ trainerdata 583, "Bert"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -30340,7 +29765,7 @@ trainerdata 584, "Ernie"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -30872,7 +30297,7 @@ trainerdata 596, "Kinsley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -30888,7 +30313,7 @@ trainerdata 596, "Kinsley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -30904,7 +30329,7 @@ trainerdata 596, "Kinsley"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -30935,7 +30360,7 @@ trainerdata 597, "Easton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -30951,7 +30376,7 @@ trainerdata 597, "Easton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_RUN_AWAY
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -30967,7 +30392,7 @@ trainerdata 597, "Easton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -30983,7 +30408,7 @@ trainerdata 597, "Easton"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -31100,7 +30525,7 @@ trainerdata 600, "Selina"
     endparty
 
 trainerdata 601, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 1
     item ITEM_NONE
@@ -31115,15 +30540,11 @@ trainerdata 601, "Grunt"
         // mon 0
         ivs 255
         abilityslot 0
-        level 12
-        pokemon SPECIES_KOFFING
+        level 35
+        pokemon SPECIES_WEEZING
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_LEVITATE
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -31154,7 +30575,7 @@ trainerdata 602, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -31170,7 +30591,7 @@ trainerdata 602, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -31186,7 +30607,7 @@ trainerdata 602, "Jose"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -31296,7 +30717,7 @@ trainerdata 604, "Gaven"
         move MOVE_ACID
         move MOVE_LEAF_BLADE
         ability ABILITY_CHLOROPHYLL
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -31312,7 +30733,7 @@ trainerdata 604, "Gaven"
         move MOVE_X_SCISSOR
         move MOVE_PROTECT
         ability ABILITY_HYPER_CUTTER
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -31328,7 +30749,7 @@ trainerdata 604, "Gaven"
         move MOVE_WILL_O_WISP
         move MOVE_ATTRACT
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -31359,7 +30780,7 @@ trainerdata 605, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -31375,7 +30796,7 @@ trainerdata 605, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_GUTS
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -31391,7 +30812,7 @@ trainerdata 605, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_ROCK_HEAD
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -31407,7 +30828,7 @@ trainerdata 605, "Kenji"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_UNBURDEN
-        setivs 3, 3, 3, 3, 3, 3
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -31485,7 +30906,7 @@ trainerdata 607, "Reena"
         move MOVE_CRUNCH
         move MOVE_ROAR
         ability ABILITY_INTIMIDATE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -31501,7 +30922,7 @@ trainerdata 607, "Reena"
         move MOVE_EARTH_POWER
         move MOVE_BODY_SLAM
         ability ABILITY_POISON_TOUCH
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -31517,7 +30938,7 @@ trainerdata 607, "Reena"
         move MOVE_COSMIC_POWER
         move MOVE_PSYCHIC
         ability ABILITY_NATURAL_CURE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -31611,7 +31032,7 @@ trainerdata 609, "Jamie"
         move MOVE_FLARE_BLITZ
         move MOVE_EMBER
         ability ABILITY_FLASH_FIRE
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -31627,7 +31048,7 @@ trainerdata 609, "Jamie"
         move MOVE_SIGNAL_BEAM
         move MOVE_CHARGE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -31768,7 +31189,7 @@ trainerdata 612, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -31784,7 +31205,7 @@ trainerdata 612, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -31800,7 +31221,7 @@ trainerdata 612, "Vance"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_TINTED_LENS
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -31808,7 +31229,7 @@ trainerdata 612, "Vance"
     endparty
 
 trainerdata 613, "Krise"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LASS
     nummons 2
     item ITEM_NONE
@@ -31823,13 +31244,9 @@ trainerdata 613, "Krise"
         // mon 0
         ivs 255
         abilityslot 0
-        level 21
-        pokemon SPECIES_ODDISH
+        level 25
+        pokemon SPECIES_GLOOM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -31839,13 +31256,9 @@ trainerdata 613, "Krise"
         // mon 1
         ivs 255
         abilityslot 0
-        level 31
+        level 25
         pokemon SPECIES_CUBONE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
         ability ABILITY_ROCK_HEAD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -33478,7 +32891,7 @@ trainerdata 646, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -33494,7 +32907,7 @@ trainerdata 646, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -33525,7 +32938,7 @@ trainerdata 647, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -33541,7 +32954,7 @@ trainerdata 647, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -33572,7 +32985,7 @@ trainerdata 648, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -33588,7 +33001,7 @@ trainerdata 648, "Josh"
         move MOVE_NONE
         move MOVE_NONE
         ability ABILITY_FRISK
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -34865,7 +34278,7 @@ trainerdata 667, "Cheryl"
         move MOVE_SAFEGUARD
         move MOVE_ENCORE
         ability ABILITY_SHADOW_TAG
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -34881,7 +34294,7 @@ trainerdata 667, "Cheryl"
         move MOVE_FLY
         move MOVE_PROTECT
         ability ABILITY_AFTERMATH
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -34897,7 +34310,7 @@ trainerdata 667, "Cheryl"
         move MOVE_BULLET_PUNCH
         move MOVE_STONE_EDGE
         ability ABILITY_THICK_FAT
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34913,7 +34326,7 @@ trainerdata 667, "Cheryl"
         move MOVE_EARTHQUAKE
         move MOVE_AVALANCHE
         ability ABILITY_WATER_VEIL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -34929,7 +34342,7 @@ trainerdata 667, "Cheryl"
         move MOVE_PSYCHIC
         move MOVE_TOXIC
         ability ABILITY_NATURAL_CURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -34960,7 +34373,7 @@ trainerdata 668, "Marley"
         move MOVE_SWORDS_DANCE
         move MOVE_SLASH
         ability ABILITY_SPEED_BOOST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -34976,7 +34389,7 @@ trainerdata 668, "Marley"
         move MOVE_THUNDER_WAVE
         move MOVE_DOUBLE_TEAM
         ability ABILITY_SOUNDPROOF
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -34992,7 +34405,7 @@ trainerdata 668, "Marley"
         move MOVE_CONFUSE_RAY
         move MOVE_DOUBLE_TEAM
         ability ABILITY_INFILTRATOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -35008,7 +34421,7 @@ trainerdata 668, "Marley"
         move MOVE_ICE_PUNCH
         move MOVE_AERIAL_ACE
         ability ABILITY_PRESSURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -35024,7 +34437,7 @@ trainerdata 668, "Marley"
         move MOVE_CRUNCH
         move MOVE_THUNDER_FANG
         ability ABILITY_INTIMIDATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -35055,7 +34468,7 @@ trainerdata 669, "Mira"
         move MOVE_THUNDERBOLT
         move MOVE_DARK_PULSE
         ability ABILITY_ADAPTABILITY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -35071,7 +34484,7 @@ trainerdata 669, "Mira"
         move MOVE_SLUDGE_BOMB
         move MOVE_ENERGY_BALL
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -35087,7 +34500,7 @@ trainerdata 669, "Mira"
         move MOVE_THUNDER_WAVE
         move MOVE_HYPER_BEAM
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -35103,7 +34516,7 @@ trainerdata 669, "Mira"
         move MOVE_AURA_SPHERE
         move MOVE_PSYCHIC
         ability ABILITY_HUSTLE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -35119,7 +34532,7 @@ trainerdata 669, "Mira"
         move MOVE_CALM_MIND
         move MOVE_HYPER_BEAM
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -35150,7 +34563,7 @@ trainerdata 670, "Riley"
         move MOVE_SWORDS_DANCE
         move MOVE_QUICK_ATTACK
         ability ABILITY_PRESSURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -35166,7 +34579,7 @@ trainerdata 670, "Riley"
         move MOVE_AERIAL_ACE
         move MOVE_SHADOW_CLAW
         ability ABILITY_GUTS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -35182,7 +34595,7 @@ trainerdata 670, "Riley"
         move MOVE_HAMMER_ARM
         move MOVE_BULLET_PUNCH
         ability ABILITY_CLEAR_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -35198,7 +34611,7 @@ trainerdata 670, "Riley"
         move MOVE_FIRE_FANG
         move MOVE_THUNDER_FANG
         ability ABILITY_INTIMIDATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -35214,7 +34627,7 @@ trainerdata 670, "Riley"
         move MOVE_BONE_RUSH
         move MOVE_BLAZE_KICK
         ability ABILITY_STEADFAST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -35245,7 +34658,7 @@ trainerdata 671, "Buck"
         move MOVE_PROTECT
         move MOVE_SANDSTORM
         ability ABILITY_STURDY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -35261,7 +34674,7 @@ trainerdata 671, "Buck"
         move MOVE_CONFUSE_RAY
         move MOVE_DOUBLE_TEAM
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -35277,7 +34690,7 @@ trainerdata 671, "Buck"
         move MOVE_ERUPTION
         move MOVE_PROTECT
         ability ABILITY_WHITE_SMOKE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -35293,7 +34706,7 @@ trainerdata 671, "Buck"
         move MOVE_THUNDER_PUNCH
         move MOVE_SHADOW_BALL
         ability ABILITY_PRESSURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -35309,7 +34722,7 @@ trainerdata 671, "Buck"
         move MOVE_ANCIENT_POWER
         move MOVE_CALM_MIND
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -35410,8 +34823,8 @@ trainerdata 674, "Alfred"
     endparty
 
 trainerdata 675, "Lance"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
-    trainerclass TRAINERCLASS_CHAMPION
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_MOVES | 0
+    trainerclass TRAINERCLASS_PKMN_TRAINER_LANCE
     nummons 1
     item ITEM_NONE
     item ITEM_NONE
@@ -35425,17 +34838,16 @@ trainerdata 675, "Lance"
         // mon 0
         ivs 255
         abilityslot 0
-        level 40
+        level 55
         pokemon SPECIES_DRAGONITE
-        item ITEM_NONE
-        move MOVE_FLY
-        move MOVE_TWISTER
-        move MOVE_THUNDER
-        move MOVE_HYPER_BEAM
-        ability ABILITY_INNER_FOCUS
-        setivs 30, 30, 30, 30, 30, 30
+		move MOVE_DRAGON_PULSE
+		move MOVE_ICE_BEAM
+		move MOVE_THUNDERBOLT
+		move MOVE_AIR_SLASH
+        ability ABILITY_MULTISCALE
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        nature NATURE_TIMID
         ballseal 0
 
     endparty
@@ -35550,7 +34962,7 @@ trainerdata 678, "Joy"
     endparty
 
 trainerdata 679, "Callie"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BEAUTY
     nummons 2
     item ITEM_NONE
@@ -35565,13 +34977,9 @@ trainerdata 679, "Callie"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
+        level 30
         pokemon SPECIES_CLEFABLE
         item ITEM_NONE
-        move MOVE_GROWL
-        move MOVE_ENCORE
-        move MOVE_DOUBLE_SLAP
-        move MOVE_METRONOME
         ability ABILITY_CUTE_CHARM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -35581,13 +34989,9 @@ trainerdata 679, "Callie"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 30
         pokemon SPECIES_WIGGLYTUFF
         item ITEM_NONE
-        move MOVE_SING
-        move MOVE_DEFENSE_CURL
-        move MOVE_POUND
-        move MOVE_DISABLE
         ability ABILITY_SHEER_FORCE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -35597,7 +35001,7 @@ trainerdata 679, "Callie"
     endparty
 
 trainerdata 680, "Kassandra"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BEAUTY
     nummons 2
     item ITEM_NONE
@@ -35612,13 +35016,9 @@ trainerdata 680, "Kassandra"
         // mon 0
         ivs 255
         abilityslot 0
-        level 16
+        level 30
         pokemon SPECIES_WIGGLYTUFF
         item ITEM_NONE
-        move MOVE_SING
-        move MOVE_DEFENSE_CURL
-        move MOVE_POUND
-        move MOVE_DISABLE
         ability ABILITY_SHEER_FORCE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -35628,13 +35028,9 @@ trainerdata 680, "Kassandra"
         // mon 1
         ivs 255
         abilityslot 0
-        level 16
+        level 30
         pokemon SPECIES_CLEFABLE
         item ITEM_NONE
-        move MOVE_GROWL
-        move MOVE_ENCORE
-        move MOVE_DOUBLE_SLAP
-        move MOVE_METRONOME
         ability ABILITY_CUTE_CHARM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -35855,7 +35251,7 @@ trainerdata 685, "Edwin"
         move MOVE_SANDSTORM
         move MOVE_ROAR
         ability ABILITY_ROCK_HEAD
-        setivs 9, 9, 9, 9, 9, 9
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -36441,9 +35837,9 @@ trainerdata 699, "Abner"
     endparty
 
 trainerdata 700, "Giovanni"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_BALL | 0
     trainerclass TRAINERCLASS_ROCKET_BOSS
-    nummons 4
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -36456,67 +35852,104 @@ trainerdata 700, "Giovanni"
         // mon 0
         ivs 255
         abilityslot 0
-        level 42
-        pokemon SPECIES_NIDOKING
-        item ITEM_NONE
-        move MOVE_FOCUS_ENERGY
-        move MOVE_FURY_ATTACK
-        move MOVE_DOUBLE_KICK
-        move MOVE_SHADOW_CLAW
-        ability ABILITY_POISON_TOUCH
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_SERIOUS
+        level 54
+        pokemon SPECIES_PERSIAN
+        item ITEM_LIFE_ORB
+        move MOVE_FAKE_OUT
+        move MOVE_SLASH
+        move MOVE_KNOCK_OFF
+        move MOVE_AERIAL_ACE
+        ability ABILITY_TECHNICIAN
+		ball ITEM_POKE_BALL
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 40
+        level 54
         pokemon SPECIES_KANGASKHAN
-        item ITEM_NONE
+        item ITEM_SITRUS_BERRY
         move MOVE_DIZZY_PUNCH
         move MOVE_SUCKER_PUNCH
-        move MOVE_LEER
+        move MOVE_CRUNCH
         move MOVE_OUTRAGE
         ability ABILITY_SCRAPPY
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIET
+		ball ITEM_POKE_BALL
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 43
-        pokemon SPECIES_HONCHKROW
-        item ITEM_NONE
-        move MOVE_DARK_PULSE
-        move MOVE_NASTY_PLOT
-        move MOVE_SWAGGER
-        move MOVE_SHADOW_BALL
-        ability ABILITY_INSOMNIA
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        level 54
+        pokemon SPECIES_NIDOKING
+        item ITEM_LIFE_ORB
+        move MOVE_ICE_BEAM
+        move MOVE_THUNDERBOLT
+        move MOVE_SLUDGE_WAVE
+        move MOVE_EARTH_POWER
+        ability ABILITY_SHEER_FORCE
+        ball ITEM_POKE_BALL
+		setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 46
+        level 54
         pokemon SPECIES_NIDOQUEEN
-        item ITEM_NONE
-        move MOVE_EARTH_POWER
-        move MOVE_SUPERPOWER
-        move MOVE_CRUNCH
-        move MOVE_ROAR
-        ability ABILITY_POISON_TOUCH
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        item ITEM_LIFE_ORB
+        move MOVE_BULLDOZE
+        move MOVE_FIRE_PUNCH
+        move MOVE_POISON_JAB
+        move MOVE_ROCK_SLIDE
+        ability ABILITY_SHEER_FORCE
+		ball ITEM_POKE_BALL
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 0, 4, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
-
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 54
+        pokemon SPECIES_RHYPERIOR
+        item ITEM_ASSAULT_VEST
+        move MOVE_STONE_EDGE
+        move MOVE_EARTHQUAKE
+        move MOVE_HAMMER_ARM
+        move MOVE_BODY_PRESS
+        ability ABILITY_SOLID_ROCK
+		ball ITEM_POKE_BALL		
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_BRAVE
+        ballseal 0
+		
+		// mon 5
+        ivs 255
+        abilityslot 0
+        level 55
+        pokemon SPECIES_MEWTWO
+        item ITEM_MEWTWONITE_Y
+        move MOVE_AURA_SPHERE
+        move MOVE_ENERGY_BALL
+        move MOVE_SHADOW_BALL
+        move MOVE_PSYCHIC
+        ability ABILITY_UNNERVE
+		ball ITEM_MASTER_BALL		
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 0, 252, 252, 4
+        nature NATURE_TIMID
+        ballseal 0
     endparty
 
 trainerdata 701, "Lance"
@@ -37077,7 +36510,7 @@ trainerdata 705, "Karen"
 trainerdata 706, "Proton"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_EXECUTIVE_PROTON
-    nummons 2
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -37087,36 +36520,100 @@ trainerdata 706, "Proton"
     endentry
 
     party 706
-        // mon 0
+         // mon 0
         ivs 255
         abilityslot 0
-        level 28
-        pokemon SPECIES_GOLBAT
-        item ITEM_NONE
-        move MOVE_LEECH_LIFE
-        move MOVE_BITE
-        move MOVE_CONFUSE_RAY
-        move MOVE_WING_ATTACK
-        ability ABILITY_SNIPER
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_DOCILE
+        level 52
+        pokemon SPECIES_CROBAT
+        item ITEM_SCOPE_LENS
+        move MOVE_U_TURN
+        move MOVE_DUAL_WINGBEAT
+        move MOVE_POISON_FANG
+        move MOVE_ZEN_HEADBUTT
+        ability ABILITY_INNER_FOCUS
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
         ballseal 0
-
+		
         // mon 1
         ivs 255
         abilityslot 0
-        level 33
-        pokemon SPECIES_WEEZING
-        item ITEM_NONE
-        move MOVE_DOUBLE_HIT
-        move MOVE_SLUDGE
-        move MOVE_SMOKESCREEN
-        move MOVE_SMOG
+        level 52
+        monwithform SPECIES_WEEZING, 1
+        item ITEM_LEFTOVERS
+        move MOVE_STRANGE_STEAM
+        move MOVE_SLUDGE_BOMB
+        move MOVE_THUNDERBOLT
+        move MOVE_HEAT_WAVE
         ability ABILITY_LEVITATE
-        setivs 12, 12, 12, 12, 12, 12
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_NAUGHTY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 0, 4, 0, 252, 0
+        nature NATURE_MODEST
+        ballseal 0
+		
+		// mon 2
+        ivs 255
+        abilityslot 0
+        level 52
+        monwithform SPECIES_MUK, 1
+        item ITEM_ASSAULT_VEST
+        move MOVE_ROCK_SLIDE
+        move MOVE_POISON_FANG
+        move MOVE_KNOCK_OFF
+        move MOVE_DRAIN_PUNCH
+        ability ABILITY_POISON_TOUCH
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 4, 0, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+		
+		// mon 3
+        ivs 255
+        abilityslot 0
+        level 52
+        pokemon SPECIES_MIGHTYENA
+        item ITEM_BERRY_JUICE
+        move MOVE_THUNDER_FANG
+        move MOVE_ICE_FANG
+        move MOVE_FIRE_FANG
+        move MOVE_CRUNCH
+        ability ABILITY_STRONG_JAW
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+		
+		// mon 4
+        ivs 255
+        abilityslot 0
+        level 52
+        pokemon SPECIES_ARBOK
+        item ITEM_BLACK_SLUDGE
+        move MOVE_POISON_FANG
+        move MOVE_ICE_FANG
+        move MOVE_FIRE_FANG
+        move MOVE_CRUNCH
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_JOLLY
+        ballseal 0
+		
+		// mon 5
+        ivs 255
+        abilityslot 0
+        level 53
+        pokemon SPECIES_BEEDRILL
+        item ITEM_BEEDRILLITE
+        move MOVE_POUNCE
+        move MOVE_DRILL_RUN
+        move MOVE_CROSS_POISON
+        move MOVE_FELL_STINGER
+        ability ABILITY_ADAPTABILITY
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_JOLLY
         ballseal 0
 
     endparty
@@ -37348,7 +36845,7 @@ trainerdata 712, "Falkner"
         move MOVE_THUNDER_WAVE
         move MOVE_DARK_PULSE
         ability ABILITY_INSOMNIA
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -37364,7 +36861,7 @@ trainerdata 712, "Falkner"
         move MOVE_ICE_BEAM
         move MOVE_HIDDEN_POWER
         ability ABILITY_FRISK
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -37380,7 +36877,7 @@ trainerdata 712, "Falkner"
         move MOVE_SWAGGER
         move MOVE_ROOST
         ability ABILITY_FRISK
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -37411,7 +36908,7 @@ trainerdata 713, "Bugsy"
         move MOVE_SWORDS_DANCE
         move MOVE_SUPERPOWER
         ability ABILITY_TECHNICIAN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -37427,7 +36924,7 @@ trainerdata 713, "Bugsy"
         move MOVE_SHADOW_SNEAK
         move MOVE_SWAGGER
         ability ABILITY_WONDER_GUARD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -37443,7 +36940,7 @@ trainerdata 713, "Bugsy"
         move MOVE_AIR_SLASH
         move MOVE_ANCIENT_POWER
         ability ABILITY_TINTED_LENS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -37459,7 +36956,7 @@ trainerdata 713, "Bugsy"
         move MOVE_X_SCISSOR
         move MOVE_ROCK_TOMB
         ability ABILITY_HYPER_CUTTER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -37475,7 +36972,7 @@ trainerdata 713, "Bugsy"
         move MOVE_STONE_EDGE
         move MOVE_COUNTER
         ability ABILITY_SWARM
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -37491,7 +36988,7 @@ trainerdata 713, "Bugsy"
         move MOVE_ATTACK_ORDER
         move MOVE_DEFEND_ORDER
         ability ABILITY_QUEENLY_MAJESTY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -37538,7 +37035,7 @@ trainerdata 714, "Whitney"
         move MOVE_ICE_BEAM
         move MOVE_THUNDERBOLT
         ability ABILITY_OWN_TEMPO
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -37554,7 +37051,7 @@ trainerdata 714, "Whitney"
         move MOVE_SURF
         move MOVE_ICE_BEAM
         ability ABILITY_SIMPLE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -37586,7 +37083,7 @@ trainerdata 714, "Whitney"
         move MOVE_FIRE_BLAST
         move MOVE_CALM_MIND
         ability ABILITY_CUTE_CHARM
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -37602,7 +37099,7 @@ trainerdata 714, "Whitney"
         move MOVE_SLEEP_TALK
         move MOVE_REST
         ability ABILITY_SCRAPPY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -37633,7 +37130,7 @@ trainerdata 715, "Morty"
         move MOVE_THUNDERBOLT
         move MOVE_SHADOW_BALL
         ability ABILITY_UNBURDEN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -37649,7 +37146,7 @@ trainerdata 715, "Morty"
         move MOVE_SUBSTITUTE
         move MOVE_PAYBACK
         ability ABILITY_PRESSURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -37665,7 +37162,7 @@ trainerdata 715, "Morty"
         move MOVE_ICE_PUNCH
         move MOVE_FAKE_OUT
         ability ABILITY_FRISK
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -37681,7 +37178,7 @@ trainerdata 715, "Morty"
         move MOVE_CONFUSE_RAY
         move MOVE_ASTONISH
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -37697,7 +37194,7 @@ trainerdata 715, "Morty"
         move MOVE_SHADOW_BALL
         move MOVE_FOCUS_BLAST
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -37713,7 +37210,7 @@ trainerdata 715, "Morty"
         move MOVE_THUNDERBOLT
         move MOVE_DESTINY_BOND
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -37744,7 +37241,7 @@ trainerdata 716, "Pryce"
         move MOVE_EARTHQUAKE
         move MOVE_BLIZZARD
         ability ABILITY_SNOW_WARNING
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
@@ -37760,7 +37257,7 @@ trainerdata 716, "Pryce"
         move MOVE_SLEEP_TALK
         move MOVE_REST
         ability ABILITY_THICK_FAT
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -37776,7 +37273,7 @@ trainerdata 716, "Pryce"
         move MOVE_ATTRACT
         move MOVE_BLIZZARD
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -37792,7 +37289,7 @@ trainerdata 716, "Pryce"
         move MOVE_ATTRACT
         move MOVE_BLIZZARD
         ability ABILITY_ICE_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
         ballseal 0
@@ -37808,7 +37305,7 @@ trainerdata 716, "Pryce"
         move MOVE_SWAGGER
         move MOVE_BLIZZARD
         ability ABILITY_ICE_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -37824,7 +37321,7 @@ trainerdata 716, "Pryce"
         move MOVE_STONE_EDGE
         move MOVE_DOUBLE_TEAM
         ability ABILITY_OBLIVIOUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -37855,7 +37352,7 @@ trainerdata 717, "Jasmine"
         move MOVE_GRAVITY
         move MOVE_EXPLOSION
         ability ABILITY_CLEAR_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -37871,7 +37368,7 @@ trainerdata 717, "Jasmine"
         move MOVE_MIRROR_COAT
         move MOVE_METAL_SOUND
         ability ABILITY_STURDY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -37887,7 +37384,7 @@ trainerdata 717, "Jasmine"
         move MOVE_NIGHT_SLASH
         move MOVE_STEEL_WING
         ability ABILITY_FRISK
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -37903,7 +37400,7 @@ trainerdata 717, "Jasmine"
         move MOVE_DREAM_EATER
         move MOVE_GRAVITY
         ability ABILITY_HEATPROOF
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -37919,7 +37416,7 @@ trainerdata 717, "Jasmine"
         move MOVE_AQUA_JET
         move MOVE_ROAR
         ability ABILITY_TORRENT
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -37935,7 +37432,7 @@ trainerdata 717, "Jasmine"
         move MOVE_ROAR
         move MOVE_IRON_TAIL
         ability ABILITY_STURDY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
         ballseal 0
@@ -37966,7 +37463,7 @@ trainerdata 718, "Chuck"
         move MOVE_ATTRACT
         move MOVE_THUNDER_PUNCH
         ability ABILITY_PURE_POWER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -37982,7 +37479,7 @@ trainerdata 718, "Chuck"
         move MOVE_FOCUS_PUNCH
         move MOVE_DOUBLE_TEAM
         ability ABILITY_IRON_FIST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -37998,7 +37495,7 @@ trainerdata 718, "Chuck"
         move MOVE_BLAZE_KICK
         move MOVE_BULK_UP
         ability ABILITY_RECKLESS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -38014,7 +37511,7 @@ trainerdata 718, "Chuck"
         move MOVE_DRAIN_PUNCH
         move MOVE_STONE_EDGE
         ability ABILITY_POISON_HEAL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38030,7 +37527,7 @@ trainerdata 718, "Chuck"
         move MOVE_THUNDER_PUNCH
         move MOVE_SWAGGER
         ability ABILITY_VITAL_SPIRIT
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38046,7 +37543,7 @@ trainerdata 718, "Chuck"
         move MOVE_FOCUS_PUNCH
         move MOVE_SUBSTITUTE
         ability ABILITY_WATER_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -38077,7 +37574,7 @@ trainerdata 719, "Clair"
         move MOVE_WATERFALL
         move MOVE_DRAGON_PULSE
         ability ABILITY_INTIMIDATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -38093,7 +37590,7 @@ trainerdata 719, "Clair"
         move MOVE_THUNDERBOLT
         move MOVE_FLAMETHROWER
         ability ABILITY_SHED_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_TIMID
         ballseal 0
@@ -38109,7 +37606,7 @@ trainerdata 719, "Clair"
         move MOVE_ROCK_SLIDE
         move MOVE_ROAR
         ability ABILITY_ROCK_HEAD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MILD
         ballseal 0
@@ -38125,7 +37622,7 @@ trainerdata 719, "Clair"
         move MOVE_ICE_BEAM
         move MOVE_DRAGON_BREATH
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -38141,7 +37638,7 @@ trainerdata 719, "Clair"
         move MOVE_DRAGON_CLAW
         move MOVE_FIRE_FANG
         ability ABILITY_BLAZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
         ballseal 0
@@ -38157,7 +37654,7 @@ trainerdata 719, "Clair"
         move MOVE_DRAGON_BREATH
         move MOVE_HYPER_BEAM
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -38188,7 +37685,7 @@ trainerdata 720, "Brock"
         move MOVE_ROCK_POLISH
         move MOVE_EARTHQUAKE
         ability ABILITY_STURDY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -38204,7 +37701,7 @@ trainerdata 720, "Brock"
         move MOVE_EARTHQUAKE
         move MOVE_REST
         ability ABILITY_ROCK_HEAD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -38220,7 +37717,7 @@ trainerdata 720, "Brock"
         move MOVE_PROTECT
         move MOVE_SANDSTORM
         ability ABILITY_SHELL_ARMOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -38236,7 +37733,7 @@ trainerdata 720, "Brock"
         move MOVE_ROCK_POLISH
         move MOVE_SANDSTORM
         ability ABILITY_ROCK_HEAD
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -38252,7 +37749,7 @@ trainerdata 720, "Brock"
         move MOVE_ENDURE
         move MOVE_GIGA_DRAIN
         ability ABILITY_SHARPNESS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -38268,7 +37765,7 @@ trainerdata 720, "Brock"
         move MOVE_AVALANCHE
         move MOVE_ROCK_POLISH
         ability ABILITY_MOLD_BREAKER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38299,7 +37796,7 @@ trainerdata 721, "Misty"
         move MOVE_ICE_BEAM
         move MOVE_SURF
         ability ABILITY_NATURAL_CURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
         ballseal 0
@@ -38315,7 +37812,7 @@ trainerdata 721, "Misty"
         move MOVE_EARTHQUAKE
         move MOVE_RAIN_DANCE
         ability ABILITY_WATER_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -38331,7 +37828,7 @@ trainerdata 721, "Misty"
         move MOVE_BLIZZARD
         move MOVE_RAIN_DANCE
         ability ABILITY_WATER_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -38347,7 +37844,7 @@ trainerdata 721, "Misty"
         move MOVE_SURF
         move MOVE_THUNDER_WAVE
         ability ABILITY_VOLT_ABSORB
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -38363,7 +37860,7 @@ trainerdata 721, "Misty"
         move MOVE_WATERFALL
         move MOVE_BATON_PASS
         ability ABILITY_WATER_VEIL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -38379,7 +37876,7 @@ trainerdata 721, "Misty"
         move MOVE_REST
         move MOVE_SLEEP_TALK
         ability ABILITY_MARVEL_SCALE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -38410,7 +37907,7 @@ trainerdata 722, "Surge"
         move MOVE_THUNDERBOLT
         move MOVE_GRASS_KNOT
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -38426,7 +37923,7 @@ trainerdata 722, "Surge"
         move MOVE_DISCHARGE
         move MOVE_OVERHEAT
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38442,7 +37939,7 @@ trainerdata 722, "Surge"
         move MOVE_MAGNET_RISE
         move MOVE_MIRROR_SHOT
         ability ABILITY_MAGNET_PULL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CALM
         ballseal 0
@@ -38458,7 +37955,7 @@ trainerdata 722, "Surge"
         move MOVE_THUNDERBOLT
         move MOVE_EXPLOSION
         ability ABILITY_STATIC
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38474,7 +37971,7 @@ trainerdata 722, "Surge"
         move MOVE_DISCHARGE
         move MOVE_SWEET_KISS
         ability ABILITY_PRANKSTER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38490,7 +37987,7 @@ trainerdata 722, "Surge"
         move MOVE_ICE_PUNCH
         move MOVE_EARTHQUAKE
         ability ABILITY_MOTOR_DRIVE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
         ballseal 0
@@ -38521,7 +38018,7 @@ trainerdata 723, "Erika"
         move MOVE_EXPLOSION
         move MOVE_SUNNY_DAY
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38537,7 +38034,7 @@ trainerdata 723, "Erika"
         move MOVE_SLEEP_POWDER
         move MOVE_GIGA_DRAIN
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38553,7 +38050,7 @@ trainerdata 723, "Erika"
         move MOVE_LEAF_STORM
         move MOVE_LEAF_BLADE
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -38569,7 +38066,7 @@ trainerdata 723, "Erika"
         move MOVE_GIGA_DRAIN
         move MOVE_ATTRACT
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -38585,7 +38082,7 @@ trainerdata 723, "Erika"
         move MOVE_ROCK_SLIDE
         move MOVE_EARTHQUAKE
         ability ABILITY_CHLOROPHYLL
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38601,7 +38098,7 @@ trainerdata 723, "Erika"
         move MOVE_SLUDGE_BOMB
         move MOVE_STUN_SPORE
         ability ABILITY_NATURAL_CURE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -38632,7 +38129,7 @@ trainerdata 724, "Janine"
         move MOVE_CONFUSE_RAY
         move MOVE_U_TURN
         ability ABILITY_INFILTRATOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RASH
         ballseal 0
@@ -38648,7 +38145,7 @@ trainerdata 724, "Janine"
         move MOVE_TOXIC
         move MOVE_EXPLOSION
         ability ABILITY_LEVITATE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIET
         ballseal 0
@@ -38664,7 +38161,7 @@ trainerdata 724, "Janine"
         move MOVE_ATTRACT
         move MOVE_SUBSTITUTE
         ability ABILITY_DRY_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -38680,7 +38177,7 @@ trainerdata 724, "Janine"
         move MOVE_SWAGGER
         move MOVE_NIGHT_SHADE
         ability ABILITY_SWARM
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
         ballseal 0
@@ -38696,7 +38193,7 @@ trainerdata 724, "Janine"
         move MOVE_BUG_BUZZ
         move MOVE_PSYCHIC
         ability ABILITY_SHIELD_DUST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_GENTLE
         ballseal 0
@@ -38712,7 +38209,7 @@ trainerdata 724, "Janine"
         move MOVE_CRUNCH
         move MOVE_SWORDS_DANCE
         ability ABILITY_BATTLE_ARMOR
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
         ballseal 0
@@ -38743,7 +38240,7 @@ trainerdata 725, "Sabrina"
         move MOVE_ENERGY_BALL
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -38759,7 +38256,7 @@ trainerdata 725, "Sabrina"
         move MOVE_SHADOW_BALL
         move MOVE_PSYCHIC
         ability ABILITY_SYNCHRONIZE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SASSY
         ballseal 0
@@ -38775,7 +38272,7 @@ trainerdata 725, "Sabrina"
         move MOVE_THUNDER
         move MOVE_PSYCHIC
         ability ABILITY_SOUNDPROOF
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -38791,7 +38288,7 @@ trainerdata 725, "Sabrina"
         move MOVE_PSYCHIC
         move MOVE_FOCUS_BLAST
         ability ABILITY_DRY_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
         ballseal 0
@@ -38807,7 +38304,7 @@ trainerdata 725, "Sabrina"
         move MOVE_DESTINY_BOND
         move MOVE_ENCORE
         ability ABILITY_SHADOW_TAG
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -38823,7 +38320,7 @@ trainerdata 725, "Sabrina"
         move MOVE_NIGHT_SLASH
         move MOVE_STONE_EDGE
         ability ABILITY_STEADFAST
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LAX
         ballseal 0
@@ -38854,7 +38351,7 @@ trainerdata 726, "Blaine"
         move MOVE_BODY_SLAM
         move MOVE_OVERHEAT
         ability ABILITY_WHITE_SMOKE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HASTY
         ballseal 0
@@ -38870,7 +38367,7 @@ trainerdata 726, "Blaine"
         move MOVE_SOLAR_BEAM
         move MOVE_SUNNY_DAY
         ability ABILITY_SOLID_ROCK
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -38886,7 +38383,7 @@ trainerdata 726, "Blaine"
         move MOVE_OVERHEAT
         move MOVE_FLARE_BLITZ
         ability ABILITY_FLASH_FIRE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BRAVE
         ballseal 0
@@ -38902,7 +38399,7 @@ trainerdata 726, "Blaine"
         move MOVE_OVERHEAT
         move MOVE_STONE_EDGE
         ability ABILITY_SIMPLE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -38918,7 +38415,7 @@ trainerdata 726, "Blaine"
         move MOVE_FLAMETHROWER
         move MOVE_SUCKER_PUNCH
         ability ABILITY_FLASH_FIRE
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_DOCILE
         ballseal 0
@@ -38934,7 +38431,7 @@ trainerdata 726, "Blaine"
         move MOVE_FLAMETHROWER
         move MOVE_CONFUSE_RAY
         ability ABILITY_FLAME_BODY
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -38965,7 +38462,7 @@ trainerdata 727, "Blue"
         move MOVE_EXPLOSION
         move MOVE_TRICK_ROOM
         ability ABILITY_CHLOROPHYLL
-        setivs 12, 12, 12, 12, 12, 12
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
         ballseal 0
@@ -39154,7 +38651,7 @@ trainerdata 730, "Thom & Kae"
         move MOVE_SWIFT
         move MOVE_THUNDER_WAVE
         ability ABILITY_STATIC
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
         ballseal 0
@@ -39170,7 +38667,7 @@ trainerdata 730, "Thom & Kae"
         move MOVE_FEINT_ATTACK
         move MOVE_PROTECT
         ability ABILITY_FLAME_BODY
-        setivs 6, 6, 6, 6, 6, 6
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
         ballseal 0
@@ -39374,7 +38871,7 @@ trainerdata 734, "Clair"
         move MOVE_THUNDERBOLT
         move MOVE_FLAMETHROWER
         ability ABILITY_SHED_SKIN
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
         ballseal 0
@@ -39390,7 +38887,7 @@ trainerdata 734, "Clair"
         move MOVE_ICE_BEAM
         move MOVE_DRAGON_BREATH
         ability ABILITY_SNIPER
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BOLD
         ballseal 0
@@ -39406,7 +38903,7 @@ trainerdata 734, "Clair"
         move MOVE_DRAGON_BREATH
         move MOVE_HYPER_BEAM
         ability ABILITY_INNER_FOCUS
-        setivs 24, 24, 24, 24, 24, 24
+        setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
         ballseal 0
