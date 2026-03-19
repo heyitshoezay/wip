@@ -35,9 +35,9 @@ const struct BadgeMartItems sBadgeMart[] = {
     { ITEM_ICE_HEAL,       1 },
     { ITEM_FULL_HEAL,      5 },
     { ITEM_ESCAPE_ROPE,    1 },
-    { ITEM_REPEL,          1 },
-    { ITEM_SUPER_REPEL,    3 },
-    { ITEM_MAX_REPEL,      5 },
+    { ITEM_ORAN_BERRY,    1 },
+    { ITEM_SITRUS_BERRY,   3 },
+    { ITEM_LUM_BERRY,      5 },
 };
 
 void LONG_CALL InitMartUI(void *taskManager, FieldSystem *fieldSystem, const u16 *items, int kind, int buySell, int decoWhich, const struct MartItem *priceOverrides);
@@ -63,12 +63,11 @@ u16 sGoldenrodDepartmentUpper2F[] = {
 u16 sGoldenrodDepartmentLower2F[] = {
     ITEM_POKE_BALL, ITEM_GREAT_BALL, ITEM_ULTRA_BALL, ITEM_ESCAPE_ROPE, ITEM_POKE_DOLL,
     ITEM_EVIOLITE, ITEM_SHELL_BELL, ITEM_SCOPE_LENS, ITEM_CHOICE_BAND, ITEM_CHOICE_SPECS,
-    ITEM_CHOICE_SPECS, ITEM_BRIGHT_POWDER, 0xFFFF
+    ITEM_CHOICE_SCARF, ITEM_BRIGHT_POWDER, 0xFFFF
 };
 
 u16 sGoldenrodDepartment3F[] = {
-    ITEM_X_SPEED, ITEM_X_ATTACK, ITEM_X_DEFENSE, ITEM_GUARD_SPEC, ITEM_DIRE_HIT,
-    ITEM_X_ACCURACY, ITEM_X_SP_ATK, ITEM_X_SP_DEF, 0xFFFF
+    ITEM_POMEG_BERRY, ITEM_KELPSY_BERRY, ITEM_QUALOT_BERRY, ITEM_HONDEW_BERRY, ITEM_GREPA_BERRY, ITEM_TAMATO_BERRY, ITEM_KINGS_ROCK, ITEM_LINKING_CORD, 0xFFFF
 };
 
 u16 sGoldenrodDepartment4F[] = {
@@ -91,7 +90,7 @@ u16 sEcruteakMart[] = {
 };
 
 u16 sOlivineMart[] = {
-    ITEM_HEART_MAIL, ITEM_HEAL_BALL, ITEM_NET_BALL, 0xFFFF
+    ITEM_METAGROSSITE, ITEM_HEAL_BALL, ITEM_NET_BALL, 0xFFFF
 };
 
 u16 sCianwoodPharmacy[] = {

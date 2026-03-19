@@ -144,6 +144,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                 #endif
 
                 if (sp->field_condition & WEATHER_RAIN) {
+                    sp->fcc.weather_count = 5;
                     if (--sp->fcc.weather_count == 0) {
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_RAIN_END);
                         sp->next_server_seq_no = sp->server_seq_no;
@@ -154,6 +155,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                 }
 
                 if (sp->field_condition & WEATHER_SANDSTORM) {
+                    sp->fcc.weather_count = 5;
                     if (--sp->fcc.weather_count == 0) {
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_SANDSTORM_END);
                         sp->next_server_seq_no = sp->server_seq_no;
@@ -164,6 +166,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                 }
 
                 if (sp->field_condition & WEATHER_SUNNY) {
+                    sp->fcc.weather_count = 5;
                     if (--sp->fcc.weather_count == 0) {
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_SUN_END);
                         sp->next_server_seq_no = sp->server_seq_no;
@@ -184,6 +187,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
                 }
 
                 if (sp->field_condition & WEATHER_SNOW) {
+                    sp->fcc.weather_count = 5;
                     if (--sp->fcc.weather_count == 0) {
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_SNOW_END);
                         sp->next_server_seq_no = sp->server_seq_no;
@@ -1394,6 +1398,9 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
 
                             if (sp->tailwindCount[side])  // update tailwind to use a separate counter so it can be larger
                             {
+                                if (side == 1 && CheckScriptFlag(PERMANENT_OW_WEATHER_FLAG) && GetScriptVar(PERMANENT_OW_WEATHER_VARIABLE) == 4) {
+                                    sp->tailwindCount[side] = 4;
+                                }
                                 if (--sp->tailwindCount[side] == 0) {
                                     LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_TAILWIND_END);
                                     sp->next_server_seq_no = sp->server_seq_no;
@@ -1600,7 +1607,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp) {
 
                 if (sp->terrainOverlay.type != TERRAIN_NONE) {
                     if (sp->terrainOverlay.numberOfTurnsLeft < TERRAIN_TURNS_INFINITE) {
-                        sp->terrainOverlay.numberOfTurnsLeft--;
+                        //sp->terrainOverlay.numberOfTurnsLeft--;
                     }
                     if (sp->terrainOverlay.numberOfTurnsLeft <= 0) {
                         LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_HANDLE_TERRAIN_END);

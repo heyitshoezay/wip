@@ -15720,7 +15720,8 @@
       "MOVE_WATERFALL",
       "MOVE_STRENGTH",
       "MOVE_ROCK_SMASH",
-      "MOVE_SURF"
+      "MOVE_SURF",
+	  "MOVE_WHIRLPOOL"
     ],
     "EggMoves": [],
     "TutorMoves": [

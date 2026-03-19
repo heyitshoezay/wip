@@ -104,39 +104,39 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
 							        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
 							        break;
                                 case 2:
-                                    sp->koban_counter = 2;
+                                    scriptnum = SUB_SEQ_OVERWORLD_RAIN;
+                                    ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break;
-                                case 3://no switch
-                                    scriptnum = 0;
+                                case 3:
+                                    scriptnum = SUB_SEQ_SNOW_WARNING;
+                                    ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break;
                                 case 4:
-                                    sp->koban_counter = 4;
-                                    sp->addeffect_type = ADD_EFFECT_ABILITY; // need to restore the current move index after the animation has played
-                                    sp->current_move_index = MOVE_GRASSY_TERRAIN; // need this for UpdateTerrainOverlay
-                                    switch (BattleRand(bw) % 4)
-                                    {
-                                    case 0:
-                                        sp->current_move_index = MOVE_PSYCHIC_TERRAIN;
-                                        break;
-                                    case 1:
-                                        sp->current_move_index = MOVE_MISTY_TERRAIN;
-                                        break;
-                                    case 2:
-                                        sp->current_move_index = MOVE_ELECTRIC_TERRAIN;
-                                        break;
-                                    }
+                                    scriptnum = SUB_SEQ_APPLY_TAILWIND;
+                                    sp->calc_work = sp->current_move_index;
+                                    sp->current_move_index = MOVE_TAILWIND;
+                                    ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break;
                                 case 5:
-                                    scriptnum = SUB_SEQ_OVERWORLD_FOG;
-                                    break;
+                                    scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                sp->calc_work = sp->current_move_index;
+                                sp->current_move_index = MOVE_GRASSY_TERRAIN;  // need this for UpdateTerrainOverlay
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break; // Grassy terrain 
                                 case 6:
-                                    sp->koban_counter = 6; //tailwind
-                                    break;
-                                case 7: //crit
-                                    scriptnum = 0;
-                                    break;
+                                   scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                sp->calc_work = sp->current_move_index;
+                                sp->current_move_index = MOVE_PSYCHIC_TERRAIN;  // need this for UpdateTerrainOverlay
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break; // Psychic terrain 
+                                case 7: 
+                                    scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                sp->calc_work = sp->current_move_index;
+                                sp->current_move_index = MOVE_ELECTRIC_TERRAIN;  // need this for UpdateTerrainOverlay
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break; // Electric terrain 
                                 case 8:
-                                    sp->koban_counter = 8; //crit + tailwind
+                                    sp->koban_counter = 8; //tailwind
                                     break;
                                 default:
                                     break;

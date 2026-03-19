@@ -8,10 +8,10 @@
 .open "base/arm9.bin", 0x02000000
 
 .org 0x02000000 + 0xFA558 //New Bark Town
-.halfword ITEM_POTION
+.halfword ITEM_CAMERUPTITE
 
 .org 0x02000000 + 0xFA560 //Cherrygrove
-.halfword ITEM_NUGGET
+.halfword ITEM_CHARIZARDITE_X
 
 .org 0x02000000 + 0xFA568 //Cherrygrove
 .halfword ITEM_NUGGET

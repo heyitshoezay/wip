@@ -125,7 +125,7 @@ struct TrainerMusic
 
 struct TrainerMusic sTrainerEncounterMusicParam[] = // cues which music sequence occurs upon eyes meeting
 {
-    {.class = TRAINERCLASS_YOUNGSTER, .music1 = SEQ_GS_EYE_J_SHOUNEN, .music2 = SEQ_GS_EYE_J_SHOUNEN},
+    {.class = TRAINERCLASS_YOUNGSTER, .music1 = SEQ_GS_EYE_J_SHOUNEN, .music2 = SEQ_SE_2RIVAL},
     {.class = TRAINERCLASS_LASS, .music1 = SEQ_GS_EYE_K_SHOUJO, .music2 = SEQ_GS_EYE_K_SHOUJO},
     {.class = TRAINERCLASS_CAMPER, .music1 = SEQ_GS_EYE_J_SHOUNEN, .music2 = SEQ_GS_EYE_J_SHOUNEN},
     {.class = TRAINERCLASS_PICNICKER, .music1 = SEQ_GS_EYE_K_SHOUJO, .music2 = SEQ_GS_EYE_K_SHOUJO},
@@ -169,4 +169,5 @@ struct TrainerMusic sTrainerEncounterMusicParam[] = // cues which music sequence
     {.class = TRAINERCLASS_EXECUTIVE_ARCHER, .music1 = SEQ_GS_EYE_ROCKET, .music2 = SEQ_GS_EYE_ROCKET},
     {.class = TRAINERCLASS_EXECUTIVE_PROTON, .music1 = SEQ_GS_EYE_ROCKET, .music2 = SEQ_GS_EYE_ROCKET},
     {.class = TRAINERCLASS_EXECUTIVE_PETREL, .music1 = SEQ_GS_EYE_ROCKET, .music2 = SEQ_GS_EYE_ROCKET},
+    {.class = TRAINERCLASS_PKMN_TRAINER_HUGH,.music1 = SEQ_GS_EYE_J_SHOUNEN, .music2 = SEQ_SE_2RIVAL},
 };

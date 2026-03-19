@@ -1891,8 +1891,8 @@ superrodrate 75
 walklevels 5, 6, 5, 6, 7, 7, 6, 6, 8, 8, 8, 8
 
 // morning encounter slots
-pokemon SPECIES_TOGETIC
-pokemon SPECIES_TOGETIC
+pokemon SPECIES_RIOLU
+pokemon SPECIES_RIOLU
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
@@ -1905,8 +1905,8 @@ pokemon SPECIES_ZUBAT
 pokemon SPECIES_SLOWPOKE
 
 // day encounter slots
-pokemon SPECIES_TOGETIC
-pokemon SPECIES_TOGETIC
+pokemon SPECIES_RIOLU
+pokemon SPECIES_RIOLU
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
@@ -1919,8 +1919,8 @@ pokemon SPECIES_ZUBAT
 pokemon SPECIES_SLOWPOKE
 
 // night encounter slots
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_ZUBAT
+pokemon SPECIES_RIOLU
+pokemon SPECIES_RIOLU
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
 pokemon SPECIES_ZUBAT
@@ -2231,8 +2231,8 @@ pokemon SPECIES_RATTATA
 pokemon SPECIES_DITTO
 
 // night encounter slots
-pokemon SPECIES_DROWZEE
-pokemon SPECIES_RATTATA
+pokemon SPECIES_ZUBAT
+pokemon SPECIES_ZUBAT
 pokemon SPECIES_DROWZEE
 pokemon SPECIES_RATTATA
 pokemon SPECIES_DROWZEE

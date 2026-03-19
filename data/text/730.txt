@@ -84,10 +84,10 @@ Medium
 Cameraman
 Reporter
 Idol
-Champion
-Elite Four
-Elite Four
-Elite Four
+₧₦ Champion
+Elite Four Member
+Elite Four Member
+Elite Four Member
 ₧₦ Trainer
 ₧₦ Trainer
 ₧₦ Trainer
@@ -110,7 +110,7 @@ Gym Leader
 ₧₦ Trainer
 Gym Leader
 Elder
-Elite Four
+Elite Four Member
 Scientist
 Team Rocket Executive
 Boarder
@@ -122,7 +122,7 @@ Mystery Man
 Double Team
 Young Couple
 ₧₦ Trainer
-Rocket Boss
+Team Rocket Boss
 ₧₦ Trainer
 ₧₦ Trainer
 ₧₦ Trainer
