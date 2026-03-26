@@ -1371,6 +1371,8 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
             if (ai->defenderHasAtleastOnePhysicalMove) {
                 if (ai->attackerMon.item == ITEM_LIGHT_CLAY) {
                     moveScore += 1;
+                if (ai->attackerMon.ability == ABILITY_PRANKSTER)
+                    moveScore += 3;   
                 }
                 if (BattleRand(bsys) % 2 == 0) {
                     moveScore += 1;
@@ -1386,6 +1388,9 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
             if (ai->defenderHasAtleastOneSpecialMove) {
                 if (ai->attackerMon.item == ITEM_LIGHT_CLAY) {
                     moveScore += 1;
+                    
+                if (ai->attackerMon.ability == ABILITY_PRANKSTER)
+                    moveScore += 3;   
                 }
                 if (BattleRand(bsys) % 2 == 0) {
                     moveScore += 1;

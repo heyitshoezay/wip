@@ -99,20 +99,20 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                 sp->current_move_index = MOVE_MISTY_TERRAIN;  // need this for UpdateTerrainOverlay
                                 ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Misty terrain 
-                                case 1: //Delta Stream
+                                case 1: 
                                     scriptnum = SUB_SEQ_DELTA_STREAM;
 							        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-							        break;
+							        break; //Delta Stream
                                 case 2:
                                     scriptnum = SUB_SEQ_OVERWORLD_RAIN;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                    break;
+                                    break; // Rain
                                 case 3:
                                     scriptnum = SUB_SEQ_SNOW_WARNING;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                    break;
+                                    break; // Snow
                                 case 4:
-                                    scriptnum = SUB_SEQ_APPLY_TAILWIND;
+                                    scriptnum = SUB_SEQ_APPLY_TAILWIND; // still need to figure out how tailwind should be applied
                                     sp->calc_work = sp->current_move_index;
                                     sp->current_move_index = MOVE_TAILWIND;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
@@ -136,8 +136,9 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                 ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Electric terrain 
                                 case 8:
-                                    sp->koban_counter = 8; //tailwind
-                                    break;
+                                    scriptnum = SUB_SEQ_OVERWORLD_SANDSTORM;
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break; // Sandstorm
                                 default:
                                     break;
                                 }

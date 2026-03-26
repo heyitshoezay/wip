@@ -13816,7 +13816,7 @@ movedata MOVE_SPICY_EXTRACT, "Spicy Extract"
 movedata MOVE_SPIN_OUT, "Spin Out"
     battleeffect MOVE_EFFECT_USER_SPEED_DOWN_2_HIT
     pss SPLIT_PHYSICAL
-    basepower 100
+    basepower 110
     type TYPE_STEEL
     accuracy 100
     pp 5

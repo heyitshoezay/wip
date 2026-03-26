@@ -790,7 +790,7 @@
 #define SEQ_SE_DP_DUMMY16                    1793
 #define SEQ_SE_DP_DUMMY17                    1794
 #define SEQ_SE_DP_POKE_DEAD3                 1795
-#define SEQ_SE_DP_HINSI                      1796
+//#define SEQ_SE_DP_HINSI                      1796
 #define SEQ_SE_DP_SUIKOMU                    1797
 #define SEQ_SE_DP_BOWA2                      1798
 #define SEQ_SE_DP_BOWA3                      1799
@@ -1373,7 +1373,6 @@
 #define SEQ_SE_GS_GEARSEALHAMERU             2376
 #define SEQ_SE_GS_XBUTTON_SYUKUSHOU          2377
 #define SEQ_SE_END                           2378
-
 //Sounds marked BANK, WAVE, PLAYER, GROUP not ported over from pokeheartgold/include/constants/sndseq.h
 
 enum {
