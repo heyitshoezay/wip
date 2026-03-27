@@ -22,7 +22,7 @@ void overrideItemUsage(struct BattleSystem *bsys, struct BattleStruct *ctx)
             {
                 mp->id = BATTLE_MSG_ITEMS_CANT_BE_USED_HERE; //msg.id  = msg_0197_00593; // Items can't be used here
                 mp->tag = TAG_NONE;
-                ov12_022639B8(bsys, battlerId, &mp);
+                ov12_022639B8(bsys, battlerId, mp);
                 ctx->com_seq_no[battlerId] = SSI_STATE_15;
                 ctx->ret_seq_no[battlerId] = SSI_STATE_SELECT_COMMAND_INIT;
             }
