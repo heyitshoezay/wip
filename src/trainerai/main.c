@@ -1223,7 +1223,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
     case MOVE_EFFECT_SET_SPIKES:
     case MOVE_EFFECT_TOXIC_SPIKES:
         if (ai->attackerTurnsOnField == 0) {
-            moveScore += 8;
+            moveScore += 9;
         } else {
             moveScore += 6;
         }
