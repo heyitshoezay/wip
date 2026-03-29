@@ -19,7 +19,7 @@ static const u16 sMachineMoves[] = {
     MOVE_CALM_MIND,        // TM004
     MOVE_ROAR,             // TM005
     MOVE_TOXIC,            // TM006
-    MOVE_HAIL,             // TM007
+    MOVE_SNOWSCAPE,        // TM007
     MOVE_BULK_UP,          // TM008
     MOVE_BULLET_SEED,      // TM009
     MOVE_HIDDEN_POWER,     // TM010
@@ -44,24 +44,24 @@ static const u16 sMachineMoves[] = {
     MOVE_PSYCHIC,          // TM029
     MOVE_SHADOW_BALL,      // TM030
     MOVE_BRICK_BREAK,      // TM031
-    MOVE_DOUBLE_TEAM,      // TM032
+    MOVE_SOLAR_BLADE,      // TM032
     MOVE_REFLECT,          // TM033
-    MOVE_SHOCK_WAVE,       // TM034
+    MOVE_VOLT_SWITCH,      // TM034
     MOVE_FLAMETHROWER,     // TM035
     MOVE_SLUDGE_BOMB,      // TM036
     MOVE_SANDSTORM,        // TM037
     MOVE_FIRE_BLAST,       // TM038
     MOVE_ROCK_TOMB,        // TM039
     MOVE_AERIAL_ACE,       // TM040
-    MOVE_TORMENT,          // TM041
+    MOVE_DRAGON_DANCE,     // TM041
     MOVE_FACADE,           // TM042
-    MOVE_SECRET_POWER,     // TM043
+    MOVE_DEFOG,            // TM043
     MOVE_REST,             // TM044
-    MOVE_ATTRACT,          // TM045
+    MOVE_PLAY_ROUGH,   // TM045
     MOVE_THIEF,            // TM046
     MOVE_STEEL_WING,       // TM047
-    MOVE_SKILL_SWAP,       // TM048
-    MOVE_SNATCH,           // TM049
+    MOVE_TRICK_ROOM,         // TM048
+    MOVE_LEECH_LIFE,       // TM049
     MOVE_OVERHEAT,         // TM050
     MOVE_ROOST,            // TM051
     MOVE_FOCUS_BLAST,      // TM052
@@ -70,16 +70,16 @@ static const u16 sMachineMoves[] = {
     MOVE_BRINE,            // TM055
     MOVE_FLING,            // TM056
     MOVE_CHARGE_BEAM,      // TM057
-    MOVE_ENDURE,           // TM058
+    MOVE_GRASSY_GLIDE,     // TM058
     MOVE_DRAGON_PULSE,     // TM059
     MOVE_DRAIN_PUNCH,      // TM060
     MOVE_WILL_O_WISP,      // TM061
     MOVE_SILVER_WIND,      // TM062
-    MOVE_EMBARGO,          // TM063
+    MOVE_VENOSHOCK,        // TM063
     MOVE_EXPLOSION,        // TM064
     MOVE_SHADOW_CLAW,      // TM065
     MOVE_PAYBACK,          // TM066
-    MOVE_RECYCLE,          // TM067
+    MOVE_POLTERGEIST,      // TM067
     MOVE_GIGA_IMPACT,      // TM068
     MOVE_ROCK_POLISH,      // TM069
     MOVE_FLASH,            // TM070
@@ -89,22 +89,22 @@ static const u16 sMachineMoves[] = {
     MOVE_GYRO_BALL,        // TM074
     MOVE_SWORDS_DANCE,     // TM075
     MOVE_STEALTH_ROCK,     // TM076
-    MOVE_PSYCH_UP,         // TM077
-    MOVE_CAPTIVATE,        // TM078
+    MOVE_FLAME_CHARGE,     // TM077
+    MOVE_LOW_SWEEP,        // TM078
     MOVE_DARK_PULSE,       // TM079
     MOVE_ROCK_SLIDE,       // TM080
     MOVE_X_SCISSOR,        // TM081
     MOVE_SLEEP_TALK,       // TM082
-    MOVE_NATURAL_GIFT,     // TM083
+    MOVE_SCALD,            // TM083
     MOVE_POISON_JAB,       // TM084
-    MOVE_DREAM_EATER,      // TM085
+    MOVE_FUTURE_SIGHT,     // TM085
     MOVE_GRASS_KNOT,       // TM086
     MOVE_SWAGGER,          // TM087
     MOVE_PLUCK,            // TM088
     MOVE_U_TURN,           // TM089
     MOVE_SUBSTITUTE,       // TM090
     MOVE_FLASH_CANNON,     // TM091
-    MOVE_TRICK_ROOM,       // TM092
+    MOVE_EARTH_POWER,      // TM092
 
     // vanilla HMs
     MOVE_CUT,              // HM01

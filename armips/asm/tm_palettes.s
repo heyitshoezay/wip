@@ -60,7 +60,7 @@ PALETTE_FAIRY equ 401
 .halfword PALETTE_POISON
 .skip 4
 
-// TM007 HAIL
+// TM007 SNOWSCAPE
 .skip 2
 .halfword PALETTE_ICE
 .skip 4
@@ -185,9 +185,9 @@ PALETTE_FAIRY equ 401
 .halfword PALETTE_FIGHTING
 .skip 4
 
-// TM032 DOUBLE_TEAM
+// TM032 SOLAR_BLADE
 .skip 2
-.halfword PALETTE_NORMAL
+.halfword PALETTE_GRASS
 .skip 4
 
 // TM033 REFLECT
