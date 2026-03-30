@@ -95,10 +95,7 @@ BOOL TrainerAI_ShouldSwitch(struct BattleSystem *bsys, int attacker)
     //if (battleType & (BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TAG)) {
     //    return FALSE;
     //}
-
-    if (CantEscape(bsys, ctx, attacker, NULL)) {
-        return FALSE;
-    }
+    
     struct AI_turnState turnStateStruct = { 0 };
     struct AI_turnState *turnState = &turnStateStruct;
 
