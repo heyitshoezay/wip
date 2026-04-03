@@ -150,7 +150,7 @@
 #define AI_CAN_GRAB_ITEMS
 
 // PROTEAN_GENERATION defines the behavior that Protean should exhibit, where it either changes type every move (<=8) or changes type once per appearance in battle (>=9)
-#define PROTEAN_GENERATION GEN_LATEST
+#define PROTEAN_GENERATION 8
 
 // CORROSIVE_GAS_IMPLIED_BEHAVIOUR defines the behavior that Corrosive Gas should exhibit, where it either does it does not affect a Kyogre, a Groudon, or species holding their respective Mega Stones to not lose their Blue Orb, Red Orb, and Mega Stones respectively (TRUE), or affects species in the above cases (FALSE).
 #define CORROSIVE_GAS_IMPLIED_BEHAVIOUR TRUE

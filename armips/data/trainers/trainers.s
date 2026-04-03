@@ -12053,51 +12053,83 @@ trainerdata 254, "Misty"
         // mon 1
         ivs 255
         abilityslot 0
-        level 49
-        pokemon SPECIES_QUAGSIRE
-        item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_AMNESIA
-        move MOVE_EARTHQUAKE
-        move MOVE_RAIN_DANCE
-        ability ABILITY_WATER_ABSORB
+        level 73
+        pokemon SPECIES_PALKIA
+        item ITEM_MYSTIC_WATER
+        move MOVE_SURF
+        move MOVE_SPACIAL_REND
+        move MOVE_THUNDER
+        move MOVE_ICE_BEAM
+        ability ABILITY_PRESSURE
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_JOLLY
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 52
-        pokemon SPECIES_LAPRAS
-        item ITEM_NONE
-        move MOVE_WATER_PULSE
-        move MOVE_SING
+        level 73
+        pokemon SPECIES_LUDICOLO
+        item ITEM_LEFTOVERS
+        move MOVE_SURF
+        move MOVE_GIGA_DRAIN
         move MOVE_ICE_BEAM
-        move MOVE_BODY_SLAM
-        ability ABILITY_WATER_ABSORB
+        move MOVE_AURA_SPHERE
+        ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        setevs 0, 0, 0, 252, 252, 4
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 54
+        level 73
+        pokemon SPECIES_IRON_BUNDLE
+        item ITEM_BOOSTER_ENERGY
+        move MOVE_ICE_BEAM
+        move MOVE_FREEZE_DRY
+        move MOVE_FLIP_TURN
+        move MOVE_SCALD
+        ability ABILITY_QUARK_DRIVE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
+
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 74
         pokemon SPECIES_STARMIE
         item ITEM_SITRUS_BERRY
-        move MOVE_WATER_PULSE
-        move MOVE_CONFUSE_RAY
-        move MOVE_RECOVER
+        move MOVE_SURF
+        move MOVE_PSYCHIC
+        move MOVE_THUNDERBOLT
         move MOVE_ICE_BEAM
         ability ABILITY_NATURAL_CURE
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RELAXED
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
+
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 75
+        pokemon SPECIES_GYARADOS
+        item ITEM_GYARADOSITE
+        move MOVE_DRAGON_DANCE
+        move MOVE_EARTHQUAKE
+        move MOVE_WATERFALL
+        move MOVE_CRUNCH
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 252, 0, 252, 4, 0
+        nature NATURE_JOLLY
+        ballseal 0
     endparty
 
 trainerdata 255, "Surge"
