@@ -386,7 +386,7 @@ trainerdata 8, "Joey"
         ability ABILITY_RUN_AWAY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_HARDY
         ballseal 0
     endparty
 
@@ -797,7 +797,7 @@ trainerdata 15, "Otis"
     endparty
 
 trainerdata 16, "Simon"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_M
     nummons 2
     item ITEM_NONE
@@ -815,6 +815,10 @@ trainerdata 16, "Simon"
         level 38
         pokemon SPECIES_TENTACRUEL
         item ITEM_NONE
+        move MOVE_SCALD
+        move MOVE_SLUDGE_WAVE
+        move MOVE_GIGA_DRAIN
+        move MOVE_DAZZLING_GLEAM
         ability ABILITY_CLEAR_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -827,10 +831,14 @@ trainerdata 16, "Simon"
         level 38
         pokemon SPECIES_SWAMPERT
         item ITEM_NONE
+        move MOVE_EARTHQUAKE
+        move MOVE_LIQUIDATION
+        move MOVE_ICE_PUNCH
+        move MOVE_STONE_EDGE
         ability ABILITY_TORRENT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_GENTLE
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
