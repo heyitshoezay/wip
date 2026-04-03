@@ -15,7 +15,7 @@ static const u16 sMachineMoves[] = {
     // vanilla TMs
     MOVE_FOCUS_PUNCH,      // TM001
     MOVE_DRAGON_CLAW,      // TM002
-    MOVE_WATER_PULSE,      // TM003
+    MOVE_FLIP_TURN,         // TM003
     MOVE_CALM_MIND,        // TM004
     MOVE_ROAR,             // TM005
     MOVE_TOXIC,            // TM006

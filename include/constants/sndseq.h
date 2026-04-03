@@ -790,7 +790,6 @@
 #define SEQ_SE_DP_DUMMY16                    1793
 #define SEQ_SE_DP_DUMMY17                    1794
 #define SEQ_SE_DP_POKE_DEAD3                 1795
-//#define SEQ_SE_DP_HINSI                      1796
 #define SEQ_SE_DP_SUIKOMU                    1797
 #define SEQ_SE_DP_BOWA2                      1798
 #define SEQ_SE_DP_BOWA3                      1799

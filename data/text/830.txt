@@ -328,7 +328,7 @@ An item to be held by a Pokémon.\nThis sharply hooked claw boosts the\ncritical
 An item to be held by a Pokémon.\nWhen the holder successfully inflicts\ndamage, the target may also flinch.
 The user focuses its mind before\nlaunching a punch. It will fail if\nthe user is hit before it is used.
 The user slashes the foe with huge,\nsharp claws.
-The user attacks the foe with a\npulsing blast of water. It may also\nconfuse the foe.
+After making its attack, the user\nrushes back to switch places with a\nparty Pokémon in waiting.
 The user quietly focuses its mind\nand calms its spirit to raise its\nSp. Atk and Sp. Def stats.
 The foe is scared off, to be\nreplaced by another Pokémon in its\nparty. In the wild, the battle ends.
 A move that leaves the target badly\npoisoned. Its poison damage worsens\nevery turn.

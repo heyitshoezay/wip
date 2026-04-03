@@ -141,6 +141,10 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                     break; // Sandstorm
                                 default:
                                     break;
+                                case 9:
+                                    scriptnum = SUB_SEQ_OVERWORLD_SUN;
+                                    ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break;
                                 }
                             }
                             break;
