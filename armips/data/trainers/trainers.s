@@ -31,7 +31,7 @@ trainerdata 0, "-"
     endparty
 
 trainerdata 1, "Silver"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_BALL | 0
     trainerclass TRAINERCLASS_RIVAL
     nummons 5
     item ITEM_NONE
@@ -57,6 +57,7 @@ trainerdata 1, "Silver"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
+        ball ITEM_DUSK_BALL
         ballseal 0
 
         // mon 1
@@ -73,6 +74,7 @@ trainerdata 1, "Silver"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
+        ball ITEM_DUSK_BALL
         ballseal 0
 
 		 // mon 2
@@ -89,6 +91,7 @@ trainerdata 1, "Silver"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
+        ball ITEM_ULTRA_BALL
         ballseal 0
 		
 		 // mon 3
@@ -105,6 +108,7 @@ trainerdata 1, "Silver"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
+        ball ITEM_LOVE_BALL
         ballseal 0
 				
         // mon 4
@@ -121,6 +125,7 @@ trainerdata 1, "Silver"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
+        ball ITEM_POKE_BALL
         ballseal 0
 
     endparty
@@ -213,7 +218,7 @@ trainerdata 4, "Wade"
     endparty
 
 trainerdata 5, "Victoria"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_BALL | 0
     trainerclass TRAINERCLASS_BEAUTY
     nummons 1
     item ITEM_NONE
@@ -239,12 +244,13 @@ trainerdata 5, "Victoria"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_ADAMANT
+        ball ITEM_LOVE_BALL
         ballseal 0
 
     endparty
 
 trainerdata 6, "Keith"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_BALL | 0
     trainerclass TRAINERCLASS_POLICEMAN
     nummons 1
     item ITEM_NONE
@@ -270,6 +276,7 @@ trainerdata 6, "Keith"
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_QUIRKY
+        ball ITEM_PREMIER_BALL
         ballseal 0
 
     endparty
@@ -384,7 +391,7 @@ trainerdata 8, "Joey"
     endparty
 
 trainerdata 9, "Elaine"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_SWIMMER_F
     nummons 1
     item ITEM_NONE
@@ -402,6 +409,10 @@ trainerdata 9, "Elaine"
         level 39
         pokemon SPECIES_STARMIE
         item ITEM_NONE
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_PSYCHIC
+        move MOVE_THUNDERBOLT
+        move MOVE_ICE_BEAM
         ability ABILITY_NATURAL_CURE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -692,7 +703,7 @@ trainerdata 13, "Grunt"
     endparty
 
 trainerdata 14, "Duncan"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_BURGLAR
     nummons 1
     item ITEM_NONE
@@ -710,6 +721,10 @@ trainerdata 14, "Duncan"
         level 51
         pokemon SPECIES_MAGMORTAR
         item ITEM_NONE
+        move MOVE_SCORCHING_SANDS
+        move MOVE_FLAMETHROWER
+        move MOVE_DARK_PULSE
+        move MOVE_AURA_SPHERE
         ability ABILITY_FLAME_BODY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -719,7 +734,7 @@ trainerdata 14, "Duncan"
     endparty
 
 trainerdata 15, "Otis"
-    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_NATURE_SET | 0
+    trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_FIREBREATHER
     nummons 3
     item ITEM_NONE
@@ -737,7 +752,11 @@ trainerdata 15, "Otis"
         level 70
         pokemon SPECIES_MAGCARGO
         item ITEM_NONE
-        ability ABILITY_WEAK_ARMOR	
+        move MOVE_EARTH_POWER
+        move MOVE_NO_RETREAT
+        move MOVE_POWER_GEM
+        move MOVE_FLAMETHROWER
+        ability ABILITY_SIMPLE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_MODEST
@@ -749,6 +768,10 @@ trainerdata 15, "Otis"
         level 70
         pokemon SPECIES_WEEZING
         item ITEM_NONE
+        move MOVE_SLUDGE_BOMB
+        move MOVE_GYRO_BALL
+        move MOVE_DESTINY_BOND
+        move MOVE_EXPLOSION
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -758,9 +781,13 @@ trainerdata 15, "Otis"
         // mon 2
         ivs 255
         abilityslot 0
-        level 47
+        level 70
         pokemon SPECIES_CAMERUPT
         item ITEM_NONE
+        move MOVE_EARTH_POWER
+        move MOVE_ROCK_SLIDE
+        move MOVE_FLAMETHROWER
+        move MOVE_HYDRO_STEAM
         ability ABILITY_SOLID_ROCK
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
