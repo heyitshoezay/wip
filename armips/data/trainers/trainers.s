@@ -5210,14 +5210,14 @@ trainerdata 108, "Ryan"
         // mon 0
         ivs 255
         abilityslot 0
-        level 25
-        pokemon SPECIES_PIDGEOT
+        level 55
+        pokemon SPECIES_CORVIKNIGHT
         item ITEM_NONE
-        move MOVE_SAND_ATTACK
-        move MOVE_QUICK_ATTACK
-        move MOVE_WHIRLWIND
-        move MOVE_WING_ATTACK
-        ability ABILITY_FRISK
+        move MOVE_STEEL_WING
+        move MOVE_DRILL_PECK
+        move MOVE_BODY_PRESS
+        move MOVE_IRON_DEFENSE
+        ability ABILITY_PRESSURE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_LONELY
@@ -5226,14 +5226,14 @@ trainerdata 108, "Ryan"
         // mon 1
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_ELECTABUZZ
+        level 55
+        pokemon SPECIES_ZEBSTRIKA
         item ITEM_NONE
-        move MOVE_THUNDER_PUNCH
-        move MOVE_LIGHT_SCREEN
-        move MOVE_SWIFT
-        move MOVE_SCREECH
-        ability ABILITY_STATIC
+        move MOVE_FLAME_CHARGE
+        move MOVE_WILD_CHARGE
+        move MOVE_ROCK_SMASH
+        move MOVE_PURSUIT
+        ability ABILITY_SAP_SIPPER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_IMPISH
@@ -5801,29 +5801,29 @@ trainerdata 121, "Kelly"
         // mon 0
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_MARILL
+        level 54
+        pokemon SPECIES_AZUMARILL
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_THICK_FAT
+        move MOVE_AQUA_JET
+        move MOVE_LIQUIDATION
+        move MOVE_PLAY_ROUGH
+        move MOVE_ICE_PUNCH
+        ability ABILITY_HUGE_POWER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_MODEST
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_WARTORTLE
+        level 54
+        pokemon SPECIES_BLASTOISE
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_DARK_PULSE
+        move MOVE_SCALD
+        move MOVE_FLASH_CANNON
+        move MOVE_ICE_BEAM
         ability ABILITY_TORRENT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -5833,14 +5833,14 @@ trainerdata 121, "Kelly"
         // mon 2
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_WARTORTLE
+        level 54
+        pokemon SPECIES_PRIMARINA
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_TORRENT
+        move MOVE_SPARKLING_ARIA
+        move MOVE_MOONBLAST
+        move MOVE_ICE_BEAM
+        move MOVE_ENERGY_BALL
+        ability ABILITY_LIQUID_VOICE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
@@ -6752,13 +6752,13 @@ trainerdata 143, "Erik"
         // mon 0
         ivs 255
         abilityslot 0
-        level 24
-        pokemon SPECIES_MACHOP
+        level 53
+        pokemon SPECIES_MACHAMP
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_MACH_PUNCH
+        move MOVE_DUAL_CHOP
+        move MOVE_ICE_PUNCH
+        move MOVE_POISON_JAB
         ability ABILITY_GUTS
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -6768,30 +6768,30 @@ trainerdata 143, "Erik"
         // mon 1
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_GRAVELER
+        level 53
+        pokemon SPECIES_GOLEM
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
+        move MOVE_STONE_EDGE
+        move MOVE_EARTHQUAKE
+        move MOVE_HEAVY_SLAM
+        move MOVE_SUCKER_PUNCH
         ability ABILITY_STURDY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIET
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 27
-        pokemon SPECIES_MACHOP
+        level 53
+        pokemon SPECIES_SIRFETCHD
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_GUTS
+        move MOVE_FIRST_IMPRESSION
+        move MOVE_KNOCK_OFF
+        move MOVE_BRICK_BREAK
+        move MOVE_BRAVE_BIRD
+        ability ABILITY_SCRAPPY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_CAREFUL
@@ -6878,8 +6878,8 @@ trainerdata 145, "Parry"
         // mon 0
         ivs 255
         abilityslot 0
-        level 30
-        pokemon SPECIES_ONIX
+        level 50
+        pokemon SPECIES_STEELIX
         item ITEM_NONE
         move MOVE_NONE
         move MOVE_NONE
@@ -10649,30 +10649,30 @@ trainerdata 232, "Vincent"
         // mon 0
         ivs 255
         abilityslot 0
-        level 45
+        level 73
         pokemon SPECIES_JOLTEON
         item ITEM_NONE
-        move MOVE_SHOCK_WAVE
+        move MOVE_THUNDERBOLT
         move MOVE_QUICK_ATTACK
-        move MOVE_PIN_MISSILE
-        move MOVE_HELPING_HAND
+        move MOVE_SHADOW_BALL
+        move MOVE_SIGNAL_BEAM
         ability ABILITY_VOLT_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_ADAMANT
+        nature NATURE_SERIOUS
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 43
-        pokemon SPECIES_VOLTORB
+        level 73
+        pokemon SPECIES_LANTURN
         item ITEM_NONE
-        move MOVE_SHOCK_WAVE
-        move MOVE_SWIFT
-        move MOVE_GYRO_BALL
-        move MOVE_SCREECH
-        ability ABILITY_STATIC
+        move MOVE_SURF
+        move MOVE_PARABOLIC_CHARGE
+        move MOVE_ICE_BEAM
+        move MOVE_PSYBEAM
+        ability ABILITY_WATER_ABSORB
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAUGHTY
@@ -10681,14 +10681,14 @@ trainerdata 232, "Vincent"
         // mon 2
         ivs 255
         abilityslot 0
-        level 42
-        pokemon SPECIES_MAGNEMITE
+        level 73
+        pokemon SPECIES_EMOLGA
         item ITEM_NONE
-        move MOVE_SHOCK_WAVE
-        move MOVE_SUPERSONIC
-        move MOVE_THUNDER_WAVE
-        move MOVE_MAGNET_BOMB
-        ability ABILITY_STURDY
+        move MOVE_AIR_SLASH
+        move MOVE_DISCHARGE
+        move MOVE_ENERGY_BALL
+        move MOVE_PURSUIT
+        ability ABILITY_LIGHTNING_ROD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_JOLLY
@@ -12170,7 +12170,7 @@ trainerdata 254, "Misty"
 trainerdata 255, "Surge"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_LT_SURGE
-    nummons 5
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -12183,81 +12183,97 @@ trainerdata 255, "Surge"
         // mon 0
         ivs 255
         abilityslot 0
-        level 51
-        pokemon SPECIES_RAICHU
-        item ITEM_NONE
-        move MOVE_THUNDER_WAVE
-        move MOVE_QUICK_ATTACK
-        move MOVE_SHOCK_WAVE
-        move MOVE_DOUBLE_TEAM
-        ability ABILITY_STATIC
+        level 74
+        monwithform SPECIES_RAICHU, 1
+        item ITEM_EXPERT_BELT
+        move MOVE_PSYCHIC
+        move MOVE_RISING_VOLTAGE
+        move MOVE_SURF
+        move MOVE_FOCUS_BLAST
+        ability ABILITY_SURGE_SURFER
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_CALM
+        setevs 0, 0, 0, 252, 252, 4
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_ELECTRODE
-        item ITEM_NONE
-        move MOVE_THUNDER_WAVE
-        move MOVE_DOUBLE_TEAM
-        move MOVE_SHOCK_WAVE
+        level 74
+        monwithform SPECIES_ELECTRODE, 1
+        item ITEM_WEAKNESS_POLICY
+        move MOVE_THUNDERBOLT
+        move MOVE_CHLOROBLAST
+        move MOVE_FLASH_CANNON
         move MOVE_LIGHT_SCREEN
-        ability ABILITY_STATIC
+        ability ABILITY_RECKLESS
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        setevs 129, 0, 0, 129, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_MAGNETON
+        level 74
+        monwithform SPECIES_ROTOM, 3
         item ITEM_NONE
-        move MOVE_SUPERSONIC
-        move MOVE_DOUBLE_TEAM
-        move MOVE_SHOCK_WAVE
-        move MOVE_MIRROR_SHOT
+        move MOVE_FREEZE_DRY
+        move MOVE_DISCHARGE
+        move MOVE_DARK_PULSE
+        move MOVE_FROST_BREATH
         ability ABILITY_MAGNET_PULL
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_ELECTRODE
-        item ITEM_NONE
-        move MOVE_SCREECH
-        move MOVE_DOUBLE_TEAM
-        move MOVE_SELF_DESTRUCT
-        move MOVE_CHARGE_BEAM
-        ability ABILITY_STATIC
+        level 74
+        pokemon SPECIES_PAWMOT
+        item ITEM_FOCUS_SASH
+        move MOVE_MACH_PUNCH
+        move MOVE_NUZZLE
+        move MOVE_DRAIN_PUNCH
+        move MOVE_THUNDER_PUNCH
+        ability ABILITY_IRON_FIST
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 4
         ivs 255
         abilityslot 0
-        level 53
-        pokemon SPECIES_ELECTABUZZ
+        level 73
+        pokemon SPECIES_REGIELEKI
         item ITEM_SITRUS_BERRY
-        move MOVE_QUICK_ATTACK
-        move MOVE_SHOCK_WAVE
-        move MOVE_LIGHT_SCREEN
-        move MOVE_LOW_KICK
-        ability ABILITY_STATIC
+        move MOVE_ANCIENT_POWER
+        move MOVE_EXTREME_SPEED
+        move MOVE_ELECTRO_BALL
+        move MOVE_REFLECT
+        ability ABILITY_TRANSISTOR
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HARDY
+        setevs 129, 0, 0, 129, 252, 0
+        nature NATURE_MILD
+        ballseal 0
+        
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 75
+        pokemon SPECIES_MANECTRIC
+        item ITEM_MANECTITE
+        move MOVE_FLAMETHROWER
+        move MOVE_UPROAR
+        move MOVE_SNARL
+        move MOVE_RISING_VOLTAGE
+        ability ABILITY_INTIMIDATE
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 129, 0, 0, 129, 252, 0
+        nature NATURE_MILD
         ballseal 0
 
     endparty
@@ -17307,29 +17323,29 @@ trainerdata 337, "Gregory"
         // mon 0
         ivs 255
         abilityslot 0
-        level 46
-        pokemon SPECIES_PIKACHU
+        level 73
+        pokemon SPECIES_RAICHU
         item ITEM_NONE
         move MOVE_DISCHARGE
         move MOVE_LIGHT_SCREEN
         move MOVE_THUNDER_WAVE
-        move MOVE_DOUBLE_TEAM
+        move MOVE_FAKE_OUT
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_SERIOUS
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 43
-        pokemon SPECIES_FLAAFFY
+        level 73
+        pokemon SPECIES_AMPHAROS
         item ITEM_NONE
-        move MOVE_SHOCK_WAVE
+        move MOVE_THUNDERBOLT
         move MOVE_SIGNAL_BEAM
-        move MOVE_CHARGE_BEAM
-        move MOVE_DOUBLE_TEAM
+        move MOVE_POWER_GEM
+        move MOVE_DRAGON_PULSE
         ability ABILITY_STATIC
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -17339,14 +17355,14 @@ trainerdata 337, "Gregory"
         // mon 2
         ivs 255
         abilityslot 0
-        level 42
-        pokemon SPECIES_ELECTRIKE
+        level 73
+        pokemon SPECIES_MANECTRIC
         item ITEM_NONE
-        move MOVE_SHOCK_WAVE
-        move MOVE_ROAR
+        move MOVE_THUNDERBOLT
+        move MOVE_HYPER_VOICE
         move MOVE_THUNDER_WAVE
-        move MOVE_THUNDER_FANG
-        ability ABILITY_STATIC
+        move MOVE_FLAMETHROWER
+        ability ABILITY_INTIMIDATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_BASHFUL
@@ -20036,14 +20052,14 @@ trainerdata 396, "Horton"
         // mon 0
         ivs 255
         abilityslot 0
-        level 43
+        level 73
         pokemon SPECIES_ELECTRODE
         item ITEM_NONE
-        move MOVE_SWIFT
-        move MOVE_SHOCK_WAVE
-        move MOVE_SCREECH
+        move MOVE_TRI_ATTACK
+        move MOVE_THUNDERBOLT
+        move MOVE_AURA_SPHERE
         move MOVE_EXPLOSION
-        ability ABILITY_STATIC
+        ability ABILITY_GALVANIZE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
@@ -20052,14 +20068,14 @@ trainerdata 396, "Horton"
         // mon 1
         ivs 255
         abilityslot 0
-        level 43
-        pokemon SPECIES_ELECTRODE
+        level 73
+        pokemon SPECIES_EELEKTROSS
         item ITEM_NONE
-        move MOVE_SWIFT
-        move MOVE_SHOCK_WAVE
-        move MOVE_DOUBLE_TEAM
-        move MOVE_LIGHT_SCREEN
-        ability ABILITY_SOUNDPROOF
+        move MOVE_CRUNCH
+        move MOVE_COIL
+        move MOVE_WILD_CHARGE
+        move MOVE_CLOSE_COMBAT
+        ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
@@ -20068,14 +20084,14 @@ trainerdata 396, "Horton"
         // mon 2
         ivs 255
         abilityslot 0
-        level 43
-        pokemon SPECIES_ELECTRODE
+        level 73
+        pokemon SPECIES_VIKAVOLT
         item ITEM_NONE
-        move MOVE_SWIFT
-        move MOVE_SHOCK_WAVE
-        move MOVE_SCREECH
-        move MOVE_ROLLOUT
-        ability ABILITY_STATIC
+        move MOVE_BUG_BUZZ
+        move MOVE_AIR_SLASH
+        move MOVE_THUNDERBOLT
+        move MOVE_ENERGY_BALL
+        ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_HARDY
