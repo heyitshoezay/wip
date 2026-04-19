@@ -100,8 +100,11 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                 switch (weatherCase)
                                 {
                                 case 0:
-                                    UpdateTerrainOverlay(sp, client_no, MISTY_TERRAIN);
-                                    break; // Misty terrain 
+                                        scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                            UpdateTerrainOverlay(sp, client_no, MISTY_TERRAIN);
+                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break;
+                                    break; // Misty terrain
                                 case 1: 
                                     scriptnum = SUB_SEQ_DELTA_STREAM;
 							        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
@@ -121,23 +124,31 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break;
                                 case 5:
-                                    UpdateTerrainOverlay(sp, client_no, GRASSY_TERRAIN);
-                                    break; // Grassy terrain 
+                                        scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                            UpdateTerrainOverlay(sp, client_no, GRASSY_TERRAIN);
+                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break;
+                                    break; // Grassy terrain
                                 case 6:
-                                    UpdateTerrainOverlay(sp, client_no, PSYCHIC_TERRAIN);
-                                    break; // Psychic terrain 
+                                        scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                            UpdateTerrainOverlay(sp, client_no, PSYCHIC_TERRAIN);
+                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break;
+                                    break; // Psychic terrain
                                 case 7: 
-                                    UpdateTerrainOverlay(sp, client_no, MOVE_ELECTRIC_TERRAIN);
-                                    break; // Electric terrain 
+                                    scriptnum = SUB_SEQ_CREATE_TERRAIN_OVERLAY;
+                                        UpdateTerrainOverlay(sp, client_no, ELECTRIC_TERRAIN);
+                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break;
                                 case 8:
                                     scriptnum = SUB_SEQ_OVERWORLD_SANDSTORM;
                                 ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Sandstorm
-                                default:
-                                    break;
                                 case 9:
                                     scriptnum = SUB_SEQ_OVERWORLD_SUN;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                    break;
+                                default:
                                     break;
                                 }
                             }
