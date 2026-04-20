@@ -16147,17 +16147,17 @@ trainerdata 313, "Reese"
         // mon 0
         ivs 255
         abilityslot 0
-        level 45
-        pokemon SPECIES_WEEZING
+        level 78
+        pokemon SPECIES_SEVIPER
         item ITEM_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_LEVITATE
+        move MOVE_POISON_JAB
+        move MOVE_CRUNCH
+        move MOVE_FLAMETHROWER
+        move MOVE_EARTHQUAKE
+        ability ABILITY_NEUROFORCE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BOLD
+        nature NATURE_SERIOUS
         ballseal 0
 
     endparty
@@ -28732,14 +28732,14 @@ trainerdata 572, "Dale"
         // mon 0
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_GULPIN
+        level 78
+        pokemon SPECIES_SWALOT
         item ITEM_BLACK_SLUDGE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        move MOVE_NONE
-        ability ABILITY_STICKY_HOLD
+        move MOVE_SLUDGE_BOMB
+        move MOVE_BODY_SLAM
+        move MOVE_ICE_BEAM
+        move MOVE_CURSE
+        ability ABILITY_MAGIC_GUARD
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_NAIVE
