@@ -12249,7 +12249,7 @@ trainerdata 255, "Lt. Surge"
 trainerdata 256, "Erika"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_ERIKA
-    nummons 4
+    nummons 6
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -12262,67 +12262,98 @@ trainerdata 256, "Erika"
         // mon 0
         ivs 255
         abilityslot 0
-        level 51
-        pokemon SPECIES_JUMPLUFF
-        item ITEM_NONE
+        level 79
+        pokemon SPECIES_MEOWSCARADA
+        item ITEM_FOCUS_SASH
+        move MOVE_NIGHT_SLASH
+        move MOVE_FLOWER_TRICK
         move MOVE_U_TURN
-        move MOVE_LEECH_SEED
-        move MOVE_SUNNY_DAY
-        move MOVE_GIGA_DRAIN
-        ability ABILITY_CHLOROPHYLL
+        move MOVE_PLAY_ROUGH
+        ability ABILITY_PROTEAN
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_IMPISH
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 52
-        pokemon SPECIES_TANGELA
-        item ITEM_NONE
-        move MOVE_ANCIENT_POWER
-        move MOVE_WRING_OUT
-        move MOVE_GIGA_DRAIN
-        move MOVE_SLEEP_POWDER
-        ability ABILITY_CHLOROPHYLL
+        level 78
+        pokemon SPECIES_KARTANA
+        item ITEM_LIFE_ORB
+        move MOVE_SACRED_SWORD
+        move MOVE_GRASSY_GLIDE
+        move MOVE_X_SCISSOR
+        move MOVE_CUT
+        ability ABILITY_BEAST_BOOST
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        setevs 0, 252, 0, 252, 0, 4
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 56
-        pokemon SPECIES_VICTREEBEL
-        item ITEM_NONE
-        move MOVE_SUNNY_DAY
-        move MOVE_SYNTHESIS
-        move MOVE_GRASS_KNOT
-        move MOVE_LEAF_STORM
-        ability ABILITY_CHLOROPHYLL
+        level 79
+        pokemon SPECIES_TOEDSCRUEL
+        item ITEM_GRASSY_SEED
+        move MOVE_GIGA_DRAIN
+        move MOVE_REFLECT
+        move MOVE_FLASH_CANNON
+        move MOVE_EARTH_POWER
+        ability ABILITY_CLEAR_BODY
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RASH
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 3
         ivs 255
         abilityslot 0
-        level 56
-        pokemon SPECIES_BELLOSSOM
-        item ITEM_SITRUS_BERRY
-        move MOVE_SUNNY_DAY
-        move MOVE_SYNTHESIS
-        move MOVE_GIGA_DRAIN
-        move MOVE_SOLAR_BEAM
-        ability ABILITY_CHLOROPHYLL
+        level 78
+        pokemon SPECIES_VIRIZION
+        item ITEM_COBA_BERRY
+        move MOVE_LEAF_BLADE
+        move MOVE_SACRED_SWORD
+        move MOVE_GRASSY_GLIDE
+        move MOVE_STONE_EDGE
+        ability ABILITY_SHARPNESS
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_QUIRKY
+        setevs 0, 252, 4, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+        
+        // mon 4
+        ivs 255
+        abilityslot 0
+        level 79
+        pokemon SPECIES_TANGROWTH
+        item ITEM_ASSAULT_VEST
+        move MOVE_KNOCK_OFF
+        move MOVE_POWER_WHIP
+        move MOVE_GRASSY_GLIDE
+        move MOVE_SLUDGE_BOMB
+        ability ABILITY_REGENERATOR
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 252, 252, 0, 0, 0, 4
+        nature NATURE_SASSY
         ballseal 0
 
+        // mon 5
+        ivs 255
+        abilityslot 0
+        level 80
+        pokemon SPECIES_VENUSAUR
+        item ITEM_VENUSAURITE
+        move MOVE_CHLOROBLAST
+        move MOVE_SLUDGE_BOMB
+        move MOVE_EARTH_POWER
+        move MOVE_LEECH_SEED
+        ability ABILITY_OVERGROW
+        setivs 31, 31, 31, 31, 31, 31
+        setevs 0, 0, 4, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
     endparty
 
 trainerdata 257, "Janine"
@@ -16750,30 +16781,30 @@ trainerdata 326, "Jo & Zoe"
         // mon 0
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_VICTREEBEL
+        level 78
+        pokemon SPECIES_LUDICOLO
         item ITEM_NONE
+        move MOVE_FAKE_OUT
+        move MOVE_SCALD
         move MOVE_GIGA_DRAIN
-        move MOVE_SLEEP_POWDER
-        move MOVE_SLUDGE_BOMB
-        move MOVE_PROTECT
-        ability ABILITY_CHLOROPHYLL
+        move MOVE_RAIN_DANCE
+        ability ABILITY_SWIFT_SWIM
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_HASTY
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 1
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_VILEPLUME
+        level 78
+        pokemon SPECIES_LILLIGANT
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_STUN_SPORE
-        move MOVE_DRAIN_PUNCH
-        move MOVE_ATTRACT
-        ability ABILITY_CHLOROPHYLL
+        move MOVE_SLEEP_POWDER
+        move MOVE_QUIVER_DANCE
+        move MOVE_CHLOROBLAST
+        move MOVE_POWER_GEM
+        ability ABILITY_OWN_TEMPO
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -17212,12 +17243,12 @@ trainerdata 336, "Tanya"
         // mon 0
         ivs 255
         abilityslot 0
-        level 49
-        pokemon SPECIES_EXEGGUTOR
+        level 78
+        monwithform SPECIES_EXEGGUTOR, 1
         item ITEM_NONE
         move MOVE_GIGA_DRAIN
         move MOVE_LIGHT_SCREEN
-        move MOVE_EGG_BOMB
+        move MOVE_DRAGON_PULSE
         move MOVE_HYPNOSIS
         ability ABILITY_CHLOROPHYLL
         setivs 31, 31, 31, 31, 31, 31
@@ -17574,14 +17605,14 @@ trainerdata 346, "Julia"
         // mon 0
         ivs 255
         abilityslot 0
-        level 44
-        pokemon SPECIES_PARAS
+        level 77
+        pokemon SPECIES_PARASECT
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_SPORE
-        move MOVE_SLASH
-        move MOVE_ATTRACT
-        ability ABILITY_EFFECT_SPORE
+        move MOVE_SEED_BOMB
+        move MOVE_LEECH_LIFE
+        move MOVE_CROSS_POISON
+        move MOVE_CRABHAMMER
+        ability ABILITY_DRY_SKIN
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_SERIOUS
@@ -17590,13 +17621,13 @@ trainerdata 346, "Julia"
         // mon 1
         ivs 255
         abilityslot 0
-        level 44
+        level 77
         pokemon SPECIES_CARNIVINE
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_WRING_OUT
-        move MOVE_INGRAIN
-        move MOVE_ATTRACT
+        move MOVE_CRUNCH
+        move MOVE_POWER_WHIP
+        move MOVE_CUT
+        move MOVE_KNOCK_OFF
         ability ABILITY_LEVITATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -17606,17 +17637,17 @@ trainerdata 346, "Julia"
         // mon 2
         ivs 255
         abilityslot 0
-        level 47
-        pokemon SPECIES_PARASECT
+        level 77
+        pokemon SPECIES_LURANTIS
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_SPORE
-        move MOVE_ATTRACT
-        move MOVE_X_SCISSOR
-        ability ABILITY_EFFECT_SPORE
+        move MOVE_SUPERPOWER
+        move MOVE_LEAF_BLADE
+        move MOVE_LEECH_LIFE
+        move MOVE_DUAL_CHOP
+        ability ABILITY_CONTRARY
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_TIMID
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
@@ -18095,14 +18126,14 @@ trainerdata 356, "Michelle"
         // mon 0
         ivs 255
         abilityslot 0
-        level 44
-        pokemon SPECIES_SKIPLOOM
+        level 77
+        pokemon SPECIES_SHIFTRY
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_U_TURN
-        move MOVE_LEECH_SEED
-        move MOVE_SUNNY_DAY
-        ability ABILITY_CHLOROPHYLL
+        move MOVE_LEAF_BLADE
+        move MOVE_KNOCK_OFF
+        move MOVE_SUCKER_PUNCH
+        move MOVE_ROCK_SLIDE
+        ability ABILITY_WIND_RIDER
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
         nature NATURE_RELAXED
@@ -18111,33 +18142,33 @@ trainerdata 356, "Michelle"
         // mon 1
         ivs 255
         abilityslot 0
-        level 45
-        pokemon SPECIES_HOPPIP
+        level 77
+        pokemon SPECIES_APPLETUN
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
-        move MOVE_U_TURN
-        move MOVE_STUN_SPORE
-        move MOVE_BOUNCE
-        ability ABILITY_CHLOROPHYLL
+        move MOVE_APPLE_ACID
+        move MOVE_DRAGON_PULSE
+        move MOVE_RECOVER
+        move MOVE_LEECH_SEED
+        ability ABILITY_THICK_FAT
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_RELAXED
+        nature NATURE_SERIOUS
         ballseal 0
 
         // mon 2
         ivs 255
         abilityslot 0
-        level 46
+        level 77
         pokemon SPECIES_JUMPLUFF
         item ITEM_NONE
-        move MOVE_GIGA_DRAIN
+        move MOVE_ACROBATICS
         move MOVE_U_TURN
-        move MOVE_SLEEP_POWDER
+        move MOVE_SEED_BOMB
         move MOVE_SUNNY_DAY
-        ability ABILITY_CHLOROPHYLL
+        ability ABILITY_AERILATE
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
-        nature NATURE_BRAVE
+        nature NATURE_ADAMANT
         ballseal 0
 
     endparty
