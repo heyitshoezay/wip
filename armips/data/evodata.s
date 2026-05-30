@@ -312,8 +312,8 @@ evodata SPECIES_ARBOK
     terminateevodata
 
 evodata SPECIES_PIKACHU
-    evolution EVO_STONE, ITEM_THUNDER_STONE, SPECIES_RAICHU
     evolutionwithform EVO_STONE, ITEM_SHINY_STONE, SPECIES_RAICHU, 1
+	evolution EVO_STONE, ITEM_THUNDER_STONE, SPECIES_RAICHU
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE

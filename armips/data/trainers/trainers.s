@@ -11945,16 +11945,16 @@ trainerdata 253, "Brock"
         // mon 1
         ivs 255
         abilityslot 0
-        level 73
-        pokemon SPECIES_GIGALITH
+        level 72
+        pokemon SPECIES_REGIROCK
         item ITEM_ASSAULT_VEST
         move MOVE_BODY_PRESS
         move MOVE_STONE_EDGE
         move MOVE_EARTHQUAKE
-        move MOVE_HEAVY_SLAM
-        ability ABILITY_SAND_FORCE
+        move MOVE_IRON_HEAD
+        ability ABILITY_SOLID_ROCK
         setivs 31, 31, 31, 31, 31, 31
-        setevs 0, 252, 129, 0, 0, 129
+        setevs 4, 252, 0, 0, 0, 252
         nature NATURE_CAREFUL
         ballseal 0
 
@@ -12330,7 +12330,7 @@ trainerdata 256, "Erika"
         pokemon SPECIES_TANGROWTH
         item ITEM_ASSAULT_VEST
         move MOVE_KNOCK_OFF
-        move MOVE_POWER_WHIP
+        move MOVE_ROCK_SLIDE
         move MOVE_GRASSY_GLIDE
         move MOVE_SLUDGE_BOMB
         ability ABILITY_REGENERATOR
@@ -25080,7 +25080,7 @@ trainerdata 495, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_CHIKORITA
-        item ITEM_NONE
+        item ITEM_ORAN_BERRY
         ability ABILITY_OVERGROW
         setivs 31, 31, 31, 31, 31, 31
         setevs 0, 0, 0, 0, 0, 0
@@ -25107,7 +25107,7 @@ trainerdata 496, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_CYNDAQUIL
-        item ITEM_NONE
+        item ITEM_ORAN_BERRY
         move MOVE_TACKLE
         move MOVE_LEER
         move MOVE_NONE
@@ -25138,7 +25138,7 @@ trainerdata 497, "Boy"
         abilityslot 0
         level 5
         pokemon SPECIES_TOTODILE
-        item ITEM_NONE
+        item ITEM_ORAN_BERRY
         move MOVE_SCRATCH
         move MOVE_LEER
         move MOVE_NONE
@@ -37246,7 +37246,7 @@ trainerdata 721, "Misty"
 
     endparty
 
-trainerdata 722, "Surge"
+trainerdata 722, "Lt. Surge"
     trainermontype TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_NATURE_SET | 0
     trainerclass TRAINERCLASS_LEADER_LT_SURGE
     nummons 6

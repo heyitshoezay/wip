@@ -179,10 +179,14 @@ int LONG_CALL BattleAI_GetTypeEffectiveness(void *bw, struct BattleStruct *sp, i
     u32 type2Effectiveness = TYPE_MUL_NORMAL;
     u32 type3Effectiveness = TYPE_MUL_NORMAL;
 
+    u32 type1Effectiveness_Dual = TYPE_MUL_NORMAL;
+    u32 type2Effectiveness_Dual = TYPE_MUL_NORMAL;
+    u32 type3Effectiveness_Dual = TYPE_MUL_NORMAL;
+
     // [0]: Attacking type
     // [1]: Defending type
     // [2]: TYPE_MUL
-    // TODO: handle Ring Target, Thousand Arrows, Freeze-Dry, Flying Press
+    // TODO: handle Ring Target, Thousand Arrows
     while (TypeEffectivenessTable[typeTableEntryNo][0] != TYPE_ENDTABLE) {
         if (TypeEffectivenessTable[typeTableEntryNo][0] == TYPE_FORESIGHT) {
             if ((defender->condition2 & STATUS2_FORESIGHT)
@@ -204,24 +208,43 @@ int LONG_CALL BattleAI_GetTypeEffectiveness(void *bw, struct BattleStruct *sp, i
                     && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_1))
                 {
                     //no ring target
-                    type1Effectiveness = UpdateTypeEffectiveness(moveno, HOLD_EFFECT_NONE, defender_type_1, TypeEffectivenessTable[typeTableEntryNo][2]);
+                    type1Effectiveness = UpdateTypeEffectiveness(moveno, defender_type_1, TypeEffectivenessTable[typeTableEntryNo][2]);
                 }
             } else if (TypeEffectivenessTable[typeTableEntryNo][1] == defender_type_2) {
                 if (AI_ShouldUseNormalTypeEffCalc(sp, defender->item_held_effect, typeTableEntryNo)
                     && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_2)) {
-                    type2Effectiveness = UpdateTypeEffectiveness(moveno, HOLD_EFFECT_NONE, defender_type_2, TypeEffectivenessTable[typeTableEntryNo][2]);
+                    type2Effectiveness = UpdateTypeEffectiveness(moveno, defender_type_2, TypeEffectivenessTable[typeTableEntryNo][2]);
                 }
             } else if (TypeEffectivenessTable[typeTableEntryNo][1] == defender_type_3) {
                 if (AI_ShouldUseNormalTypeEffCalc(sp, defender->item_held_effect, typeTableEntryNo)
                     && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_3)) {
-                    type3Effectiveness = UpdateTypeEffectiveness(moveno, HOLD_EFFECT_NONE, defender_type_3, TypeEffectivenessTable[typeTableEntryNo][2]);
+                    type3Effectiveness = UpdateTypeEffectiveness(moveno, defender_type_3, TypeEffectivenessTable[typeTableEntryNo][2]);
+                }
+            }
+        }
+        else if (sp->current_move_index == MOVE_FLYING_PRESS && TypeEffectivenessTable[typeTableEntryNo][0] == TYPE_FLYING)
+        {
+            if (TypeEffectivenessTable[typeTableEntryNo][1] == defender_type_1) {
+                if (AI_ShouldUseNormalTypeEffCalc(sp, defender->item_held_effect, typeTableEntryNo)
+                    && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_1)) {
+                    type1Effectiveness_Dual = UpdateTypeEffectiveness(moveno, defender_type_1, TypeEffectivenessTable[typeTableEntryNo][2]);
+                }
+            } else if (TypeEffectivenessTable[typeTableEntryNo][1] == defender_type_2) {
+                if (AI_ShouldUseNormalTypeEffCalc(sp, defender->item_held_effect, typeTableEntryNo)
+                    && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_2)) {
+                    type2Effectiveness_Dual = UpdateTypeEffectiveness(moveno, defender_type_2, TypeEffectivenessTable[typeTableEntryNo][2]);
+                }
+            } else if (TypeEffectivenessTable[typeTableEntryNo][1] == defender_type_3) {
+                if (AI_ShouldUseNormalTypeEffCalc(sp, defender->item_held_effect, typeTableEntryNo)
+                    && !StrongWindsShouldWeaken(bw, sp, typeTableEntryNo, defender_type_3)) {
+                    type3Effectiveness_Dual = UpdateTypeEffectiveness(moveno, defender_type_3, TypeEffectivenessTable[typeTableEntryNo][2]);
                 }
             }
         }
         typeTableEntryNo++;
     }
   
-    int typeMul = type1Effectiveness * type2Effectiveness * type3Effectiveness;
+    int typeMul = type1Effectiveness * type2Effectiveness * type3Effectiveness * (type1Effectiveness_Dual * type2Effectiveness_Dual * type3Effectiveness_Dual);
     switch (typeMul) {
     case EFFECTIVENESS_MULT_TRIPLE_SUPER_EFFECTIVE:
         return TYPE_MUL_TRIPLE_SUPER_EFFECTIVE; // 40
@@ -640,12 +663,12 @@ int LONG_CALL BattleAI_GetDynamicMoveType(struct BattleSystem *bsys, struct Batt
                 break;
 
             default:
-                // Aura Wheel can only be successfully used by Morpeko (or a Pokémon that has transformed into Morpeko). This line does not prevent the move from being used!!!
+                // Aura Wheel can only be successfully used by Morpeko (or a Pokï¿½mon that has transformed into Morpeko). This line does not prevent the move from being used!!!
                 type = TYPE_TYPELESS;
                 break;
             }
         } else {
-            // Aura Wheel can only be successfully used by Morpeko (or a Pokémon that has transformed into Morpeko). This line does not prevent the move from being used!!!
+            // Aura Wheel can only be successfully used by Morpeko (or a Pokï¿½mon that has transformed into Morpeko). This line does not prevent the move from being used!!!
             type = TYPE_TYPELESS;
         }
         break;

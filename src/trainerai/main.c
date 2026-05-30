@@ -1109,6 +1109,12 @@ int LONG_CALL SetupScoring(struct BattleSystem *bsys, u32 attacker, int i, struc
     case MOVE_EFFECT_SP_DEF_UP:
     case MOVE_EFFECT_SP_DEF_UP_2: //amnesia
     case MOVE_EFFECT_SP_DEF_UP_3:
+        if (ai->attackerMoveEffect == MOVE_EFFECT_SP_DEF_UP || ai->attackerMoveEffect == MOVE_EFFECT_SP_DEF_UP_2 || ai->attackerMoveEffect == MOVE_EFFECT_SP_DEF_UP_3) {
+            if (ai->defenderHasAtleastOneSpecialMove == FALSE) {
+                break;
+            }
+        }
+        FALLTHROUGH;
     case MOVE_EFFECT_DEF_UP_DOUBLE_ROLLOUT_POWER: //defense curl
     case MOVE_EFFECT_SP_DEF_UP_DOUBLE_ELECTRIC_POWER: // Charge
     case MOVE_EFFECT_DEF_SP_DEF_UP: // cosmic power
