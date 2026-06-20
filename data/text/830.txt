@@ -370,7 +370,7 @@ The user vigorously performs a\nmystic, powerful dance that boosts\nits Attack a
 An attack move that doubles its\npower if the user is poisoned,\nparalyzed, or has a burn.
 It reduces the foe’s evasion stat.\nIt also removes spikes, light\nscreens, etc.
 The user goes to sleep for two\nturns. It fully restores the user’s\nHP and heals any status problem.
-The user attacks by playing rough\nwith the target. This may also lower\nthe target’s Attack stat.
+The user damages opposing Pokémon by\nemitting a powerful flash.
 The user attacks and steals the\nfoe’s held item simultaneously. It\ncan’t steal if the user holds an\ritem.
 The foe is hit with wings of steel.\nIt may also raise the user’s Defense\nstat.
 The user creates a bizarre area in\nwhich slower Pokémon get to move\nfirst for five turns.

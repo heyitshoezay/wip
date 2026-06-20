@@ -58,7 +58,7 @@ static const u16 sMachineMoves[] = {
     MOVE_FACADE,           // TM042
     MOVE_DEFOG,            // TM043
     MOVE_REST,             // TM044
-    MOVE_PLAY_ROUGH,   // TM045
+    MOVE_DAZZLING_GLEAM,   // TM045
     MOVE_THIEF,            // TM046
     MOVE_STEEL_WING,       // TM047
     MOVE_TRICK_ROOM,         // TM048

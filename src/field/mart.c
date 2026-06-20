@@ -47,7 +47,7 @@ u16 sCherrygroveCityMart[] = {
 };
 
 u16 sVioletCityMart[] = {
-    ITEM_ABILITY_PATCH, ITEM_MUSCLE_BAND, ITEM_WISE_GLASSES, ITEM_ORAN_BERRY, 0xFFFF
+    ITEM_ABILITY_PATCH, ITEM_MUSCLE_BAND, ITEM_WISE_GLASSES, ITEM_POMEG_BERRY, 0xFFFF
 };
 
 u16 sAzaleaCityMart[] = {
@@ -81,7 +81,7 @@ u16 sGoldenrodHerbs[] = {
 };
 
 u16 sEcruteakMart[] = {
-    ITEM_HEART_MAIL, ITEM_HEAL_BALL, ITEM_NET_BALL, 0xFFFF
+    ITEM_BLUE_SHARD, ITEM_RED_SHARD, ITEM_GREEN_SHARD, 0xFFFF
 };
 
 u16 sOlivineMart[] = {

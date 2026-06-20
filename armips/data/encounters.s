@@ -137,8 +137,8 @@ pokemon SPECIES_MAGBY
 pokemon SPECIES_MAGBY
 
 // day encounter slots
-pokemon SPECIES_BIDOOF
-pokemon SPECIES_ZIGZAGOON
+pokemon SPECIES_MAGBY
+pokemon SPECIES_MAGBY
 pokemon SPECIES_RATTATA
 pokemon SPECIES_ROCKRUFF
 pokemon SPECIES_MEOWTH
@@ -1489,7 +1489,7 @@ pokemon SPECIES_ZUBAT
 pokemon SPECIES_ONIX
 
 // day encounter slots
-pokemon SPECIES_GEODUDE
+monwithform SPECIES_DIGLETT, 1
 pokemon SPECIES_SANDSHREW
 pokemon SPECIES_GEODUDE
 pokemon SPECIES_SANDSHREW
