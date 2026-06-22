@@ -25,6 +25,15 @@ extern u32 word_to_store_form_at;
 
 // [preevo] = {species, form}, [postevo] = {species, form},
 u16 ALIGN4 gEvolutionSceneOverride[2][2];
+void LONG_CALL arrayShuffle(int array[], int n)
+{
+    for (int i = n - 1; i > 0; i--) {
+        int j = gf_rand() % (i + 1);
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 
 char __attribute__((section (".init"))) sHeaderString[] = "hg-engine rocks!";
 //#include "../data/IconPaletteTable.c"
@@ -1579,20 +1588,7 @@ void set_starter_hidden_ability(struct Party *party UNUSED, struct PartyPokemon 
         SET_MON_HIDDEN_ABILITY_BIT(pp)
         SetBoxMonAbility((void *)&pp->box);
     }
-#ifdef RANDOM_3_MAX_IVS
-    if (CheckScriptFlag(RANDOM_3_MAX_IVS_FLAG) == 1) {
-        u8 array[] = { 0, 1, 2, 3, 4, 5 };
-        arrayShuffle(array, 6);
 
-        int iv = 31;
-        // Randomly chooses 3 stats
-        for (int i = 0; i < 3; i++) {
-            u8 selectedValue = array[i];
-            SetBoxMonData(boxmon, MON_DATA_HP_IV + selectedValue, &iv);
-        }
-        ClearScriptFlag(RANDOM_3_MAX_IVS_FLAG);
-    }
-#endif
 }
 
 /**

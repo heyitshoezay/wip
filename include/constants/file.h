@@ -1,6 +1,6 @@
 #ifndef CONSTANTS_FILE_H
 #define CONSTANTS_FILE_H
-
+#define OVERLAY_TRAINER_AI 10
 // NARC files
 #define ARC_BATTLE_MOVE_SEQ    0
 #define ARC_BATTLE_SUB_SEQ     1
