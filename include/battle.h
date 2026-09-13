@@ -836,6 +836,22 @@ typedef struct AI_turnScoring {
     int calcState;
 } AI_turnScoring;
 
+typedef enum HealingConditionType {
+    HEALING_CONDITION_HEALING_NONE = 0,
+    HEALING_CONDITION_HEALING_WISH,
+    HEALING_CONDITION_HEALING_LUNAR_DANCE,
+} HealingConditionType;
+
+typedef struct HealingWishCounter {
+    u8 count : 4;
+    u8 front : 2;
+    u8 back : 2;
+} HealingWishCounter;
+
+typedef struct HealingWishQueue {
+    HealingConditionType queue[CLIENT_MAX][2];
+    HealingWishCounter counter[CLIENT_MAX];
+} HealingWishQueue;
 
 #define BATTLE_SCRIPT_PUSH_DEPTH 4
 
@@ -1085,20 +1101,10 @@ struct BattleStruct {
     PursuitContext pursuitContext;
     DancerContext dancerContext;
     MagicBounceContext magicBounceContext;
-
-
-
-
-
-
-
-
-
-
-
-
-
     AI_turnScoring aiTurnScoring;
+    HealingWishQueue healingWishQueue;
+    int field_condition2; // gen5+ field conditions
+    int magicRoomCounter;
 };
 
 enum {
@@ -2969,21 +2975,6 @@ u8 LONG_CALL CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int clien
 
 #define CALCSPEED_FLAG_NOTHING     0
 #define CALCSPEED_FLAG_NO_PRIORITY 0x80
-
-/**
- *  @brief set move status effects for super effective and calculate modified damage
- *
- *  @param bw battle work structure
- *  @param sp global battle structure
- *  @param move_no move index
- *  @param move_type move type
- *  @param attack_client attacker
- *  @param defence_client defender
- *  @param damage current damage
- *  @param flag move status flags to mess around with
- *  @return modified damage
- */
-int LONG_CALL ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move_type, int attack_client, int defence_client, int damage, u32 *flag);
 
 /**
  *  @brief see if a move has positive priority after adjustment
