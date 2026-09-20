@@ -109,7 +109,7 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Rain
                                 case 3:
-                                    scriptnum = BATTLE_SUBSCRIPT_SNOW_WARNING;
+                                    scriptnum = BATTLE_SUBSCRIPT_OVERWORLD_HAIL;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Snow
                                 /*case 4:

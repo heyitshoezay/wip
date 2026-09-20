@@ -1264,7 +1264,7 @@ Please wait.
 Data is corrupted.
 Playback canceled.
 Battle is too long.
-Playback canceled.
+Playback canceled.z
 The dimensions became distorted!
 The Distortion World’s {STRVAR_1 1, 0, 0}\nappeared!\r
 Announcer: You’re out of\n{STRVAR_1 8, 0, 0}s!\fGame over!\r

@@ -87,7 +87,7 @@ u16 sEcruteakMart[] = {
 };
 
 u16 sOlivineMart[] = {
-    ITEM_METAGROSSITE, ITEM_HEAL_BALL, ITEM_NET_BALL, 0xFFFF
+    ITEM_BLAZIKENITE, ITEM_HEAL_BALL, ITEM_NET_BALL, 0xFFFF
 };
 
 u16 sCianwoodPharmacy[] = {
