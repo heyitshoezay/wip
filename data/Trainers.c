@@ -597,15 +597,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_LAST_POKE,
-                .text = "The wind is finally with us!\\n",
+                .text = "Think you can take down the \\nnext Pokémon like you did earlier?\\n",
             },
             {
                 .type = TRMSG_LAST_POKE_HALF,
-                .text = "We can still fly!\\n",
+                .text = "No way! Not yet!\\nNot giving up!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "I understand...\\nI’ll bow out gracefully.\\n",
+                .text = "W-what? That can’t be!\\nMy buffed-up Pokémon!\\n",
             },
         },
     },
@@ -41480,6 +41480,7 @@ const u16 sTrainerTextOrder[] = {
     628,
     629,
     630,
+    11,
 };
 
 const u32 sTrainerDataCount = sizeof(sTrainerData) / sizeof(sTrainerData[0]);
