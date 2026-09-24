@@ -94,7 +94,16 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
         break;
     case MOVE_HEAVY_SLAM:
     case MOVE_HEAT_CRASH:
+        if (defender->weight == 0)
+        {
+            movepower = 120;
+            break;
+        }
         switch (attacker->weight / defender->weight) {
+        case 0:
+        case 1:
+            movepower = 40;
+            break;
         case 2:
             movepower = 60;
             break;
@@ -105,11 +114,8 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
             movepower = 100;
             break;
         case 5:
-            movepower = 120;
-            break;
-            // less than 2
         default:
-            movepower = 40;
+            movepower = 120;
             break;
         }
         break;
@@ -405,7 +411,25 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
         }
     }
 
-    /* Not considered in AI:  Mud Sport, Water Sport, Dark Aura, Fairy Aura, Aura Beak  */
+    // All other abilities:
+    /* Not considered in AI:  Mud Sport, Water Sport  */
+    BOOL fieldHasFairyAura = CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_FAIRY_AURA);
+    BOOL fieldHasDarkAura = CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_DARK_AURA);
+    BOOL fieldHasAuraBreak = CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_AURA_BREAK);
+    if (movetype == TYPE_FAIRY && fieldHasFairyAura) {
+        if (fieldHasAuraBreak) {
+            basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__0_75);
+        } else {
+            basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_33);
+        }
+    }
+    if (movetype == TYPE_DARK && fieldHasDarkAura) {
+        if (fieldHasAuraBreak) {
+            basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__0_75);
+        } else {
+            basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_33);
+        }
+    }
 
     // handle Rivalry
     if (attacker->ability == ABILITY_RIVALRY) {
@@ -473,14 +497,23 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
     }
 
     // handle Analytic
-    if (attacker->ability == ABILITY_ANALYTIC) {
-        if (attacker->speed < defender->speed) {
+    if (attacker->ability == ABILITY_ANALYTIC && move.effect != MOVE_EFFECT_HIT_IN_3_TURNS) {
+        int k = 0;
+        for (k = 0; k < 4; k++) {
+            if (attacker == k || sp->battlemon[k].hp == 0) {
+                continue;
+            }
+            if (attacker->speed > sp->effectiveSpeed[k]) {
+                break;
+            }
+        }
+        if (k == 4) {
             basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_3);
         }
     }
 
     // handle Tough Claws
-    if ((attacker->ability == ABILITY_TOUGH_CLAWS) && (IsContactBeingMade(attacker->ability, attacker->item_held_effect, defender->item_held_effect, moveno, sp->moveTbl[moveno].flag))) {
+    if ((attacker->ability == ABILITY_TOUGH_CLAWS) && (IsContactBeingMade(attacker->ability, attacker->item_held_effect, defender->item_held_effect, moveno, move.flag))) {
         basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_3);
     }
 
@@ -1147,7 +1180,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     u8 movetype;
     u8 movesplit = GetMoveSplit(sp, moveno);
     u32 damage = 0;
-    u32 moveEffectiveness;
+    u32 moveEffectiveness = TYPE_MUL_NORMAL;
     u32 finalModifier = UQ412__1_0;
     BOOL attackerHasMoldBreaker = attacker->hasMoldBreaker;
     u32 weatherAttacker = BattleAI_GetWeather(bw, sp, attacker->ability);
@@ -1272,18 +1305,6 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         return 0;
     }
 
-    switch (moveno) {
-    case MOVE_SELF_DESTRUCT:
-    case MOVE_EXPLOSION:
-    case MOVE_MISTY_EXPLOSION:
-    case MOVE_FINAL_GAMBIT:
-        return 0;
-    default:
-        break;
-    }
-
-
-
     if (!attackerHasMoldBreaker && defender->ability == ABILITY_ICE_FACE && defender->form == 0 && !(defender->condition2 & STATUS2_TRANSFORM) && movesplit == SPLIT_PHYSICAL) { // SPECIES_EISCUE
         return 0;
     }
@@ -1325,23 +1346,29 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     //=====Step 6. General Damage Modifiers=====
 
     // 6.1 Spread Move Modifier
+    BOOL dragonDartsHitsTwice = TRUE;
     BOOL isDoubleBattle = (BattleTypeGet(bw) & (BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLES | BATTLE_TYPE_TAG));
     BOOL countPossibleHits = 0;
     if (isDoubleBattle) {
-        for (unsigned i = 0; i < CLIENT_MAX; ++i) {
-            if (i == attackerSlot) {
-                continue;
-            }
-            if (move.target == RANGE_ALL_ADJACENT && i == BATTLER_ALLY(attackerSlot) && sp->battlemon[i].hp) {
-                countPossibleHits++;
-                continue;
-            }
-            if (move.target == RANGE_ADJACENT_OPPONENTS && i != BATTLER_ALLY(attackerSlot) && sp->battlemon[i].hp) {
-                countPossibleHits++;
-            }
+        dragonDartsHitsTwice = FALSE;
+        if (moveno == MOVE_DRAGON_DARTS && HasType(sp, BATTLER_ALLY(defenderSlot), TYPE_FAIRY)){
+            dragonDartsHitsTwice = TRUE;
         }
-        if (countPossibleHits > 1) {
-            damage = QMul_RoundDown(damage, UQ412__0_75);
+        for (int i = 0; i < CLIENT_MAX; ++i) {
+            if (i == attackerSlot || !sp->battlemon[i].hp) {
+                continue;
+            }
+
+            BOOL isAlly = (i == BATTLER_ALLY(attackerSlot));
+            BOOL hitsAlly = (move.target == RANGE_ALL_ADJACENT && isAlly);
+            BOOL hitsOpponent = ((move.target == RANGE_ADJACENT_OPPONENTS || move.target == RANGE_ALL_ADJACENT) && !isAlly);
+
+            if (hitsAlly || hitsOpponent) {
+                if (++countPossibleHits > 1) {
+                    damage = QMul_RoundDown(damage, UQ412__0_75);
+                    break;
+                }
+            }
         }
     }
     // TODO
@@ -1381,7 +1408,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     debug_printf("[AI_Damage] damage: %d\n", damage);
 #endif
     // 6.3.5 Glaive Rush
-    if (sp->moveConditionsFlags[defenderSlot].glaiveRush) {
+    if (sp->moveConditionsFlags[defenderSlot].wideOpen) {
         damage = damage * 200 / 100;
     }
 
@@ -1435,7 +1462,6 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     // TODO: need to factor in Tera Shell
     moveEffectiveness = BattleAI_GetTypeEffectiveness(bw, sp, moveno, movetype, attackerSlot, defenderSlot, attacker, defender);
     
-
     switch (moveno) {
     case MOVE_SHEER_COLD:
         if (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE || defender->type3 == TYPE_ICE) {
@@ -1445,7 +1471,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     case MOVE_FISSURE:
     case MOVE_GUILLOTINE:
     case MOVE_HORN_DRILL:
-        if (attacker->level <= defender->level || (!attackerHasMoldBreaker && defender->ability == ABILITY_STURDY)){
+        if ((attacker->ability != ABILITY_NO_GUARD && attacker->level <= defender->level) || (!attackerHasMoldBreaker && defender->ability == ABILITY_STURDY)) {
             moveEffectiveness = TYPE_MUL_NO_EFFECT;
         }
     default:
@@ -1453,6 +1479,17 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     }
 
     damages->moveEffectiveness = moveEffectiveness;
+
+    switch (moveno) {
+    case MOVE_SELF_DESTRUCT:
+    case MOVE_EXPLOSION:
+    case MOVE_MISTY_EXPLOSION:
+    case MOVE_FINAL_GAMBIT:
+        return 0;
+    default:
+        break;
+    }
+
     switch (moveEffectiveness) {
     case TYPE_MUL_NO_EFFECT:
         damages->damageRoll = 0;
@@ -1619,13 +1656,19 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
 
     if (!attackerHasMoldBreaker && defender->ability == ABILITY_FLUFFY) {
         // 6.9.6 Fluffy (contact moves)
-        if (IsContactBeingMade(attacker->ability, attacker->item_held_effect, defender->item_held_effect, moveno, sp->moveTbl[moveno].flag)) {
+        if (IsContactBeingMade(attacker->ability, attacker->item_held_effect, defender->item_held_effect, moveno, move.flag)) {
             finalModifier = QMul_RoundUp(finalModifier, UQ412__0_5);
         }
 
         // 6.9.10 Fluffy (Fire-type moves)
         if (type == TYPE_FIRE) {
             finalModifier = QMul_RoundUp(finalModifier, UQ412__2_0);
+        }
+    }
+    if (!attackerHasMoldBreaker && defender->ability == ABILITY_AURA_GUARD) {
+        // 6.9.6 Aura Guard (contact moves)
+        if (IsContactBeingMade(attacker->ability, attacker->item_held_effect, defender->item_held_effect, moveno, move.flag)) {
+            finalModifier = QMul_RoundUp(finalModifier, UQ412__0_5);
         }
     }
 
@@ -1736,6 +1779,13 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     for (int u = 0; u < 16; u++) {
         damages->damageRange[u] = damages->damageRange[u] == 0 ? 1 : damages->damageRange[u];
         damages->damageRange[u] = damages->damageRange[u] % 65536;
+    }
+
+    if (moveno == MOVE_DRAGON_DARTS && dragonDartsHitsTwice) {
+        damages->damageRoll *= 2;
+        for (int u = 0; u < 16; u++) {
+            damages->damageRange[u] *= 2;
+        }
     }
 
 #ifdef DEBUG_DAMAGE_CALC_AI

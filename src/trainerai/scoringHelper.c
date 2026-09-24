@@ -16,7 +16,7 @@
 #include "../../include/constants/file.h"
 
 
-int LONG_CALL BattlerPositiveStatChangesSum(struct BattleSystem *bsys, u32 battler, struct AIContext *ai UNUSED)
+int LONG_CALL BattlerPositiveStatChangesSum(struct BattleSystem *bsys, u32 battler)
 {
     struct BattleStruct *ctx = bsys->sp;
     int statSum = 0;

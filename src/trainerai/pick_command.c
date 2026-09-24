@@ -139,11 +139,18 @@ int TrainerAI_PickCommand(struct BattleSystem *bsys, int attacker)
 
     ctx->aiTurnScoring.targets[attacker] = target;
     ctx->aiTurnScoring.choice[attacker] = result;
+    if (ctx->battlemon[attacker].move[result] == MOVE_MILK_DRINK && target != BATTLER_ALLY(attacker)) {
+        ctx->aiTurnScoring.targets[attacker] = attacker;
+    }
 
     if (ai1->isDoubleBattle && ai1->isAllyAlive && (attacker == 1 || attacker == 3)) {
         ctx->aiTurnScoring.targets[ally] = allyTarget;
         ctx->aiTurnScoring.choice[ally] = resultAlly;
         ctx->aiTurnScoring.calcState = CalcedEnemy_1_and_3;
+
+        if (ctx->battlemon[ally].move[resultAlly] == MOVE_MILK_DRINK && allyTarget != BATTLER_ALLY(ally)) {
+            ctx->aiTurnScoring.targets[ally] = ally;
+        }
     }
 
     return PLAYER_INPUT_FIGHT;
@@ -196,10 +203,11 @@ u8 LONG_CALL ChooseMove(struct BattleSystem *bsys, int target, int moveScores[4]
             tieMoveCount++;
         }
     }
-    u8 tieMoveIndex = (BattleRand(bsys) % tieMoveCount);
+    int rand = BattleRand(bsys);
+    u8 tieMoveIndex = (rand % tieMoveCount);
     u8 result = tiedMoveIndices[tieMoveIndex]; // % 4]; // randomly pick a move among the tie
 #ifdef DEBUG_AI_SCORING
-    debug_printf("got tieMoveIndex/Count %d/%d -> Resulting move: %d\n", tieMoveIndex, tieMoveCount, result);
+    debug_printf("got index %d: %d mod %d -> Resulting move: %d\n", tieMoveIndex, rand, tieMoveCount, result);
 #endif // DEBUG_AI_SCORING
     return result;
 }
@@ -235,9 +243,18 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         return FALSE;
     }
 
+    if (ai->attackerPositiveStatChangesSum > 0) {
+        return FALSE;
+    }
+
     if (ai->attackerMon.percenthp < 67) {
         return FALSE;
     }
+
+    if ((100*ai->maxDamageReceived/ai->attackerMon.hp) < (100*ai->attackerRolledMaxDamage/ai->defenderMon.hp)) {
+        return FALSE;
+    }
+
     BOOL hasPerishSong = FALSE;
     if (ctx->battlemon[attacker].effect_of_moves & MOVE_EFFECT_FLAG_PERISH_SONG) {
         hasPerishSong = TRUE;
@@ -249,6 +266,10 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         doublesAddon = 3;
     }
 
+    if (ai->highestPostKoScoreFromParty < 103) {
+        return FALSE;
+    }
+
     int switchScore = 0;
     if (hasPerishSong) {
         if (ai->highestPostKoScoreFromParty >= (103 + doublesAddon)) {
@@ -256,10 +277,10 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         }
     } else {
         if (ai->highestPostKoScoreFromParty == (104 + doublesAddon)) {
-            switchScore = getVarianceFromDamage(ai);
+            switchScore = getVarianceFromDamage(ai)/2;
         }
         if (ai->highestPostKoScoreFromParty >= (104 + doublesAddon + 1)) {
-            switchScore = 25 + getVarianceFromDamage(ai);
+            switchScore = 5 + getVarianceFromDamage(ai);
         }
     }
 
@@ -267,7 +288,7 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
 #ifdef DEBUG_AI_SCORING
     debug_printf("rand %d, switchScore %d\n", rand, switchScore);
 #endif // DEBUG_AI_SCORING
-    if (rand <= switchScore) {
+    if (rand < switchScore) {
         return TRUE;
     }
 

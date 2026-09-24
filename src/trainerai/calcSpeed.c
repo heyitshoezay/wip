@@ -17,7 +17,7 @@
 #include "../../include/custom/custom_ai.h"
 
 
-u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, struct PartyPokemon *partyMon, int flag)
+u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, struct PartyPokemon *partyMon, int flag, int *effectivePartyMonSpeed)
 {
     u8 ret = 0;
     u32 speed1, speedPartyMon;
@@ -58,7 +58,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     // NormalRound is QMul_RoundUp
     // pokeRound is QMul_RoundDown
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     char client1Nickname[12];
     char client2Nickname[12];
     GetMonData(partyMon, MON_DATA_NICKNAME, client2Nickname);
@@ -69,7 +69,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     debug_printf("[CalcSpeed] client2: %s\n", client2Nickname);
 #endif
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] %s's base speed: %d\n", client1Nickname, sp->battlemon[client1].speed);
     debug_printf("[CalcSpeed] %s's base speed: %d\n", client2Nickname, GetMonData(partyMon, MON_DATA_SPEED, 0));
@@ -79,14 +79,13 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     speed1 = (sp->battlemon[client1].speed * StatBoostModifiers[stat_stage_spd1][0] / StatBoostModifiers[stat_stage_spd1][1]) % 65536;
     speedPartyMon = (GetMonData(partyMon, MON_DATA_SPEED, 0) * StatBoostModifiers[stat_stage_spd2][0] / StatBoostModifiers[stat_stage_spd2][1]) % 65536;
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] %s's speed1 after stat changes: %d\n", client1Nickname, speed1);
     debug_printf("[CalcSpeed] %s's speedPartyMon after stat changes: %d\n", client2Nickname, speedPartyMon);
 #endif
 
     // Step 1: 2x Abilities
-
     if ((CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) == 0)
         && (CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK) == 0)) {
         if (((ability1 == ABILITY_SWIFT_SWIM) && (sp->field_condition & FIELD_CONDITION_RAIN_ALL))
@@ -128,7 +127,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier1, UQ412__2_0);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 1: 2x Abilities\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -145,7 +144,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__1_5);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 2: Quick Feet\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -162,7 +161,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     if (ability2 == ABILITY_SLOW_START) {
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__0_5);
     }
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 3: Slow Start\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -200,7 +199,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__2_0);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 4: Quick Powder\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -217,7 +216,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__1_5);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 5: Choice Scarf\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -234,7 +233,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__0_5);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 6: Iron Ball / Macho Brace / Power EV items\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -252,7 +251,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedModifier2 = QMul_RoundUp(speedModifier2, UQ412__2_0);
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 7: Tailwind\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -261,7 +260,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
 
     // Step 8: Swamp
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 8: Swamp\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -274,7 +273,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     speedModifier1 = speedModifier1 < 410 ? 410 : speedModifier1;
     speedModifier2 = speedModifier2 < 410 ? 410 : speedModifier2;
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 9: Apply limit\n");
     debug_printf("[CalcSpeed] %s's speedModifier1: %d\n", client1Nickname, speedModifier1);
@@ -286,7 +285,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     speed1 = QMul_RoundDown(speed1, speedModifier1);
     speedPartyMon = QMul_RoundDown(speedPartyMon, speedModifier2);
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 10: Apply the chained modifier to the starting speed\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
@@ -294,7 +293,6 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
 #endif
 
     // Step 11: Paralysis
-
     if ((ability1 != ABILITY_QUICK_FEET)
         && sp->battlemon[client1].condition & STATUS_PARALYSIS) {
         speed1 = QMul_RoundUp(speed1, UQ412__0_5); // gen 7 on only halves speed for paralysis
@@ -304,7 +302,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedPartyMon = QMul_RoundUp(speedPartyMon, UQ412__0_5); // gen 7 on only halves speed for paralysis
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 11: Paralysis\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
@@ -318,7 +316,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     speedPartyMon = speedPartyMon % 65536;
     speedPartyMon = speedPartyMon > 10000 ? 10000 : speedPartyMon;
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 12: Apply limit\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
@@ -329,8 +327,9 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
 
     //sp->effectiveSpeed[client1] = speed1;
     // sp->effectiveSpeed[client2] = speedPartyMon;
+    *effectivePartyMonSpeed = speedPartyMon;
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 13: Speed calculations stop here for the purposes of Gyro Ball / Electro Ball\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
@@ -344,7 +343,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
         speedPartyMon = 10000 - speedPartyMon;
     }
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 14: Trick Room\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
@@ -356,7 +355,7 @@ u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, 
     speed1 = speed1 % 8192;
     speedPartyMon = speedPartyMon % 8192;
 
-#ifdef DEBUG_SPEED_CALC
+#ifdef DEBUG_AI_SPEED_CALC
     debug_printf("\n=================\n");
     debug_printf("[CalcSpeed] Step 15: Apply Limit\n");
     debug_printf("[CalcSpeed] %s's speed1: %d\n", client1Nickname, speed1);
