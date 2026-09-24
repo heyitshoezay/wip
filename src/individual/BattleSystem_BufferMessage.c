@@ -22,7 +22,7 @@ static int GetKeyStoneVariantFromTrainerClass(int trainerClass)
 {
     switch (trainerClass) {
     default:
-        return ITEM_KEY_STONE;
+        return ITEM_MEGA_RING;
         break;
     }
 }
@@ -82,19 +82,21 @@ void BattleSystem_BufferMessage(struct BattleSystem *bsys, BattleMessage *msg)
         BattleMessage_BufferNickname(bsys, 0, msg->param[0]);
         BattleMessage_BufferPokemon(bsys, 1, msg->param[1]);
         break;
-    case TAG_NICKNAME_ITEM:
+case TAG_NICKNAME_ITEM:
         BattleMessage_BufferNickname(bsys, 0, msg->param[0]);
         if (((msg->id >= BATTLE_MSG_OBTAINED_ITEM) && (msg->id < (BATTLE_MSG_OBTAINED_ITEM + 3)))
             || ((msg->id >= BATTLE_MSG_HARVESTED_ITEM) && (msg->id < (BATTLE_MSG_HARVESTED_ITEM + 3)))
-            || ((msg->id >= BATTLE_MSG_PICKED_UP_ITEM) && (msg->id < (BATTLE_MSG_PICKED_UP_ITEM + 3)))) { // get article added to each of these
+            || ((msg->id >= BATTLE_MSG_PICKED_UP_ITEM) && (msg->id < (BATTLE_MSG_PICKED_UP_ITEM + 3)))) { 
             BufferItemNameWithIndefArticle(bsys->msgFormat, 1, msg->param[1]);
         } else {
             BattleMessage_BufferItem(bsys, 1, msg->param[1]);
         }
         if (msg->id >= BATTLE_MSG_MEGA_EVOLUTION && (msg->id - BATTLE_MSG_MEGA_EVOLUTION) < 3) {
-            //  mask off high bits so we get only the battlerId
             Trainer *trainer = BattleSystem_GetTrainer(bsys, msg->param[0] & 0xFF);
             BattleMessage_BufferItem(bsys, 2, GetKeyStoneVariantFromTrainerClass(trainer->data.trainerClass));
+            
+            // Buffer the Trainer Name corresponding to the battler performing Mega Evolution
+            BattleMessage_BufferTrainerName(bsys, 3, msg->param[0] & 0xFF);
         }
         break;
     case TAG_NICKNAME_POFFIN: // unused
