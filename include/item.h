@@ -2,10 +2,9 @@
 #define POKEDIAMOND_ITEM_H
 
 #include "types.h"
-
 #include "script.h"
 #include "task.h"
-
+#include "window.h"
 /*
  * Bit array describing the effects of using the item on a
  * party member.
@@ -118,6 +117,13 @@ struct ItemMenuUseData {
     TaskManager *taskManager;
     u16 itemId;
     u8 unk6;
+};
+
+struct RegisteredKeyItemUseMessagePrintTaskData {
+    struct Window window;
+    String *strbuf;
+    u16 printerId;
+    u16 state;
 };
 
 struct BagViewAppWork {

@@ -638,3 +638,49 @@ BOOL IsPlayerOnLadder(void)
     // battle tower
     return collision == 0x3C || collision == 0x3D || collision == 0x3E || mapId == 114 || mapId == 180 || (mapId >= 265 && mapId <= 271);
 }
+
+BOOL LONG_CALL BagApp_TryUseItemInPlace(void *param1, u16 itemId)
+{
+    MessageFormat *messageFormat = *(void **)((u8 *)param1 + 0x02F4);
+    struct PlayerProfile *playerProfile = *(void **)((u8 *)param1 + 0x023C);
+
+    BufferPlayersName(messageFormat, 0, playerProfile);
+    BufferItemName(messageFormat, 1, itemId);
+
+    String *srcStr = NULL;
+    if (itemId == ITEM_BLACK_FLUTE) {
+        MsgData *msgLoader = *(void **)((u8 *)param1 + 0x02F0);
+        srcStr = NewString_ReadMsgData(msgLoader, 65);
+        BagApp_SetFlute(param1, 1);
+        *(u16 *)((u8 *)param1 + 0x0680) = 0;
+    } else if (itemId == ITEM_WHITE_FLUTE) {
+        MsgData *msgLoader = *(void **)((u8 *)param1 + 0x02F0);
+        srcStr = NewString_ReadMsgData(msgLoader, 64);
+        BagApp_SetFlute(param1, 2);
+        *(u16 *)((u8 *)param1 + 0x0680) = 0;
+    } else if (itemId == ITEM_REPEL || itemId == ITEM_SUPER_REPEL || itemId == ITEM_MAX_REPEL) {
+        srcStr = BagApp_TryUseRepel(param1, itemId);
+    } else if (itemId == ITEM_GB_SOUNDS) {
+        srcStr = BagApp_ToggleGBSounds(param1, itemId);
+        *(u16 *)((u8 *)param1 + 0x0680) = 0;
+    } else if (itemId == ITEM_EXP_SHARE) {
+        // read from 010.txt
+        u16 expShareOn = CheckScriptFlag(FLAG_EXP_SHARE_ENABLED);
+        MsgData *msgLoader = *(void **)((u8 *)param1 + 0x02F0);
+        srcStr = NewString_ReadMsgData(msgLoader, expShareOn ? 130 : 129);
+        *(u16 *)((u8 *)param1 + 0x0680) = 0;
+        if (expShareOn) {
+            ClearScriptFlag(FLAG_EXP_SHARE_ENABLED);
+        } else {
+            SetScriptFlag(FLAG_EXP_SHARE_ENABLED);
+        }
+    } else {
+        return FALSE;
+    }
+
+    String *fmtDest = *(void **)((u8 *)param1 + 0x05E4);
+    StringExpandPlaceholders(messageFormat, fmtDest, srcStr);
+    String_Delete(srcStr);
+
+    return TRUE;
+}

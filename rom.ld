@@ -389,6 +389,15 @@ GetPlayerYCoord = 0x0205C688 | 1;
 BagView_New = 0x02077878 | 1;
 BagView_SetItem = 0x020778BC | 1;
 Sav2_Bag_get = 0x0207879C | 1;
+BufferPlayersName = 0x0200BE48 | 1;
+BufferItemName = 0x0200C0CC | 1;
+NewString_ReadMsgData = 0x0200BBA0 | 1;
+RoamerSave_SetFlute = 0x021F994C | 1;
+BagApp_SetFlute	= 0x021F994C | 1;
+BagApp_TryUseRepel = 0x021FBA9C | 1;
+BagApp_ToggleGBSounds = 0x021FBAF8 | 1;
+Task_PrintRegisteredKeyItemUseMessage = 0x0206518C | 1;
+FieldSystem_CreateTask = 0x020504F0 | 1;
 
 FreeOverlayAllocation = 0x02006F58 | 1;
 GetOverlayLoadDestination = 0x02006FAC | 1;

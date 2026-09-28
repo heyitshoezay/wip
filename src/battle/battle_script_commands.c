@@ -1316,6 +1316,20 @@ u8 ALIGN4 scratchpad[4] = { 0, 0, 0, 0 };
 #define monCountFromItem     scratchpad[1]
 #define trackPartyExperience scratchpad[2]
 
+// fakes the party mons having an exp share held item
+int Task_GetExp_HandleExpShare(struct EXP_CALCULATOR *data, struct PartyPokemon *mon, int slot, int itemEffect)
+{
+    int side = (data->sp->fainting_client >> 1) & 1;
+
+     if (itemEffect != HOLD_EFFECT_EXP_SHARE && CheckScriptFlag(FLAG_EXP_SHARE_ENABLED)
+        && GetMonData(mon, MON_DATA_HP, NULL) && GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_EGG
+        && !(data->sp->obtained_exp_right_flag[side] & No2Bit(slot))) {
+        itemEffect = HOLD_EFFECT_EXP_SHARE;
+    }
+
+    return itemEffect;
+}
+
 /**
  *  @brief task to distribute experience
  *
@@ -1332,6 +1346,7 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     struct EXP_CALCULATOR *expcalc = work;
     int exp_client_no = 0;
     struct BattleStruct *sp = expcalc->sp;
+    BOOL expShareEnabled = CheckScriptFlag(FLAG_EXP_SHARE_ENABLED);
 
     client_no = (sp->fainting_client >> 1) & 1;
 
@@ -1345,7 +1360,11 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
             item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
             eqp = GetItemData(item, ITEM_PARAM_HOLD_EFFECT, 5);
 
-            if ((eqp == HOLD_EFFECT_EXP_SHARE) || (sp->obtained_exp_right_flag[client_no] & No2Bit(sel_mons_no))) {
+            if (expShareEnabled) {
+                if (GetMonData(pp, MON_DATA_SPECIES, NULL) && GetMonData(pp, MON_DATA_HP, NULL)) {
+                    break;
+                }
+            } else if ((eqp == HOLD_EFFECT_EXP_SHARE) || (sp->obtained_exp_right_flag[client_no] & No2Bit(sel_mons_no))) {
                 break;
             }
         }
@@ -1371,7 +1390,7 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
                 item = GetMonData(pploop, MON_DATA_HELD_ITEM, NULL);
                 eqp = BattleItemDataGet(sp, item, 1);
 
-                if (eqp == HOLD_EFFECT_EXP_SHARE) {
+                if (!expShareEnabled && eqp == HOLD_EFFECT_EXP_SHARE) {
                     monCountFromItem++;
                 }
             }
@@ -1409,7 +1428,13 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
 
             // debug_printf("[Task_DistributeExp_Extend] L = %d, Lp = %d, b = %d, top = %d, bottom = %d, exp = %d\n", level, Lp, base, top, bottom, totalexp);
 
-            if (monCountFromItem) {
+             if (expShareEnabled) {
+                sp->obtained_exp = totalexp;
+                sp->exp_share_obtained_exp = totalexp / 2;
+                if (sp->exp_share_obtained_exp == 0) {
+                    sp->exp_share_obtained_exp = 1;
+                }
+            } else if (monCountFromItem) {
                 sp->obtained_exp = (totalexp / 2) / monCount;
                 if (sp->obtained_exp == 0) {
                     sp->obtained_exp = 1;
@@ -1458,7 +1483,7 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
                     item = GetMonData(pploop, MON_DATA_HELD_ITEM, NULL);
                     eqp = BattleItemDataGet(sp, item, 1);
 
-                    if (eqp == HOLD_EFFECT_EXP_SHARE) {
+                    if (!expShareEnabled && eqp == HOLD_EFFECT_EXP_SHARE) {
                         monCountFromItem++;
                     }
                 }
@@ -1467,7 +1492,13 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
         // multiply by 255/390 (map audino to 255) to not get massively inflated experience rates
         totalexp = 255 * GetSpeciesBaseExp(sp->battlemon[sp->fainting_client].species, sp->battlemon[sp->fainting_client].form_no) / 390; // PokePersonalParaGet(sp->battlemon[sp->fainting_client].species, PERSONAL_EXP_YIELD);
         totalexp = (totalexp * sp->battlemon[sp->fainting_client].level) / 7;
-        if (monCountFromItem) {
+        if (expShareEnabled) {
+            sp->obtained_exp = totalexp;
+            sp->exp_share_obtained_exp = totalexp / 2;
+            if (sp->exp_share_obtained_exp == 0) {
+                sp->exp_share_obtained_exp = 1;
+            }
+        } else if (monCountFromItem) {
             sp->obtained_exp = (totalexp / 2) / monCount;
             if (sp->obtained_exp == 0) {
                 sp->obtained_exp = 1;
@@ -1528,7 +1559,8 @@ BOOL Task_DistributeExp_capture_experience(void *arg0, void *work, u32 get_clien
     BOOL ret = FALSE;
     u32 original_work_params[NELEMS(store_work_params)];
     struct EXP_CALCULATOR *expcalc = work;
-
+    BOOL expShareEnabled = CheckScriptFlag(FLAG_EXP_SHARE_ENABLED);
+        
     if (BattleTypeGet(expcalc->bw) & BATTLE_TYPE_NO_EXPERIENCE) {
         return TRUE;
     }
@@ -1565,7 +1597,9 @@ BOOL Task_DistributeExp_capture_experience(void *arg0, void *work, u32 get_clien
                 item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
                 eqp = GetItemData(item, ITEM_PARAM_HOLD_EFFECT, 5);
 
-                if ((eqp == HOLD_EFFECT_EXP_SHARE) || (expcalc->sp->obtained_exp_right_flag[(expcalc->sp->fainting_client >> 1) & 1] & No2Bit(sel_mons_no))) {
+                 if ((expShareEnabled && GetMonData(pp, MON_DATA_SPECIES, NULL) && GetMonData(pp, MON_DATA_HP, NULL))
+                    || (eqp == HOLD_EFFECT_EXP_SHARE)
+                    || (expcalc->sp->obtained_exp_right_flag[(expcalc->sp->fainting_client >> 1) & 1] & No2Bit(sel_mons_no))) {
                     expcalc->work[6] = sel_mons_no;
                     trackPartyExperience |= No2Bit(sel_mons_no);
                     break;

@@ -4,6 +4,7 @@
 
 .include "asm/include/interop_macros.inc"
 #include "../../include/constants/moves.h"
+#include "../../include/constants/hold_item_effects.h"
 
 //形态变化恢复
 .global TryRevertFormChange_hook
@@ -202,6 +203,48 @@ mov r1, r5
 bl ClearBattleMonFlags
 ldr r0, =0x0225157E | 1
 bx r0
+
+.pool
+
+
+.global Task_GetExp_HandleExpShareSelectionHook
+Task_GetExp_HandleExpShareSelectionHook:
+mov r3, r0
+mov r0, r4
+mov r1, r6
+mov r2, r5
+bl Task_GetExp_HandleExpShare
+cmp r0, #HOLD_EFFECT_EXP_SHARE
+beq _returnTo0224591A
+mov r0, #1
+lsl r0, r5
+ldr r3, =0x022458FC | 1
+bx r3
+
+_returnTo0224591A:
+ldr r3, =0x0224591A | 1
+bx r3
+
+.pool
+
+
+.global Task_GetExp_HandleExpShareAwardHook
+Task_GetExp_HandleExpShareAwardHook:
+ldr r3, [sp, #0x18]
+mov r0, r4
+mov r1, r6
+mov r2, r5
+bl Task_GetExp_HandleExpShare
+cmp r0, #HOLD_EFFECT_EXP_SHARE
+bne _returnTo02245A68
+
+ldr r0, [sp, #0x24]
+ldr r3, =0x02245A5C | 1
+bx r3
+
+_returnTo02245A68:
+ldr r3, =0x02245A68 | 1
+bx r3
 
 .pool
 

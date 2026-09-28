@@ -7,6 +7,7 @@
 #include "../include/message.h"
 #include "../include/script.h"
 #include "../include/types.h"
+#include "../include/task.h"
 
 #define GFX_ITEM_DUMMY_ID  ((MAX_TOTAL_ITEM_NUM) * 2 + 2)
 #define GFX_ITEM_RETURN_ID ((MAX_TOTAL_ITEM_NUM + 1) * 2 + 4)
@@ -378,6 +379,8 @@ void ItemMenuUseFunc_AbilityCapsule(struct ItemMenuUseData *data, const struct I
 void ItemMenuUseFunc_Mint(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
 void ItemMenuUseFunc_Nectar(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
 void ItemMenuUseFunc_RotomCatalog(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
+void ItemMenuUseFunc_ExpShare(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
+BOOL ItemFieldUseFunc_ExpShare(struct ItemFieldUseData *data);
 
 const struct ItemUseFuncDat sNewItemFieldUseFuncs[] = {
     { ItemMenuUseFunc_RevealGlass, ItemFieldUseFunc_RevealGlass, NULL },
@@ -386,6 +389,7 @@ const struct ItemUseFuncDat sNewItemFieldUseFuncs[] = {
     { ItemMenuUseFunc_Mint, NULL, NULL },
     { ItemMenuUseFunc_Nectar, NULL, NULL },
     { ItemMenuUseFunc_RotomCatalog, NULL, NULL },
+    { ItemMenuUseFunc_ExpShare, ItemFieldUseFunc_ExpShare, NULL },
 };
 
 extern const struct ItemUseFuncDat sItemFieldUseFuncs[NUM_VANILLA_FIELD_USE_FUNCS];
@@ -668,6 +672,31 @@ void ItemMenuUseFunc_RotomCatalog(struct ItemMenuUseData *data, const struct Ite
 
     FieldSystem *fieldSystem = data->taskManager->fieldSystem; // TaskManager_GetFieldSystem(data->taskManager);
     struct BagViewAppWork *env = data->taskManager->env; // TaskManager_GetEnvironment(data->taskManager);
-    env->atexit_TaskEnv = sub_0203FAE8(fieldSystem, HEAPID_WORLD, ITEM_ROTOM_CATALOG);
+        env->atexit_TaskEnv = sub_0203FAE8(fieldSystem, HEAPID_WORLD, data->itemId);
     sub_0203C8F0(env, 0x0203CA9C | 1);
+}
+
+void ItemMenuUseFunc_ExpShare(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED)
+{
+    FieldSystem *fieldSystem = data->taskManager->fieldSystem; // TaskManager_GetFieldSystem(data->taskManager);
+    struct BagViewAppWork *env = data->taskManager->env; // TaskManager_GetEnvironment(data->taskManager);
+    env->atexit_TaskEnv = sub_0203FAE8(fieldSystem, HEAPID_WORLD, data->itemId);
+    sub_0203C8F0(env, 0x0203CA9C | 1);
+}
+
+BOOL ItemFieldUseFunc_ExpShare(struct ItemFieldUseData *data)
+{
+    struct RegisteredKeyItemUseMessagePrintTaskData *env = sys_AllocMemory(HEAPID_WORLD, sizeof(struct RegisteredKeyItemUseMessagePrintTaskData));
+    env->state = 0;
+    MsgData *msgData = NewMsgDataFromNarc(MSGDATA_LOAD_DIRECT, ARC_MSG_DATA, 10 /* NARC_msg_msg_0010_bin */, HEAPID_WORLD);
+    u16 expShareOn = CheckScriptFlag(FLAG_EXP_SHARE_ENABLED);
+    env->strbuf = NewString_ReadMsgData(msgData, expShareOn ? 130 : 129);
+    if (expShareOn) {
+        ClearScriptFlag(FLAG_EXP_SHARE_ENABLED);
+    } else {
+        SetScriptFlag(FLAG_EXP_SHARE_ENABLED);
+    }
+    DestroyMsgData(msgData);
+    FieldSystem_CreateTask(data->fieldSystem, Task_PrintRegisteredKeyItemUseMessage, env);
+    return TRUE;
 }

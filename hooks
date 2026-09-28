@@ -339,6 +339,9 @@ arm9 GrabCryNumSpeciesForm 02006A0C 2
 
 #endif
 
+0012 Task_GetExp_HandleExpShareSelectionHook 022458F2 3
+0012 Task_GetExp_HandleExpShareAwardHook 02245A54 3
+
 #ifdef IMPLEMENT_CAPTURE_EXPERIENCE
 
 0012 Task_DistributeExp_capture_experience_hook 0224688A 0
@@ -523,6 +526,8 @@ arm9 form_evo_hook_2 0207641C 0
 0002 PlayerStepEvent_RepelCounterDecrement 0224BAE4 2
 0015 BagApp_GetRepelStepCountAddr 021F993C 3
 #endif
+
+0015 BagApp_TryUseItemInPlace 021FB9D8 3
 
 0012 BattleContext_Main 022486B0 2
 

@@ -1,9 +1,9 @@
 #ifndef POKEHEARTGOLD_UNK_0200E320_H
 #define POKEHEARTGOLD_UNK_0200E320_H
 
-#include "types.h"
 
 #include "trainer_data.h"
+#include "types.h"
 
 typedef struct SysTaskQueue SysTaskQueue;
 typedef struct SysTask SysTask;
@@ -55,6 +55,8 @@ void LONG_CALL DestroySysTask(SysTask *task);
 SysTask *LONG_CALL SysTask_CreateOnVBlankQueue(SysTaskFunc func, void *data, int priority);
 void LONG_CALL TaskManager_Call(TaskManager *taskman, TaskFunc taskFunc, void *env);
 BOOL LONG_CALL Task_TutorialBattle(TaskManager *taskManager);
+TaskManager *LONG_CALL FieldSystem_CreateTask(FieldSystem *fieldSystem, TaskFunc taskFunc, void *env);
+BOOL LONG_CALL Task_PrintRegisteredKeyItemUseMessage(TaskManager *taskManager);
 
 void LONG_CALL CallTask_StartEncounter(TaskManager *taskManager, BattleSetup *setup, s32 effect, s32 bgm, u32 *winFlag);
 
