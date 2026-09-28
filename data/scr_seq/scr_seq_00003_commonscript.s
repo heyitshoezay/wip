@@ -1,17 +1,28 @@
-.nds
-.thumb
+.include "asm/include/interop_macros.inc"
 
-.include "armips/include/scriptmacros.s"
-.include "armips/include/flags.s"
-.include "armips/include/soundeffects.s"
-.include "armips/include/vars.s"
+.include "asm/include/scriptmacros.inc"
+.include "asm/include/flags.inc"
+.include "asm/include/soundeffects.inc"
+.include "asm/include/vars.inc"
 
-.include "asm/include/items.inc"
+.include "asm/include/events.inc"
+.include "asm/include/game_stats.inc"
+.include "asm/include/maps.inc"
+.include "asm/include/map_sections.inc"
+.include "asm/include/movements.inc"
+.include "asm/include/rankings.inc"
+.include "asm/include/spawns.inc"
+.include "asm/include/std_scripts.inc"
+.include "asm/include/trainers.inc"
+
+#include "constants/item.h"
+#include "constants/moves.h"
+#include "constants/species.h"
 
 
 // text archive to grab from: 040.txt
 
-.create "build/a012/2_003", 0
+.data
 
 
 scrdef scr_seq_0003_000
@@ -86,7 +97,29 @@ scrdef scr_seq_0003_068
 scrdef scr_seq_0003_069
 scrdef scr_seq_0003_070
 scrdef scr_seq_0003_071
-scrdef scr_seq_0003_072
+scrdef scr_seq_0003_072_repels
+scrdef scr_seq_0003_073_autobattle_testing
+scrdef scr_seq_0003_074
+scrdef scr_seq_0003_075
+scrdef scr_seq_0003_076
+scrdef scr_seq_0003_077
+scrdef scr_seq_0003_078
+scrdef scr_seq_0003_079
+scrdef scr_seq_0003_080
+scrdef scr_seq_0003_081
+scrdef scr_seq_0003_082
+scrdef scr_seq_0003_083
+scrdef scr_seq_0003_084
+scrdef scr_seq_0003_085
+scrdef scr_seq_0003_086
+scrdef scr_seq_0003_087
+scrdef scr_seq_0003_088
+scrdef scr_seq_0003_089
+scrdef scr_seq_0003_090
+scrdef scr_seq_0003_091
+scrdef scr_seq_0003_092
+scrdef scr_seq_0003_093_utility
+scrdef scr_seq_0003_094_repel
 scrdef_end
 
 scr_seq_0003_002:
@@ -191,7 +224,7 @@ _0273:
     wait_fade
     closemsg
     scrcmd_436
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     bufferpartymonnick 0, VAR_SPECIAL_x8009
@@ -229,7 +262,7 @@ _02F7:
     wait_fade
     closemsg
     scrcmd_436
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     bufferpartymonnick 0, VAR_SPECIAL_x8009
@@ -273,7 +306,7 @@ _0395:
     wait_fade
     closemsg
     scrcmd_436
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     bufferpartymonnick 0, VAR_SPECIAL_x8009
@@ -324,7 +357,7 @@ _0445:
     setvar VAR_SPECIAL_x8004, 1
     goto _01AA
 
-.align 4
+.balign 4
 
 _0454:
     step 100, 1
@@ -347,7 +380,7 @@ scr_seq_0003_069:
     play_fanfare SEQ_ME_ASA
     wait_fanfare
     heal_party
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     endstd
@@ -661,14 +694,14 @@ _085F:
 
 _0892:
     buffer_players_name 0
-    buffer_item_name 1, VAR_SPECIAL_x8004
+    buffer_item_name_indef 1, VAR_SPECIAL_x8004
     npc_msg 28
     goto _08C9
 
 _08A3:
     compare VAR_SPECIAL_x8005, 1
     goto_if_gt _08BB
-    buffer_item_name 0, VAR_SPECIAL_x8004
+    buffer_item_name_indef 0, VAR_SPECIAL_x8004
     goto _08C0
 
 _08BB:
@@ -843,35 +876,35 @@ _0BA2:
     closemsg
     call _0E16
     scrcmd_158 0
-    scrcmd_150
+    restore_overworld
     goto _0C01
 
 _0BB5:
     closemsg
     call _0E16
     scrcmd_158 1
-    scrcmd_150
+    restore_overworld
     goto _0C01
 
 _0BC8:
     closemsg
     call _0E16
     scrcmd_158 2
-    scrcmd_150
+    restore_overworld
     goto _0C01
 
 _0BDB:
     closemsg
     call _0E16
     scrcmd_158 3
-    scrcmd_150
+    restore_overworld
     goto _0C01
 
 _0BEE:
     closemsg
     call _0E16
     scrcmd_158 4
-    scrcmd_150
+    restore_overworld
     goto _0C01
 
 _0C01:
@@ -891,7 +924,7 @@ _0C23:
 _0C33:
     call _0CA7
 _0C39:
-    scrcmd_616 VAR_TEMP_x4000
+    count_saved_photos VAR_TEMP_x4000
     compare VAR_TEMP_x4000, 0
     goto_if_ne _0C72
     menu_exec
@@ -912,7 +945,7 @@ _0CA7:
     menu_init_std_gmm 1, 1, 0, 1, VAR_SPECIAL_RESULT
     menu_item_add 73, 82, 0
     menu_item_add 74, 83, 1
-    scrcmd_616 VAR_TEMP_x4000
+    count_saved_photos VAR_TEMP_x4000
     compare VAR_TEMP_x4000, 0
     goto_if_ne _0CDA
     menu_item_add 75, 84, 2
@@ -930,7 +963,7 @@ _0CEC:
     goto_if_eq _0D0F
     call _0E16
     scrcmd_376
-    scrcmd_150
+    restore_overworld
     goto _0D18
 
 _0D0F:
@@ -946,7 +979,7 @@ _0D18:
     goto _0C39
 
 _0D3A:
-    scrcmd_572 VAR_SPECIAL_RESULT
+    get_unique_seals_quantity VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _0D5B
     closemsg
@@ -969,8 +1002,8 @@ _0D64:
 _0D86:
     closemsg
     call _0E16
-    scrcmd_617
-    scrcmd_150
+    open_photo_album
+    restore_overworld
     goto _0D98
 
 _0D98:
@@ -989,7 +1022,7 @@ _0DBA:
     goto_if_eq _0DE7
     call _0E16
     scrcmd_164
-    scrcmd_150
+    restore_overworld
     call _0E02
     goto _0A2E
 
@@ -1179,7 +1212,7 @@ _104A:
     setvar VAR_SPECIAL_x8007, 3
     return
 
-.align 4
+.balign 4
 
 _1054:
     step 0, 1
@@ -1206,7 +1239,7 @@ scr_seq_0003_015:
     fade_screen 6, 1, 0, RGB_BLACK
     wait_fade
     scrcmd_450
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     releaseall
@@ -1235,7 +1268,7 @@ scr_seq_0003_019:
     end
 
 scr_seq_0003_020:
-    hasitem ITEM_BIKE, 1, VAR_SPECIAL_RESULT
+    hasitem 450, 1, VAR_SPECIAL_RESULT // ITEM_BIKE
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _1163
     scrcmd_609
@@ -1337,7 +1370,7 @@ _11AE:
     setvar VAR_SPECIAL_x8000, 2
     addvar VAR_SPECIAL_x8000, VAR_SPECIAL_RESULT
     scrcmd_492 VAR_SPECIAL_x8000, VAR_SPECIAL_RESULT, VAR_SPECIAL_x8001
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     compare VAR_SPECIAL_RESULT, 0
@@ -1477,7 +1510,7 @@ _136C:
     fade_screen 6, 1, 0, RGB_BLACK
     wait_fade
     run_phone_call
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     return
@@ -1518,14 +1551,14 @@ scr_seq_0003_046:
     scrcmd_662 VAR_SPECIAL_x8005, VAR_SPECIAL_x8004, VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _1444
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     endstd
     end
 
 _1444:
-    scrcmd_150
+    restore_overworld
     fade_screen 6, 1, 1, RGB_BLACK
     wait_fade
     endstd
@@ -1718,12 +1751,12 @@ scr_seq_0003_063:
 scr_seq_0003_064:
     play_se SEQ_SE_DP_SELECT
     lockall
-    scrcmd_727 VAR_SPECIAL_x8005
+    get_follow_poke_party_index VAR_SPECIAL_x8005
     bufferpartymonnick 0, VAR_SPECIAL_x8005
     npc_msg 99
     closemsg
     scrcmd_806
-    scrcmd_727 VAR_SPECIAL_x8005
+    get_follow_poke_party_index VAR_SPECIAL_x8005
     bufferpartymonnick 0, VAR_SPECIAL_x8005
     npc_msg 100
     wait_button
@@ -1732,27 +1765,752 @@ scr_seq_0003_064:
     end
 
 scr_seq_0003_072:
-    playfanfare SEQ_SE_DP_SELECT
-	lockall 
-	fade_screen 6, 1, 0, RGB_BLACK
-	wait_fade 
-	party_select_ui 
-	getselectedpartyslot VAR_SPECIAL_x8005
-	returnscreen 
-	fade_screen 6, 1, 1, RGB_BLACK
-	wait_fade 
-	getpartypokemonid VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
-	scrcmd_466 VAR_SPECIAL_RESULT, VAR_SPECIAL_x8005
-	fade_screen 6, 1, 0, RGB_BLACK
-	wait_fade 
-	move_relearner_init VAR_SPECIAL_x8005
-	move_relearner_get_result VAR_SPECIAL_RESULT
-	returnscreen 
-	fade_screen 6, 1, 1, RGB_BLACK
-	wait_fade 
-	releaseall 
     end 
 
+scr_seq_0003_073_autobattle_testing:
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    npc_msg 120
+    closemsg
+    trainer_battle 5, 0, 0, 0
+    //setvar 0x800B, 1
+    //WildBattleSp 785 | (1 << 11), 50, 0
+    releaseall
+    end
+
+scr_seq_0003_074:
+    end
+
+scr_seq_0003_075:
+    end
+
+scr_seq_0003_076:
+    end
+
+scr_seq_0003_077:
+    end
+
+scr_seq_0003_078:
+    end
+
+scr_seq_0003_079:
+    end
+
+scr_seq_0003_080:
+    end
+
+scr_seq_0003_081:
+    end
+
+scr_seq_0003_082:
+    end
+
+scr_seq_0003_083:
+    end
+
+scr_seq_0003_084:
+    end
+
+scr_seq_0003_085:
+    end
+
+scr_seq_0003_086:
+    end
+
+scr_seq_0003_087:
+    end
+
+scr_seq_0003_088:
+    end
+
+scr_seq_0003_089:
+    end
+
+scr_seq_0003_090:
+    end
+
+scr_seq_0003_091:
+    end
+
+scr_seq_0003_092:
+    end
+
+scr_seq_0003_093_utility:
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    faceplayer
+    touchscreen_menu_hide
+    npc_msg 139 //hi
+    ListLocalText 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    AddListOption 140, 255, 0
+	AddListOption 141, 255, 1
+	AddListOption 142, 255, 2
+    AddListOption 143, 255, 3
+	AddListOption 192, 255, 4
+    AddListOption 144, 255, 5
+    ShowList
+    switch VAR_SPECIAL_RESULT
+    case 0, _forget
+    case 1, _remember
+    case 2, _maximize
+    case 3, _apply
+    case 4, _changenature
+    //case 5, _exit
+    goto _exit
+
+_changenature:
+    npc_msg 193 //I can change
+    CheckItem ITEM_HEART_SCALE, 3, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _needmoreheartsclaes
+    npc_msg 194 //Which pok
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    party_select_ui
+    GetSelectedPartySlot VAR_SPECIAL_x8005
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _exit
+    GetPartyPokemonID VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _wontworkegg
+    //TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 195 //Which nature
+    ListLocalText 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    AddListOption 196, 255, 20
+	AddListOption 197, 255, 21
+	AddListOption 198, 255, 22
+    AddListOption 199, 255, 23
+	AddListOption 200, 255, 24
+	AddListOption 201, 255, 25
+    AddListOption 202, 255, 26
+    AddListOption 203, 255, 27
+    AddListOption 204, 255, 28
+    AddListOption 205, 255, 29
+    AddListOption 206, 255, 30
+    AddListOption 207, 255, 31
+    AddListOption 208, 255, 32
+    AddListOption 209, 255, 33
+    AddListOption 210, 255, 34
+    AddListOption 211, 255, 35
+    AddListOption 212, 255, 36
+    AddListOption 213, 255, 37
+    AddListOption 214, 255, 38
+    AddListOption 215, 255, 39
+    AddListOption 216, 255, 40
+    AddListOption 217, 255, 41
+    AddListOption 218, 255, 42
+    AddListOption 219, 255, 43
+    AddListOption 220, 255, 44
+    AddListOption 144, 255, 0
+    ShowList
+    switch VAR_SPECIAL_RESULT
+    case 20, _nature20
+    case 21, _nature21
+    case 22, _nature22
+    case 23, _nature23
+    case 24, _nature24
+    case 25, _nature25
+    case 26, _nature26
+    case 27, _nature27
+    case 28, _nature28
+    case 29, _nature29
+    case 30, _nature30
+    case 31, _nature31
+    case 32, _nature32
+    case 33, _nature33
+    case 34, _nature34
+    case 35, _nature35
+    case 36, _nature36
+    case 37, _nature37
+    case 38, _nature38
+    case 39, _nature39
+    case 40, _nature40
+    case 41, _nature41
+    case 42, _nature42
+    case 43, _nature43
+    case 44, _nature44
+    goto _exit
+
+ _nature20:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 221 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature21:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 222 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature22:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 223 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature23:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 224 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature24:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 225 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature25:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 226 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature26:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 227 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature27:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 228 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature28:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 229 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature29:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 230 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature30:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 231//sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature31:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 232 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature32:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 233 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature33:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 234 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature34:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 235 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature35:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 236 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature36:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 237 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature37:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 238 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature38:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 239 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature39:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 240 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature40:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 241 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature41:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 242 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature42:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 243 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature43:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 244 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+_nature44:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 245 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 246 //done nature
+    goto _takescale3
+
+ _takescale3:   
+    TakeItem ITEM_HEART_SCALE, 3, 0x800C
+	buffer_players_name 0
+	npc_msg 247
+    goto _exit
+
+_apply:
+    npc_msg 181 //Which status
+    ListLocalText 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    AddListOption 182, 255, 11
+	AddListOption 183, 255, 12
+	AddListOption 184, 255, 13
+    AddListOption 185, 255, 14
+	AddListOption 186, 255, 15
+    AddListOption 144, 255, 0
+    ShowList
+    switch VAR_SPECIAL_RESULT
+    case 11, _status
+    case 12, _status
+    case 13, _status
+    case 14, _status
+    case 15, _status
+    //case 5, _exit
+    goto _exit
+
+_status:
+    npc_msg 187 //status to which?
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    party_select_ui
+    GetSelectedPartySlot VAR_SPECIAL_x8005
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _exit
+    GetPartyPokemonID VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _wontworkegg
+    SetMonProperty
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _statusnotpossible
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 188 //status done
+    goto _exit
+
+_statusnotpossible:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 189 //status not possible
+    goto _exit
+
+_maximize:
+    npc_msg 160 //I can maximize
+    CheckItem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _needmoreheartsclaes
+    npc_msg 161 //Which pok
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    party_select_ui
+    GetSelectedPartySlot VAR_SPECIAL_x8005
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _exit
+    GetPartyPokemonID VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _wontworkegg
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 162 //Which IV
+    ListLocalText 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    AddListOption 163, 255, 0
+	AddListOption 164, 255, 1
+	AddListOption 165, 255, 2
+    AddListOption 166, 255, 3
+	AddListOption 167, 255, 4
+    AddListOption 168, 255, 5
+    AddListOption 144, 255, 6
+    ShowList
+    switch VAR_SPECIAL_RESULT
+    case 0, _maxHP
+    case 1, _maxAtk
+    case 2, _maxDef
+    case 3, _maxSpeed
+    case 4, _maxSpAtk
+    case 5, _maxSpDef
+    goto _exit
+
+
+_maxHP:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 169 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 175 //done Hp
+    goto _takescale
+
+_maxAtk:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 170 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 176 //done att
+    goto _takescale
+
+_maxDef:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 171 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 177 //done def
+    goto _takescale
+
+_maxSpeed:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 172 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 178 //done speed
+    goto _takescale
+
+_maxSpAtk:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 179 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 175 //done spatt
+    goto _takescale
+
+_maxSpDef:
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 174 //sure?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    SetMonProperty
+    TextPartyPokemon 0, VAR_SPECIAL_x8005
+    npc_msg 180 //done spdef
+    goto _takescale
+
+_remember:
+    npc_msg 154 //I can remember
+    CheckItem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _needmoreheartsclaes
+    npc_msg 156 //which mon
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    party_select_ui
+    GetSelectedPartySlot VAR_SPECIAL_x8005
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _exit
+    GetPartyPokemonID VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _wontworkegg
+    scrcmd_466 VAR_SPECIAL_RESULT, VAR_SPECIAL_x8005
+    compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _nomoves
+    npc_msg 157
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    RememberMoveScreen VAR_SPECIAL_x8005
+	move_relearner_get_result VAR_SPECIAL_RESULT
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_RESULT, 255
+    goto_if_eq _exit
+    goto _takescale
+
+_takescale:
+    TakeItem ITEM_HEART_SCALE, 1, 0x800C
+	buffer_players_name 0
+	npc_msg 159
+    goto _exit
+
+_needmoreheartsclaes:
+    npc_msg 155
+    goto _exit
+
+_nomoves:
+    npc_msg 158
+    goto _exit
+
+_forget:
+    npc_msg 146 //I can forget
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _exit
+    npc_msg 147 //which mon
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    party_select_ui
+    GetSelectedPartySlot VAR_SPECIAL_x8002
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8002, 255
+    goto_if_eq _exit
+    GetPartyPokemonID VAR_SPECIAL_x8002, VAR_SPECIAL_x8001
+    compare VAR_SPECIAL_x8001, 0
+    goto_if_eq _wontworkegg
+    CountPokemonMoves VAR_SPECIAL_RESULT, VAR_SPECIAL_x8002
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _wontworklastmove
+    npc_msg 150 //which move
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    closemsg
+    scrcmd_394 VAR_SPECIAL_x8002
+	scrcmd_395 VAR_SPECIAL_x8001
+    ReturnScreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8001, 255
+    goto_if_eq _exit
+    TextPartyPokemonMove 0, 0x8002, 0x8001
+	npc_msg 151 //this move?
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _delete
+    goto _exit
+
+_delete:
+    DeleteMove 0x8002, 0x8001
+    play_se 1192
+    wait_se 1192
+    npc_msg 152
+    goto _exit
+
+_wontworkegg:
+    npc_msg 148
+    goto _exit
+
+_wontworklastmove:
+    npc_msg 149
+    goto _exit
+
+_exit:
+    npc_msg 145 //Goodbye
+    closemsg
+    touchscreen_menu_show
+    releaseall
+    endstd
+    end
+
+scr_seq_0003_094_repel:
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    RunNewCommand 1, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _repelIsOn
+    npc_msg 250
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _endToggleRepel
+    RunNewCommand 2, VAR_SPECIAL_RESULT
+    PlayFanfare SEQ_SE_DP_CARD2
+    buffer_players_name 0
+    npc_msg 251
+    goto _endToggleRepel
+
+_repelIsOn:
+    npc_msg 248
+    yesno VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _endToggleRepel
+    RunNewCommand 2, VAR_SPECIAL_RESULT
+    PlayFanfare SEQ_SE_DP_CARD2
+    buffer_players_name 0
+    npc_msg 249
+    goto _endToggleRepel
+
+_endToggleRepel:
+    closemsg
+    releaseall
+    end
 
 
 .close
