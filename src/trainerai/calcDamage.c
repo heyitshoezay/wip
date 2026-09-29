@@ -16,7 +16,7 @@
 
 //#define DEBUG_DAMAGE_CALC_AI 1
 
-int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond UNUSED, u32 field_cond, u16 pow, u8 type UNUSED, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
+int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond UNUSED, u16 pow, u8 type UNUSED, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
     u8 i = 0;
     u32 p;
@@ -498,9 +498,9 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
 
     // handle Analytic
     if (attacker->ability == ABILITY_ANALYTIC && move.effect != MOVE_EFFECT_HIT_IN_3_TURNS) {
-        int k = 0;
+        u8 k = 0;
         for (k = 0; k < 4; k++) {
-            if (attacker == k || sp->battlemon[k].hp == 0) {
+            if (attackerSlot == k || sp->battlemon[k].hp == 0) {
                 continue;
             }
             if (attacker->speed > sp->effectiveSpeed[k]) {
@@ -1174,7 +1174,7 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
     return baseDamage;
 }
 
-int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u32 field_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
+int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
 
     u8 movetype;
@@ -1341,7 +1341,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         }
      }
         
-    damage = BattleAI_CalcBaseDamage(bw, sp, moveno, side_cond, field_cond, pow, movetype, critical, attackerSlot, defenderSlot, attacker, defender);
+    damage = BattleAI_CalcBaseDamage(bw, sp, moveno, side_cond, pow, movetype, critical, attackerSlot, defenderSlot, attacker, defender);
 
     //=====Step 6. General Damage Modifiers=====
 
@@ -1820,7 +1820,7 @@ int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno,
             if (moveno == MOVE_TRIPLE_AXEL) {
                 basePower = 20;
             }
-            damages->damageRoll += BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, field_cond, (i+1) * basePower, type, critical, attackerSlot, defenderSlot, &damagesLocal, attacker, defender);
+            damages->damageRoll += BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, (i+1) * basePower, type, critical, attackerSlot, defenderSlot, &damagesLocal, attacker, defender);
             for (int u = 0; u < 16; u++) {
                 damages->damageRange[u] += damagesLocal.damageRange[u];
             }
@@ -1831,6 +1831,6 @@ int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno,
     }
     else
     {
-        return BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, field_cond, pow, type, critical, attackerSlot, defenderSlot, damages, attacker, defender);
+        return BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, pow, type, critical, attackerSlot, defenderSlot, damages, attacker, defender);
     }
 }

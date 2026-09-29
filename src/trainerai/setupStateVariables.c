@@ -178,6 +178,13 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
         ai->defenderImmuneToStatDrop = TRUE;
     }
 
+    ai->defenderImmuneToFlinch = FALSE;
+    if (ai->defenderMon.item == ITEM_COVERT_CLOAK 
+        || (!ai->attackerMon.hasMoldBreaker && (ai->defenderMon.ability == ABILITY_SHIELD_DUST || ai->defenderMon.ability == ABILITY_INNER_FOCUS)))
+    {
+        ai->defenderImmuneToFlinch = TRUE;
+    }
+
     ai->partySizeAttacker = Battle_GetClientPartySize(bsys, attacker);
     ai->livingMembersAttacker = 0;
     ai->partySizeDefender = Battle_GetClientPartySize(bsys, ai->defender);

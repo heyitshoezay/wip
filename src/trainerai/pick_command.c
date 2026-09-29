@@ -15,6 +15,7 @@ u8 LONG_CALL FindTargets(struct BattleStruct *ctx, u8 attacker, int targets[4], 
 u8 LONG_CALL ChooseMove(struct BattleSystem *bsys, int target, int moveScores[4][4], int highestScoredMove);
 BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defender, struct AIContext *ai);
 void LONG_CALL CalcTurnStateDamagesAndScores(struct BattleSystem *bsys, u32 attacker, u32 defender, struct AIContext *aiOp1, struct AIContext *aiOp2, struct AI_turnState *turnState);
+int LONG_CALL OverrideWrongTargetForMove(int move, u8 target, int attacker);
 
 int TrainerAI_PickCommand(struct BattleSystem *bsys, int attacker)
 {
@@ -137,23 +138,32 @@ int TrainerAI_PickCommand(struct BattleSystem *bsys, int attacker)
         }
     }
 
-    ctx->aiTurnScoring.targets[attacker] = target;
     ctx->aiTurnScoring.choice[attacker] = result;
-    if (ctx->battlemon[attacker].move[result] == MOVE_MILK_DRINK && target != BATTLER_ALLY(attacker)) {
-        ctx->aiTurnScoring.targets[attacker] = attacker;
-    }
+    ctx->aiTurnScoring.targets[attacker] = OverrideWrongTargetForMove(ctx->battlemon[attacker].move[result], target, attacker);
 
     if (ai1->isDoubleBattle && ai1->isAllyAlive && (attacker == 1 || attacker == 3)) {
-        ctx->aiTurnScoring.targets[ally] = allyTarget;
         ctx->aiTurnScoring.choice[ally] = resultAlly;
-        ctx->aiTurnScoring.calcState = CalcedEnemy_1_and_3;
+        ctx->aiTurnScoring.targets[ally] = OverrideWrongTargetForMove(ctx->battlemon[ally].move[resultAlly], allyTarget, ally);
 
-        if (ctx->battlemon[ally].move[resultAlly] == MOVE_MILK_DRINK && allyTarget != BATTLER_ALLY(ally)) {
-            ctx->aiTurnScoring.targets[ally] = ally;
-        }
+        ctx->aiTurnScoring.calcState = CalcedEnemy_1_and_3;
     }
 
     return PLAYER_INPUT_FIGHT;
+}
+
+int LONG_CALL OverrideWrongTargetForMove(int move, u8 target, int attacker)
+{
+    switch (move) {
+    case MOVE_MILK_DRINK:
+    case MOVE_ACUPRESSURE:
+        if (target != BATTLER_ALLY(attacker)) {
+            return attacker;
+        }
+        break;
+    default:
+        break;
+    }
+    return target;
 }
 
 u8 LONG_CALL FindTargets(struct BattleStruct *ctx, u8 attacker, int targets[4], int moveScores[4][4], int damages[4][4], int highestScoredMove)

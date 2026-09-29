@@ -6786,6 +6786,14 @@ RunNewCommand NEW_COMMAND_QUEUE_NEW_REPEL, 0x800C
 .hword \unk
 .endm
 
+.macro RunNewUtility,slot,unk
+DummyTextTreasure \slot, \unk
+.endm
+
+.macro SetMonProperty
+RunNewUtility 0, 0x800C
+.endm
+
 .macro TextMapName,slot,location
 .hword 210
 .byte \slot

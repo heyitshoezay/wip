@@ -662,7 +662,7 @@ int LONG_CALL DamagingMoveScoring(struct BattleSystem *bsys, u32 attacker, int i
     case MOVE_VOLT_SWITCH:
         if (ai->effectivenessOnPlayer[i] > TYPE_MUL_NO_EFFECT) {
             if (!isMoveHighestDamage && ai->livingMembersAttacker > (1+ai->isDoubleBattle)) {
-                moveScore += 6;
+                moveScore += 4;
             }
             if (ai->shouldSwitch) {
                 moveScore += 3;
@@ -697,12 +697,8 @@ int LONG_CALL DamagingMoveScoring(struct BattleSystem *bsys, u32 attacker, int i
         break;
     }
     case MOVE_FAKE_OUT: {
-        if (ai->attackerTurnsOnField == 0 && ai->defenderMon.item != ITEM_COVERT_CLOAK) {
-            if (ai->attackerMon.hasMoldBreaker || (ai->defenderMon.ability != ABILITY_SHIELD_DUST && ai->defenderMon.ability != ABILITY_INNER_FOCUS)) {
+        if (ai->attackerTurnsOnField == 0 && !ai->defenderImmuneToFlinch) {
                 moveScore += 9;
-            } else {
-                    moveScore -= IMPOSSIBLE_MOVE;
-            }
         } else {
             moveScore -= IMPOSSIBLE_MOVE;
         }
@@ -1361,7 +1357,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
     case MOVE_EFFECT_PASS_STATS_AND_STATUS:
         if (ai->livingMembersAttacker > (1 + ai->isDoubleBattle)) {
             if ((ai->attackerPositiveStatChangesSum >= 1) || ctx->battlemon[ai->attacker].condition2 & STATUS2_SUBSTITUTE) {
-                moveScore += 14;
+                moveScore += 9;
             }
         }
         if (ai->livingMembersAttacker == 1) {
@@ -1404,6 +1400,12 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
             moveScore -= NEVER_USE_MOVE_20;
         } else {
             moveScore += 6;
+            
+            // ---> Added Prankster Check <---
+            if (ai->attackerMon.ability == ABILITY_PRANKSTER) {
+                moveScore += 3;
+            }
+            
             if (ai->defenderHasAtleastOnePhysicalMove) {
                 if (ai->attackerMon.item == ITEM_LIGHT_CLAY) {
                     moveScore += 1;
@@ -1419,6 +1421,12 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
             moveScore -= NEVER_USE_MOVE_20;
         } else {
             moveScore += 6;
+            
+            // ---> Added Prankster Check <---
+            if (ai->attackerMon.ability == ABILITY_PRANKSTER) {
+                moveScore += 3;
+            }
+            
             if (ai->defenderHasAtleastOneSpecialMove) {
                 if (ai->attackerMon.item == ITEM_LIGHT_CLAY) {
                     moveScore += 1;
@@ -1504,7 +1512,10 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
         FALLTHROUGH;
     case MOVE_EFFECT_STATUS_PARALYZE:
         if (ai->playerMovesFirst || // and slower after para
-            (BattlerKnowsMove(bsys, attacker, MOVE_HEX, ai) == TRUE) || (BattlerKnowsFlinchingMove(bsys, attacker, ai) == TRUE) || ctx->battlemon[ai->defender].condition2 & STATUS2_ATTRACT || ctx->battlemon[ai->defender].condition2 & STATUS2_CONFUSION) {
+            (BattlerKnowsMove(bsys, attacker, MOVE_HEX, ai) == TRUE) 
+            || (BattlerKnowsFlinchingMove(bsys, attacker, ai) == TRUE && !ai->defenderImmuneToFlinch) 
+            || ctx->battlemon[ai->defender].condition2 & STATUS2_ATTRACT 
+            || ctx->battlemon[ai->defender].condition2 & STATUS2_CONFUSION) {
             moveScore += 8;
         } else {
             moveScore += 7;

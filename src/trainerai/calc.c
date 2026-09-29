@@ -535,11 +535,7 @@ BOOL LONG_CALL BattleAI_IsKnockOffPoweredUp(struct AI_sDamageCalc *defender)
     if (defender->item == ITEM_NONE) {
         return FALSE;
     }
-    if (defender->species == SPECIES_SLOWBRO && defender->item == ITEM_SLOWBRONITE && defender->form == 2) {
-        return TRUE;
-    } else {
-        return CanItemBeRemovedFromSpecies(defender->species, defender->item); // incorrectly does not see MAIL, but who cares?
-    }
+    return CanItemBeRemovedFromSpecies(defender->species, defender->item, defender->form);
 }
 
 int LONG_CALL BattleAI_GetDynamicMoveType(struct BattleSystem *bsys, struct BattleStruct *ctx, struct AI_sDamageCalc *attacker, int moveNo)

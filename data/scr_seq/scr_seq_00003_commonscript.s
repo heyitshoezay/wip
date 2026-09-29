@@ -2513,4 +2513,4 @@ _endToggleRepel:
     end
 
 
-.close
+.balign 4

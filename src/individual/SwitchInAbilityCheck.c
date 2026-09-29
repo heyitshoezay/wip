@@ -95,8 +95,9 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                 {
                                 case 0:
                                         scriptnum = BATTLE_SUBSCRIPT_CREATE_TERRAIN_OVERLAY;
-                                            UpdateTerrainOverlay(sp, client_no, MISTY_TERRAIN);
-                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        UpdateTerrainOverlay(sp, client_no, MISTY_TERRAIN);
+                                        sp->terrainOverlay.numberOfTurnsLeft = 0; // <--- Forces permanent
+                                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                         break;
                                     break; // Misty terrain
                                 case 1: 
@@ -111,29 +112,28 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                     scriptnum = BATTLE_SUBSCRIPT_OVERWORLD_HAIL;
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Snow
-                                /*case 4:
-                                    scriptnum = SUB_SEQ_APPLY_TAILWIND; // still need to figure out how tailwind should be applied
-                                    sp->calc_work = sp->current_move_index;
-                                    sp->current_move_index = MOVE_TAILWIND;
+                               case 4:
+                                    scriptnum = BATTLE_SUBSCRIPT_ENEMY_TAILWIND; 
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                    break;*/
+                                    break;
                                 case 5:
                                         scriptnum = BATTLE_SUBSCRIPT_CREATE_TERRAIN_OVERLAY;
-                                            UpdateTerrainOverlay(sp, client_no, GRASSY_TERRAIN);
-                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                        break;
-                                    break; // Grassy terrain
+                                        UpdateTerrainOverlay(sp, client_no, GRASSY_TERRAIN);
+                                        sp->terrainOverlay.numberOfTurnsLeft = 0; // <--- Forces permanent
+                                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break; // Grassy terrain
                                 case 6:
                                         scriptnum = BATTLE_SUBSCRIPT_CREATE_TERRAIN_OVERLAY;
-                                            UpdateTerrainOverlay(sp, client_no, PSYCHIC_TERRAIN);
-                                         ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                        break;
-                                    break; // Psychic terrain
+                                        UpdateTerrainOverlay(sp, client_no, PSYCHIC_TERRAIN);
+                                        sp->terrainOverlay.numberOfTurnsLeft = 0; // <--- Forces permanent
+                                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break; // Psychic terrain
                                 case 7: 
-                                    scriptnum = BATTLE_SUBSCRIPT_CREATE_TERRAIN_OVERLAY;
+                                        scriptnum = BATTLE_SUBSCRIPT_CREATE_TERRAIN_OVERLAY;
                                         UpdateTerrainOverlay(sp, client_no, ELECTRIC_TERRAIN);
-                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
-                                    break;
+                                        sp->terrainOverlay.numberOfTurnsLeft = 0; // <--- Forces permanent
+                                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                        break; // Electric Terrain
                                 case 8:
                                     scriptnum = BATTLE_SUBSCRIPT_OVERWORLD_SAND;
                                 ret = SWITCH_IN_CHECK_MOVE_SCRIPT;

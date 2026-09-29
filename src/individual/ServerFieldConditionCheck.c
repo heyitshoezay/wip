@@ -147,62 +147,66 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp)
         case ENDTURN_WEATHER_SUBSIDING: {
 #ifdef DEBUG_ENDTURN_LOGIC
             debug_printf("In ENDTURN_WEATHER_SUBSIDING\n");
-
 #endif
 
             if (sp->field_condition & FIELD_CONDITION_RAIN) {
-                sp->fcc.weather_count = 5; // infinite weather
-                if (--sp->fcc.weather_count == 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_RAINING_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    sp->temp_work = 19;
-                    ret = 1;
+                if (sp->fcc.weather_count > 0) {
+                    if (--sp->fcc.weather_count == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_RAINING_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        sp->temp_work = 19;
+                        ret = 1;
+                    }
                 }
             }
 
             if (sp->field_condition & FIELD_CONDITION_SANDSTORM) {
-                sp->fcc.weather_count = 5; // infinite weather
-                if (--sp->fcc.weather_count == 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SANDSTORM_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    sp->temp_work = 21;
-                    ret = 1;
+                if (sp->fcc.weather_count > 0) {
+                    if (--sp->fcc.weather_count == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SANDSTORM_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        sp->temp_work = 21;
+                        ret = 1;
+                    }
                 }
             }
 
             if (sp->field_condition & FIELD_CONDITION_SUN) {
-                sp->fcc.weather_count = 5; // infinite weather
-                if (--sp->fcc.weather_count == 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SUNNY_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    sp->temp_work = 22;
-                    ret = 1;
+                if (sp->fcc.weather_count > 0) {
+                    if (--sp->fcc.weather_count == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SUNNY_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        sp->temp_work = 22;
+                        ret = 1;
+                    }
                 }
             }
 
             if (sp->field_condition & FIELD_CONDITION_HAIL) {
-                sp->fcc.weather_count = 5; // infinite weather
-                if (--sp->fcc.weather_count == 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_HAILING_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    sp->temp_work = 20;
-                    ret = 1;
+                if (sp->fcc.weather_count > 0) {
+                    if (--sp->fcc.weather_count == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_HAILING_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        sp->temp_work = 20;
+                        ret = 1;
+                    }
                 }
             }
 
             if (sp->field_condition & FIELD_CONDITION_SNOW_TEMP) {
-                sp->fcc.weather_count = 5; // infinite weather
-                if (--sp->fcc.weather_count == 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SNOW_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    // TODO: Reuse same animation for now
-                    sp->temp_work = 54;
-                    ret = 1;
+                if (sp->fcc.weather_count > 0) {
+                    if (--sp->fcc.weather_count == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SNOW_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        // TODO: Reuse same animation for now
+                        sp->temp_work = 54;
+                        ret = 1;
+                    }
                 }
             }
 
@@ -1569,21 +1573,24 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp)
             sp->fcc_seq_no++;
             break;
         }
-        case ENDTURN_TERRAIN_DISSIPATING: {
+case ENDTURN_TERRAIN_DISSIPATING: {
 #ifdef DEBUG_ENDTURN_LOGIC
             debug_printf("In ENDTURN_TERRAIN_DISSIPATING\n");
 
 #endif
 
             if (sp->terrainOverlay.type != TERRAIN_NONE) {
-                if (sp->terrainOverlay.numberOfTurnsLeft < TERRAIN_TURNS_INFINITE) {
-                    //sp->terrainOverlay.numberOfTurnsLeft--; //infinite Terrain
-                }
-                if (sp->terrainOverlay.numberOfTurnsLeft <= 0) {
-                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_HANDLE_TERRAIN_END);
-                    sp->next_server_seq_no = sp->server_seq_no;
-                    sp->server_seq_no = 22;
-                    ret = 1;
+                
+                // Only count down if it's a temporary terrain (timer > 0)
+                if (sp->terrainOverlay.numberOfTurnsLeft > 0) {
+                    
+                    // Subtract 1. If it hits 0, end the terrain.
+                    if (--sp->terrainOverlay.numberOfTurnsLeft == 0) {
+                        LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_HANDLE_TERRAIN_END);
+                        sp->next_server_seq_no = sp->server_seq_no;
+                        sp->server_seq_no = 22;
+                        ret = 1;
+                    }
                 }
             }
 
