@@ -113,7 +113,18 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break; // Snow
                                case 4:
+                                    // 1. Silently apply Tailwind to the Enemy (Side 1)
+                                    sp->side_condition[1] |= SIDE_STATUS_TAILWIND;
+                                    sp->tailwindCount[1] = 4;
+                                    
+                                    // 2. Trick the game into playing the animation on the enemy
+                                    sp->attack_client = 1;
+                                    sp->defence_client = 1;
+                                    sp->waza_work = MOVE_TAILWIND; // Stores the move ID for the script
+                                    
+                                    // 3. Call visual script (533)
                                     scriptnum = BATTLE_SUBSCRIPT_ENEMY_TAILWIND; 
+                                    
                                     ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
                                     break;
                                 case 5:

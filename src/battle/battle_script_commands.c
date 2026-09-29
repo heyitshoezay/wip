@@ -140,6 +140,7 @@ BOOL btl_scr_cmd_127_ActivateHealingWish(void *bsys UNUSED, struct BattleStruct 
 BOOL btl_scr_cmd_128_IsFieldCondition2On(void *bsys UNUSED, struct BattleStruct *ctx);
 BOOL btl_scr_cmd_129_SetFieldCondition2(void *bsys UNUSED, struct BattleStruct *ctx);
 BOOL btl_scr_cmd_12A_GoToIfMoveConditionFlagSet(void *bsys, struct BattleStruct *ctx);
+BOOL btl_scr_cmd_12B_ApplyEnemyTailwind(void *bsys, struct BattleStruct *ctx); // new tailwind for enemy
 BOOL BtlCmd_GoToMoveScript(struct BattleSystem *bsys, struct BattleStruct *ctx);
 BOOL BtlCmd_WeatherHPRecovery(void *bw, struct BattleStruct *sp);
 BOOL BtlCmd_CalcWeatherBallParams(void *bw, struct BattleStruct *sp);
@@ -568,9 +569,9 @@ const btl_scr_cmd_func NewBattleScriptCmdTable[] = {
     [0x128 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_128_IsFieldCondition2On,
     [0x129 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_129_SetFieldCondition2,
     [0x12A - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12A_GoToIfMoveConditionFlagSet,
-    // [BASE_ENGINE_BTL_SCR_CMDS_MAX - START_OF_NEW_BTL_SCR_CMDS + 1] = btl_scr_cmd_custom_01_your_custom_command,
+    [0x12B - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12B_ApplyEnemyTailwind, // <--- Your new command
 };
-
+    // [BASE_ENGINE_BTL_SCR_CMDS_MAX - START_OF_NEW_BTL_SCR_CMDS + 1] = btl_scr_cmd_custom_01_your_custom_command,
 // clang-format on
 
 /**
@@ -5937,6 +5938,19 @@ BOOL btl_scr_cmd_12A_GoToIfMoveConditionFlagSet(void *bsys, struct BattleStruct 
     default:
         break;
     }
+
+    return FALSE;
+}
+BOOL btl_scr_cmd_12B_ApplyEnemyTailwind(void *bsys UNUSED, struct BattleStruct *ctx)
+{
+    // Tells the game to move to the next line in your .s script
+    IncrementBattleScriptPtr(ctx, 1);
+
+    // Silently apply Tailwind ONLY to the Enemy (Side 1)
+    ctx->side_condition[1] |= SIDE_STATUS_TAILWIND;
+    
+    // Set the timer (the end-turn logic will freeze it)
+    ctx->tailwindCount[1] = 4;
 
     return FALSE;
 }
