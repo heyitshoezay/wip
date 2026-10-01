@@ -33,6 +33,9 @@ typedef struct TutorMove {
     u8 tutorNpc;
 } TutorMove;
 
+#define MOVE_TUTOR_NPC_EGG 4
+#define EGG_TUTOR_COST     0
+#define EGG_SLOT { MOVE_NONE, EGG_TUTOR_COST, MOVE_TUTOR_NPC_EGG }
 TutorMove sTutorMoves[] = {
     { MOVE_DIVE, 40, MOVE_TUTOR_NPC_FRONTIER_TOP_LEFT },
     { MOVE_MUD_SLAP, 32, MOVE_TUTOR_NPC_FRONTIER_TOP_RIGHT },
@@ -86,10 +89,53 @@ TutorMove sTutorMoves[] = {
     { MOVE_BLOCK, 32, MOVE_TUTOR_NPC_FRONTIER_BOTTOM_RIGHT },
     { MOVE_BUG_BITE, 32, MOVE_TUTOR_NPC_FRONTIER_TOP_LEFT },
     { MOVE_HEADBUTT, 0, MOVE_TUTOR_NPC_HEADBUTT },
+    EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT,
+    EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT,
+    EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT, EGG_SLOT,
 };
+static u16 GetLearnableEggTutorMoves(struct PartyPokemon *mon, u8 dest[])
+{
+    u16 eggMoves[MAX_EGG_MOVES];
+    u8 eggCount = LoadEggMoves(mon, eggMoves);
+
+    u16 current[MAX_MON_MOVES];
+    for (int i = 0; i < MAX_MON_MOVES; i++) {
+        current[i] = GetMonData(mon, MON_DATA_MOVE1 + i, NULL);
+    }
+
+    u32 first = 0;
+    while (first < NELEMS(sTutorMoves) && sTutorMoves[first].tutorNpc != MOVE_TUTOR_NPC_EGG) {
+        first++;
+    }
+
+    u16 num = 0;
+    for (u8 e = 0; e < eggCount; e++) {
+        BOOL known = FALSE;
+        for (int i = 0; i < MAX_MON_MOVES; i++) {
+            if (current[i] == eggMoves[e]) {
+                known = TRUE;
+            }
+        }
+        if (known) {
+            continue;
+        }
+        if (first + num >= NELEMS(sTutorMoves)) {
+            break;
+        }
+        sTutorMoves[first + num].move = eggMoves[e];
+        if (dest != NULL) {
+            dest[num] = first + num;
+        }
+        num++;
+    }
+    return num;
+}
 
 u16 LONG_CALL GetLearnableTutorMoves(struct PartyPokemon *mon, u32 moveTutorNpc, u8 dest[])
 {
+        if (moveTutorNpc == MOVE_TUTOR_NPC_EGG) {
+        return GetLearnableEggTutorMoves(mon, dest);
+    }
     int i;
     u16 currentMoves[MAX_MON_MOVES];
     for (i = 0; i < MAX_MON_MOVES; i++) {
@@ -104,6 +150,9 @@ u16 LONG_CALL GetLearnableTutorMoves(struct PartyPokemon *mon, u32 moveTutorNpc,
 
     u16 numLearnableMoves = 0;
     for (u32 j = 0; j < NELEMS(sTutorMoves); j++) {
+                if (sTutorMoves[j].tutorNpc == MOVE_TUTOR_NPC_EGG) {
+            break;
+        }
         BOOL canLearnMove = (tutorLearnset[j / 32] >> (j % 32)) & 1;
         if (canLearnMove && moveTutorNpc == sTutorMoves[j].tutorNpc) {
             for (i = 0; i < MAX_MON_MOVES; i++) {
