@@ -2688,11 +2688,6 @@ BOOL LONG_CALL BattleSystem_CheckMoveEffect(void *bw, struct BattleStruct *sp, i
         return TRUE;
     }
 
-    if (!(sp->server_status_flag & BATTLE_STATUS_FLAT_HIT_RATE) //TODO: Is this flag a debug flag to ignore hit rates..?
-        && ((sp->battlemon[battlerIdTarget].effect_of_moves & MOVE_EFFECT_FLAG_LOCK_ON
-                && sp->battlemon[battlerIdTarget].moveeffect.battlerIdLockOn == battlerIdAttacker)
-            || GetBattlerAbility(sp, battlerIdAttacker) == ABILITY_NO_GUARD
-            || GetBattlerAbility(sp, battlerIdTarget) == ABILITY_NO_GUARD)) {
     BOOL lockOnOrNoGuard = (GetBattlerAbility(sp, battlerIdAttacker) == ABILITY_NO_GUARD) || (GetBattlerAbility(sp, battlerIdTarget) == ABILITY_NO_GUARD)
         || (sp->battlemon[battlerIdTarget].effect_of_moves & MOVE_EFFECT_FLAG_LOCK_ON
             && sp->battlemon[battlerIdTarget].moveeffect.battlerIdLockOn == battlerIdAttacker);
