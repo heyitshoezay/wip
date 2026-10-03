@@ -1,6 +1,7 @@
 #include "../include/battle.h"
 #include "../include/constants/ability.h"
 #include "../include/constants/file.h"
+#include "../include/constants/species.h"
 #include "../include/pokemon.h"
 #include "../include/repel.h"
 #include "../include/script.h"
@@ -9,6 +10,7 @@
 #define SCRIPT_NEW_CMD_REPEL_USE    0
 #define SCRIPT_NEW_CMD_STATUS_REPEL 1
 #define SCRIPT_NEW_CMD_TOGGLE_REPEL 2
+#define SCRIPT_NEW_CMD_PARTY_HAS_FAIRY 3
 
 #define SCRIPT_NEW_CMD_MAX 256
 
@@ -52,6 +54,25 @@ BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
         }
 
         break;
+    }
+    case SCRIPT_NEW_CMD_PARTY_HAS_FAIRY: {
+        struct Party *party = SaveData_GetPlayerPartyPtr(ctx->fsys->savedata);
+        u16 hasFairy = 0;
+        for (int i = 0; i < party->count; i++) {
+            struct PartyPokemon *pp = Party_GetMonByIndex(party, i);
+            u16 species = GetMonData(pp, MON_DATA_SPECIES_OR_EGG, NULL);
+            if (species == SPECIES_NONE || species == SPECIES_EGG) {
+                continue;
+            }
+            int type1 = GetMonData(pp, MON_DATA_TYPE_1, NULL);
+            int type2 = GetMonData(pp, MON_DATA_TYPE_2, NULL);
+            if (type1 == TYPE_FAIRY || type2 == TYPE_FAIRY) {
+                hasFairy = 1;
+                break;
+            }
+        }
+        SetScriptVar(0x800C, hasFairy);
+        return FALSE;
     }
     default:
         break;

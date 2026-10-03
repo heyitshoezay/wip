@@ -12,6 +12,18 @@ bl 0x0221BE20
 
 .close
 
+// restore hg-engine rocks!
+.if (fileexists("base/overlay/overlay_0129.bin"))
+    .open "base/overlay/overlay_0129.bin", 0x023D8000
+.else
+    .create "base/overlay/overlay_0129.bin", 0x023D8000
+.endif
+
+.orga 0
+
+.align 16
+.ascii "hg-engine rocks!" // interesting.
+.align 16
 
 /*
 .open "base/overlay/overlay_0010.bin", 0x0221BE20

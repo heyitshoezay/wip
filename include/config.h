@@ -154,6 +154,10 @@
 // comment out the line below to revert back to Gen 8- behavior
 #define RESTORE_ITEMS_AT_BATTLE_END
 
+// RESTORE_BERRIES_AT_BATTLE_END also restores held berries that were eaten during battle, so berries are never lost for good
+// (a berry still works once per battle per Pokemon). Requires RESTORE_ITEMS_AT_BATTLE_END. Comment out to make berries single-use again
+#define RESTORE_BERRIES_AT_BATTLE_END
+
 // AI_CAN_GRAB_ITEMS allows to use Trick, Switcheroo, (Thief still todo) on the Player and actually grab items. This can result in lost items.
 #define AI_CAN_GRAB_ITEMS
 

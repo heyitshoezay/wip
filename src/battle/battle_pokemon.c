@@ -1099,9 +1099,13 @@ void BattleEndRevertFormChange(struct BattleSystem *bw)
     for (i = 0; i < BattleWorkPokeCountGet(bw, 0); i++) {
         u32 battleItem = newBS.itemsToRestore[i];
         pp = BattleWorkPokemonParamGet(bw, 0, i);
+    #ifndef RESTORE_BERRIES_AT_BATTLE_END
         if (!IS_ITEM_BERRY(newBS.itemsToRestore[i])) {
             SetMonData(pp, MON_DATA_HELD_ITEM, &battleItem);
         }
+#else
+        SetMonData(pp, MON_DATA_HELD_ITEM, &battleItem);
+#endif // RESTORE_BERRIES_AT_BATTLE_END
     }
 
     // set to zero after the items have already been restored to maybe prevent observed byte loss
