@@ -1565,6 +1565,16 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         }
     }
 
+    // frostbite (STATUS_FREEZE) halves special damage
+    if (movesplit == SPLIT_SPECIAL) {
+        if (attacker->condition & STATUS_FREEZE) {
+            damages->damageRoll = QMul_RoundDown(damages->damageRoll, UQ412__0_5);
+            for (int u = 0; u < 16; u++) {
+                damages->damageRange[u] = QMul_RoundDown(damages->damageRange[u], UQ412__0_5);
+            }
+        }
+    }
+
 #ifdef DEBUG_DAMAGE_CALC_AI
     debug_printf("\n=================\n");
     debug_printf("[AI_Damage] 6.8 Burn Modifier\n");

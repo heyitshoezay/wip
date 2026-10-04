@@ -18,7 +18,7 @@ A quite rare Poké Ball made to\ncommemorate a special occasion of\nsome sort.
 A spray-type medicine for treating\nwounds. It can be used to restore\n20 HP to a Pokémon.
 A spray-type medicine for poisoning.\nIt can be used once to lift the effects\nof being poisoned from a Pokémon.
 A spray-type medicine for treating\nburns. It can be used to cure a\nPokémon suffering from a burn.
-A spray-type medicine for treating\nfreezing. It can be used to thaw out\na Pokémon that has been frozen solid.
+A spray-type medicine for treating\nfrostbite. It can be used to heal\na Pokémon that has been frostbitten.
 A spray-type medicine to wake the\nsleeping. It can be used to rouse a\nPokémon from the clutches of sleep.
 A spray-type medicine for treating\nparalysis. It can be used to free a\nPokémon that has been paralyzed.
 A medicine that can be used to fully\nrestore the max HP of a Pokémon and\ncure any status conditions it may have.
@@ -151,7 +151,7 @@ If a Pokémon holds one of these Berries,\nit will be able to free itself from\n
 If a Pokémon holds one of these Berries,\nit will be able to wake itself from sleep.
 If a Pokémon holds one of these Berries,\nit will be able to lift the effects of\nbeing poisoned from itself.
 If a Pokémon holds one of these Berries,\nit will be able to cure itself of a burn.
-If a Pokémon holds one of these Berries,\nit will be able to thaw itself after being\n frozen.
+If a Pokémon holds one of these Berries,\nit will be able to heal itself after being\n frostbitten.
 If a Pokémon holds one of these Berries,\nit will be able to restore 10 PP to a\nmove.
 If a Pokémon holds one of these Berries,\nit will be able to restore 10 HP to\nitself.
 If a Pokémon holds one of these Berries,\nit will be able to cure itself of\nconfusion.
@@ -338,8 +338,8 @@ The user forcefully shoots seeds at\nthe foe. Two to five seeds are shot\nin rap
 A unique attack that varies in type\ndepending on the Pokémon using it.
 The user intensifies the sun for\nfive turns, powering up Fire-type\nmoves.
 The foe is taunted into a rage that\nallows it to use only attack moves\nfor two to four turns.
-The foe is struck with an icy-cold\nbeam of energy. It may also freeze\nthe target solid.
-A howling blizzard is summoned to\nstrike the foe. It may also freeze\nthe target solid.
+The foe is struck with an icy-cold\nbeam of energy. It may also cause\nfrostbite.
+A howling blizzard is summoned to\nstrike the foe. It may also cause\nfrostbite.
 The foe is attacked with a powerful\nbeam. The user must rest on the next\nturn to regain its energy.
 A wondrous wall of light is put up\nto suppress damage from special\nattacks for five turns.
 It enables the user to evade all\nattacks. Its chance of failing rises\nif it is used in succession.

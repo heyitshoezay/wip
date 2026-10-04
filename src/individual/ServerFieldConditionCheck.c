@@ -794,6 +794,13 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp)
                     sp->next_server_seq_no = sp->server_seq_no;
                     sp->server_seq_no = 22;
                     ret = 1;
+                } else if ((sp->battlemon[battlerId].condition & STATUS_FREEZE) && sp->battlemon[battlerId].hp != 0) {
+                    // frostbite deals the same residual damage as a burn
+                    sp->battlerIdTemp = battlerId;
+                    LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_FROSTBITE_DAMAGE);
+                    sp->next_server_seq_no = sp->server_seq_no;
+                    sp->server_seq_no = 22;
+                    ret = 1;
                 }
 
                 sp->scc_work++;

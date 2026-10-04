@@ -198,7 +198,7 @@ BOOL LONG_CALL MonDiesFromResidualDamage(struct BattleStruct *ctx, u32 attacker,
         damageReceived += maxHp / 4;
     }
 
-    if (attackerCondition & STATUS_BURN) {
+    if (attackerCondition & (STATUS_BURN | STATUS_FREEZE)) { // frostbite deals the same residual damage as a burn
         damageReceived += maxHp / 16;
     } else if (attackerCondition & STATUS_POISON) {
         if (ability == ABILITY_POISON_HEAL) {

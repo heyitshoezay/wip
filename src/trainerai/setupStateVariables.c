@@ -108,7 +108,6 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
 #endif
     ai->isDefenderIncapacitated = FALSE;
     if ((ai->defenderMon.condition & STATUS_SLEEP)
-        || ((ai->defenderMon.condition & STATUS_FREEZE) && !ai->defenderKnowsThawingMove)
         || (ai->defenderMon.condition2 & STATUS2_RECHARGE)
         || ST_CheckIfInTruant(ctx, defender)) {
         ai->isDefenderIncapacitated = TRUE;

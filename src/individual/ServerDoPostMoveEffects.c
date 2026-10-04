@@ -26,7 +26,7 @@ int LONG_CALL Activate_FlameBurstHit(void *bsys UNUSED, struct BattleStruct *ctx
 int LONG_CALL Activate_Rowap_Jaboca(void *bw UNUSED, struct BattleStruct *sp);
 int LONG_CALL Activate_Incinerate(void *bw UNUSED, struct BattleStruct *sp);
 void LONG_CALL Activate_KO_Count(void *bw UNUSED, struct BattleStruct *sp);
-int LONG_CALL ThawTarget_FromFireMove_Scald(void *bsys UNUSED, struct BattleStruct *ctx);
+int LONG_CALL ThawTarget_FromFireMove_Scald(void *bsys UNUSED, struct BattleStruct *ctx UNUSED);
 int LONG_CALL Activate_ThroatSpray_BlunderPolicy(void *bsys, struct BattleStruct *ctx);
 int LONG_CALL Activate_RampageConfusion(void *bsys UNUSED, struct BattleStruct *ctx);
 int LONG_CALL Activate_ShellBell_LifeOrb(void *bw UNUSED, struct BattleStruct *sp);
@@ -848,30 +848,8 @@ case SWOAK_SEQ_CHECK_DEFENDER_ITEM_ON_HIT:
     FALLTHROUGH;
 case SWOAK_SEQ_THAW_ICE:
     {
-        int movetype;
-        u16 currMove = ctx->current_move_index;
-
-        movetype = GetAdjustedMoveType(ctx, ctx->attack_client, currMove); // new normalize checks
-
+        // frostbite (STATUS_FREEZE) is not cured by being hit by Fire-type or other thawing moves
         ctx->swoam_seq_no++;
-
-        if (ctx->defence_client != 0xFF)
-        {
-            if ((ctx->battlemon[ctx->defence_client].condition & STATUS_FREEZE)
-             && ((ctx->waza_status_flag & MOVE_STATUS_MULTI_HIT_DISRUPTED) == 0)
-             && (ctx->defence_client != ctx->attack_client)
-             && ((ctx->oneSelfFlag[ctx->defence_client].physical_damage) || (ctx->oneSelfFlag[ctx->defence_client].special_damage))
-             && (ctx->battlemon[ctx->defence_client].hp)
-             && ((movetype == TYPE_FIRE) || (IsElementInArray(gMovesThatThawFrozenMons, &currMove, NELEMS(gMovesThatThawFrozenMons), sizeof(u16)))) // scald can also melt opponents as of gen 6
-             && ctx->oneTurnFlag[ctx->attack_client].parental_bond_flag == 0)
-            {
-                ctx->battlerIdTemp = ctx->defence_client;
-                LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_THAW_OUT);
-                ctx->next_server_seq_no = ctx->server_seq_no;
-                ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
-                return;
-            }
-        }
     }
     FALLTHROUGH;
 case SWOAK_SEQ_CHECK_HEALING_ITEMS:
@@ -1380,28 +1358,9 @@ u16 gMovesThatThawFrozenMons[] = {
     MOVE_STEAM_ERUPTION,
 };
 
-int LONG_CALL ThawTarget_FromFireMove_Scald(void *bsys UNUSED, struct BattleStruct *ctx)
+int LONG_CALL ThawTarget_FromFireMove_Scald(void *bsys UNUSED, struct BattleStruct *ctx UNUSED)
 {
-    int movetype;
-    u16 currMove = ctx->current_move_index;
-
-    movetype = GetAdjustedMoveType(ctx, ctx->attack_client, currMove); // new normalize checks
-
-    if (ctx->defence_client != BATTLER_NONE) {
-        if ((ctx->battlemon[ctx->defence_client].condition & STATUS_FREEZE)
-            && ((ctx->waza_status_flag & MOVE_STATUS_MULTI_HIT_DISRUPTED) == 0)
-            && (ctx->defence_client != ctx->attack_client)
-            && ((ctx->oneSelfFlag[ctx->defence_client].physical_damage) || (ctx->oneSelfFlag[ctx->defence_client].special_damage))
-            && (ctx->battlemon[ctx->defence_client].hp)
-            && ((movetype == TYPE_FIRE) || (IsElementInArray(gMovesThatThawFrozenMons, &currMove, NELEMS(gMovesThatThawFrozenMons), sizeof(u16)))) // scald can also melt opponents as of gen 6
-            && ctx->oneTurnFlag[ctx->attack_client].parental_bond_flag == 0) {
-            ctx->battlerIdTemp = ctx->defence_client;
-            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_THAW_OUT);
-            ctx->next_server_seq_no = ctx->server_seq_no;
-            ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
-            return TRUE;
-        }
-    }
+    // frostbite (STATUS_FREEZE) is not cured by being hit by Fire-type or other thawing moves
     return FALSE;
 }
 

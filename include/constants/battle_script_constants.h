@@ -535,6 +535,8 @@
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)
+// NOTE: MAX_BASE_SUBSCRIPT_NUM is out of date: ENEMY_TAILWIND (523) is already a base subscript, so the first custom subscript is index 524
+#define BATTLE_SUBSCRIPT_FROSTBITE_DAMAGE                       (524)
 
 // add status effect constants--used in battle effect scripts to queue up a subscript through the table in src/moves.c
 

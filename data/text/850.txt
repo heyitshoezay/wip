@@ -364,7 +364,7 @@ The user attacks with an exploding\npollen puff. If the target is an\nally, it r
 The user switches places with a\nparty Pokémon in waiting, passing\nalong any stat changes.
 The user makes the ground under the\nfoe erupt with power. It may also\nlower the target’s Sp. Def.
 An all-out attack that becomes more\npowerful the less HP the user has.
-The foe is struck with an icy-cold\nbeam of energy. It may also freeze\nthe target solid.
+The foe is struck with an icy-cold\nbeam of energy. It may also cause\nfrostbite.
 For five turns, Pokémon on the\nground have powered up Electric-type\nmoves and can no longer fall asleep.
 The user turns the ground into\nGrassy Terrain for five turns. This\npowers up Grass-type moves.
 This protects Pokémon on the ground\nfrom priority moves and powers up\nPsychic-type moves for five turns.
@@ -372,7 +372,7 @@ Sets a Misty Terrain for five turns.\nThis prevents status ailments and\nweakens
 The user stimulates its brain by\nthinking bad thoughts. It sharply\nraises the user’s Sp. Atk.
 The foe is attacked with an intense\nblast of all-consuming fire. It may\nalso leave the target with a burn.
 The foe is blasted by a huge volume\nof water launched under great\npressure.
-A howling blizzard is summoned to\nstrike the foe. It may also freeze\nthe target solid.
+A howling blizzard is summoned to\nstrike the foe. It may also cause\nfrostbite.
 When used with its grass equivalent,\nits power increases and a vast sea\nof fire appears.
 When combined with its fire\nequivalent, its power increases and\na rainbow appears.
 When used with its water equivalent,\nits power increases and a vast swamp\nappears.
