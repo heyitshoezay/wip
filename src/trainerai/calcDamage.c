@@ -1188,6 +1188,12 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     struct BattleMove move = sp->moveTbl[moveno];
     movetype = BattleAI_GetDynamicMoveType(bw, sp, attacker, moveno);
 
+    // Blazing Soul: Fire-type moves get +1 priority while the user is at full HP.  Counting it here lets the checks below that
+    // look at the move's priority (Dazzling / Queenly Majesty / Armor Tail, targets in the middle of Fly or Dig) see it.
+    if (attacker->ability == ABILITY_BLAZING_SOUL && movetype == TYPE_FIRE && attacker->hp == attacker->maxhp) {
+        move.priority++;
+    }
+
     BOOL moveCanHit = TRUE;
     if (defender->effect_of_moves & MOVE_EFFECT_FLAG_SEMI_INVULNERABLE) {
         moveCanHit = FALSE;

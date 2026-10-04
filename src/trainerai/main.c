@@ -556,7 +556,7 @@ int LONG_CALL DamagingMoveScoring(struct BattleSystem *bsys, u32 attacker, int i
 #endif
     if (ai->monCanOneShotPlayerWithMove[i]) // if ai sees kill with this move
     {
-        if (ai->aiMovesFirst || (ai->playerMovesFirst && ctx->moveTbl[ai->attackerMove].priority > 0)) {
+        if (ai->aiMovesFirst || (ai->playerMovesFirst && HasMovePriority(bsys, ai->attacker, ai->attackerMove, ai->attackerMon.ability, ai->defender))) {
             moveScore += 6; // and is faster/has priority
         } else if (ai->playerMovesFirst) {
             moveScore += 3;
@@ -2021,6 +2021,12 @@ BOOL LONG_CALL HasMovePriority(struct BattleSystem *bsys, u8 attacker, u32 attac
     {
         hasPriority = TRUE;
     } 
+    else if (attackerAbility == ABILITY_BLAZING_SOUL
+        && attackerMoveStruct.type == TYPE_FIRE
+        && ctx->battlemon[attacker].hp == (s32)ctx->battlemon[attacker].maxhp)
+    {
+        hasPriority = TRUE;
+    }
     else if (attackerMoveStruct.priority > 0)
     {
         hasPriority = TRUE;

@@ -312,7 +312,7 @@ Poison-inflicting moves\nwill also cause confusion.
 The Pokémon’s contact\nmoves ignore protections.
 Normal-type moves become\nDragon-type and powered up.
 Levitate and Beast Boost.
-Placeholder
+Fire-type moves gain\npriority when its HP is full.
 All moves act as if\nHarsh Sunlight is active.
 Powers up fire moves.
 Placeholder

@@ -1685,6 +1685,12 @@ void LONG_CALL CalcPriorityAndQuickClawCustapBerry(void *bsys, struct BattleStru
             priority++;
         }
 
+        // Handle Blazing Soul
+        if (GetBattlerAbility(ctx, client) == ABILITY_BLAZING_SOUL && ctx->moveTbl[move].type == TYPE_FIRE
+            && ctx->battlemon[client].hp == (s32)ctx->battlemon[client].maxhp) {
+            priority++;
+        }
+
         // handle Triage
         if (GetBattlerAbility(ctx, client) == ABILITY_TRIAGE) {
             for (i = 0; i < NELEMS(TriageMovesList); i++) {
@@ -3802,6 +3808,11 @@ int LONG_CALL GetClientActionPriority(struct BattleSystem *bsys UNUSED, struct B
     }
 
     if ((GetBattlerAbility(ctx, battlerId) == ABILITY_GALE_WINGS) && (ctx->moveTbl[move].type == TYPE_FLYING)) {
+        return ctx->moveTbl[move].priority + 1;
+    }
+
+    if ((GetBattlerAbility(ctx, battlerId) == ABILITY_BLAZING_SOUL) && (ctx->moveTbl[move].type == TYPE_FIRE)
+        && (ctx->battlemon[battlerId].hp == (s32)ctx->battlemon[battlerId].maxhp)) {
         return ctx->moveTbl[move].priority + 1;
     }
 
