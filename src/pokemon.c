@@ -1561,6 +1561,10 @@ void sub_0206D328(struct PartyPokemon *pokemon, u32 heapId)
 #define CRY_SPECIES_BASE_MAUSHOLD   (CRY_SPECIES_FORMS_BASE + 24 + 48)
 
 u32 storeShayminForm = 0;
+// the original cry code asks GrabCryNumSpeciesForm for the cry number three times in a row.  the first call has the form, the
+// other two do not, so the species and form of the first call are remembered here for the other two (see below)
+u32 storedCrySpecies = 0;
+u32 storedCryForm = 0;
 
 /**
  *  @brief grab the cry index given species and form
@@ -1578,7 +1582,19 @@ u32 GrabCryNumSpeciesForm(u32 species, u32 form)
         species = SPECIES_BULBASAUR;
     }
 
-    // debug_printf("[GrabCryNumSpeciesForm] species = %d, form = %d\n", species, form)
+    // the cry code asks for the cry number three times in a row: first from 0x020069BF with the form, then from 0x020063E5 and
+    // 0x02006241 with the form missing (0), and those last two decide which cry is played.  remember the form from the first call and
+    // hand it to the other two, otherwise a mega (or any other form) that is sent out gets the cry of its base form.  shaymin does the
+    // same with its own variable below.
+    if (species <= SPECIES_MAX_MON_NUM && species != SPECIES_SHAYMIN) {
+        register u32 callerAddr asm("lr");
+        if (callerAddr == 0x020069BF) {
+            storedCrySpecies = species;
+            storedCryForm = form;
+        } else if ((callerAddr == 0x020063E5 || callerAddr == 0x02006241) && form == 0 && species == storedCrySpecies) {
+            form = storedCryForm;
+        }
+    }
 
     // battles are fucking stupid and pass in species already adjusted for form.  need to revert to base species and extract form
     if (species > SPECIES_MAX_MON_NUM) {
