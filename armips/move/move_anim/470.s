@@ -67,7 +67,7 @@ MegaAnimScript:
     callfunction 34, 6, 2056, 0, 1, 32767, 0, 10, "NaN", "NaN", "NaN", "NaN"      // opposing Pokemon: shade back to normal (alpha 0) over 10 frames
     callfunction 0x24, 5, 2, 0, 1, 4, 8 | 0x100, 0, 0, 0, 0, 0                    // the shake, now on the new form
     waitstate
-    wait 15
+    //wait 15                                                                      // removed so the cry starts right after the shake
     //unloadparticle 0                                                             // moved up, before the form change
     playcry 0, -117, 127
     waitcry 0
