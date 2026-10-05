@@ -2010,8 +2010,9 @@ BOOL BattleController_CheckMoveFailures1(struct BattleSystem *bsys, struct Battl
         }
         break;
     case MOVE_METAL_BURST:
-        sideB = IsClientEnemy(bsys, ctx->oneTurnFlag[ctx->attack_client].last_damage);
-        if (!(ctx->oneTurnFlag[ctx->attack_client].last_damage && sideA != sideB && ctx->battlemon[ctx->oneTurnFlag[ctx->attack_client].last_damager].hp)) {
+        battlerId = ctx->oneTurnFlag[ctx->attack_client].last_damager; // the battler that hit us, NOT last_damage (the amount of damage)
+        sideB = IsClientEnemy(bsys, battlerId);
+        if (!(ctx->oneTurnFlag[ctx->attack_client].last_damage && sideA != sideB && ctx->battlemon[battlerId].hp)) {
             flag = TRUE;
         }
         break;
