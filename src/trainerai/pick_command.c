@@ -23,6 +23,12 @@ int TrainerAI_PickCommand(struct BattleSystem *bsys, int attacker)
     debug_printf("TrainerAI_PickCommand: %d\n", attacker);
 #endif // DEBUG_AI_SCORING
     struct BattleStruct *ctx = bsys->sp;
+#ifdef DEBUG_AI_SCORING
+    // TEST ONLY: is the player's choice for this turn already stored when the AI decides?  If the numbers below change to match
+    // the move you pick this turn (and not the one from the turn before), the AI could read it.  Remove this when done.
+    debug_printf("peek: player actions %d %d %d %d, move chosen %d, last move used %d\n", (int)ctx->playerActions[0][0], (int)ctx->playerActions[0][1],
+        (int)ctx->playerActions[0][2], (int)ctx->playerActions[0][3], (int)ctx->waza_no_select[0], (int)ctx->waza_no_old[0]);
+#endif // DEBUG_AI_SCORING
     BOOL isTagPartner = FALSE;
     if (attacker == 2) {
         isTagPartner = TRUE;
@@ -241,9 +247,29 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         return FALSE;
     }
 
+#ifdef IMPLEMENT_AI_ABSORB_SWITCH
+    // not worth a switch when the AI's Pokemon is already below AI_ABSORB_SWITCH_MIN_HP_PERCENT of its HP
+    if ((u32)ctx->battlemon[attacker].hp * 100 >= (u32)ctx->battlemon[attacker].maxhp * AI_ABSORB_SWITCH_MIN_HP_PERCENT) {
+        // a Pokemon that is immune to the move that would KO us beats the usual switching rules, and ignores the cooldown
+        int immuneSlot = AI_FindImmuneSwitchIn(bsys, attacker, defender, ai);
+        if (immuneSlot >= 0 && (int)(BattleRand(bsys) % 100) < AI_ABSORB_SWITCH_PERCENT) {
+            ai->postKoScoringPosition = immuneSlot;
+            return TRUE;
+        }
+    }
+#endif // IMPLEMENT_AI_ABSORB_SWITCH
+
     if (ai->livingMembersAttacker < 2) {
         return FALSE;
     }
+
+#ifdef IMPLEMENT_AI_SWITCH_COOLDOWN
+    // cooldown: no switching out on the first turn after switching in, unless the player's Pokemon changed as well
+    // (turns on field is 0 on a Pokemon's first full turn; at the start of the battle both sides are 0, so the lead can still switch)
+    if ((int)ai->attackerTurnsOnField <= 0 && (int)ai->defenderTurnsOnField > 0) {
+        return FALSE;
+    }
+#endif // IMPLEMENT_AI_SWITCH_COOLDOWN
 
     if (ai->monCanOneShotPlayerWithAnyMove && ai->aiMovesFirst) {
         return FALSE;

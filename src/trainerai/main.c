@@ -1180,6 +1180,12 @@ int LONG_CALL SetupScoring(struct BattleSystem *bsys, u32 attacker, int i, struc
         moveScore = 0;
     }
 
+#ifdef IMPLEMENT_AI_ANTI_ABUSE
+    if (moveScore > 0) {
+        moveScore += AI_AntiAbuseSetupBonus(ai); // the player keeps switching or stalling, so free turns are worth taking
+    }
+#endif // IMPLEMENT_AI_ANTI_ABUSE
+
     return moveScore;
 }
 

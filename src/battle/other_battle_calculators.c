@@ -4601,6 +4601,7 @@ void LONG_CALL PlayTrainerVictoryBGM(struct Trainer *trainer)
     case TRAINERCLASS_LEADER_BYRON:
     case TRAINERCLASS_LEADER_CANDICE:
     case TRAINERCLASS_LEADER_VOLKNER:
+    case TRAINERCLASS_CHAMPION_CYNTHIA:
         PlayBGM(SEQ_GS_WIN3);
         break;
     case TRAINERCLASS_TOWER_TYCOON:

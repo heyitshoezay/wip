@@ -29,7 +29,11 @@ u32 calcPlayerAsDefender(struct BattleSystem *bsys, struct BattleStruct *ctx, st
 
             if (attackerMove.split != SPLIT_STATUS && attackerMove.power) {
                 damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, moveno, ctx->side_condition[BATTLER_IS_ENEMY(attacker)], ctx->field_condition, attackerMove.power, attackerMove.type, critical, attacker, defender, &damages, attackerMon, defenderMon);
+#ifdef IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
+                damages.damageRoll = AI_ScaleDamage(damages.damageRange[15], AI_PARTY_DAMAGE_PERCENT); // max roll, scaled
+#else
                 damages.damageRoll = damages.damageRange[15]; // max Damage
+#endif // IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
 
                 damages.damageRoll = BattleAI_AdjustUnusualMoveDamage(attackerMon, defenderMon, damages.damageRoll, attackerMove.effect, moveno, damages.moveEffectiveness);
                 for (int u = 0; u < 16; u++) {
@@ -62,7 +66,11 @@ u32 calcPlayerAsAttacker(struct BattleSystem *bsys, struct BattleStruct *ctx, in
 
         if (defenderMove.split != SPLIT_STATUS && defenderMove.power && ctx->battlemon[defender].pp[k]) {
             damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, defenderMoveno, ctx->side_condition[BATTLER_IS_ENEMY(defender)], ctx->field_condition, defenderMove.power, defenderMove.type, critical, defender, attacker, &damages, defenderMon, attackerMon);
+#ifdef IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
+            damages.damageRoll = AI_ScaleDamage(damages.damageRange[15], AI_PARTY_DAMAGE_PERCENT); // max roll, scaled
+#else
             damages.damageRoll = damages.damageRange[15]; // max Damage
+#endif // IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
 
             damages.damageRoll = BattleAI_AdjustUnusualMoveDamage(defenderMon, attackerMon, damages.damageRoll, defenderMove.effect, defenderMoveno, damages.moveEffectiveness);
             for (int u = 0; u < 16; u++) {

@@ -94,6 +94,24 @@
 // commenting this line out disables the building of the new EV/IV viewing system
 #define IMPLEMENT_NEW_EV_IV_VIEWER
 
+// IMPLEMENT_AI_SWITCH_COOLDOWN stops the trainer AI from switching out again on its first turn after switching in
+// (it does not apply when the player's Pokemon also just changed).  comment out to remove the cooldown
+#define IMPLEMENT_AI_SWITCH_COOLDOWN
+
+// IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES makes the trainer AI use a fixed damage estimate instead of a random roll
+// by default that is the best-case roll (100%), so "the AI can kill" means a best-case roll kills.  the percentages are
+// AI_FIELD_DAMAGE_PERCENT (Pokemon on the field) and AI_PARTY_DAMAGE_PERCENT (switch-in scoring) in custom_ai.h.  comment out to go back
+#define IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
+
+// IMPLEMENT_AI_ACCURATE_KILL_CHECK makes the trainer AI's "can it kill" answer account for Focus Sash, Sturdy and Disguise
+// (a full HP Pokemon with a Sash or Sturdy survives a single hit; an intact Disguise absorbs the first hit)
+// comment out the line below to go back to counting those as kills
+#define IMPLEMENT_AI_ACCURATE_KILL_CHECK
+
+// IMPLEMENT_AI_ABSORB_SWITCH lets the trainer AI switch to a Pokemon that is immune to the move that would KO its current one
+// (Water Absorb, Volt Absorb, Flash Fire, Sap Sipper, Levitate, type immunities...).  comment out to remove it
+#define IMPLEMENT_AI_ABSORB_SWITCH
+
 // IMPLEMENT_LEVEL_CAP defines whether or not a configurable hard level cap system is built into the rom based on the value in LEVEL_CAP_VARIABLE
 // if the level is greater than or equal to LEVEL_CAP_VARIABLE, the pokémon will no longer gain experience
 // uncommenting IMPLEMENT_LEVEL_CAP enables the level cap system.  make sure to also uncomment LEVEL_CAP_VARIABLE in the process
@@ -103,6 +121,12 @@
 #define LEVEL_CAP_VARIABLE 0x416F
 //#define UNCAP_CANDIES_FROM_LEVEL_CAP
 #define ALLOW_LEVEL_CAP_EVOLVE
+
+// IMPLEMENT_AI_ANTI_ABUSE makes the trainer AI keep track of what the player does from turn to turn
+// it counts consecutive voluntary switches and consecutive stalling turns (Protect, recovery moves, switching)
+// once the player passes the thresholds in custom_ai.h the AI scores setup moves, entry hazards, Taunt, Encore, poison and Leech Seed higher
+// comment out the line below to turn the anti-abuse logic off
+#define IMPLEMENT_AI_ANTI_ABUSE
 
 // System flags that need to be enabled for the player to use the gimmick. If you want to change them, remember to change them in flags.s as well for consistency
 #define FLAG_MEGA_EVOLUTION_ENABLED  2518

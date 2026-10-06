@@ -837,6 +837,17 @@ typedef struct AI_turnScoring {
     int calcState;
 } AI_turnScoring;
 
+// what the player has been doing, kept across turns for the trainer AI's anti-abuse logic
+// index 0 is the player's first battler (client 0), index 1 the second (client 2)
+typedef struct AI_antiAbuse {
+    int turnStamp;         // total_turn + 1 of the last update, so it only updates once per turn (0 = never)
+    u8 started[2];         // this battler has been seen at least once
+    u8 lastPartySlot[2];   // party slot the battler was in at the last update
+    u8 switchStreak[2];    // consecutive turns the player voluntarily switched
+    u8 stallStreak[2];     // consecutive turns the player switched, protected or healed instead of pressuring
+    u8 totalSwitches[2];   // voluntary switches this battle (stops counting at 255)
+} AI_antiAbuse;
+
 typedef enum HealingConditionType {
     HEALING_CONDITION_HEALING_NONE = 0,
     HEALING_CONDITION_HEALING_WISH,
@@ -1106,6 +1117,7 @@ struct BattleStruct {
     HealingWishQueue healingWishQueue;
     int field_condition2; // gen5+ field conditions
     int magicRoomCounter;
+    AI_antiAbuse aiAntiAbuse; // added last so nothing above it moves
 };
 
 enum {

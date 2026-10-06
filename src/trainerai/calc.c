@@ -858,26 +858,28 @@ int LONG_CALL BattleAI_GetDynamicMoveType(struct BattleSystem *bsys, struct Batt
 
 BOOL LONG_CALL CanAttackerOneShotDefender(u32 attackerDamage, u8 split, u32 moveno, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
-    //BOOL isMoveMultihit = IsMultiHitMove(moveno);
     BOOL canOneShot = TRUE;
 
-    if (attackerDamage >= defender->hp) { /*
-        if (defender->hp == defender->maxhp) {
+    if (attackerDamage < defender->hp) {
+        canOneShot = FALSE;
+    }
+#ifdef IMPLEMENT_AI_ACCURATE_KILL_CHECK
+    else {
+        BOOL isMoveMultihit = IsMultiHitMove(moveno);
 
-            if (!isMoveMultihit
-                && (defender->item == ITEM_FOCUS_SASH
-                    || (!attacker->hasMoldBreaker && defender->ability == ABILITY_STURDY))) {
-                canOneShot = FALSE;
-            }
-
-            if (!attacker->hasMoldBreaker && defender->ability == ABILITY_DISGUISE) { // SPECIES_MIMIKYU
+        // Focus Sash and Sturdy only save a Pokemon that is at full HP, and only from a single hit
+        if (!isMoveMultihit && defender->hp == defender->maxhp) {
+            if (defender->item == ITEM_FOCUS_SASH || (!attacker->hasMoldBreaker && defender->ability == ABILITY_STURDY)) {
                 canOneShot = FALSE;
             }
         }
-        */
-    } else {
-        canOneShot = FALSE;
+
+        // an intact Disguise (Mimikyu, form 0) absorbs the first hit no matter how much HP is left
+        if (!isMoveMultihit && !attacker->hasMoldBreaker && defender->ability == ABILITY_DISGUISE && defender->form == 0) {
+            canOneShot = FALSE;
+        }
     }
+#endif // IMPLEMENT_AI_ACCURATE_KILL_CHECK
 
     if (!attacker->hasMoldBreaker && defender->ability == ABILITY_ICE_FACE && defender->form == 0 && split == SPLIT_PHYSICAL) { // SPECIES_EISCUE
         canOneShot = FALSE;

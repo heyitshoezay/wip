@@ -20,6 +20,13 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
     u8 critical = 0;
     u8 speedCalc;
 
+#ifdef IMPLEMENT_AI_ANTI_ABUSE
+    AI_UpdateAntiAbuse(bsys); // does nothing if it already ran this turn
+    ai->playerSwitchStreak = ctx->aiAntiAbuse.switchStreak[(defender >> 1) & 1];
+    ai->playerStallStreak = ctx->aiAntiAbuse.stallStreak[(defender >> 1) & 1];
+    ai->playerTotalSwitches = ctx->aiAntiAbuse.totalSwitches[(defender >> 1) & 1];
+#endif // IMPLEMENT_AI_ANTI_ABUSE
+
     FillDamageStructFromBattleMon(bsys, ctx, &ai->attackerMon, attacker);
     FillDamageStructFromBattleMon(bsys, ctx, &ai->defenderMon, defender);
     ai->isDoubleBattle = FALSE;
@@ -221,7 +228,11 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
 
         if (defenderMove.split != SPLIT_STATUS && defenderMove.power && IsMoveUsable(ctx, defender, defenderMoveno, ai->defenderLastUsedMove, defenderMove.split, k)) {
             damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, defenderMoveno, ctx->side_condition[BATTLER_IS_ENEMY(defender)], ctx->field_condition, defenderMove.power, defenderMove.type, critical, defender, attacker, &damages, &ai->defenderMon, &ai->attackerMon);
+#ifdef IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
+            damages.damageRoll = AI_ScaleDamage(damages.damageRange[15], AI_FIELD_DAMAGE_PERCENT); // max roll, scaled
+#else
             damages.damageRoll = damages.damageRange[15]; // max Damage
+#endif // IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
 
             damages.damageRoll = BattleAI_AdjustUnusualMoveDamage(&ai->defenderMon, &ai->attackerMon, damages.damageRoll, defenderMove.effect, defenderMoveno, damages.moveEffectiveness);
             for (int u = 0; u < 16; u++) {
@@ -264,6 +275,16 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
     debug_printf("Overall Max damage received from %i:%i is %d > %d att.HP\n", highestDamageMoveIndex, ctx->battlemon[ai->defender].move[highestDamageMoveIndex], ai->maxDamageReceived, ai->attackerMon.hp);
 #endif // DEBUG_AI_SCORING
 
+#ifdef IMPLEMENT_AI_ABSORB_SWITCH
+    // remember the move the AI expects the player to use (their hardest hit) and whether it would KO
+    ai->playerPredictedMove = MOVE_NONE;
+    ai->playerPredictedMoveKills = FALSE;
+    if (ai->maxDamageReceived > 0) {
+        ai->playerPredictedMove = ctx->battlemon[defender].move[highestDamageMoveIndex];
+        ai->playerPredictedMoveKills = ai->playerCanOneShotMonWithMove[highestDamageMoveIndex];
+    }
+#endif // IMPLEMENT_AI_ABSORB_SWITCH
+
     ai->attackerHasAttackingMoves = FALSE;
     ai->monCanOneShotPlayerWithAnyMove = FALSE;
     for (int j = 0; j < ai->attackerMovesKnown; j++) {
@@ -277,6 +298,9 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
             ai->attackerHasAttackingMoves = TRUE;
             damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, attackerMoveno, ctx->side_condition[BATTLER_IS_ENEMY(attacker)], ctx->field_condition, attackerMove.power, attackerMove.type, critical, attacker, defender, &damages, &ai->attackerMon, &ai->defenderMon);
             ai->effectivenessOnPlayer[j] = damages.moveEffectiveness;
+#ifdef IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
+            damages.damageRoll = AI_ScaleDamage(damages.damageRange[15], AI_FIELD_DAMAGE_PERCENT); // no random roll: max roll, scaled
+#endif // IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES
 
             damages.damageRoll = BattleAI_AdjustUnusualMoveDamage(&ai->attackerMon, &ai->defenderMon, damages.damageRoll, attackerMove.effect, attackerMoveno, ai->effectivenessOnPlayer[j]);
             for (int u = 0; u < 16; u++) {

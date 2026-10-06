@@ -2996,8 +2996,9 @@ BOOL btl_scr_cmd_FF_checkcanactivatedefiantorcompetitive(void *bsys UNUSED, stru
 
     if ((ctx->battlemon[ctx->state_client].hp != 0)
         && (ctx->oneSelfFlag[ctx->state_client].defiant_flag)
-        && ((ctx->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)
-        && ((ctx->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)) {
+        && (ctx->addeffect_type == SIDE_EFFECT_TYPE_PROTECT_CONTACT // the attacker's move was blocked, but the protect move's effect still counts
+            || (((ctx->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)
+                && ((ctx->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)))) {
         ctx->oneSelfFlag[ctx->state_client].defiant_flag = 0;
         switch (GetBattlerAbility(ctx, ctx->state_client)) {
         case ABILITY_DEFIANT:
@@ -3189,9 +3190,10 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
         && (ctx->server_status_flag & BATTLE_STATUS_CHARGE_TURN) == 0) {
         switch (ctx->moveProtect[ctx->defence_client]) {
         case MOVE_KINGS_SHIELD:
-            if (ctx->battlemon[ctx->attack_client].states[STAT_ATTACK] > 0) {
+            if (ctx->battlemon[ctx->attack_client].states[STAT_ATTACK] > 0 && !CheckSubstitute(ctx, ctx->attack_client)) {
                 // King's Shield lowers Attack by two stages in Generation 6 and 7.
                 ctx->addeffect_param = (GEN_LATEST > 7) ? MOVE_SUBSCRIPT_PTR_ATTACK_DOWN_1_STAGE : MOVE_SUBSCRIPT_PTR_ATTACK_DOWN_2_STAGES;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_PROTECT_CONTACT;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }
@@ -3213,15 +3215,17 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
             }
             break;
         case MOVE_OBSTRUCT:
-            if (ctx->battlemon[ctx->attack_client].states[STAT_DEFENSE] > 0) {
+            if (ctx->battlemon[ctx->attack_client].states[STAT_DEFENSE] > 0 && !CheckSubstitute(ctx, ctx->attack_client)) {
                 ctx->addeffect_param = MOVE_SUBSCRIPT_PTR_DEFENSE_DOWN_2_STAGES;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_PROTECT_CONTACT;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }
             break;
         case MOVE_SILK_TRAP:
-            if (ctx->battlemon[ctx->attack_client].states[STAT_SPEED] > 0) {
+            if (ctx->battlemon[ctx->attack_client].states[STAT_SPEED] > 0 && !CheckSubstitute(ctx, ctx->attack_client)) {
                 ctx->addeffect_param = MOVE_SUBSCRIPT_PTR_SPEED_DOWN_1_STAGE;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_PROTECT_CONTACT;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }

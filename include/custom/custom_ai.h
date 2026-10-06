@@ -5,6 +5,20 @@
 
 #define DEBUG_AI_SCORING 1
 
+// fixed damage estimates for the trainer AI (see IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES in config.h)
+#define AI_FIELD_DAMAGE_PERCENT 100 // damage between the Pokemon currently out (100 = best-case roll)
+#define AI_PARTY_DAMAGE_PERCENT 100 // damage involving a Pokemon waiting in the party (100 = best-case roll)
+
+// scale a damage estimate by a percentage; real damage never rounds down to 0
+static inline u32 AI_ScaleDamage(u32 damage, u32 percent)
+{
+    u32 scaled = damage * percent / 100;
+    if (damage != 0 && scaled == 0) {
+        scaled = 1;
+    }
+    return scaled;
+}
+
 
 
 
@@ -106,6 +120,8 @@ struct PACKED AIContext {
     u8 livingMembersDefender;
 
     u8 attackerMovesKnown;
+    u32 playerPredictedMove;       // the move the AI expects the player to use: their hardest hit
+    BOOL playerPredictedMoveKills; // whether that move would KO the AI's Pokemon (absorb switch)
     BOOL attackerHasAttackingMoves;
 
     u32 attackerLastUsedMove;
@@ -147,6 +163,10 @@ struct PACKED AIContext {
     BOOL ignoreTarget;
 
     u8 attackerPositiveStatChangesSum;
+
+    u8 playerSwitchStreak;   // consecutive voluntary player switches (anti-abuse)
+    u8 playerStallStreak;    // consecutive stalling turns by the player (anti-abuse)
+    u8 playerTotalSwitches;  // voluntary player switches this battle (anti-abuse)
 };
 
 struct PACKED AI_damage {
@@ -156,6 +176,34 @@ struct PACKED AI_damage {
 };
 
 void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 defender, struct AIContext *ai);
+
+// absorb switch: swap to a Pokemon that is immune to the move that would KO the current one (see absorbSwitch.c)
+#define AI_ABSORB_SWITCH_PERCENT 75 // chance of making the switch when the chance arises
+#define AI_ABSORB_SWITCH_MIN_HP_PERCENT 50 // no absorb switch when the AI's Pokemon has less than this share of its HP left
+#define AI_ABSORB_SWITCH_SAFE_PERCENT 85 // a Pokemon is not switched into when one of the player's other moves would take this share of its HP or more
+#define AI_ABSORB_SWITCH_MEGA_PREVIEW // calculate with the player's Pokemon Mega Evolved if it can be (it may do it this turn). comment out to turn off
+
+typedef struct AI_immuneCandidate {
+    int slot;                // party slot
+    BOOL immune;             // takes no damage from the move that would KO the current Pokemon
+    BOOL killedByOtherMove;  // but one of the player's other moves would KO it
+    u32 worstOtherPercent;   // share of its HP the player's strongest other move would take
+} AI_immuneCandidate;
+
+int LONG_CALL AI_PickImmuneCandidate(const AI_immuneCandidate *candidates, int count);
+int LONG_CALL AI_FindImmuneSwitchIn(struct BattleSystem *bsys, u32 attacker, u32 defender, struct AIContext *ai);
+
+// anti-abuse: the AI notices a player who keeps switching or stalling and reacts (see antiAbuse.c)
+#define ANTI_ABUSE_SWITCH_THRESHOLD 2 // consecutive voluntary switches before the AI reacts
+#define ANTI_ABUSE_STALL_THRESHOLD  3 // consecutive stalling turns before the AI reacts
+#define ANTI_ABUSE_BONUS_PER_LEVEL  3 // score added for each turn past a threshold
+#define ANTI_ABUSE_MAX_BONUS        9 // the most the AI will ever add
+
+void LONG_CALL AI_UpdateAntiAbuse(struct BattleSystem *bsys);
+void LONG_CALL AI_AntiAbuseObserve(AI_antiAbuse *tracker, u32 side, u32 partySlot, BOOL previousMonAlive, BOOL aiForcedSwitch, BOOL playerPivoted, BOOL playerStalled);
+int LONG_CALL AI_AntiAbuseBonusLevel(u32 switchStreak, u32 stallStreak, BOOL *switchingIsTheReason);
+int LONG_CALL AI_AntiAbuseSetupBonus(struct AIContext *ai);
+int LONG_CALL AI_AntiAbuseHarassBonus(struct AIContext *ai, u32 moveEffect);
 
 
 int LONG_CALL ScoreMovesAgainstDefender(struct BattleSystem *bsys, u32 attacker, u32 target, int moveScores[4][4], struct AIContext *ai);

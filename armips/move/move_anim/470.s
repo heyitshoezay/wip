@@ -47,28 +47,38 @@ MegaAnimScript:
     wait 15
     wait 15                                                                        // stands in for the time the shake used to take here; shorten it to start the white sooner
 
-    // WHITE-OUT (copied from Luster Purge, armips/move/move_anim/295.s).  The screen fades to solid white and every Pokemon is shaded
-    // white, then the form changes, then the shake plays on the new form while the screen fades back.
-    // The last number on a shade line (callfunction 34) is how many frames the shade takes to build up to full white; 0 is instant.  It was
-    // 40, so the shade was still building when the form changed, which looked like one last flash on the new form.  Now it is instant.
-    callfunction 33, 5, 0, 1, 0, 16, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"     // screen: fade to white (alpha 0 to 16)
-    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"      // shade the attacking Pokemon white, instantly
-    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"      // shade the opposing Pokemon white, instantly
-    // Both Pokemon are shaded, so both are hidden when the flash begins.  The partner slots (doubles) are left out:
-    //callfunction 34, 6, 2052, 0, 1, 32767, 16, 40, "NaN", "NaN", "NaN", "NaN"   // the attacker's partner (doubles)
-    //callfunction 34, 6, 2064, 0, 1, 32767, 16, 40, "NaN", "NaN", "NaN", "NaN"   // the target's partner (doubles)
-    wait 30                                                                        // how long it stays white before the form changes
-    //addparticle 0, 10, 3                                                         // the last two emitters were removed
-    //addparticle 0, 12, 3
-    unloadparticle 0                                                               // ends the pulsing ring and every other emitter of file 489 just before the form change
-    unloadparticle 1                                                               // same for file 490.  (These two used to be at the end of the script, after the form change.)
+    // WHITE-OUT, long version.  Measured against Radical Red's Mega Evolution (60 frames = 1 second):
+    //   Radical Red : about 30 frames to fade to white, about 65 frames fully white, about 40 frames to fade back
+    //   before this : 13 frames, 36 frames (and never fully white, the glow stayed on top), 12 frames
+    // The screen fade moves at a fixed speed, so the fade TO white is split in two halves with a wait between them to make it slower.
+    // This worked in the recording: it took 32 frames.  (If the halves ever look wrong, use the single-fade line marked SINGLE.)
+    // The fade BACK in two halves did nothing in the recording, so it is a single fade.
+    //
+    // 1. fade to white: frames 0 to 30.  Both Pokemon are shaded white gradually over the same 30 frames.
+    callfunction 33, 5, 0, 1, 0, 8, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"      // screen: fade to white, first half (alpha 0 to 8)
+    //callfunction 33, 5, 0, 1, 0, 16, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"   // SINGLE: screen: fade to white in one go (use this instead of the two halves)
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 30, "NaN", "NaN", "NaN", "NaN"      // shade the attacking Pokemon white over 30 frames
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 30, "NaN", "NaN", "NaN", "NaN"      // shade the opposing Pokemon white over 30 frames
+    wait 12                                                                        // the first half needs about 8 frames
+    callfunction 33, 5, 0, 1, 8, 16, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"     // screen: fade to white, second half (alpha 8 to 16)
+    wait 18                                                                        // frame 30: the screen is fully white and both Pokemon are hidden
+    // 2. fully white.  The particles are taken away only now, while nothing else is visible, so the white is clean.
+    // In the last recording both Pokemon came back into view about 90 frames after the shade began, while the screen was still white,
+    // so the shade is applied again here (instantly) to keep them hidden through the whole hold.
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white again, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white again, instantly
+    unloadparticle 0                                                               // ends the pulsing ring and every other emitter of file 489
+    unloadparticle 1                                                               // same for file 490
+    wait 32                                                                        // fully white.  This was 65, which came out at about 150 frames in the recording.
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // and once more right before the form changes
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"
+    // 3. the form changes while the screen is white, then the screen fades back, with the shake on the new form.
+    // The fade back in two halves made no difference in the recording (it took the same 14 frames), so it is one fade again.
     transform 0
-    callfunction 33, 5, 0, 1, 16, 0, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"     // screen: fade back from white (alpha 16 to 0)
-    callfunction 34, 6, 2056, 0, 1, 32767, 0, 10, "NaN", "NaN", "NaN", "NaN"      // opposing Pokemon: shade back to normal (alpha 0) over 10 frames
+    callfunction 33, 5, 0, 1, 16, 0, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"      // screen: fade back from white
+    callfunction 34, 6, 2056, 0, 1, 32767, 0, 10, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: shade back to normal
     callfunction 0x24, 5, 2, 0, 1, 4, 8 | 0x100, 0, 0, 0, 0, 0                    // the shake, now on the new form
     waitstate
-    //wait 15                                                                      // removed so the cry starts right after the shake
-    //unloadparticle 0                                                             // moved up, before the form change
     playcry 0, -117, 127
     waitcry 0
     wait 15

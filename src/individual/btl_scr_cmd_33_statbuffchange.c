@@ -121,6 +121,7 @@ BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp)
         && sp->oneSelfFlag[sp->state_client].defiant_flag == 0
         && statchange < 0
         && (sp->addeffect_type == SIDE_EFFECT_TYPE_STICKY_WEB
+            || sp->addeffect_type == SIDE_EFFECT_TYPE_PROTECT_CONTACT
             || (sp->state_client != sp->attack_client // can't raise own stats
                 && sp->state_client != BattleWorkPartnerClientNoGet(bw, sp->attack_client) // can't raise partner's stats
                 && ((sp->waza_status_flag & WAZA_STATUS_FLAG_NO_OUT) == 0)
@@ -339,7 +340,7 @@ BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp)
         } else {
             // debug_printf("in ability checks\n");
 
-            if (sp->addeffect_type == SIDE_EFFECT_TYPE_ABILITY || sp->addeffect_type == SIDE_EFFECT_TYPE_PRINT_WORK_ABILITY) {
+            if (sp->addeffect_type == SIDE_EFFECT_TYPE_ABILITY || sp->addeffect_type == SIDE_EFFECT_TYPE_PRINT_WORK_ABILITY || sp->addeffect_type == SIDE_EFFECT_TYPE_PROTECT_CONTACT) {
                 BOOL prevented = FALSE;
                 if (sp->scw[IsClientEnemy(bw, sp->state_client)].mistCount) {
                     sp->mp.id = BATTLE_MSG_PROTECTED_BY_MIST;
