@@ -96,9 +96,8 @@ static u32 DamageToPartyMon(struct BattleSystem *bsys, struct BattleStruct *ctx,
 {
     struct AI_damage damages = { 0 };
     struct BattleMove move = ctx->moveTbl[moveno];
-    u8 critical = 0;
 
-    damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, moveno, ctx->side_condition[BATTLER_IS_ENEMY(defender)], ctx->field_condition, move.power, move.type, critical, defender, attacker, &damages, player, partyMon);
+    damages.damageRoll = BattleAI_CalcDamage(bsys, ctx, moveno, move.power, defender, attacker, &damages, player, partyMon);
     damages.damageRoll = damages.damageRange[15]; // best-case roll; stays 0 when the move cannot hurt this Pokémon at all
     damages.damageRoll = BattleAI_AdjustUnusualMoveDamage(player, partyMon, damages.damageRoll, move.effect, moveno, damages.moveEffectiveness);
 #ifdef IMPLEMENT_AI_FIXED_DAMAGE_ESTIMATES

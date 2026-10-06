@@ -33,9 +33,6 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
 int LONG_CALL OffensiveSetup(struct BattleSystem *bsys UNUSED, u32 attacker UNUSED, int i UNUSED, struct AIContext *ai);
 int LONG_CALL DefensiveSetup(struct BattleSystem *bsys UNUSED, u32 attacker UNUSED, int i UNUSED, struct AIContext *ai);
 
-BOOL LONG_CALL HasMovePriority(struct BattleSystem *bsys, u8 attacker, u32 attackerMove, u32 attackerAbility, u8 defender);
-
-
 enum AIActionChoice __attribute__((section(".init"))) TrainerAI_Main(struct BattleSystem *bsys, u32 attacker)
 {
 #ifdef DEBUG_AI_SCORING
@@ -2008,34 +2005,4 @@ int LONG_CALL RecoveryScoring(struct BattleSystem *bsys, u32 attacker, int i, st
     }
 
     return moveScore;
-}
-
-
-
-BOOL LONG_CALL HasMovePriority(struct BattleSystem *bsys, u8 attacker, u32 attackerMove, u32 attackerAbility, u8 defender)
-{
-    struct BattleStruct *ctx = bsys->sp;
-    struct BattleMove attackerMoveStruct = ctx->moveTbl[attackerMove];
-    BOOL hasPriority = FALSE;
-    if (attackerMove == MOVE_GRASSY_GLIDE 
-        && ctx->terrainOverlay.type == GRASSY_TERRAIN 
-        && ctx->terrainOverlay.numberOfTurnsLeft > 0)
-    {
-        hasPriority = TRUE;
-    } 
-    else if (HasMovePranksterPriority(bsys, attacker, attackerMove, attackerAbility, defender))
-    {
-        hasPriority = TRUE;
-    } 
-    else if (attackerAbility == ABILITY_BLAZING_SOUL
-        && attackerMoveStruct.type == TYPE_FIRE
-        && ctx->battlemon[attacker].hp == (s32)ctx->battlemon[attacker].maxhp)
-    {
-        hasPriority = TRUE;
-    }
-    else if (attackerMoveStruct.priority > 0)
-    {
-        hasPriority = TRUE;
-    }
-    return hasPriority;
 }

@@ -16,7 +16,7 @@
 
 //#define DEBUG_DAMAGE_CALC_AI 1
 
-int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond UNUSED, u16 pow, u8 type UNUSED, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
+int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u16 pow, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
     u8 i = 0;
     u32 p;
@@ -201,8 +201,12 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
             movepower *= 2;
         }
         break;
-        // case MOVE_PAYBACK:
-        // case MOVE_PURSUIT:
+    //case MOVE_PAYBACK: gen5+
+    case MOVE_PURSUIT:
+        if (defender->isSwitching) {
+            movepower *= 2;
+        }
+        break;
     case MOVE_ROUND:
         // TODO: Implement Round
         break;
@@ -235,7 +239,7 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
         break;
     case MOVE_BOLT_BEAK:
     case MOVE_FISHIOUS_REND:
-        if (attacker->speed >= defender->speed) {
+        if (attacker->speed >= defender->speed || defender->isSwitching) {
             movepower *= 2;
         }
         break;
@@ -368,7 +372,11 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
         break;
     }
 
-    /* Not considered in AI:  Helping Hand, Me First */
+    /* Not considered in AI: Me First */
+    // handle Helping Hand
+    if (attacker->partnerMoveNo == MOVE_HELPING_HAND) {
+        basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_5);
+    }
 
     // handle Charge
     if ((attacker->effect_of_moves & MOVE_EFFECT_FLAG_CHARGE) && (movetype == TYPE_ELECTRIC)) {
@@ -500,7 +508,10 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
     if (attacker->ability == ABILITY_ANALYTIC && move.effect != MOVE_EFFECT_HIT_IN_3_TURNS) {
         u8 k = 0;
         for (k = 0; k < 4; k++) {
-            if (attackerSlot == k || sp->battlemon[k].hp == 0) {
+            if (attackerSlot == k || sp->battlemon[k].hp == 0 ) {
+                continue;
+            }
+            if (defenderSlot == k && defender->isSwitching) {
                 continue;
             }
             if (attacker->speed > sp->effectiveSpeed[k]) {
@@ -555,6 +566,10 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
     // handle Steely Spirit for the attacker--can stack //TODO
     if (movetype == TYPE_STEEL && attacker->ability == ABILITY_STEELY_SPIRIT) {
         basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_5);
+    }
+
+    if (attacker->ability == ABILITY_STAKEOUT && defender->isSwitching) {
+        basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__2_0);
     }
 
     if (isDoubleBattle) {
@@ -1174,9 +1189,9 @@ int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int mov
     return baseDamage;
 }
 
-int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
+int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int moveno, u16 pow, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
-
+    u8 critical = 1;
     u8 movetype;
     u8 movesplit = GetMoveSplit(sp, moveno);
     u32 damage = 0;
@@ -1188,16 +1203,17 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     struct BattleMove move = sp->moveTbl[moveno];
     movetype = BattleAI_GetDynamicMoveType(bw, sp, attacker, moveno);
 
-    // Blazing Soul: Fire-type moves get +1 priority while the user is at full HP.  Counting it here lets the checks below that
-    // look at the move's priority (Dazzling / Queenly Majesty / Armor Tail, targets in the middle of Fly or Dig) see it.
-    if (attacker->ability == ABILITY_BLAZING_SOUL && movetype == TYPE_FIRE && attacker->hp == attacker->maxhp) {
-        move.priority++;
+    BOOL moveHasPriority = FALSE;
+    
+    if (HasMovePriority(bw, attackerSlot, moveno, attacker->ability, defenderSlot)
+        || (attacker->ability == ABILITY_GALE_WINGS && movetype == TYPE_FLYING && attacker->hp == attacker->maxhp)) {
+        moveHasPriority = TRUE;
     }
 
     BOOL moveCanHit = TRUE;
     if (defender->effect_of_moves & MOVE_EFFECT_FLAG_SEMI_INVULNERABLE) {
         moveCanHit = FALSE;
-        switch (sp->current_move_index) {
+        switch (moveno) {
         case MOVE_SURF:
         case MOVE_WHIRLPOOL:
             if (defender->effect_of_moves & MOVE_EFFECT_FLAG_DIVE) {
@@ -1229,7 +1245,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     if (moveCanHit == FALSE
         && defender->ability != ABILITY_NO_GUARD
         && attacker->ability != ABILITY_NO_GUARD
-        && (move.priority > 0 || attacker->speed > defender->speed)) {
+        && (moveHasPriority || attacker->speed > defender->speed)) {
         return 0;
     }
 
@@ -1275,7 +1291,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         case ABILITY_DAZZLING:
         case ABILITY_QUEENLY_MAJESTY:
         case ABILITY_ARMOR_TAIL:
-            if (move.priority > 0) {
+            if (moveHasPriority) {
                 return 0;
             }
             break;
@@ -1314,6 +1330,18 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     if (!attackerHasMoldBreaker && defender->ability == ABILITY_ICE_FACE && defender->form == 0 && !(defender->condition2 & STATUS2_TRANSFORM) && movesplit == SPLIT_PHYSICAL) { // SPECIES_EISCUE
         return 0;
     }
+    if (move.effect == MOVE_EFFECT_HIT_FIRST_IF_TARGET_ATTACKING && defender->isSwitching) {
+        return 0;
+    } 
+
+    if (moveHasPriority && defender->isGrounded && sp->terrainOverlay.type == PSYCHIC_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
+        return 0;
+    }
+
+     if (((sp->field_condition & FIELD_CONDITION_EXTREMELY_HARSH_SUNLIGHT) && movetype == TYPE_WATER)
+        || ((sp->field_condition & FIELD_CONDITION_HEAVY_RAIN) && movetype == TYPE_FIRE)) {
+        return 0;
+    }
 
     u32 critCondition = 1;
     if (attacker->condition2 & STATUS2_FOCUS_ENERGY 
@@ -1347,7 +1375,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         }
      }
         
-    damage = BattleAI_CalcBaseDamage(bw, sp, moveno, side_cond, pow, movetype, critical, attackerSlot, defenderSlot, attacker, defender);
+    damage = BattleAI_CalcBaseDamage(bw, sp, moveno, pow, critical, attackerSlot, defenderSlot, attacker, defender);
 
     //=====Step 6. General Damage Modifiers=====
 
@@ -1382,7 +1410,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
 
     // 6.3 Weather Modifier
     if (weatherAttacker & FIELD_CONDITION_RAIN_ALL) {
-        switch (type) {
+        switch (movetype) {
         case TYPE_FIRE:
             damage = QMul_RoundDown(damage, UQ412__0_5);
             break;
@@ -1393,7 +1421,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     }
 
     if (weatherAttacker & FIELD_CONDITION_SUN_ALL) {
-        switch (type) {
+        switch (movetype) {
         case TYPE_FIRE:
             damage = QMul_RoundDown(damage, UQ412__1_5);
             break;
@@ -1620,6 +1648,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     // Effects relative to a particular side of the field
     // 6.9.1 Screens
     // handle Reflect
+    int side_cond = sp->side_condition[BATTLER_IS_ENEMY(defenderSlot)];
     if ((movesplit == SPLIT_PHYSICAL)
         && ((side_cond & SIDE_STATUS_REFLECT) != 0 || (side_cond & SIDE_STATUS_AURORA_VEIL) != 0)
         && (sp->critical == 1)
@@ -1677,7 +1706,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         }
 
         // 6.9.10 Fluffy (Fire-type moves)
-        if (type == TYPE_FIRE) {
+        if (movetype == TYPE_FIRE) {
             finalModifier = QMul_RoundUp(finalModifier, UQ412__2_0);
         }
     }
@@ -1826,7 +1855,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
 }
 
 
-int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u32 field_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
+int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno, u16 pow, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender)
 {
     // TODO: Parental bond, Triple Axel, Triple Kick
     if (moveno == MOVE_TRIPLE_AXEL || moveno == MOVE_TRIPLE_KICK) {
@@ -1836,7 +1865,7 @@ int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno,
             if (moveno == MOVE_TRIPLE_AXEL) {
                 basePower = 20;
             }
-            damages->damageRoll += BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, (i+1) * basePower, type, critical, attackerSlot, defenderSlot, &damagesLocal, attacker, defender);
+            damages->damageRoll += BattleAI_CalcDamageInternal(bw, sp, moveno, (i+1) * basePower, attackerSlot, defenderSlot, &damagesLocal, attacker, defender);
             for (int u = 0; u < 16; u++) {
                 damages->damageRange[u] += damagesLocal.damageRange[u];
             }
@@ -1847,6 +1876,6 @@ int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno,
     }
     else
     {
-        return BattleAI_CalcDamageInternal(bw, sp, moveno, side_cond, pow, type, critical, attackerSlot, defenderSlot, damages, attacker, defender);
+        return BattleAI_CalcDamageInternal(bw, sp, moveno, pow, attackerSlot, defenderSlot, damages, attacker, defender);
     }
 }

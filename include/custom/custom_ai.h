@@ -42,7 +42,7 @@ struct PACKED AI_sDamageCalc {
 
     u32 condition;
     u32 condition2;
-    u8 isGrounded;
+    
 
     u16 ability;
     u8 sex;
@@ -62,18 +62,27 @@ struct PACKED AI_sDamageCalc {
     u8 level;
     u32 form;
 
-    BOOL hasMoldBreaker;
+   
     u32 effect_of_moves;
-    BOOL flashFireActivated;
-    u8 hiddenPowerType;
 
     u8 slowStartCount;
     u8 furyCutterCount;
-    u8 metronomeTurns;
+    
     u8 lastResortCount;
-    u8 attackerHasMoveFailureLastTurn;
-    u8 canBelch;
-    u8 paradoxBoostedStat;
+
+    u8 hasMoldBreaker : 1;
+    u8 flashFireActivated : 1;
+    u8 attackerHasMoveFailureLastTurn : 1;
+    u8 canBelch : 1;
+    u8 isSwitching : 1;
+    u8 isGrounded : 1;
+    u8 padding : 2;
+
+    u8 hiddenPowerType;
+    u8 paradoxBoostedStat :4;
+    u8 metronomeTurns : 4;
+
+    u32 partnerMoveNo;
 };
 
 struct PACKED AIContext {
@@ -215,8 +224,8 @@ int LONG_CALL BattleAI_PostKOSwitchIn_Internal(struct BattleSystem *bsys, int at
 
 u8 LONG_CALL BattleAI_CalcSpeed(void *bw, struct BattleStruct *sp, int client1, struct PartyPokemon *partyMon, int flag, int* effectivePartyMonSpeed);
 
-int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender);
-int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond, u32 field_cond, u16 pow, u8 type, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender);
+int LONG_CALL BattleAI_CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u16 pow, u8 critical, u8 attackerSlot, u8 defenderSlot, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender);
+int LONG_CALL BattleAI_CalcDamage(void *bw, struct BattleStruct *sp, int moveno, u16 pow, u8 attackerSlot, u8 defenderSlot, struct AI_damage *damages, struct AI_sDamageCalc *attacker, struct AI_sDamageCalc *defender);
 
 void LONG_CALL FillDamageStructFromPartyMon(void *bw UNUSED, struct BattleStruct *sp, struct AI_sDamageCalc *monStruct, struct PartyPokemon *pp, int attackerPos UNUSED, int partyPos UNUSED);
 
@@ -249,6 +258,7 @@ u32 LONG_CALL BattleAI_GetWeather(struct BattleSystem *bsys, struct BattleStruct
 u8 LONG_CALL BattleAI_GetHighestParadoxStat(u8 atk, u8 def, u8 spatk, u8 spdef, u8 speed);
 
 BOOL LONG_CALL HasMovePranksterPriority(struct BattleSystem *bsys, u8 attacker, u32 attackerMove, u32 attackerAbility, u8 defender);
+BOOL LONG_CALL HasMovePriority(struct BattleSystem *bsys, u8 attacker, u32 attackerMove, u32 attackerAbility, u8 defender);
 
 BOOL LONG_CALL IsMoveUsable(struct BattleStruct *ctx, u8 attacker, u32 move, u32 moveLastUsed, u8 split, u8 index);
 

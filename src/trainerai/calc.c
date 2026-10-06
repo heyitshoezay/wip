@@ -960,7 +960,7 @@ BOOL LONG_CALL IsPartyPokemonGrounded(struct BattleStruct *sp, struct PartyPokem
 u32 LONG_CALL BattleAI_GetWeather(struct BattleSystem *bsys, struct BattleStruct *ctx, int ability)
 {
     if (ability == ABILITY_MEGA_SOL) {
-        return FIELD_CONDITION_NONE;
+        return FIELD_CONDITION_SUN;
     }
 
     if (CheckSideAbility(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) || CheckSideAbility(bsys, ctx, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK)) {
@@ -1014,4 +1014,31 @@ BOOL LONG_CALL IsMoveUsable(struct BattleStruct *ctx, u8 attacker, u32 move, u32
         }
     }
     return TRUE;
+}
+
+
+BOOL LONG_CALL HasMovePriority(struct BattleSystem *bsys, u8 attacker, u32 attackerMove, u32 attackerAbility, u8 defender)
+{
+    struct BattleStruct *ctx = bsys->sp;
+    struct BattleMove attackerMoveStruct = ctx->moveTbl[attackerMove];
+
+    //ignore gale wings here
+    BOOL hasPriority = FALSE;
+    if (attackerMove == MOVE_GRASSY_GLIDE
+        && ctx->terrainOverlay.type == GRASSY_TERRAIN
+        && ctx->terrainOverlay.numberOfTurnsLeft > 0) {
+        hasPriority = TRUE;
+    } else if (attackerAbility == ABILITY_TRIAGE && IsTriageBoostedMove(attackerMove)) {
+        hasPriority = TRUE;
+    } else if (HasMovePranksterPriority(bsys, attacker, attackerMove, attackerAbility, defender)) {
+        hasPriority = TRUE;
+    } else if (attackerAbility == ABILITY_BLAZING_SOUL
+        && attackerMoveStruct.type == TYPE_FIRE
+        && ctx->battlemon[attacker].hp == (s32)ctx->battlemon[attacker].maxhp) {
+        // Blazing Soul: Fire-type moves get +1 priority while the user is at full HP
+        hasPriority = TRUE;
+    } else if (attackerMoveStruct.priority > 0) {
+        hasPriority = TRUE;
+    }
+    return hasPriority;
 }

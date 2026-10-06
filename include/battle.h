@@ -3074,6 +3074,7 @@ BOOL LONG_CALL IsDynamaxBannedWeightMove(u32 moveIndex);
 BOOL LONG_CALL IsBallOrBombMove(u32 moveIndex);
 
 BOOL LONG_CALL IsDanceMove(u32 moveIndex);
+BOOL LONG_CALL IsTriageBoostedMove(u32 moveIndex);
 
 /// @brief Get the priority of the client
 /// @param bsys
@@ -3142,6 +3143,7 @@ BOOL LONG_CALL CanUndergoPrimalReversion(struct BattleStruct *sp, u8 client_no);
 
 // defined in mega.c
 BOOL LONG_CALL CheckMegaData(u32 mon, u32 item, u32 form);
+BOOL IsMegaSpecies(u32 mon, u32 form);
 
 /**
  *  @brief grab mega form of a specific species with specific item
