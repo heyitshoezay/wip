@@ -49,7 +49,7 @@ MegaAnimScript:
 
     // WHITE-OUT, long version.  Measured against Radical Red's Mega Evolution (60 frames = 1 second):
     //   Radical Red : about 30 frames to fade to white, about 65 frames fully white, about 40 frames to fade back
-    //   before this : 13 frames, 36 frames (and never fully white, the glow stayed on top), 12 frames
+    //   original    : 13 frames, 36 frames (and never fully white, the glow stayed on top), 12 frames
     // The screen fade moves at a fixed speed, so the fade TO white is split in two halves with a wait between them to make it slower.
     // This worked in the recording: it took 32 frames.  (If the halves ever look wrong, use the single-fade line marked SINGLE.)
     // The fade BACK in two halves did nothing in the recording, so it is a single fade.
@@ -62,23 +62,50 @@ MegaAnimScript:
     wait 12                                                                        // the first half needs about 8 frames
     callfunction 33, 5, 0, 1, 8, 16, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"     // screen: fade to white, second half (alpha 8 to 16)
     wait 18                                                                        // frame 30: the screen is fully white and both Pokemon are hidden
-    // 2. fully white.  The particles are taken away only now, while nothing else is visible, so the white is clean.
-    // In the last recording both Pokemon came back into view about 90 frames after the shade began, while the screen was still white,
-    // so the shade is applied again here (instantly) to keep them hidden through the whole hold.
-    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white again, instantly
-    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white again, instantly
+    // 2. fully white.  The particles are taken away now, while nothing else is visible, so the white is clean.
+    // Taking the particles away puts both Pokemon back to normal colour for a moment, so for the whole short hold the white shade is
+    // applied again every 2 waits (about every 4 frames).  Whatever resets it, the Pokemon are hidden again almost at once.
     unloadparticle 0                                                               // ends the pulsing ring and every other emitter of file 489
     unloadparticle 1                                                               // same for file 490
-    wait 32                                                                        // fully white.  This was 65, which came out at about 150 frames in the recording.
-    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // and once more right before the form changes
-    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"
-    // 3. the form changes while the screen is white, then the screen fades back, with the shake on the new form.
-    // The fade back in two halves made no difference in the recording (it took the same 14 frames), so it is one fade again.
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 2
+    // 3. the form changes while the screen is white.  The form change also showed both Pokemon for a few frames, so they are made white
+    // again straight away.  Then the white fades away and both Pokemon come back with it (about 24 frames), and only after the white
+    // is completely gone do the shake and the cry play.
     transform 0
+    callfunction 34, 6, 2050, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // attacking Pokemon: white, instantly
+    callfunction 34, 6, 2056, 0, 1, 32767, 16, 0, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: white, instantly
+    wait 1
     callfunction 33, 5, 0, 1, 16, 0, 32767, "NaN", "NaN", "NaN", "NaN", "NaN"      // screen: fade back from white
-    callfunction 34, 6, 2056, 0, 1, 32767, 0, 10, "NaN", "NaN", "NaN", "NaN"       // opposing Pokemon: shade back to normal
-    callfunction 0x24, 5, 2, 0, 1, 4, 8 | 0x100, 0, 0, 0, 0, 0                    // the shake, now on the new form
-    waitstate
+    callfunction 34, 6, 2050, 0, 1, 32767, 0, 12, "NaN", "NaN", "NaN", "NaN"       // the new form: shade back to normal with the white
+    callfunction 34, 6, 2056, 0, 1, 32767, 0, 12, "NaN", "NaN", "NaN", "NaN"       // the opposing Pokemon: shade back to normal with the white
+    waitstate                                                                      // waits until the white is completely gone
+    wait 6                                                                         // a short beat with the clear screen so the new form is seen before it shakes
+    callfunction 0x24, 5, 2, 0, 1, 4, 8 | 0x100, 0, 0, 0, 0, 0                    // the shake, on the new form, now that the white has cleared
+    waitstate                                                                      // waits for the shake to finish, then the cry
     playcry 0, -117, 127
     waitcry 0
     wait 15
