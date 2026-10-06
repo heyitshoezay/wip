@@ -106,6 +106,7 @@ _lowerThanThreeTurns:
     GoTo _211
 
 _205:
+    AbilityPopup BATTLER_CATEGORY_MSG_BATTLER_TEMP
     // {0}’s {1} made {2} fall asleep!
     PrintMessage 50, TAG_NICKNAME_ABILITY_NICKNAME, BATTLER_CATEGORY_MSG_TEMP, BATTLER_CATEGORY_MSG_BATTLER_TEMP, BATTLER_CATEGORY_SIDE_EFFECT_MON
 
@@ -136,6 +137,7 @@ _237:
     WaitButtonABTime 30
 
 _stayedAwakeDueToAbility:
+    AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0} stayed awake because of its {1}!
     PrintMessage 329, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _365
@@ -217,6 +219,7 @@ _doubleFlowerVeilHandle:
     WaitButtonABTime 30
 
 _392:
+    AbilityPopup BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0} stayed awake because of its ally’s {1}!
     PrintMessage 1385, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _365

@@ -1204,7 +1204,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     movetype = BattleAI_GetDynamicMoveType(bw, sp, attacker, moveno);
 
     BOOL moveHasPriority = FALSE;
-    
+
     if (HasMovePriority(bw, attackerSlot, moveno, attacker->ability, defenderSlot)
         || (attacker->ability == ABILITY_GALE_WINGS && movetype == TYPE_FLYING && attacker->hp == attacker->maxhp)) {
         moveHasPriority = TRUE;
@@ -1323,7 +1323,7 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         return 0;
     }
     if ((moveno == MOVE_BURN_UP && attacker->type1 != TYPE_FIRE && attacker->type2 != TYPE_FIRE && attacker->type3 != TYPE_FIRE)
-        || (moveno == MOVE_DOUBLE_SHOCK && attacker->type1 != TYPE_ELECTRIC && attacker->type2 != TYPE_ELECTRIC && attacker->type3 != TYPE_ELECTRIC )) {
+        || (moveno == MOVE_DOUBLE_SHOCK && attacker->type1 != TYPE_ELECTRIC && attacker->type2 != TYPE_ELECTRIC && attacker->type3 != TYPE_ELECTRIC)) {
         return 0;
     }
 
@@ -1332,14 +1332,31 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
     }
     if (move.effect == MOVE_EFFECT_HIT_FIRST_IF_TARGET_ATTACKING && defender->isSwitching) {
         return 0;
-    } 
+    }
 
     if (moveHasPriority && defender->isGrounded && sp->terrainOverlay.type == PSYCHIC_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
         return 0;
     }
 
-     if (((sp->field_condition & FIELD_CONDITION_EXTREMELY_HARSH_SUNLIGHT) && movetype == TYPE_WATER)
+    if (((sp->field_condition & FIELD_CONDITION_EXTREMELY_HARSH_SUNLIGHT) && movetype == TYPE_WATER)
         || ((sp->field_condition & FIELD_CONDITION_HEAVY_RAIN) && movetype == TYPE_FIRE)) {
+        return 0;
+    }
+
+    if (sp->field_condition & FIELD_CONDITION_GRAVITY) {
+        switch (moveno) {
+        case MOVE_FLY:
+        case MOVE_BOUNCE:
+        case MOVE_JUMP_KICK:
+        case MOVE_HIGH_JUMP_KICK:
+        case MOVE_FLYING_PRESS:
+            return 0;
+        default:
+            break;
+        }
+    }
+
+    if (sp->moveConditionsFlags[attackerSlot].throatChopTimer && IsMoveSoundBased(moveno)) {
         return 0;
     }
 
@@ -1510,6 +1527,9 @@ int LONG_CALL BattleAI_CalcDamageInternal(void *bw, struct BattleStruct *sp, int
         }
     default:
         break;
+    }
+    if (defender->ability == ABILITY_WONDER_GUARD && !attackerHasMoldBreaker && moveEffectiveness < TYPE_MUL_SUPER_EFFECTIVE) {
+        moveEffectiveness = TYPE_MUL_NO_EFFECT;
     }
 
     damages->moveEffectiveness = moveEffectiveness;

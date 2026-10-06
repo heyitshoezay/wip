@@ -59,6 +59,7 @@ _101:
     PrintAttackMessage
     Wait
     WaitButtonABTime 30
+    AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} made it ineffective!
     PrintMessage 734, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _124
@@ -87,6 +88,7 @@ handleFlowerVeilMessage:
     PrintAttackMessage
     Wait
     WaitButtonABTime 30
+    AbilityPopup BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} made it ineffective!
     PrintMessage 734, TAG_NICKNAME_ABILITY, BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _124

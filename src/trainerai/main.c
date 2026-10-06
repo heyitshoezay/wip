@@ -1868,7 +1868,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
     return moveScore;
 }
 
-u32 LONG_CALL GetRecoverAmountPercent(struct BattleSystem *bsys, u32 attackerMove, u32 attackerMoveEffect)
+u32 LONG_CALL GetRecoverAmountPercent(struct BattleSystem *bsys, u32 attackerMove, u32 attackerMoveEffect, struct AIContext *ai)
 {
     struct BattleStruct *ctx = bsys->sp;
     u32 recoverAmountPercent = 50;
@@ -1878,7 +1878,7 @@ u32 LONG_CALL GetRecoverAmountPercent(struct BattleSystem *bsys, u32 attackerMov
         break;
     case MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER:
         if ((attackerMove == MOVE_SHORE_UP && (ctx->field_condition & FIELD_CONDITION_SANDSTORM_ALL))
-            || (attackerMove != MOVE_SHORE_UP && (ctx->field_condition & FIELD_CONDITION_SUN_ALL))) {
+            || (attackerMove != MOVE_SHORE_UP && ((ctx->field_condition & FIELD_CONDITION_SUN_ALL) || ai->attackerMon.ability == ABILITY_MEGA_SOL))) {
             recoverAmountPercent = 67;
         } else if (ctx->field_condition & FIELD_CONDITION_RAIN_ALL) {
             recoverAmountPercent = 25;
@@ -1892,7 +1892,7 @@ u32 LONG_CALL GetRecoverAmountPercent(struct BattleSystem *bsys, u32 attackerMov
 
 BOOL LONG_CALL shouldRecover(struct BattleSystem *bsys, u32 attacker UNUSED, u32 attackerMoveEffect, struct AIContext *ai)
 {
-    u32 recoverAmountPercent = GetRecoverAmountPercent(bsys, ai->attackerMove, attackerMoveEffect);
+    u32 recoverAmountPercent = GetRecoverAmountPercent(bsys, ai->attackerMove, attackerMoveEffect, ai);
 
     u32 recoverAmountHP = recoverAmountPercent * ai->attackerMon.maxhp / 100;
     if ((recoverAmountHP + ai->attackerMon.hp) > ai->attackerMon.maxhp) {
@@ -1968,7 +1968,7 @@ int LONG_CALL RecoveryScoring(struct BattleSystem *bsys, u32 attacker, int i, st
         }
         break;
     case MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER: {
-        u32 recoverAmount = GetRecoverAmountPercent(bsys, ai->attackerMove, MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER);
+        u32 recoverAmount = GetRecoverAmountPercent(bsys, ai->attackerMove, MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER, ai);
         if (aiShouldRecover && recoverAmount > 50) {
             moveScore += 7;
         } else if (recoverAmount == 50 && shouldRecover(bsys, attacker, MOVE_EFFECT_RESTORE_HALF_HP, ai)) {

@@ -205,6 +205,7 @@ _AbilityBlock:
 
 _ImmuneDueToAbility:
     WaitButtonABTime 30
+    AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} prevents poisoning!
     PrintMessage 650, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _Cleanup
@@ -269,6 +270,7 @@ _DoubleFlowerVeilHandle:
 
 _FlowerVeilAllyFail:
     WaitButtonABTime 30
+    AbilityPopup BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} prevents poisoning!
     PrintMessage 650, TAG_NICKNAME_ABILITY, BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_RELATIVE_ALLY|BATTLER_CATEGORY_SIDE_EFFECT_MON
     GoTo _Cleanup

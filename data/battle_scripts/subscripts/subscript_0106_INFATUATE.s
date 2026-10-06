@@ -38,6 +38,7 @@ _055:
     PrintAttackMessage 
     Wait 
     WaitButtonABTime 30
+    AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} prevents romance!
     PrintMessage 647, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_SIDE_EFFECT_MON
     Wait 
@@ -54,6 +55,7 @@ _082:
     End 
 
 _098:
+    AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON
     // {0}’s {1} made the {2} ineffective!
     PrintMessage 1147, TAG_NICKNAME_ABILITY_ITEM, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_SIDE_EFFECT_MON, BATTLER_CATEGORY_MSG_BATTLER_TEMP
     Wait 

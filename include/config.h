@@ -112,6 +112,11 @@
 // (Water Absorb, Volt Absorb, Flash Fire, Sap Sipper, Levitate, type immunities...).  comment out to remove it
 #define IMPLEMENT_AI_ABSORB_SWITCH
 
+// IMPLEMENT_AI_SEE_PLAYER_CHOICE lets a trainer whose AI flags include F_SEE_PLAYER_CHOICE look at what the player chose this turn, after both
+// sides have chosen, and choose again knowing it.  Only trainers with that flag are affected (singles only, and only when both sides are using a
+// move).  comment out to remove it
+//#define IMPLEMENT_AI_SEE_PLAYER_CHOICE
+
 // IMPLEMENT_LEVEL_CAP defines whether or not a configurable hard level cap system is built into the rom based on the value in LEVEL_CAP_VARIABLE
 // if the level is greater than or equal to LEVEL_CAP_VARIABLE, the pokémon will no longer gain experience
 // uncommenting IMPLEMENT_LEVEL_CAP enables the level cap system.  make sure to also uncomment LEVEL_CAP_VARIABLE in the process

@@ -42,6 +42,7 @@ _066:
 
 _099:
     WaitButtonABTime 30
+    AbilityPopup BATTLER_CATEGORY_ATTACKER
     // {0} stayed awake because of its {1}!
     PrintMessage 329, TAG_NICKNAME_ABILITY, BATTLER_CATEGORY_ATTACKER, BATTLER_CATEGORY_ATTACKER
     GoTo _144

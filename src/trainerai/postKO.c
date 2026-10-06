@@ -200,6 +200,12 @@ int LONG_CALL BattleAI_PostKOSwitchIn_Internal(struct BattleSystem *bsys, int at
             switchInScore[i] = 100;
 
             FillDamageStructFromPartyMon(bsys, ctx, &attackerMon, mon, attacker, i);
+            if (calcWithHighestDamageHit) {
+#ifdef DEBUG_AI_SCORING
+                debug_printf("Calcing with switch enabled\n");
+#endif // DEBUG_AI_SCORING
+                attackerMon.isSwitching = TRUE;
+            }
 
             if (calcOpp) {
 #ifdef DEBUG_AI_SCORING
