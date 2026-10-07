@@ -2,7 +2,7 @@
 .include "armips/include/constants.s"
 .include "armips/include/generated/levelup.s"
 .include "armips/include/generated/species.s" // just need NUM_OF_MONS
-
+.include "armips/asm/intro_pokemon.s" // Turtwig cry in the Oak intro
 .include "armips/asm/abilities.s" // ability expansion
 .include "armips/asm/moves.s" // repoints all the move table defines within the structure
 .include "armips/asm/trainer_ai.s" // repoints all the move table defines for trainer ai within the structure

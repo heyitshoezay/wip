@@ -12922,7 +12922,7 @@ const TrainerData sTrainerData[] = {
                 .level = 66,
                 .species = SPECIES_WEAVILE,
                 .item = ITEM_FOCUS_SASH,
-                .moves = { MOVE_ICE_SHARD, MOVE_ICE_PUNCH, MOVE_NIGHT_SLASH, MOVE_POISON_JAB },
+                .moves = { MOVE_ICE_SHARD, MOVE_TRIPLE_AXEL, MOVE_NIGHT_SLASH, MOVE_DIRE_CLAW },
                 .ability = ABILITY_PRESSURE,
                 .setIvs = { 31, 31, 31, 31, 31, 31 },
                 .setEvs = { 0, 252, 4, 252, 0, 0 },
@@ -26534,7 +26534,7 @@ const TrainerData sTrainerData[] = {
             .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET,
             .trainerClass = TRAINERCLASS_EXECUTIVE_PETREL,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_SEE_PLAYER_CHOICE,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
         .party = {

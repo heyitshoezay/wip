@@ -425,6 +425,7 @@ Fsys_GetWeather_HandleDiamondDust = 0x0203BBB4 | 1;
 sub_0206D038 = 0x0206D038 | 1;
 GetSpeciesNameIntoArray = 0x0200BC28 | 1;
 PlayCry = 0x02006218 | 1;
+GF_SndPlayerCountPlaying = 0x020054C0 | 1;
 PlaySE = 0x0200604C | 1;
 
 weatherSysObjFadeInit = 0x021EC504 | 1;
@@ -923,3 +924,26 @@ sub_0207294C = 0x0207294C | 1;
 sub_02017068 = 0x02017068 | 1;
 MapObjectManager_RestoreFromSave = 0x0205E648 | 1;
 Save_MapObjects_Get = 0x0203B9D0 | 1;
+
+/* Streamed music (NWAV) player: Nitro SDK functions it calls */
+DC_FlushRange = 0x020D2894;
+DC_InvalidateRange = 0x020D285C;
+FS_CloseFile = 0x020D82C0;
+FS_FindArchive = 0x020D7958;
+FS_InitFile = 0x020D7F98;
+FS_OpenFileFast = 0x020D8208;
+FS_ReadFile = 0x020D83CC;
+FS_SeekFile = 0x020D83DC;
+MI_CpuFill8 = 0x020D4994;
+NNS_SndSetMasterVolume = 0x020C7988;
+OS_CreateThread = 0x020D1AD4;
+OS_InitMessageQueue = 0x020D2388;
+OS_ReceiveMessage = 0x020D2444;
+OS_SendMessage = 0x020D23B0;
+OS_WakeUpThreadDirect = 0x020D1F34;
+SND_LockChannel = 0x020D5240;
+SND_SetChannelVolume = 0x020D52A0;
+SND_SetupAlarm = 0x020D5200;
+SND_SetupChannelPcm = 0x020D52E8;
+SND_StartTimer = 0x020D5174;
+SND_StopTimer = 0x020D519C;

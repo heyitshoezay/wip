@@ -112,10 +112,6 @@
 // (Water Absorb, Volt Absorb, Flash Fire, Sap Sipper, Levitate, type immunities...).  comment out to remove it
 #define IMPLEMENT_AI_ABSORB_SWITCH
 
-// IMPLEMENT_AI_SEE_PLAYER_CHOICE lets a trainer whose AI flags include F_SEE_PLAYER_CHOICE look at what the player chose this turn, after both
-// sides have chosen, and choose again knowing it.  Only trainers with that flag are affected (singles only, and only when both sides are using a
-// move).  comment out to remove it
-//#define IMPLEMENT_AI_SEE_PLAYER_CHOICE
 
 // IMPLEMENT_LEVEL_CAP defines whether or not a configurable hard level cap system is built into the rom based on the value in LEVEL_CAP_VARIABLE
 // if the level is greater than or equal to LEVEL_CAP_VARIABLE, the pokémon will no longer gain experience
@@ -290,7 +286,7 @@
 
 // SKIP_TUTORIAL_INFO will skip the tutorial when starting a new game and go straight to Professor Oak greeting you.
 // uncomment the line out to get this functionality
-// #define SKIP_TUTORIAL_INFO
+ #define SKIP_TUTORIAL_INFO
 
 // Champions-specific move configurations. Set to 0 to use Scarlet/Violet values.
 #define CHAMPIONS_POWER_CHANGES         1
@@ -319,7 +315,7 @@
 
 // PLAY_MON_VICTORY_POSE enables the victory pose for Pokémon when fainting an opponent.
 // Comment out this define if you want to disable this feature.
-// #define PLAY_MON_VICTORY_POSE
+ #define PLAY_MON_VICTORY_POSE
 
 // Dumps of the vanilla text (data/text), zone event data (data/eventdata/zone_event), and field scripts (data/scr_seq)
 // are shipped as a reference so that a hack can be diffed against what the game originally shipped with.

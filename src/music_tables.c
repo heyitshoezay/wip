@@ -54,7 +54,8 @@ u16 MainMusicComboTable[][2] = {
     [ANIM_MUSIC_COMBO_KIMONO_GIRL] = { 0x2D, SEQ_GS_VS_TRAINER },
     [ANIM_MUSIC_COMBO_RED] = { 0x2E, SEQ_GS_VS_CHAMP },
     // (***END OF VANILLA ENTRIES***)
-    [ANIM_MUSIC_COMBO_ROARK] = {0x2E, SEQ_GS_BA_BRAIN },
+    [ANIM_MUSIC_COMBO_ROARK] = {0x2E, 0 },
+    [ANIM_MUSIC_COMBO_CYNTHIA] = {0x2E, 1 },
 };
 
 // format is one byte for trainer class, then one byte for combo (combo increments by 4 because each combo is four bytes long)
@@ -101,7 +102,7 @@ u8 TrainerClassToMusicCombo[][2] = {
     { TRAINERCLASS_LEADER_BYRON, ANIM_MUSIC_COMBO_ROARK * 4 },
     { TRAINERCLASS_LEADER_CANDICE, ANIM_MUSIC_COMBO_ROARK * 4 },
     { TRAINERCLASS_LEADER_VOLKNER, ANIM_MUSIC_COMBO_ROARK * 4 },
-    { TRAINERCLASS_CHAMPION_CYNTHIA, ANIM_MUSIC_COMBO_RED * 4 },
+    { TRAINERCLASS_CHAMPION_CYNTHIA, ANIM_MUSIC_COMBO_CYNTHIA * 4 },
 };
 
 struct MonBattleMusic {

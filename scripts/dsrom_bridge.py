@@ -91,6 +91,34 @@ def pack(dsrom_bin, rom, dsrom_dir, base, filesys):
     shutil.rmtree(dsrom_files)
     shutil.copytree(filesys, dsrom_files)
 
+    # --- keep new files (waves/) in path_order.txt ---
+    order_path = os.path.join(dsrom_dir, "path_order.txt")
+    if os.path.isfile(order_path):
+        with open(order_path, encoding="utf-8") as f:
+            listed = [l.rstrip("\r\n") for l in f if l.strip()]
+        added = []
+
+        def covered(p):
+            # a path is placed if it, or one of its parents, is listed; or it is a parent of something listed
+            return any(p == l or p.startswith(l + "/") or l.startswith(p + "/") for l in listed + added)
+
+        def visit(rel):
+            p = "/" + rel if rel else ""
+            if rel and not covered(p):
+                added.append(p)
+                return
+            full = os.path.join(dsrom_files, rel) if rel else dsrom_files
+            if os.path.isdir(full) and not (rel and any(p == l or p.startswith(l + "/") for l in listed + added)):
+                for name in sorted(os.listdir(full)):
+                    visit(rel + "/" + name if rel else name)
+
+        visit("")
+        if added:
+            with open(order_path, "a", encoding="utf-8") as f:
+                for p in added:
+                    f.write(p + "\n")
+            print("path_order.txt: added", ", ".join(added))
+
     overlays_yaml_path = os.path.join(dsrom_dir, "arm9_overlays", "overlays.yaml")
     data = read_yaml(overlays_yaml_path)
     by_id = {o["id"]: o for o in data["overlays"]}

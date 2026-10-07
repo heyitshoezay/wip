@@ -351,6 +351,11 @@ $(BASE)/arm9.bin: $(ROMNAME) $(NDSTOOL) $(VENV_ACTIVATE)
 endif
 
 all: $(OUTPUT) $(OVERLAY_OUTPUTS) $(TOOLS) $(BASE)/arm9.bin
+	@# base_extra/ is yours: whatever is in it is copied over base/ before every build, so it survives "make clean" and a re-extraction
+	@# (for example the streamed music: base_extra/root/waves/0_song.nwav ends up as base/root/waves/0_song.nwav)
+	@if [ -d base_extra ]; then cp -a base_extra/. $(BASE)/ && echo "Copied base_extra/ into $(BASE)/"; fi
+	@# prune stale waves: only the files in base_extra/root/waves are allowed in the rom, in this order
+	@if [ -d base_extra/root/waves ]; then for d in $(BASE)/root/waves base_dsrom/files/waves; do [ -d "$$d" ] && for f in "$$d"/*; do [ -e "base_extra/root/waves/$$(basename "$$f")" ] || { echo "removing stale wave $$f"; rm -f "$$f"; }; done; done; true; fi
 	@# find and delete macOS and windows files
 	find . \( -name "*.DS_Store" -o -name "*:Zone.Identifier" \) -delete
 	$(PYTHON) scripts/make.py $(CFLAGS)

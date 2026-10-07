@@ -10,6 +10,7 @@
 #define SCRIPT_NEW_CMD_REPEL_USE    0
 #define SCRIPT_NEW_CMD_STATUS_REPEL 1
 #define SCRIPT_NEW_CMD_TOGGLE_REPEL 2
+#define SCRIPT_NEW_CMD_PLAY_MUSIC 100 // DummyTextTrap 100 <song>: start a background music (0, 1, 2 = streamed file, 1004+ = normal song)
 #define SCRIPT_NEW_CMD_PARTY_HAS_FAIRY 3
 
 #define SCRIPT_NEW_CMD_MAX 256
@@ -20,6 +21,9 @@ BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
     u16 UNUSED arg0 = ScriptReadHalfword(ctx);
 
     switch (sw) {
+    case SCRIPT_NEW_CMD_PLAY_MUSIC:
+        PlayBGM(arg0);
+        return FALSE;
     case SCRIPT_NEW_CMD_REPEL_USE:;
 #ifdef IMPLEMENT_REUSABLE_REPELS
         u16 most_recent_repel = Repel_GetMostRecent();

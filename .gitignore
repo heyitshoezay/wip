@@ -69,3 +69,4 @@ test_filter.txt
 /scripts/fixed/moves-updated.s
 
 /hg-engine.wiki/
+base_extra/*
