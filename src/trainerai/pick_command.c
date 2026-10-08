@@ -240,6 +240,37 @@ int getVarianceFromDamage(struct AIContext *ai)
     return (50 - ai->highestDamageHitPrct) * 3 / 5;
 }
 
+// TRUE if the AI mon still has PP for an entry hazard that is not up yet on the player's side (and the player has more mons to hurt)
+static BOOL AI_HasUnusedHazardMove(struct BattleStruct *ctx, u32 attacker, struct AIContext *ai)
+{
+    if (ai->livingMembersDefender < 2) {
+        return FALSE;
+    }
+    for (int i = 0; i < 4; i++) {
+        u32 move = ctx->battlemon[attacker].move[i];
+        if (move == MOVE_NONE || ctx->battlemon[attacker].pp[i] == 0) {
+            continue;
+        }
+        switch (ctx->moveTbl[move].effect) {
+        case MOVE_EFFECT_STEALTH_ROCK:
+            if ((ctx->side_condition[ai->defenderSide] & SIDE_STATUS_STEALTH_ROCK) == 0) { return TRUE; }
+            break;
+        case MOVE_EFFECT_STICKY_WEB:
+            if ((ctx->side_condition[ai->defenderSide] & SIDE_STATUS_STICKY_WEB) == 0) { return TRUE; }
+            break;
+        case MOVE_EFFECT_SET_SPIKES:
+            if (ctx->scw[ai->defenderSide].spikesLayers < 3) { return TRUE; }
+            break;
+        case MOVE_EFFECT_TOXIC_SPIKES:
+            if (ctx->scw[ai->defenderSide].toxicSpikesLayers < 2) { return TRUE; }
+            break;
+        default:
+            break;
+        }
+    }
+    return FALSE;
+}
+
 BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defender, struct AIContext *ai)
 {
     struct BattleStruct *ctx = bsys->sp;
@@ -253,6 +284,15 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         if (aiTrainer == NULL || (aiTrainer->data.aiFlags & (1 << 14)) == 0) {
             return FALSE;
         }
+    }
+
+    // a lead that still has hazards to set stays in and sets them, even if it is about to faint
+    if (AI_HasUnusedHazardMove(ctx, attacker, ai)) {
+        return FALSE;
+    }
+    // a full-HP Focus Sash / Sturdy mon survives one hit, so it does not run from a KO
+    if (ai->attackerHasSturdyOrFocusSashActive && ai->playerPredictedMoveKills) {
+        return FALSE;
     }
 
 #ifdef IMPLEMENT_AI_ABSORB_SWITCH
