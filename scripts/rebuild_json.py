@@ -17,6 +17,17 @@ infoblock = json.load(open("build/sdat/InfoBlock.json", "rb+"))
 
 totalcries = len(os.listdir("sound/cries")) + 50
 
+# when the sound table was already extended by an earlier build, the "species1 <= 544" blocks below do nothing, so new cries are never added.
+# this puts any missing cries right after the last existing WAVE_ARC_PV entry (cry N must sit at index N + 234, so they have to stay in a row)
+def AppendMissingCries(entries, nameOf, make, firstMissing):
+    last = -1
+    for i, e in enumerate(entries):
+        if nameOf(e).startswith("WAVE_ARC_PV") and "SKY" not in nameOf(e):
+            last = i
+    for n in range(firstMissing, totalcries):
+        entries.insert(last + 1, make(n))
+        last += 1
+
 species0 = 1
 species1 = 1
 
@@ -118,6 +129,9 @@ if (species1 <= 544):
         json_data["subFile"] = [ "00.swav" ]
         fileblock["file"].insert(len(fileblock["file"]), json_data)
         #print(json_data)
+else:
+    AppendMissingCries(fileblock["file"], lambda e: e["name"],
+        lambda n: {"name": "WAVE_ARC_PV{:03d}.swar".format(n), "type": "WAVARC", "MD5": "1f3678644735b1319fd0f07a99335e38", "subFile": ["00.swav"]}, species1)
 
 with open("build/sdat/FileBlock.json", "w") as savefile:
     json.dump(fileblock, savefile)
@@ -203,6 +217,9 @@ if (species1 <= 544): # hasn't already been expanded
         json_data["unkA"] = 0
         
         infoblock["wavarcInfo"].insert(len(infoblock["wavarcInfo"]), json_data)
+else:
+    AppendMissingCries(infoblock["wavarcInfo"], lambda e: e["name"],
+        lambda n: {"name": "WAVE_ARC_PV{:03d}".format(n), "fileName": "WAVE_ARC_PV{:03d}.swar".format(n), "unkA": 0}, species1)
 
 
 with open("build/sdat/InfoBlock.json", "w") as savefile:

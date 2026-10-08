@@ -1560,6 +1560,9 @@ void sub_0206D328(struct PartyPokemon *pokemon, u32 heapId)
 #define CRY_SPECIES_BASE_ENAMORUS   (CRY_SPECIES_FORMS_BASE + 23 + 48)
 #define CRY_SPECIES_BASE_MAUSHOLD   (CRY_SPECIES_FORMS_BASE + 24 + 48)
 
+// Legends Z-A megas: one cry each, in species.h order (SPECIES_PLZA_MEGAS_START + n -> this + n)
+#define CRY_SPECIES_BASE_PLZA_MEGAS (CRY_SPECIES_BASE_MAUSHOLD + 1)
+
 u32 storeShayminForm = 0;
 // the original cry code asks GrabCryNumSpeciesForm for the cry number three times in a row.  the first call has the form, the
 // other two do not, so the species and form of the first call are remembered here for the other two (see below)
@@ -1624,6 +1627,10 @@ u32 GrabCryNumSpeciesForm(u32 species, u32 form)
     // handle megas in a way such that it's not added to the already-bad switch
     if (newSpecies >= SPECIES_MEGA_START && newSpecies <= MAX_MEGA_NUM) {
         return newSpecies - SPECIES_MEGA_START + CRY_SPECIES_BASE_VENUSAUR;
+    }
+
+    if (newSpecies >= SPECIES_PLZA_MEGAS_START && newSpecies <= MAX_SPECIES_PLZA_MEGAS_FORM_NUM) {
+        return newSpecies - SPECIES_PLZA_MEGAS_START + CRY_SPECIES_BASE_PLZA_MEGAS;
     }
 
     // handle the rest of the species
