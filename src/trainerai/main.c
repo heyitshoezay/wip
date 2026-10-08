@@ -686,7 +686,7 @@ int LONG_CALL DamagingMoveScoring(struct BattleSystem *bsys, u32 attacker, int i
         break;
     }
     case MOVE_FIRST_IMPRESSION: {
-        if (ai->attackerTurnsOnField == 0) {
+        if (ai->attackerMon.firstTurnOut) {
             moveScore += 9;
         } else {
             moveScore -= IMPOSSIBLE_MOVE;
@@ -694,8 +694,8 @@ int LONG_CALL DamagingMoveScoring(struct BattleSystem *bsys, u32 attacker, int i
         break;
     }
     case MOVE_FAKE_OUT: {
-        if (ai->attackerTurnsOnField == 0 && !ai->defenderImmuneToFlinch) {
-                moveScore += 9;
+        if (ai->attackerMon.firstTurnOut && !ai->defenderImmuneToFlinch) {
+            moveScore += 9;
         } else {
             moveScore -= IMPOSSIBLE_MOVE;
         }
@@ -1256,7 +1256,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
     case MOVE_EFFECT_STEALTH_ROCK:
     case MOVE_EFFECT_SET_SPIKES:
     case MOVE_EFFECT_TOXIC_SPIKES:
-        if (ai->attackerTurnsOnField == 0) {
+        if (ai->attackerMon.firstTurnOut) {
             moveScore += 8;
         } else {
             moveScore += 6;
@@ -1272,7 +1272,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
         }
         break;
     case MOVE_EFFECT_STICKY_WEB:
-        if (ai->attackerTurnsOnField == 0) {
+        if (ai->attackerMon.firstTurnOut) {
             moveScore += 9;
         } else {
             moveScore += 6;
@@ -1317,10 +1317,10 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
         if (IsMonInflictedWithAnyNegativeStatus(ctx, ai->defender)) {
             moveScore += 1;
         }
-        if (ai->attackerTurnsOnField == 0 && ai->isDoubleBattle) {
+        if (ai->attackerMon.firstTurnOut && ai->isDoubleBattle) {
             moveScore -= 1;
         }
-        if (ai->attackerTurnsOnField == 0 && BattlerKnowsMoveWithEffect(bsys, ai->attacker, MOVE_EFFECT_PROTECT, ai) 
+        if (ai->attackerMon.firstTurnOut
             && ai->attackerMon.item == ITEM_TOXIC_ORB && ai->attackerMon.ability == ABILITY_POISON_HEAL) {
             moveScore += 1;
         }
@@ -1838,7 +1838,7 @@ int LONG_CALL HarassmentScoring(struct BattleSystem *bsys, u32 attacker, int i, 
         }
         break;
     case MOVE_EFFECT_ENCORE:
-        if (ai->defenderTurnsOnField == 0
+        if (ai->defenderMon.firstTurnOut
             || ctx->battlemon[ai->defender].moveeffect.encoredTurns > 0
             || ctx->battlemon[ai->defender].moveeffect.moveNoChoice != MOVE_NONE)
         {

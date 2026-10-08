@@ -266,7 +266,7 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
 #ifdef IMPLEMENT_AI_SWITCH_COOLDOWN
     // cooldown: no switching out on the first turn after switching in, unless the player's Pokemon changed as well
     // (turns on field is 0 on a Pokemon's first full turn; at the start of the battle both sides are 0, so the lead can still switch)
-    if ((int)ai->attackerTurnsOnField <= 0 && (int)ai->defenderTurnsOnField > 0) {
+    if (ai->attackerMon.firstTurnOut && !ai->defenderMon.firstTurnOut) {
         return FALSE;
     }
 #endif // IMPLEMENT_AI_SWITCH_COOLDOWN
