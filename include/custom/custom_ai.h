@@ -189,6 +189,12 @@ void LONG_CALL SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 
 #define AI_ABSORB_SWITCH_PERCENT 75 // chance of making the switch when the chance arises
 #define AI_ABSORB_SWITCH_MIN_HP_PERCENT 50 // no absorb switch when the AI's Pokemon has less than this share of its HP left
 #define AI_ABSORB_SWITCH_SAFE_PERCENT 85 // a Pokemon is not switched into when one of the player's other moves would take this share of its HP or more
+// ineffective switch: leave when the best attack does very little (see CalculateSwitch in pick_command.c)
+#define AI_INEFFECTIVE_DAMAGE_PERCENT 25 // "not doing damage" = its best attack takes less than this share of the player's CURRENT HP
+#define AI_INEFFECTIVE_STAY_HP_PERCENT 15 // at or below this share of its own HP it stays in and tries to finish with priority instead
+#define AI_INEFFECTIVE_SWITCH_PERCENT 70 // minimum chance of switching each turn once it counts as ineffective (a better party member is still required)
+#define AI_IMMUNE_SWITCH_BIG_HIT_PERCENT 35 // also do the immunity switch when the player's strongest move takes this share of the AI mon's current HP (not only when it KOs)
+#define AI_TANK_SWITCH_MAX_PERCENT 50 // when the player's strongest move would KO the AI mon, a teammate that takes at most this share of its HP from it counts as a safe switch-in
 #define AI_ABSORB_SWITCH_MEGA_PREVIEW // calculate with the player's Pokemon Mega Evolved if it can be (it may do it this turn). comment out to turn off
 
 typedef struct AI_immuneCandidate {

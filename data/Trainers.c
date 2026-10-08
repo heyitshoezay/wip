@@ -33052,14 +33052,14 @@ const TrainerData sTrainerData[] = {
             .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
             .trainerClass = TRAINERCLASS_LEADER_VOLKNER,
             .items = { ITEM_HYPER_POTION, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_ALLOW_SWITCHING,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 46,
+                .level = 60,
                 .species = SPECIES_JOLTEON,
                 .item = ITEM_NONE,
                 .moves = { MOVE_THUNDER_WAVE, MOVE_CHARGE_BEAM, MOVE_IRON_TAIL, MOVE_QUICK_ATTACK },
@@ -33068,7 +33068,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 46,
+                .level = 60,
                 .species = SPECIES_RAICHU,
                 .item = ITEM_NONE,
                 .moves = { MOVE_CHARGE_BEAM, MOVE_FOCUS_BLAST, MOVE_SIGNAL_BEAM, MOVE_QUICK_ATTACK },
@@ -33077,7 +33077,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 48,
+                .level = 60,
                 .species = SPECIES_LUXRAY,
                 .item = ITEM_NONE,
                 .moves = { MOVE_ICE_FANG, MOVE_THUNDER_FANG, MOVE_CRUNCH, MOVE_FIRE_FANG },
@@ -33086,7 +33086,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 196,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_ELECTIVIRE,
                 .item = ITEM_SITRUS_BERRY,
                 .moves = { MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_QUICK_ATTACK, MOVE_GIGA_IMPACT },
@@ -35737,14 +35737,14 @@ const TrainerData sTrainerData[] = {
             .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET,
             .trainerClass = TRAINERCLASS_CHAMPION_CYNTHIA,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_ALLOW_SWITCHING,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_SPIRITOMB,
                 .item = ITEM_NONE,
                 .moves = { MOVE_SILVER_WIND, MOVE_DARK_PULSE, MOVE_PSYCHIC, MOVE_DREAM_EATER },
@@ -35757,7 +35757,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_ROSERADE,
                 .item = ITEM_NONE,
                 .moves = { MOVE_TOXIC, MOVE_SLEEP_POWDER, MOVE_EXTRASENSORY, MOVE_SHADOW_BALL },
@@ -35770,7 +35770,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_TOGEKISS,
                 .item = ITEM_NONE,
                 .moves = { MOVE_AURA_SPHERE, MOVE_EXTRASENSORY, MOVE_AIR_SLASH, MOVE_ATTRACT },
@@ -35783,7 +35783,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_LUCARIO,
                 .item = ITEM_NONE,
                 .moves = { MOVE_AURA_SPHERE, MOVE_SHADOW_BALL, MOVE_EARTHQUAKE, MOVE_EXTREME_SPEED },
@@ -35796,7 +35796,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_MILOTIC,
                 .item = ITEM_NONE,
                 .moves = { MOVE_SURF, MOVE_BLIZZARD, MOVE_MIRROR_COAT, MOVE_RECOVER },
@@ -35809,7 +35809,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 50,
+                .level = 60,
                 .species = SPECIES_GARCHOMP,
                 .item = ITEM_NONE,
                 .moves = { MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_CRUNCH, MOVE_STONE_EDGE },

@@ -247,6 +247,14 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         return FALSE;
     }
 
+    // only trainers with F_ALLOW_SWITCHING (bosses) ever switch; everyone else stays in
+    {
+        Trainer *aiTrainer = BattleSystem_GetTrainer(bsys, attacker);
+        if (aiTrainer == NULL || (aiTrainer->data.aiFlags & (1 << 14)) == 0) {
+            return FALSE;
+        }
+    }
+
 #ifdef IMPLEMENT_AI_ABSORB_SWITCH
     // not worth a switch when the AI's Pokemon is already below AI_ABSORB_SWITCH_MIN_HP_PERCENT of its HP
     if ((u32)ctx->battlemon[attacker].hp * 100 >= (u32)ctx->battlemon[attacker].maxhp * AI_ABSORB_SWITCH_MIN_HP_PERCENT) {
@@ -283,9 +291,18 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
         return FALSE;
     }
 
+#ifdef IMPLEMENT_AI_INEFFECTIVE_SWITCH
+    // "ineffective": it has attacking moves but its best one takes less than AI_INEFFECTIVE_DAMAGE_PERCENT of the player's current HP
+    BOOL ineffective = ai->attackerHasAttackingMoves && ai->defenderMon.hp > 0
+        && (u32)(100 * ai->attackerRolledMaxDamage) < (u32)(AI_INEFFECTIVE_DAMAGE_PERCENT * ai->defenderMon.hp);
+    if (ai->attackerMon.percenthp < 67 && !(ineffective && ai->attackerMon.percenthp > AI_INEFFECTIVE_STAY_HP_PERCENT)) {
+        return FALSE;
+    }
+#else
     if (ai->attackerMon.percenthp < 67) {
         return FALSE;
     }
+#endif // IMPLEMENT_AI_INEFFECTIVE_SWITCH
 
     if ((100*ai->maxDamageReceived/ai->attackerMon.hp) < (100*ai->attackerRolledMaxDamage/ai->defenderMon.hp)) {
         return FALSE;
@@ -319,6 +336,12 @@ BOOL LONG_CALL CalculateSwitch(struct BattleSystem *bsys, u32 attacker, u32 defe
             switchScore = 5 + getVarianceFromDamage(ai);
         }
     }
+
+#ifdef IMPLEMENT_AI_INEFFECTIVE_SWITCH
+    if (ineffective && switchScore < AI_INEFFECTIVE_SWITCH_PERCENT) {
+        switchScore = AI_INEFFECTIVE_SWITCH_PERCENT;
+    }
+#endif // IMPLEMENT_AI_INEFFECTIVE_SWITCH
 
     int rand = BattleRand(bsys) % 100;
 #ifdef DEBUG_AI_SCORING

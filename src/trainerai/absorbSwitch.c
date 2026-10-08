@@ -126,8 +126,12 @@ int LONG_CALL AI_FindImmuneSwitchIn(struct BattleSystem *bsys, u32 attacker, u32
     if (ai->isDoubleBattle || ai->livingMembersAttacker < 2) {
         return -1;
     }
-    if (ai->playerPredictedMove == MOVE_NONE || !ai->playerPredictedMoveKills) {
-        return -1; // the move we expect would not KO us, so there is nothing to dodge
+    if (ai->playerPredictedMove == MOVE_NONE) {
+        return -1;
+    }
+    if (!ai->playerPredictedMoveKills
+        && (ai->attackerMon.hp == 0 || (u32)(100 * ai->maxDamageReceived) < (u32)(AI_IMMUNE_SWITCH_BIG_HIT_PERCENT * ai->attackerMon.hp))) {
+        return -1; // the move we expect is neither a KO nor a big hit, so there is nothing worth dodging
     }
     if (ai->monCanOneShotPlayerWithAnyMove && ai->aiMovesFirst) {
         return -1; // we get there first with a KO of our own
@@ -157,7 +161,9 @@ int LONG_CALL AI_FindImmuneSwitchIn(struct BattleSystem *bsys, u32 attacker, u32
 
         AI_immuneCandidate *c = &candidates[count];
         c->slot = i;
-        c->immune = (DamageToPartyMon(bsys, ctx, attacker, defender, ai, &playerCalc, &partyMon, ai->playerPredictedMove) == 0);
+        u32 predictedDamage = DamageToPartyMon(bsys, ctx, attacker, defender, ai, &playerCalc, &partyMon, ai->playerPredictedMove);
+        c->immune = (predictedDamage == 0)
+            || (ai->playerPredictedMoveKills && partyMon.hp > 0 && (u32)(100 * predictedDamage) <= (u32)(AI_TANK_SWITCH_MAX_PERCENT * partyMon.hp));
         c->killedByOtherMove = FALSE;
         c->worstOtherPercent = 0;
 

@@ -63,6 +63,7 @@ typedef uint32_t u32;
 #define F_ROAMING_MON                (1 << 11)
 #define F_SAFARI_ZONE                (1 << 12)
 #define F_CATCHING_DEMO              (1 << 13)
+#define F_ALLOW_SWITCHING            (1 << 14) // boss trainers: AI may switch Pokemon out
 
 // standard flags for expert trainer AI
 #define F_TRAINER_EXPERT_AI (F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS)

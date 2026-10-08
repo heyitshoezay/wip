@@ -27,7 +27,7 @@ enum AIFlag {
     AI_FLAG_UNUSED_11 = 1 << 11,
     AI_FLAG_UNUSED_12 = 1 << 12,
     AI_FLAG_UNUSED_13 = 1 << 13,
-    AI_FLAG_UNUSED_14 = 1 << 14,
+    AI_FLAG_ALLOW_SWITCHING = 1 << 14,
     AI_FLAG_UNUSED_15 = 1 << 15,
     AI_FLAG_UNUSED_16 = 1 << 16,
     AI_FLAG_UNUSED_17 = 1 << 17,

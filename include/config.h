@@ -112,6 +112,10 @@
 // (Water Absorb, Volt Absorb, Flash Fire, Sap Sipper, Levitate, type immunities...).  comment out to remove it
 #define IMPLEMENT_AI_ABSORB_SWITCH
 
+// IMPLEMENT_AI_INEFFECTIVE_SWITCH lets the trainer AI switch out a Pokemon that is not doing real damage (it can still use priority
+// to finish a very low HP Pokemon).  the numbers are in custom_ai.h.  comment out to go back to "never switch under 67% HP"
+#define IMPLEMENT_AI_INEFFECTIVE_SWITCH
+
 
 // IMPLEMENT_LEVEL_CAP defines whether or not a configurable hard level cap system is built into the rom based on the value in LEVEL_CAP_VARIABLE
 // if the level is greater than or equal to LEVEL_CAP_VARIABLE, the pokémon will no longer gain experience
